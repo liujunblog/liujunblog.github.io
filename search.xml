@@ -403,6 +403,45 @@
 <td>a &#x3D; {1,2,3,4}<br/>b &#x3D; {2,3,5,6}<br/>se &#x3D; a | b<br/>print(se)# {1,2,3,4,5,6}</td>
 </tr>
 </tbody></table>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>Number 数字 int float bool complex</p>
+<p>String 字符串</p>
+<p>List 列表  表示[]</p>
+<p>Tuple 元组 表示（）</p>
+<p>Set 集合{a,b,c}</p>
+<p>Dictionary 字典{‘a’:’1’}</p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>操作</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>str()</td>
+<td>转化为字符串</td>
+<td>a &#x3D; 5 <br>print(type(a)) #&lt;class ‘int’&gt;<br>b &#x3D; str(a) <br>print(b, type(b))#5 &lt;class ‘str’&gt;</td>
+</tr>
+<tr>
+<td>tuple()</td>
+<td>转换为元组类型</td>
+<td>list &#x3D; [1,2] <br>print(type(list)) #&lt;class ‘list’&gt;<br>print(type(tuple(list)))#&lt;class ‘tuple’&gt;</td>
+</tr>
+<tr>
+<td>list()</td>
+<td>转化为列表</td>
+<td>t &#x3D; (1,2) <br>print(type(t)) #&lt;class ‘tuple’&gt;<br>print(type(list(t)))#&lt;class ‘list’&gt;</td>
+</tr>
+<tr>
+<td>dict()</td>
+<td>转化为字典</td>
+<td>a &#x3D; [‘a’, ‘b’, ‘c’]<br> b &#x3D; [‘d’, ‘e’]<br> d &#x3D; zip(a, b)<br> print(d)#返回的是对象地址&lt;zip object at 0x000002A6E88B4788&gt;<br> print(dict(d))#{‘a’: ‘d’, ‘b’: ‘e’}</td>
+</tr>
+</tbody></table>
+<h2 id="不可变对象"><a href="#不可变对象" class="headerlink" title="不可变对象"></a>不可变对象</h2><p>定义：存储空间保存的数据不允许被修改，这种数据就是不可变类型(内容不可变，地址会变化)</p>
+<p>常见的不可变类型有：数值类型int, bool, float, complex</p>
+<p>​					字符串 str</p>
+<p>​					元组 tuple</p>
 ]]></content>
       <categories>
         <category>python</category>
