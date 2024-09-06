@@ -450,10 +450,24 @@
 <td>a &#x3D; [‘a’, ‘b’, ‘c’]<br> b &#x3D; [‘d’, ‘e’]<br> d &#x3D; zip(a, b)<br> print(d)#返回的是对象地址&lt;zip object at 0x000002A6E88B4788&gt;<br> print(dict(d))#{‘a’: ‘d’, ‘b’: ‘e’}</td>
 </tr>
 </tbody></table>
-<h2 id="不可变对象"><a href="#不可变对象" class="headerlink" title="不可变对象"></a>不可变对象</h2><p>定义：存储空间保存的数据不允许被修改，这种数据就是不可变类型(内容不可变，地址会变化)</p>
+<h2 id="不可变对象"><a href="#不可变对象" class="headerlink" title="不可变对象"></a>不可变对象</h2><p>定义：存储空间保存的数据不允许被修改，这种数据就是不可变类型(原变量内容不可变，地址会变化)</p>
 <p>常见的不可变类型有：数值类型int, bool, float, complex</p>
 <p>​					字符串 str</p>
 <p>​					元组 tuple</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#内容不可变，地址可以变化</span></span><br><span class="line">i  = <span class="number">73</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(i))</span><br><span class="line"><span class="built_in">print</span>(i)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(i)) <span class="comment"># 地址：1825204704</span></span><br><span class="line"></span><br><span class="line">i+=<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(i)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(i))<span class="comment">#地址：1825204768</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
 ]]></content>
       <categories>
         <category>python</category>
