@@ -459,13 +459,41 @@
 <h2 id="可变对象"><a href="#可变对象" class="headerlink" title="可变对象"></a>可变对象</h2><p>存储空间保存的数据允许被修改，这种数据就是可变类型</p>
 <p>常见可变对象类型有：</p>
 <p>列表list</p>
-]]></content>
+<p>字典dict</p>
+<p>集合set</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#列表</span></span><br><span class="line">m = [<span class="number">5</span>,<span class="number">9</span>]</span><br><span class="line"><span class="built_in">print</span>(m)<span class="comment">#[5, 9]</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(m))<span class="comment">#1749592527808</span></span><br><span class="line">m += [<span class="number">6</span>]</span><br><span class="line"><span class="built_in">print</span>(m)[<span class="number">5</span>, <span class="number">9</span>, <span class="number">6</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(m))<span class="comment">#1749592527808</span></span><br><span class="line"><span class="comment">#集合</span></span><br><span class="line"><span class="built_in">set</span> = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;123&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">set</span>,<span class="built_in">type</span>(<span class="built_in">set</span>),<span class="built_in">id</span>(<span class="built_in">set</span>))<span class="comment">#&#123;&#x27;123&#x27;, 1, 2&#125; &lt;class &#x27;set&#x27;&gt; 156167376</span></span><br><span class="line"><span class="built_in">set</span>.add(<span class="string">&#x27;34&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">set</span>,<span class="built_in">type</span>(<span class="built_in">set</span>),<span class="built_in">id</span>(<span class="built_in">set</span>))<span class="comment">#&#123;&#x27;123&#x27;, 1, 2, &#x27;34&#x27;&#125; &lt;class &#x27;set&#x27;&gt; 1561673764416</span></span><br></pre></td></tr></table></figure>
+
+<p>可变对象：内容可变，地址不变</p>
+<h2 id="函数、函数的返回值"><a href="#函数、函数的返回值" class="headerlink" title="函数、函数的返回值"></a>函数、函数的返回值</h2><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>定义：把具有独立功能的的代码块组合成一个个小模块</p>
+<p>作用：提高写代码的效率，实现代码复用–流程标准化</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#格式</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">函数名</span>():</span><br><span class="line">	函数体</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;哈哈哈&quot;</span>)</span><br><span class="line">fun()<span class="comment">#哈哈哈</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="函数返回"><a href="#函数返回" class="headerlink" title="函数返回"></a>函数返回</h3>]]></content>
       <categories>
         <category>python</category>
       </categories>
       <tags>
         <tag>python基础</tag>
-        <tag>分享</tag>
+        <tag>python进阶</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python</title>
+    <url>/2024/09/06/python/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>python进阶</title>
+    <url>/2024/09/06/python%E8%BF%9B%E9%98%B6/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
+        <tag>python进阶</tag>
       </tags>
   </entry>
 </search>
