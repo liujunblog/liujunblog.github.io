@@ -450,24 +450,15 @@
 <td>a &#x3D; [‘a’, ‘b’, ‘c’]<br> b &#x3D; [‘d’, ‘e’]<br> d &#x3D; zip(a, b)<br> print(d)#返回的是对象地址&lt;zip object at 0x000002A6E88B4788&gt;<br> print(dict(d))#{‘a’: ‘d’, ‘b’: ‘e’}</td>
 </tr>
 </tbody></table>
-<h2 id="不可变对象"><a href="#不可变对象" class="headerlink" title="不可变对象"></a>不可变对象</h2><p>定义：存储空间保存的数据不允许被修改，这种数据就是不可变类型(原变量内容不可变，地址会变化)</p>
+<h2 id="不可变对象"><a href="#不可变对象" class="headerlink" title="不可变对象"></a>不可变对象</h2><p>定义：存储空间保存的数据不允许被修改，这种数据就是不可变类型(原变量内容不可变，地址会变化，原变量改变后，需要重新分配内存空间)</p>
 <p>常见的不可变类型有：数值类型int, bool, float, complex</p>
 <p>​					字符串 str</p>
 <p>​					元组 tuple</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#内容不可变，地址可以变化</span></span><br><span class="line">i  = <span class="number">73</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(i))</span><br><span class="line"><span class="built_in">print</span>(i)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(i)) <span class="comment"># 地址：1825204704</span></span><br><span class="line"></span><br><span class="line">i+=<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(i)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(i))<span class="comment">#地址：1825204768</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#内容不可变，地址可以变化</span></span><br><span class="line">i  = <span class="number">73</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(i))</span><br><span class="line"><span class="built_in">print</span>(i)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(i)) <span class="comment"># 地址：1825204704</span></span><br><span class="line"></span><br><span class="line">i+=<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(i)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(i))<span class="comment">#地址：1825204768</span></span><br><span class="line"><span class="comment">#元组</span></span><br><span class="line">t = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(t)<span class="comment"># (1, 2, 3, 4, 5)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(t))<span class="comment"># 2024501387952</span></span><br><span class="line">t[<span class="number">1</span>] = <span class="number">100</span></span><br><span class="line"><span class="built_in">print</span>(t)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(t))<span class="comment"># TypeError: &#x27;tuple&#x27; object does not support item assignment</span></span><br><span class="line"><span class="comment">#字符串</span></span><br><span class="line">s = <span class="string">&#x27;abc&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(s))<span class="comment">#2925156601504</span></span><br><span class="line">s = <span class="string">&#x27;abcd&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(s))<span class="comment">#2925156688648</span></span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-
-
-
-
-
-
+<h2 id="可变对象"><a href="#可变对象" class="headerlink" title="可变对象"></a>可变对象</h2><p>存储空间保存的数据允许被修改，这种数据就是可变类型</p>
+<p>常见可变对象类型有：</p>
+<p>列表list</p>
 ]]></content>
       <categories>
         <category>python</category>
