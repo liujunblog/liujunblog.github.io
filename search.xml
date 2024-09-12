@@ -589,7 +589,20 @@
   <entry>
     <title>python进阶</title>
     <url>/2024/09/06/python%E8%BF%9B%E9%98%B6/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="python进阶"><a href="#python进阶" class="headerlink" title="python进阶"></a>python进阶</h1><h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>定义：是一个事件，这个事件在程序执行过程中发生，影响了程序的正常执行。</p>
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>语法格式一：</p>
+<p>try:</p>
+<p>​	可能引发异常现象的代码</p>
+<p>except:</p>
+<p>​	出现异常现象的处理代码</p>
+<p>语法格式二：</p>
+<p>try:</p>
+<p>​	可能引发异常现象的代码</p>
+<p>except:</p>
+<p>​	出现异常现象的处理代码</p>
+<p>else:</p>
+<p>​	try 代码块结束后运行的代码</p>
+]]></content>
       <categories>
         <category>python</category>
       </categories>
