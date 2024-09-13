@@ -13,6 +13,53 @@
       </tags>
   </entry>
   <entry>
+    <title>python进阶</title>
+    <url>/2024/09/06/python%E8%BF%9B%E9%98%B6/</url>
+    <content><![CDATA[<h1 id="python进阶"><a href="#python进阶" class="headerlink" title="python进阶"></a>python进阶</h1><h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>定义：是一个事件，这个事件在程序执行过程中发生，影响了程序的正常执行。</p>
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>语法格式一：</p>
+<p>try:</p>
+<p>​	可能引发异常现象的代码</p>
+<p>except:</p>
+<p>​	出现异常现象的处理代码</p>
+<p>语法格式二：</p>
+<p>try:</p>
+<p>​	可能引发异常现象的代码</p>
+<p>except:</p>
+<p>​	出现异常现象的处理代码</p>
+<p>else:</p>
+<p>​	try 代码块结束后运行的代码</p>
+<h3 id="异常传递"><a href="#异常传递" class="headerlink" title="异常传递"></a>异常传递</h3><p>当函数&#x2F;方法执行出现异常，会将异常传递给函数&#x2F;方法的调用一方</p>
+<p>如果传递到主程序，仍没有异常处理，程序才会被终止</p>
+<h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><p>特性：</p>
+<ol>
+<li>必须有一个明确的结束条件</li>
+<li>每次进入更深一层递归时，问题规模相比上一次递归都应有所减少</li>
+<li>相邻两次重复之前有紧密联系，前一次要为后一次做准备</li>
+<li>递归效率不高，递归层次过多导致栈溢出</li>
+<li>优点：定义简单，逻辑清晰</li>
+</ol>
+<p>递推：给递归实现拆解，递归每次都是基于上一次进行下一次的执行</p>
+<p>回溯：遇到终止条件之前，从最后往回返，一级一级的把值返回来</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#应用：</span></span><br><span class="line"><span class="comment">#累加</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> fun(n-<span class="number">1</span>)+n</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"><span class="built_in">print</span>(fun(<span class="number">7</span>))   	</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#斐波那契数列 1,1,2,3,5,8,13,21</span></span><br><span class="line">list1 = []</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> n</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> fun(n-<span class="number">1</span>) + fun(n-<span class="number">2</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>):</span><br><span class="line">    list1.append(fun(i))</span><br><span class="line"><span class="built_in">print</span>(list1)<span class="comment">#[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="函数引用"><a href="#函数引用" class="headerlink" title="函数引用"></a>函数引用</h2><p>定义：如果函数收到的是一个可变对象（比如字典或列表）的引用，就能够修改对象的原始——相当于通过”传引用”来传递对象；如果函数接收到的是一个不可变对象（如数字字符元组）的引用，就不能直接修改原始对象——相当于”‘传值”来传对象</p>
+<p>函数引用：如函数名的引用，函数传递时的引用传递</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
+        <tag>python进阶</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python</title>
     <url>/2024/04/24/python%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h1><h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><p>整型（int）浮点类型（float） 布尔（bool）复数（complex，z &#x3D; a + bj , j为虚部）</p>
@@ -573,9 +620,7 @@
 <td>枚举用于将一个可遍历的数据对象组合为一个索引序列，同时列出数据和数据下标，一般用在for循环</td>
 </tr>
 </tbody></table>
-<pre><code>    ### 拆包
-</code></pre>
-<p>定义：对于函数中的多个返回数据，去掉元组，列表或者字典，直接获得里面数据的过程。</p>
+<h3 id="拆包"><a href="#拆包" class="headerlink" title="拆包"></a>拆包</h3><p>定义：对于函数中的多个返回数据，去掉元组，列表或者字典，直接获得里面数据的过程。</p>
 <p>​	</p>
 ]]></content>
       <categories>
@@ -584,31 +629,6 @@
       <tags>
         <tag>python基础</tag>
         <tag>python进阶 - python高阶</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python进阶</title>
-    <url>/2024/09/06/python%E8%BF%9B%E9%98%B6/</url>
-    <content><![CDATA[<h1 id="python进阶"><a href="#python进阶" class="headerlink" title="python进阶"></a>python进阶</h1><h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>定义：是一个事件，这个事件在程序执行过程中发生，影响了程序的正常执行。</p>
-<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>语法格式一：</p>
-<p>try:</p>
-<p>​	可能引发异常现象的代码</p>
-<p>except:</p>
-<p>​	出现异常现象的处理代码</p>
-<p>语法格式二：</p>
-<p>try:</p>
-<p>​	可能引发异常现象的代码</p>
-<p>except:</p>
-<p>​	出现异常现象的处理代码</p>
-<p>else:</p>
-<p>​	try 代码块结束后运行的代码</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python基础</tag>
-        <tag>python进阶</tag>
       </tags>
   </entry>
 </search>
