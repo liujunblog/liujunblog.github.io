@@ -582,7 +582,7 @@
       <tags>
         <tag>python基础</tag>
         <tag>python进阶</tag>
-        <tag>python的networkx库基础</tag>
+        <tag>python的networkx库</tag>
       </tags>
   </entry>
   <entry>
@@ -682,7 +682,12 @@
       <tags>
         <tag>python基础</tag>
         <tag>python进阶</tag>
-        <tag>python的networkx库基础</tag>
+        <tag>python的networkx库</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>python的networkx库</title>
+    <url>/2024/09/23/python%E7%9A%84networkx%E5%BA%93/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
