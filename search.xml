@@ -670,14 +670,10 @@
 
 <h2 id="多层嵌套"><a href="#多层嵌套" class="headerlink" title="多层嵌套"></a>多层嵌套</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">exam</span>(<span class="params">fn</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">x,y</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;hello&quot;</span>,x,y)</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">inner</span>(<span class="params">a,b</span>):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;inner函数中的值：%s，%s&quot;</span>%(a,b))</span><br><span class="line">            fn(a,b)</span><br><span class="line">        <span class="keyword">return</span> inner</span><br><span class="line">    <span class="keyword">return</span> fun</span><br><span class="line"><span class="meta">@exam</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">te</span>(<span class="params">a,b</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;结果是：&quot;</span>, (a + b))</span><br><span class="line">te(<span class="number">1</span>,<span class="number">2</span>)(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">/*</span><br><span class="line">hello <span class="number">1</span> <span class="number">2</span></span><br><span class="line">inner函数中的值：<span class="number">3</span>，<span class="number">4</span></span><br><span class="line">结果是： <span class="number">7</span></span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-
-
+<h2 id="属性与方法"><a href="#属性与方法" class="headerlink" title="属性与方法"></a>属性与方法</h2><p>属性：对象的特征描述，实际为定义的变量，该变量为属性</p>
+<p>方法：对象具有的行为（本质是函数），类中定义的函数即方法</p>
+<h3 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h3><p>对象的创建格式</p>
+<p>​	对象名 &#x3D; 类名（）</p>
 ]]></content>
       <categories>
         <category>python</category>
