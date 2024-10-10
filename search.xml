@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++</title>
+    <url>/2024/09/05/C/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>蓝桥杯</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python</title>
     <url>/2024/04/24/python%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h1><h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><p>整型（int）浮点类型（float） 布尔（bool）复数（complex，z &#x3D; a + bj , j为虚部）</p>
@@ -574,18 +586,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++</title>
-    <url>/2024/09/05/C/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>蓝桥杯</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python的networkx库</title>
     <url>/2024/09/23/python%E7%9A%84networkx%E5%BA%93/</url>
     <content><![CDATA[<h1 id="无向图"><a href="#无向图" class="headerlink" title="无向图"></a>无向图</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G = nx.Graph()</span><br><span class="line"><span class="comment">#添加节点</span></span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="comment">#添加边</span></span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>)])</span><br><span class="line"><span class="comment">#可视化</span></span><br><span class="line">nx.draw(G, with_labels=<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#保存图片地址</span></span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取图的邻接矩阵</span></span><br><span class="line">As = nx.adjacency_matrix(G)</span><br><span class="line"><span class="built_in">print</span>(As)</span><br><span class="line"></span><br><span class="line"><span class="comment">#转化为二维的矩阵</span></span><br><span class="line">A= As.todense()</span><br><span class="line"><span class="built_in">print</span>(A)</span><br></pre></td></tr></table></figure>
@@ -847,7 +847,7 @@
 <h4 id="3-模块度（Modularity）"><a href="#3-模块度（Modularity）" class="headerlink" title="3. 模块度（Modularity）"></a>3. <strong>模块度（Modularity）</strong></h4><p>   虽然模块度通常用于衡量网络的社区结构，但它也与聚集性紧密相关，因为高模块度的网络意味着网络中存在高度聚集的子群体。模块度高的网络倾向于形成社区，即网络中的节点分为若干个内部连接紧密而外部连接稀疏的群体。</p>
 <ul>
 <li><strong>定义</strong>：模块度通过衡量网络中的实际边数与随机分配边数之间的差异，来评价网络划分为社区的优劣。</li>
-<li><strong>公式</strong>：<br><img src="/./images/efigure01-1728551943393-7.png" alt="图1"></li>
+<li><strong>公式</strong>：<br><img src="/./images/efigure01.png" alt="图1"></li>
 </ul>
 <h4 id="4-超边重叠度（Hyperedge-Overlap）"><a href="#4-超边重叠度（Hyperedge-Overlap）" class="headerlink" title="4. 超边重叠度（Hyperedge Overlap）"></a>4. <strong>超边重叠度（Hyperedge Overlap）</strong></h4><ul>
 <li><strong>定义</strong>：超边重叠度反映超网络中不同超边之间共享节点的程度。两个超边之间如果共享更多的节点，它们之间的重叠度就越高。</li>
