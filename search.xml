@@ -1,742 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C++</title>
-    <url>/2024/09/05/C/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>蓝桥杯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>论文知识点</title>
-    <url>/2024/10/09/%E8%AE%BA%E6%96%87%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<h1 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h3 id="一、超网络的结构测度指标体系"><a href="#一、超网络的结构测度指标体系" class="headerlink" title="一、超网络的结构测度指标体系"></a>一、超网络的结构测度指标体系</h3><p>超网络（<strong>hypernetwork</strong>）的结构测度指标体系是网络科学中的一个研究热点，旨在宽松和分析超网络的结构特性。超网络是一种特殊类型的网络，其中的边可以连接多个节点，而不仅仅是节点。这种复杂性的关系拓展了两个传统图论的边连接形式，因此需要专门的测度指标来描述其结构。</p>
-<p>以下是一些常用的超网络结构测度指标：</p>
-<h4 id="1-度分布（Degree-Distribution）"><a href="#1-度分布（Degree-Distribution）" class="headerlink" title="1.度分布（Degree Distribution）"></a>1.<strong>度分布（Degree Distribution）</strong></h4><ul>
-<li><h5 id="节点度（Node-Degree）：表示一个节点参与的超边数量。在超网络中，节点的度可以表示为其参与的超边数量。"><a href="#节点度（Node-Degree）：表示一个节点参与的超边数量。在超网络中，节点的度可以表示为其参与的超边数量。" class="headerlink" title="节点度（Node Degree）：表示一个节点参与的超边数量。在超网络中，节点的度可以表示为其参与的超边数量。"></a><strong>节点度（Node Degree）</strong>：表示一个节点参与的超边数量。在超网络中，节点的度可以表示为其参与的超边数量。</h5></li>
-<li><h5 id="超边度（Hyperedge-Degree）：表示每个超边连接的节点数量，也即每条超边的维度大小。"><a href="#超边度（Hyperedge-Degree）：表示每个超边连接的节点数量，也即每条超边的维度大小。" class="headerlink" title="超边度（Hyperedge Degree）：表示每个超边连接的节点数量，也即每条超边的维度大小。"></a><strong>超边度（Hyperedge Degree）</strong>：表示每个超边连接的节点数量，也即每条超边的维度大小。</h5></li>
-</ul>
-<h4 id="2-节点中心性（Node-Centrality）"><a href="#2-节点中心性（Node-Centrality）" class="headerlink" title="2.节点中心性（Node Centrality）"></a>2.<strong>节点中心性（Node Centrality）</strong></h4><p>这是缓慢网络中的要点在结构上是否受到关注的重要位置的指标：</p>
-<ul>
-<li><strong>度中心性（Degree Centrality）</strong>：根据节点参与的超边数量来降低其重要性。</li>
-<li><strong>接近中心性（Closeness Centrality）</strong>：通过计算节点与其他节点的最短路径距离，反映节点的传递效率。</li>
-<li><strong>内部中心性（Betweenness Centrality）</strong>：一个反映节点在最短路径中充当“桥梁”的程度，即该节点在网络中信息流动的枢纽角色。</li>
-</ul>
-<h4 id="3-聚类系数（Clustering-Coefficient）"><a href="#3-聚类系数（Clustering-Coefficient）" class="headerlink" title="3.聚类系数（Clustering Coefficient）"></a>3.<strong>聚类系数（Clustering Coefficient）</strong></h4><p>传统网络中的迭代次数被用于计算节点间和邻居节点之间的加权程度。而在超网络中，迭代次数的定义更复杂，可能涉及计算节点间通过共享超边进行连接的概率。</p>
-<h4 id="4-模块性（Modularity）"><a href="#4-模块性（Modularity）" class="headerlink" title="4.模块性（Modularity）"></a>4.<strong>模块性（Modularity）</strong></h4><p>模块性用于最简单网络中的社区结构，即网络能否划分为若干模块或子群体，使得相同模块内的节点比外部模块之间的节点连接更紧密。超网络中的模块性测度可以扩展为考虑多节点超边的影响。</p>
-<h4 id="5-连通性（Connectivity）"><a href="#5-连通性（Connectivity）" class="headerlink" title="5.连通性（Connectivity）"></a>5.<strong>连通性（Connectivity）</strong></h4><p>替代性是指网络中节点通过超边的连接情况：</p>
-<ul>
-<li><strong>强干扰性（Strong Connectivity）</strong>：表示是否存在强弱的子图，使得所有节点都通过超边相互相邻。</li>
-<li><strong>弱感知性（Weak Connectivity）</strong>：不要求所有节点之间都直接关联，而是可以通过多跳超边连通。</li>
-</ul>
-<h4 id="6-路径长度（Path-Length）"><a href="#6-路径长度（Path-Length）" class="headerlink" title="6.路径长度（Path Length）"></a>6.<strong>路径长度（Path Length）</strong></h4><p>在超网络中，路径长度可以通过多个节点的超边来定义和关注。例如，在两个节点间，是否存在通过一系列超边的路径。</p>
-<h4 id="7-超边的覆盖度和重叠度（Hyperedge-Coverage-and-Overlap）"><a href="#7-超边的覆盖度和重叠度（Hyperedge-Coverage-and-Overlap）" class="headerlink" title="7.超边的覆盖度和重叠度（Hyperedge Coverage and Overlap）"></a>7.<strong>超边的覆盖度和重叠度（Hyperedge Coverage and Overlap）</strong></h4><ul>
-<li><strong>覆盖度</strong>：最小网络中的节点被超边覆盖的程度。即某个节点的所有可能的邻居是否都在节点条父条超边中。</li>
-<li><strong>重叠度</strong>：不同超边之间的节点重叠程度，表示网络中节点在多个超边之间共享的程度。</li>
-</ul>
-<h4 id="8-子结构与模式识别（子结构和基序分析）"><a href="#8-子结构与模式识别（子结构和基序分析）" class="headerlink" title="8.子结构与模式识别（子结构和基序分析）"></a>8.<strong>子结构与模式识别（子结构和基序分析）</strong></h4><p>超网络中的子结构或模式分析旨在识别网络中经常出现的结构特征。这可以帮助我们了解超网络的功能特性或设置规律。</p>
-<h4 id="9-信息传播效率（Information-Diffusion-Efficiency）"><a href="#9-信息传播效率（Information-Diffusion-Efficiency）" class="headerlink" title="9.信息传播效率（Information Diffusion Efficiency）"></a>9.<strong>信息传播效率（Information Diffusion Efficiency）</strong></h4><p>信息传播的效率是指信息在超网络中通过节点和超边缘传播的速度和范围。这涉及计算信息在不同超网络结构中的传播路径和扩散模型。</p>
-<h4 id="10-超边维度（Hyperedge-Dimension）"><a href="#10-超边维度（Hyperedge-Dimension）" class="headerlink" title="10.超边维度（Hyperedge Dimension）"></a>10.<strong>超边维度（Hyperedge Dimension）</strong></h4><p>超边维度是超网络中超边连接的节点数量的分布情况，它反映了每条超边的复杂程度。</p>
-<p>这些结构测度指标有助于研究人员理解超网络的复杂性和行为，尤其是在大规模、多层次的网络关系中，这些指标可以揭示隐藏的网络模式或特性。</p>
-<p>超网络中，<strong>强度</strong>、<strong>超边度</strong>、<strong>超边强度</strong>、和<strong>超边基数</strong>等概念都是用来描述节点和超边之间复杂关系的关键指标。它们与传统网络中的概念有所不同，具体的定义和内涵如下：</p>
-<h3 id="二、强度、超边度、超边强度、超边基数等概念的定义和内涵"><a href="#二、强度、超边度、超边强度、超边基数等概念的定义和内涵" class="headerlink" title="二、强度、超边度、超边强度、超边基数等概念的定义和内涵"></a>二、强度、超边度、超边强度、超边基数等概念的定义和内涵</h3><h4 id="1-强度（Strength）"><a href="#1-强度（Strength）" class="headerlink" title="1. 强度（Strength）"></a>1. <strong>强度（Strength）</strong></h4><p>   在超网络中，节点的强度通常是指一个节点与其他节点通过超边相连接的<strong>总权重</strong>。这一概念与传统网络中的“节点强度”相似，但在超网络中，超边的权重可以根据连接的节点数、连接的重要性等进行加权计算。</p>
-<ul>
-<li><strong>定义</strong>：某个节点强度是该节点所参与的超边的权重之和。</li>
-<li><strong>内涵</strong>：强度描述了节点在网络中的参与度和影响力，强度越大，表明该节点在网络中与其他节点的关联越多或越强。</li>
-</ul>
-<h4 id="2-超边度（Hyperedge-Degree）"><a href="#2-超边度（Hyperedge-Degree）" class="headerlink" title="2. 超边度（Hyperedge Degree）"></a>2. <strong>超边度（Hyperedge Degree）</strong></h4><p>   超边度是指某个超边中所包含的<strong>节点的数量</strong>。在传统网络中，一条边连接两个节点，而在超网络中，超边可以连接多个节点，因此超边度描述了这条超边的“多度性”。</p>
-<ul>
-<li><strong>定义</strong>：某条超边度是该超边所连接的节点数量。</li>
-<li><strong>内涵</strong>：超边度反映了超边的复杂程度，也可以反映超边在网络中连接多个节点的能力，超边度越高，表示该超边涉及的节点越多。</li>
-</ul>
-<h4 id="3-超边强度（Hyperedge-Strength）"><a href="#3-超边强度（Hyperedge-Strength）" class="headerlink" title="3. 超边强度（Hyperedge Strength）"></a>3. <strong>超边强度（Hyperedge Strength）</strong></h4><p>   超边强度表示的是某一超边的<strong>总权重</strong>。这一概念与节点强度类似，但针对的是超边本身。超边强度可以通过超边连接的节点间的交互频率、关系重要性等因素来加权计算。</p>
-<ul>
-<li><strong>定义</strong>：某条超边强度是该超边中所有节点对之间关系的权重总和。</li>
-<li><strong>内涵</strong>：超边强度反映了超边中节点之间关联的强弱程度，强度越高，说明该超边内节点的关系越紧密或相互影响力越大。</li>
-</ul>
-<h4 id="4-超边基数（Hyperedge-Cardinality）"><a href="#4-超边基数（Hyperedge-Cardinality）" class="headerlink" title="4. 超边基数（Hyperedge Cardinality）"></a>4. <strong>超边基数（Hyperedge Cardinality）</strong></h4><p>   超边基数是超网络中的一个基础概念，指的是某一条超边连接的<strong>节点的数目</strong>。与超边度相似，但“基数”更侧重于表示这条超边在形式上的“连接数量”属性，而非具体的网络结构含义。</p>
-<ul>
-<li><strong>定义</strong>：超边基数是指某条超边所连接的节点数量。</li>
-<li><strong>内涵</strong>：超边基数是一个纯粹的集合论概念，直接反映了超边的规模。它与超边度的内涵相似，但可以更直接地用于一些集合论形式化的分析中。</li>
-</ul>
-<h4 id="这四个概念的关系："><a href="#这四个概念的关系：" class="headerlink" title="这四个概念的关系："></a>这四个概念的关系：</h4><ol>
-<li><strong>强度</strong>和<strong>超边强度</strong>都涉及权重，但强度是针对<strong>节点</strong>，而超边强度是针对<strong>超边</strong>。</li>
-<li><strong>超边度</strong>和<strong>超边基数</strong>都描述了超边的节点数目，两者在定义上非常接近，但基数通常在集合论上下文中使用，表示形式化的节点数，而超边度则更多用于结构性分析。</li>
-<li>强度和超边度共同影响网络的整体拓扑结构，尤其是在研究网络中节点的影响力或网络中的信息传递时，它们是重要的衡量指标。</li>
-</ol>
-<p>这些指标对于理解超网络的复杂结构非常重要，有助于揭示节点在超网络中扮演的角色以及节点之间关系的强度。</p>
-<h3 id="三、聚集指标"><a href="#三、聚集指标" class="headerlink" title="三、聚集指标"></a>三、聚集指标</h3><p><strong>聚集指标（Aggregation Measures）</strong> 是用来衡量网络中节点及其邻居之间的连通性或凝聚性，通常用来描述节点之间形成紧密团体或子结构的程度。在网络科学中，聚集性是理解节点间局部结构特性的一个重要方面，尤其是在社交网络或合作网络中，它反映了节点间相互依赖或协作的强度。</p>
-<p>对于<strong>传统网络</strong>，最常见的聚集性指标是<strong>聚类系数（Clustering Coefficient）</strong>，而在<strong>超网络</strong>中，由于超边可以连接多个节点，聚集性指标的计算和含义会更加复杂。下面是聚集性相关的主要指标和它们的内涵：</p>
-<h4 id="1-聚类系数（Clustering-Coefficient）"><a href="#1-聚类系数（Clustering-Coefficient）" class="headerlink" title="1. 聚类系数（Clustering Coefficient）"></a>1. <strong>聚类系数（Clustering Coefficient）</strong></h4><p>   聚类系数衡量网络中节点的邻居之间互相连接的紧密程度。它是局部聚集性的常用度量，通常分为以下两种类型：</p>
-<ul>
-<li><p><strong>局部聚类系数（Local Clustering Coefficient）</strong>：</p>
-<ul>
-<li><strong>定义</strong>：对于某个节点，局部聚类系数是其邻居节点之间实际存在的连边数量与可能存在的连边数量的比值。</li>
-<li><strong>内涵</strong>：局部聚类系数反映了某个节点周围形成“团体”或“圈子”的程度。值越大，说明该节点的邻居节点之间的连接越紧密。</li>
-<li><strong>公式</strong>（传统网络）：<br><img src="/./images/efigure02.png" alt="图"></li>
-</ul>
-</li>
-<li><p><strong>全局聚类系数（Global Clustering Coefficient）</strong>：</p>
-<ul>
-<li><strong>定义</strong>：全局聚类系数是网络中所有节点的局部聚类系数的平均值，或者通过三角形与三节点子图的比例来计算。</li>
-<li><strong>内涵</strong>：全局聚类系数反映整个网络中的聚集性特征，描述网络整体上节点是否倾向于形成聚集的小团体。</li>
-</ul>
-</li>
-</ul>
-<p>   在<strong>超网络</strong>中，聚类系数的计算更加复杂，因为超边可以连接多个节点。常见的扩展方式包括：</p>
-<ul>
-<li><strong>超边聚类系数（Hyperedge Clustering Coefficient）</strong>：基于共享超边来定义，计算节点与其邻居之间通过共同超边连接的概率。</li>
-<li><strong>超网络的高阶聚集性</strong>：考虑超边与超边之间的相互交叠和共享节点的关系，用来描述超边之间的紧密度。</li>
-</ul>
-<h4 id="2-三角形闭合率（Triangle-Closure-Rate）"><a href="#2-三角形闭合率（Triangle-Closure-Rate）" class="headerlink" title="2. 三角形闭合率（Triangle Closure Rate）"></a>2. <strong>三角形闭合率（Triangle Closure Rate）</strong></h4><ul>
-<li><strong>定义</strong>：三角形闭合率是网络中两两节点与第三个共同邻居形成三角形的概率。它是另一种衡量聚集性的指标，尤其在社交网络中，朋友的朋友往往也会成为朋友，这种现象就体现在三角形闭合率上。</li>
-<li><strong>超网络中的扩展</strong>：超网络中的三角形闭合可以扩展为多节点子结构的闭合，或者通过分析某些节点与其他多个节点共同形成的紧密结构来计算。</li>
-</ul>
-<h4 id="3-模块度（Modularity）"><a href="#3-模块度（Modularity）" class="headerlink" title="3. 模块度（Modularity）"></a>3. <strong>模块度（Modularity）</strong></h4><p>   虽然模块度通常用于衡量网络的社区结构，但它也与聚集性紧密相关，因为高模块度的网络意味着网络中存在高度聚集的子群体。模块度高的网络倾向于形成社区，即网络中的节点分为若干个内部连接紧密而外部连接稀疏的群体。</p>
-<ul>
-<li><strong>定义</strong>：模块度通过衡量网络中的实际边数与随机分配边数之间的差异，来评价网络划分为社区的优劣。</li>
-<li><strong>公式</strong>：<br><img src="/./images/efigure01.png" alt="图1"></li>
-</ul>
-<h4 id="4-超边重叠度（Hyperedge-Overlap）"><a href="#4-超边重叠度（Hyperedge-Overlap）" class="headerlink" title="4. 超边重叠度（Hyperedge Overlap）"></a>4. <strong>超边重叠度（Hyperedge Overlap）</strong></h4><ul>
-<li><strong>定义</strong>：超边重叠度反映超网络中不同超边之间共享节点的程度。两个超边之间如果共享更多的节点，它们之间的重叠度就越高。</li>
-<li><strong>内涵</strong>：超边重叠度是超网络中高阶聚集性的反映，说明网络中的节点倾向于通过多个超边彼此紧密联系。</li>
-</ul>
-<h4 id="5-社团系数（Community-Coefficient）"><a href="#5-社团系数（Community-Coefficient）" class="headerlink" title="5. 社团系数（Community Coefficient）"></a>5. <strong>社团系数（Community Coefficient）</strong></h4><ul>
-<li><strong>定义</strong>：社团系数是描述网络中节点聚集成若干社区的能力。它是通过分析网络的模块结构，计算网络在不同社区中节点连接的紧密程度。</li>
-<li><strong>内涵</strong>：社团系数较高意味着网络有明显的聚集性，形成了多个社区或群体。</li>
-</ul>
-<h4 id="6-凝聚子图（Cohesive-Subgraphs）"><a href="#6-凝聚子图（Cohesive-Subgraphs）" class="headerlink" title="6. 凝聚子图（Cohesive Subgraphs）"></a>6. <strong>凝聚子图（Cohesive Subgraphs）</strong></h4><ul>
-<li><strong>定义</strong>：凝聚子图是指节点之间相互连接紧密的子结构。k-核心（k-core）是一个典型的凝聚子图，它是由所有度至少为 ( k ) 的节点及其连边构成的子图。</li>
-<li><strong>内涵</strong>：凝聚子图反映了网络中节点局部聚集性，k-核心分析可以帮助识别网络中高度凝聚的子结构。</li>
-</ul>
-<h4 id="7-过度连通性（Hyperconnectivity）"><a href="#7-过度连通性（Hyperconnectivity）" class="headerlink" title="7. 过度连通性（Hyperconnectivity）"></a>7. <strong>过度连通性（Hyperconnectivity）</strong></h4><ul>
-<li><strong>定义</strong>：过度连通性是超网络中节点通过超边的连接程度，即节点之间不仅通过直接超边相连，而且与多个其他节点共享相同的超边，形成紧密的聚集结构。</li>
-<li><strong>内涵</strong>：过度连通性体现了超网络中节点间多维度的连接关系，反映了网络的复杂聚集性。</li>
-</ul>
-<h4 id="8-超网络的k-核心（k-core-in-Hypernetwork）"><a href="#8-超网络的k-核心（k-core-in-Hypernetwork）" class="headerlink" title="8. 超网络的k-核心（k-core in Hypernetwork）"></a>8. <strong>超网络的k-核心（k-core in Hypernetwork）</strong></h4><ul>
-<li><strong>定义</strong>：超网络中的k-核心是由所有度至少为 ( k ) 的节点构成的子结构，它表示节点的局部密集区域。由于超网络中的边可以是多节点连接，因此k-核心的定义需要扩展以适应超边的复杂性。</li>
-<li><strong>内涵</strong>：超网络的k-核心分析帮助识别网络中最具凝聚力的区域，通常用于识别网络中最核心的子群体。</li>
-</ul>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>聚集指标反映了网络中的节点及其邻居之间的连通性，尤其在超网络中，这种聚集性更为复杂，涉及多个节点通过超边进行连接的多维度结构。通过这些聚集性指标，我们可以更深入地理解网络的局部特性和群体结构，从而发现隐藏在网络中的紧密关系和社区模式。</p>
-<h3 id="四、超边相似性的个性化推荐框架"><a href="#四、超边相似性的个性化推荐框架" class="headerlink" title="四、超边相似性的个性化推荐框架"></a>四、超边相似性的个性化推荐框架</h3><p>在超网络中，<strong>超边相似性</strong>可以为个性化推荐提供新的视角。与传统网络中基于节点之间的连接不同，超网络中的超边连接多个节点，因此可以捕捉到多节点之间的复杂关系。这使得基于超边相似性构建的个性化推荐框架更适合复杂数据集中的推荐任务，如社交媒体、电子商务、科研合作等场景。</p>
-<p>超边相似性在个性化推荐中可以通过度量用户或物品的行为模式相似性，从而为用户提供更为精准的推荐。以下是超边相似性推荐框架的核心组成部分：</p>
-<h4 id="1-数据表示与超网络构建"><a href="#1-数据表示与超网络构建" class="headerlink" title="1. 数据表示与超网络构建"></a>1. <strong>数据表示与超网络构建</strong></h4><p>   在个性化推荐系统中，数据通常包含用户与物品的交互，如用户点击、购买、评论等。在超网络中，这些交互可以通过<strong>超边</strong>来表示，例如：</p>
-<ul>
-<li>用户-物品-类别的多重关系可以构建为超网络中的一个超边，连接用户、物品以及其类别标签。</li>
-<li>用户之间共享的行为（如共同参与某个活动）也可以通过超边表示，超边连接了所有参与同一活动的用户。</li>
-</ul>
-<p>   <strong>步骤</strong>：</p>
-<ul>
-<li><strong>节点表示</strong>：用户、物品和相关属性（如类别、标签等）作为超网络的节点。</li>
-<li><strong>超边构建</strong>：通过分析用户行为的共同特征（如同时购买的物品或参与的活动），构建超边，将多个相关节点连接起来。</li>
-</ul>
-<h4 id="2-超边相似性计算"><a href="#2-超边相似性计算" class="headerlink" title="2. 超边相似性计算"></a>2. <strong>超边相似性计算</strong></h4><p>   要进行个性化推荐，关键是定义和计算超边的相似性。超边相似性可以通过以下方法计算：</p>
-<ul>
-<li><p><strong>基于节点的相似性</strong>：</p>
-<ul>
-<li><strong>节点交叠度</strong>：如果两个超边共享相同的节点（例如，用户参与了多个相同的物品），可以认为它们具有较高的相似性。相似性可以通过计算超边共享节点的数量来定义：<br><img src="/./images/efigure03.png" alt="图3"></li>
-</ul>
-</li>
-<li><p><strong>基于特征向量的相似性</strong>：</p>
-<ul>
-<li>对每个超边中的节点进行嵌入表示，将节点的属性和行为编码为向量。然后使用余弦相似性、欧几里得距离等方法计算超边之间的相似性：<br><img src="/./images/efigure04.png" alt="图4"></li>
-</ul>
-</li>
-<li><p><strong>基于信息传播的相似性</strong>：</p>
-<ul>
-<li>考虑超网络中信息传播的路径。如果信息从一个超边传播到另一个超边的效率较高（例如通过短路径、多节点传播等），那么可以认为它们相似性较高。信息传播效率可以通过随机游走、图卷积等方法进行计算。</li>
-</ul>
-</li>
-</ul>
-<h4 id="3-推荐算法设计"><a href="#3-推荐算法设计" class="headerlink" title="3. 推荐算法设计"></a>3. <strong>推荐算法设计</strong></h4><p>基于超边相似性，可以设计多种个性化推荐算法，核心思想是利用相似的超边来为用户生成个性化的推荐列表：</p>
-<ul>
-<li><p><strong>基于邻居的协同过滤（Neighborhood-based Collaborative Filtering）</strong>：</p>
-<ul>
-<li>为每个用户构建一个包含与其相关的超边集合，基于这些超边找到与之最相似的超边集合。然后推荐这些相似超边中的物品或服务给用户。</li>
-<li>具体步骤：先找到用户所在的超边，然后根据超边相似性找到最相似的超边，从中提取新的物品并推荐给用户。</li>
-</ul>
-</li>
-<li><p><strong>矩阵分解方法（Matrix Factorization）</strong>：</p>
-<ul>
-<li>将超网络中的节点和超边转化为用户-物品矩阵，通过矩阵分解来学习潜在的用户和物品的特征表示。通过超边的相似性，优化矩阵分解过程，预测用户对未见物品的评分。</li>
-<li>与传统矩阵分解不同，超边的高维连接性使得在分解过程中需要考虑更多的上下文信息，适合捕捉复杂的用户行为模式。</li>
-</ul>
-</li>
-<li><p><strong>图嵌入与深度学习（Graph Embedding &amp; Deep Learning）</strong>：</p>
-<ul>
-<li>基于超边构建用户和物品的特征向量，通过深度学习模型（如图神经网络 GNN）对超网络进行嵌入学习。通过训练模型学习到节点和超边的高维表示，然后基于超边相似性进行推荐。</li>
-<li>例如，使用图卷积网络（GCN）在超网络中传播信息，更新节点的嵌入表示，从而更好地捕捉用户和物品之间的复杂关系。</li>
-</ul>
-</li>
-</ul>
-<h4 id="4-个性化推荐生成"><a href="#4-个性化推荐生成" class="headerlink" title="4. 个性化推荐生成"></a>4. <strong>个性化推荐生成</strong></h4><ul>
-<li><strong>Top-N推荐</strong>：基于超边相似性，为每个用户生成与其行为最相关的超边推荐列表，然后从这些超边中提取出最有可能吸引用户的物品，最终生成Top-N推荐列表。</li>
-<li><strong>推荐多样性</strong>：通过控制推荐中的超边相似性阈值，增加推荐结果的多样性。例如，除了推荐与用户行为最相似的超边，也可以适当推荐相似度较低但潜在兴趣较大的超边。</li>
-</ul>
-<h4 id="5-评价与优化"><a href="#5-评价与优化" class="headerlink" title="5. 评价与优化"></a>5. <strong>评价与优化</strong></h4><ul>
-<li><strong>精确率和召回率</strong>：衡量推荐系统的准确性，精确率反映推荐结果的准确程度，召回率表示推荐覆盖了多少用户潜在感兴趣的物品。</li>
-<li><strong>覆盖率</strong>：衡量系统推荐的物品范围是否广泛，即推荐是否过于集中于少数流行物品。</li>
-<li><strong>新颖性与多样性</strong>：评价系统是否能够推荐给用户一些新颖的或不太常见的物品，避免推荐同质化。</li>
-</ul>
-<h4 id="案例应用："><a href="#案例应用：" class="headerlink" title="案例应用："></a>案例应用：</h4><ol>
-<li><strong>电商推荐</strong>：在电子商务平台中，超边可以表示用户的购物行为和商品的多属性信息（如品牌、类别）。基于超边相似性，可以为用户推荐符合其历史购买偏好的新商品。</li>
-<li><strong>社交媒体推荐</strong>：在社交媒体中，超边可以表示用户的社交群体和内容互动行为（如共同参与的活动、点赞的内容等）。基于超边相似性，可以推荐用户感兴趣的帖子、群组或好友。</li>
-</ol>
-<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>基于超边相似性的个性化推荐框架通过分析用户、物品及其复杂的多维关系，能够捕捉到传统网络难以揭示的用户兴趣模式和行为特征。这一框架在电子商务、社交媒体、科研合作等多个领域具有广泛的应用潜力，并且能够通过灵活的超网络构建和相似性度量方法，进一步提高推荐系统的精准性和多样性。</p>
-<h3 id="五、合作网络、竞争网络、交通网络"><a href="#五、合作网络、竞争网络、交通网络" class="headerlink" title="五、合作网络、竞争网络、交通网络"></a>五、合作网络、竞争网络、交通网络</h3><p><strong>合作网络</strong>、<strong>竞争网络</strong>和<strong>交通网络</strong>是复杂网络研究中的典型应用领域，它们反映了不同系统中节点（如个体、组织或地点）之间的特定交互关系。以下是对这三类网络的介绍及其主要特性：</p>
-<h4 id="1-合作网络（Collaboration-Network）"><a href="#1-合作网络（Collaboration-Network）" class="headerlink" title="1. 合作网络（Collaboration Network）"></a>1. <strong>合作网络（Collaboration Network）</strong></h4><p>   <strong>定义</strong>：合作网络是描述个体或组织之间协作关系的网络，节点代表个体或组织，边表示它们之间的合作关系。这类网络常见于科研、商业和创新等领域。</p>
-<p>   <strong>应用场景</strong>：</p>
-<ul>
-<li><strong>科研合作</strong>：科研人员之间的合作构成了典型的合作网络，边表示他们在同一篇论文或项目上的合作。</li>
-<li><strong>商业合作</strong>：企业或公司之间的合作、联盟构成商业合作网络，例如公司共同开发产品、分享技术。</li>
-<li><strong>创新生态系统</strong>：在技术创新领域，企业、研发机构等通过合作共同推动创新，形成复杂的合作网络。</li>
-</ul>
-<p>   <strong>特性</strong>：</p>
-<ul>
-<li><strong>高聚集性</strong>：在合作网络中，合作伙伴往往倾向于形成三角关系或更紧密的团体，合作网络的聚集系数较高。</li>
-<li><strong>中心性</strong>：一些节点（如科研领军人物、核心企业）会成为合作网络的中心节点，拥有较高的度和中心性。</li>
-<li><strong>小世界效应</strong>：合作网络通常表现出小世界效应，意味着通过少数中介节点，两个任意节点之间的距离很短。</li>
-</ul>
-<p>   <strong>研究方法</strong>：</p>
-<ul>
-<li><strong>节点中心性分析</strong>：识别网络中最具影响力的个体或组织（如具有高度中心性的科研人员或企业）。</li>
-<li><strong>社团检测</strong>：分析网络中的合作群体，找出具有紧密合作关系的子网络（如科研领域中的特定研究团队）。</li>
-</ul>
-<h4 id="2-竞争网络（Competition-Network）"><a href="#2-竞争网络（Competition-Network）" class="headerlink" title="2. 竞争网络（Competition Network）"></a>2. <strong>竞争网络（Competition Network）</strong></h4><p>   <strong>定义</strong>：竞争网络描述个体或组织之间的竞争关系。节点代表竞争主体（如企业、个体等），边表示它们之间的竞争。与合作网络不同，竞争网络中的关系具有对抗性。</p>
-<p>   <strong>应用场景</strong>：</p>
-<ul>
-<li><strong>市场竞争</strong>：企业之间在产品市场上的竞争，边表示企业之间争夺同一市场份额的关系。</li>
-<li><strong>生态竞争</strong>：在生物学中，物种之间为资源而竞争也构成竞争网络，物种通过争夺栖息地、食物等资源进行竞争。</li>
-<li><strong>社交竞争</strong>：个人在社交网络中的地位竞争，例如影响力、关注度的争夺，形成竞争关系。</li>
-</ul>
-<p>   <strong>特性</strong>：</p>
-<ul>
-<li><strong>异质性</strong>：竞争网络通常由不同规模、不同实力的节点构成，节点的度分布可能高度不均匀，少数节点（如行业巨头）可能与许多节点存在竞争关系。</li>
-<li><strong>对抗性结构</strong>：竞争网络中的关系更多表现为负向关系（即“竞争”），而不是协作；因此，网络中可能会形成相互竞争的团体或结构。</li>
-<li><strong>权力法则分布</strong>：竞争网络中的度分布常常遵循幂律分布，表明大多数节点只有少数竞争对手，而少数节点有大量的竞争对手。</li>
-</ul>
-<p>   <strong>研究方法</strong>：</p>
-<ul>
-<li><strong>对抗性图模型</strong>：使用正负边表示竞争和合作关系的对抗性图来分析竞争网络中的动态变化和稳定结构。</li>
-<li><strong>博弈论分析</strong>：在竞争网络中，通过博弈论分析参与者的竞争策略，预测网络中竞争平衡的演化趋势。</li>
-</ul>
-<h4 id="3-交通网络（Transportation-Network）"><a href="#3-交通网络（Transportation-Network）" class="headerlink" title="3. 交通网络（Transportation Network）"></a>3. <strong>交通网络（Transportation Network）</strong></h4><p>   <strong>定义</strong>：交通网络描述了地理位置之间的运输或通信连接，节点代表地点（如城市、站点），边代表连接这些地点的交通路线（如道路、铁路、航线等）。交通网络广泛存在于实际生活中的各种运输和物流系统中。</p>
-<p>   <strong>应用场景</strong>：</p>
-<ul>
-<li><strong>城市交通系统</strong>：城市中的公交线路、地铁线路、道路系统构成了典型的交通网络，边表示站点之间的道路或轨道连接。</li>
-<li><strong>航空网络</strong>：机场之间的航班航线构成了全球航空交通网络，节点是机场，边表示航线。</li>
-<li><strong>物流网络</strong>：企业的供应链或物流网络也是一种交通网络，节点为仓库或配送中心，边表示货物的运输路径。</li>
-</ul>
-<p>   <strong>特性</strong>：</p>
-<ul>
-<li><strong>空间嵌入性</strong>：交通网络中的节点和边通常依赖于空间位置，网络中的连接与地理距离有关。</li>
-<li><strong>网络效率</strong>：交通网络的效率非常重要，它衡量货物、人员或信息能否快速、便捷地从一个节点传递到另一个节点。</li>
-<li><strong>层级结构</strong>：交通网络往往具有层级结构，少数枢纽节点（如大型机场或交通枢纽）承担着连接大量边的作用，而大多数节点与枢纽节点相连。</li>
-</ul>
-<p>   <strong>研究方法</strong>：</p>
-<ul>
-<li><strong>最短路径算法</strong>：交通网络中最常用的分析方法，用于寻找节点之间的最优路径，以最小化运输成本或时间。</li>
-<li><strong>网络鲁棒性分析</strong>：分析交通网络在面对突发事件（如道路中断、天气影响等）时的稳定性和应对能力。</li>
-<li><strong>中心性分析</strong>：识别交通网络中的重要节点（如交通枢纽），这些节点往往具有较高的度中心性或介数中心性。</li>
-</ul>
-<h4 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h4><ul>
-<li><strong>合作网络</strong>强调个体或组织间的协作与共赢关系，常见于科研、商业等领域，具有高聚集性和小世界效应。</li>
-<li><strong>竞争网络</strong>侧重于个体或组织间的竞争与对抗关系，广泛存在于经济、生态等系统中，具有异质性和对抗性。</li>
-<li><strong>交通网络</strong>则描述了地理位置之间的连接，重点在于如何高效、安全地进行运输或通信，通常依赖于空间嵌入性和层级结构。</li>
-</ul>
-<p>三者的主要区别在于节点之间的关系性质：合作网络以协作为主，竞争网络以对抗为主，而交通网络则注重连接与运输效率。这三种网络的研究对理解复杂系统中的不同交互模式具有重要意义。</p>
-<h3 id="六、驱动网络演化的因素"><a href="#六、驱动网络演化的因素" class="headerlink" title="六、驱动网络演化的因素"></a>六、驱动网络演化的因素</h3><p>驱动网络演化的因素是指影响网络结构随时间变化的主要原因或机制。不同类型的网络（如合作网络、竞争网络、社交网络、生态网络等）会受到不同的因素驱动，但通常以下几个关键因素在多种网络演化过程中起着重要作用：</p>
-<h4 id="1-节点增长（Node-Growth）"><a href="#1-节点增长（Node-Growth）" class="headerlink" title="1. 节点增长（Node Growth）"></a>1. <strong>节点增长（Node Growth）</strong></h4><p><strong>定义</strong>：网络中的新节点不断加入，导致网络规模逐渐扩大。</p>
-<p><strong>影响</strong>：</p>
-<ul>
-<li><strong>社交网络</strong>：随着时间推移，新用户不断加入社交平台，形成新的连接关系，网络规模迅速扩展。</li>
-<li><strong>交通网络</strong>：新城市、站点的加入扩展了网络的地理覆盖范围，增加了交通线路的复杂性。</li>
-<li><strong>科研合作网络</strong>：随着新研究人员进入某个领域，他们与现有科研人员合作，形成新的合作关系。</li>
-</ul>
-<p><strong>机制</strong>：</p>
-<ul>
-<li><strong>优先连接机制</strong>：即“富者愈富”现象，新节点倾向于连接已有网络中的高度中心节点，导致度分布呈现幂律分布，这种机制广泛存在于互联网、社交网络、科学合作网络等系统中。</li>
-</ul>
-<h4 id="2-边的重组和丢失（Edge-Rewiring-and-Loss）"><a href="#2-边的重组和丢失（Edge-Rewiring-and-Loss）" class="headerlink" title="2. 边的重组和丢失（Edge Rewiring and Loss）"></a>2. <strong>边的重组和丢失（Edge Rewiring and Loss）</strong></h4><p><strong>定义</strong>：现有的连接（边）可以被重新排列或丢失，改变了网络中的连接结构。</p>
-<p><strong>影响</strong>：</p>
-<ul>
-<li><strong>合作网络</strong>：企业或科研团队之间的合作关系可能随项目结束或战略变化而终止，同时可能与新的合作伙伴建立联系。</li>
-<li><strong>社交网络</strong>：人与人之间的社交关系可能随时间淡化或断裂，老朋友的联系可能减少，新朋友的联系增加。</li>
-<li><strong>生态网络</strong>：物种间的竞争或协作关系可能随着生态环境的变化而调整，导致某些物种间的交互关系发生变化。</li>
-</ul>
-<p><strong>机制</strong>：</p>
-<ul>
-<li><strong>连接偏好变化</strong>：节点的连接偏好（如合作对象、竞争对手等）可能随着时间变化而发生改变，这会导致边的重新分配。</li>
-<li><strong>资源竞争与合作演化</strong>：在竞争和合作网络中，随着资源或市场变化，竞争或合作关系可能发生转变，影响边的存在与否。</li>
-</ul>
-<h4 id="3-网络中的局部相互作用（Local-Interaction）"><a href="#3-网络中的局部相互作用（Local-Interaction）" class="headerlink" title="3. 网络中的局部相互作用（Local Interaction）"></a>3. <strong>网络中的局部相互作用（Local Interaction）</strong></h4><p><strong>定义</strong>：节点通过与邻居的局部交互，影响到整个网络的演化。</p>
-<p><strong>影响</strong>：</p>
-<ul>
-<li><strong>社交网络</strong>：朋友之间的意见影响力、模仿行为等会促使个体改变连接行为，例如通过共同朋友认识新的人，形成新的连接。</li>
-<li><strong>生态网络</strong>：物种的局部相互作用（如捕食、竞争）会影响网络的稳定性和演化趋势，局部互动可能导致物种灭绝或繁荣。</li>
-</ul>
-<p><strong>机制</strong>：</p>
-<ul>
-<li><strong>同质性偏好（Homophily）</strong>：个体更倾向于与相似的个体建立联系，导致网络中节点之间的相似性不断增强。</li>
-<li><strong>三角闭合（Triadic Closure）</strong>：如果两个节点有共同的邻居，那么它们更有可能建立连接，形成闭合三角形的关系。</li>
-</ul>
-<h4 id="4-外部冲击与干扰（External-Shocks-and-Disturbances）"><a href="#4-外部冲击与干扰（External-Shocks-and-Disturbances）" class="headerlink" title="4. 外部冲击与干扰（External Shocks and Disturbances）"></a>4. <strong>外部冲击与干扰（External Shocks and Disturbances）</strong></h4><p><strong>定义</strong>：外部环境的变化或重大事件会对网络结构产生深远影响。</p>
-<p><strong>影响</strong>：</p>
-<ul>
-<li><strong>交通网络</strong>：自然灾害、战争、政策变化等外部因素可能导致部分交通线路中断、重建或扩展，改变网络的整体结构。</li>
-<li><strong>金融网络</strong>：市场崩溃、金融危机等外部冲击会导致网络中的企业、银行破产或重组，改变它们之间的金融依赖关系。</li>
-<li><strong>生态网络</strong>：气候变化、物种入侵或人类活动等外部干扰会导致物种灭绝或迁移，进而改变生态网络中的关系。</li>
-</ul>
-<p><strong>机制</strong>：</p>
-<ul>
-<li><strong>脆弱性与鲁棒性</strong>：网络中某些节点或边对外部冲击特别敏感，这些关键节点或边的变化会对网络整体结构产生深远影响。</li>
-<li><strong>适应性演化</strong>：某些网络（如生物网络或社会网络）具有适应外部冲击的能力，能够通过内部调整来缓冲外部影响。</li>
-</ul>
-<h4 id="5-节点属性和偏好的变化（Node-Attributes-and-Preferences-Changes）"><a href="#5-节点属性和偏好的变化（Node-Attributes-and-Preferences-Changes）" class="headerlink" title="5. 节点属性和偏好的变化（Node Attributes and Preferences Changes）"></a>5. <strong>节点属性和偏好的变化（Node Attributes and Preferences Changes）</strong></h4><p><strong>定义</strong>：节点的属性（如年龄、偏好、资源等）或其偏好随着时间推移发生变化，影响其连接行为。</p>
-<p><strong>影响</strong>：</p>
-<ul>
-<li><strong>社交网络</strong>：随着时间推移，人的兴趣、职业、居住地发生变化，可能导致社交关系的调整和重组。</li>
-<li><strong>科研合作网络</strong>：科研人员的研究方向或兴趣发生变化，会促使他们寻找新的合作伙伴，改变科研网络的结构。</li>
-<li><strong>竞争网络</strong>：公司或个体的策略、资源发生变化，可能使得它们从一个竞争对手转向另一个竞争对手。</li>
-</ul>
-<p><strong>机制</strong>：</p>
-<ul>
-<li><strong>兴趣趋同效应</strong>：节点的偏好趋同会导致它们更容易相互连接，例如在社交网络中，拥有相似兴趣的用户更容易形成联系。</li>
-<li><strong>节点成熟度与演化</strong>：一些网络中节点随着“成长”而改变连接行为，例如新公司进入市场时可能与小公司竞争，但随着扩展会与大公司竞争。</li>
-</ul>
-<h4 id="6-随机性与噪声（Randomness-and-Noise）"><a href="#6-随机性与噪声（Randomness-and-Noise）" class="headerlink" title="6. 随机性与噪声（Randomness and Noise）"></a>6. <strong>随机性与噪声（Randomness and Noise）</strong></h4><p><strong>定义</strong>：网络的演化过程有时受到随机因素或噪声的影响，导致不可预测的变化。</p>
-<p><strong>影响</strong>：</p>
-<ul>
-<li><strong>社交网络</strong>：个体之间的联系可能由于偶然的事件或短暂的交互而形成，形成随机连接。</li>
-<li><strong>交通网络</strong>：道路建设或关闭可能并非完全计划内，而是受到偶然事件（如突发需求、政治决策）的影响。</li>
-<li><strong>生态网络</strong>：物种关系的演化过程中存在一定的随机性，例如突发事件导致某个物种灭绝或迁移。</li>
-</ul>
-<p><strong>机制</strong>：</p>
-<ul>
-<li><strong>随机图模型</strong>：在某些网络中，随机连接或断裂可能会随着网络增长而发生，导致结构演化呈现一定的随机特性。</li>
-<li><strong>随机游走模型</strong>：某些网络演化模型考虑节点随机游走来寻找连接伙伴，这种随机性影响网络的最终结构。</li>
-</ul>
-<h4 id="7-反馈机制（Feedback-Mechanisms）"><a href="#7-反馈机制（Feedback-Mechanisms）" class="headerlink" title="7. 反馈机制（Feedback Mechanisms）"></a>7. <strong>反馈机制（Feedback Mechanisms）</strong></h4><p><strong>定义</strong>：网络中节点的行为会反馈到整个网络，进而推动网络的演化。</p>
-<p><strong>影响</strong>：</p>
-<ul>
-<li><strong>经济网络</strong>：企业间的合作或竞争关系会影响市场的反馈，进而调整企业的竞争策略，导致网络结构随之变化。</li>
-<li><strong>社交网络</strong>：个体的行为（如发帖、评论等）影响其社交反馈（如点赞、评论数），这又进一步影响其未来的连接行为。</li>
-<li><strong>生态网络</strong>：物种间的捕食和竞争关系会形成生态反馈，导致物种之间的关系动态调整。</li>
-</ul>
-<p><strong>机制</strong>：</p>
-<ul>
-<li><strong>正反馈循环</strong>：节点之间的某种行为（如合作）会产生增强该行为的反馈，导致网络中的合作关系更加紧密。</li>
-<li><strong>负反馈机制</strong>：竞争或资源限制导致的负反馈可能会抑制某些关系的进一步发展，促使网络中的节点或边进行调整。</li>
-</ul>
-<h4 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h4><p>网络的演化通常是由多种因素共同作用的结果，这些因素既包括网络内部节点和边的行为（如节点增长、局部相互作用），也包括外部环境变化（如外部冲击、随机事件）。网络的结构在这些驱动因素的影响下，不断进行调整、扩展或收缩，从而展现出复杂的演化模式。理解这些驱动因素有助于预测网络未来的演化趋势，并为实际系统中的问题（如社交网络的增长、交通网络的优化、生态网络的保护）提供参考。</p>
-<h3 id="七、连接机制、竞争驱动机制、节点状态转换机制"><a href="#七、连接机制、竞争驱动机制、节点状态转换机制" class="headerlink" title="七、连接机制、竞争驱动机制、节点状态转换机制"></a>七、连接机制、竞争驱动机制、节点状态转换机制</h3><ol>
-<li><h4 id="混合连接机制："><a href="#混合连接机制：" class="headerlink" title="混合连接机制："></a><strong>混合连接机制</strong>：</h4><ul>
-<li>这种机制结合了不同类型的连接方式，旨在提高系统的灵活性和效率。在网络中，它可能涉及将有线和无线连接结合在一起，利用各自的优势来满足不同的需求。混合连接机制可以在数据传输、网络负载均衡和资源分配等方面发挥重要作用。</li>
-</ul>
-</li>
-<li><h4 id="竞争驱动机制："><a href="#竞争驱动机制：" class="headerlink" title="竞争驱动机制："></a><strong>竞争驱动机制</strong>：</h4><ul>
-<li>该机制涉及多个参与者之间的竞争，驱动它们优化自身的行为，以获得资源或达成目标。在经济学和博弈论中，这种机制常用于描述市场竞争。在技术系统中，竞争驱动机制可以促使不同的算法或技术不断改进，以便在特定任务中表现更好。</li>
-</ul>
-</li>
-<li><h4 id="节点状态转换机制："><a href="#节点状态转换机制：" class="headerlink" title="节点状态转换机制："></a><strong>节点状态转换机制</strong>：</h4><ul>
-<li>这个机制描述了系统中节点如何在不同状态之间转换。通常用于图论和网络理论中，节点可能根据特定的规则或事件（如接收到的信息、时间变化等）在不同状态（如激活、待机、故障等）之间切换。节点状态转换机制可以用于建模复杂系统的动态行为，如计算机网络、社交网络或生物网络。</li>
-</ul>
-</li>
-</ol>
-<h3 id="八、邻域择优机制、允许老节点互连机制、断边重连机制驱"><a href="#八、邻域择优机制、允许老节点互连机制、断边重连机制驱" class="headerlink" title="八、邻域择优机制、允许老节点互连机制、断边重连机制驱"></a>八、邻域择优机制、允许老节点互连机制、断边重连机制驱</h3><p>这三种机制通常与网络结构、拓扑优化以及动态系统中的节点管理相关。以下是对每个机制的简要解释：</p>
-<ol>
-<li><h4 id="邻域择优机制："><a href="#邻域择优机制：" class="headerlink" title="邻域择优机制："></a><strong>邻域择优机制</strong>：</h4><ul>
-<li>该机制涉及在网络中选择最佳邻居节点进行连接或通信。在多种应用中，例如无线网络、社交网络或分布式计算中，节点通常会基于某些标准（如信号强度、节点性能、延迟等）来选择邻居。这种机制可以提高网络的整体效率和性能，确保信息在网络中有效传递。</li>
-</ul>
-</li>
-<li><h4 id="允许老节点互连机制："><a href="#允许老节点互连机制：" class="headerlink" title="允许老节点互连机制："></a><strong>允许老节点互连机制</strong>：</h4><ul>
-<li>这个机制允许网络中较老的节点之间建立直接连接。这种设计有助于维持网络的稳定性和可靠性，尤其是在节点频繁失效或更新的情况下。通过促进老节点的互连，网络可以增强信息传递的冗余性，并确保系统能够继续运行，即使部分新节点出现问题。</li>
-</ul>
-</li>
-<li><h4 id="断边重连机制："><a href="#断边重连机制：" class="headerlink" title="断边重连机制："></a><strong>断边重连机制</strong>：</h4><ul>
-<li>该机制描述了在网络中如何处理断开的连接（边）。当节点之间的连接因故障或其他原因中断时，断边重连机制允许这些节点尝试重新建立连接，或者选择新的邻居节点进行连接。通过灵活的重连策略，网络能够适应动态变化，保持其连通性和稳定性。这在动态网络（如移动自组织网络）中尤为重要。</li>
-</ul>
-</li>
-</ol>
-<h3 id="九、Poisson-过程理论和平均场方法"><a href="#九、Poisson-过程理论和平均场方法" class="headerlink" title="九、Poisson 过程理论和平均场方法"></a>九、Poisson 过程理论和平均场方法</h3><p><strong>Poisson过程理论</strong>和<strong>平均场方法</strong>是概率论和统计物理中的两个重要概念，分别用于建模随机事件和分析复杂系统的行为。下面是对这两个理论的简要介绍：</p>
-<h4 id="Poisson过程理论"><a href="#Poisson过程理论" class="headerlink" title="Poisson过程理论"></a>Poisson过程理论</h4><p><strong>定义</strong>：</p>
-<ul>
-<li>Poisson过程是一种随机过程，用于描述在固定时间间隔内发生独立事件的数量。它被广泛应用于排队论、信号处理、网络流量等领域。</li>
-</ul>
-<p><strong>主要特性</strong>：</p>
-<ol>
-<li><strong>事件发生的独立性</strong>：在任意两个不重叠的时间区间内发生事件的数量是相互独立的。</li>
-<li><strong>均匀性</strong>：在单位时间内发生事件的期望数量是一个常数，通常记为 λ（lambda），称为事件的强度或速率。</li>
-<li><strong>概率分布</strong>：在时间区间 [0, t] 内发生的事件数量服从 Poisson 分布，其概率质量函数为：<br><img src="/./images/efigure05.png" alt="图5"></li>
-</ol>
-<p><strong>应用</strong>：</p>
-<ul>
-<li>该理论在各种领域中应用广泛，如电话呼叫的到达、交通流量、网络数据包的到达等。</li>
-</ul>
-<h4 id="平均场方法"><a href="#平均场方法" class="headerlink" title="平均场方法"></a>平均场方法</h4><p><strong>定义</strong>：</p>
-<ul>
-<li>平均场方法是一种用于分析复杂系统（如统计物理、网络和生物系统）行为的技术。该方法通过假设系统中每个单元（如粒子、节点等）在某种平均条件下相互作用，从而简化系统的分析。</li>
-</ul>
-<p><strong>主要特性</strong>：</p>
-<ol>
-<li><strong>均匀假设</strong>：假设系统中的每个单元都与所有其他单元相互作用，并且每个单元的行为都是在平均场中进行的。</li>
-<li><strong>简化模型</strong>：通过引入均值或平均场变量，平均场方法能够将复杂的相互作用转化为简化的方程，从而使得求解问题更加可行。</li>
-<li><strong>动态系统的分析</strong>：平均场方法常用于分析动态系统的稳定性和相变行为，可以帮助理解系统的全局性质。</li>
-</ol>
-<p><strong>应用</strong>：</p>
-<ul>
-<li>在统计物理中，平均场理论被用来分析相变和临界现象。在机器学习中，平均场方法用于推断和优化算法。</li>
-</ul>
-<h4 id="总结-4"><a href="#总结-4" class="headerlink" title="总结"></a>总结</h4><p><strong>Poisson过程理论</strong>主要用于描述和建模独立随机事件的发生，而<strong>平均场方法</strong>则用于分析复杂系统中单元之间的相互作用，尤其是在系统规模较大时。这两者可以结合使用，以更好地理解随机过程和动态系统中的行为。</p>
-<h3 id="十、传染病动力学的-SIS-模型和-SIR-模型"><a href="#十、传染病动力学的-SIS-模型和-SIR-模型" class="headerlink" title="十、传染病动力学的 SIS 模型和 SIR 模型"></a>十、传染病动力学的 SIS 模型和 SIR 模型</h3><p>在传染病动力学中，<strong>SIS模型</strong>和<strong>SIR模型</strong>是两个基本且广泛使用的数学模型，用于描述疾病传播过程。它们通过将人口划分为不同的状态（如易感、感染、康复等）来分析疾病的传播特征和动态变化。以下是这两个模型的详细介绍：</p>
-<h4 id="SIS模型（易感-感染-易感）"><a href="#SIS模型（易感-感染-易感）" class="headerlink" title="SIS模型（易感-感染-易感）"></a>SIS模型（易感-感染-易感）</h4><p><strong>基本概念</strong>：</p>
-<ul>
-<li>在SIS模型中，个体在感染后不会获得长期免疫力。感染个体在治愈后会重新回到易感状态，因此整个过程是循环的。</li>
-</ul>
-<p><strong>状态定义</strong>：</p>
-<ul>
-<li><strong>S</strong>（易感者）：个体未感染，但有可能感染。</li>
-<li><strong>I</strong>（感染者）：个体正在感染，并能传染给易感者。</li>
-</ul>
-<p><strong>模型方程</strong>：</p>
-<p><img src="/./images/efigure06.png" alt="图6"></p>
-<p><strong>特点</strong>：</p>
-<ul>
-<li>在该模型中，个体在感染后会在一段时间后恢复并返回易感状态，形成一个封闭的循环。</li>
-</ul>
-<h4 id="SIR模型（易感-感染-康复）"><a href="#SIR模型（易感-感染-康复）" class="headerlink" title="SIR模型（易感-感染-康复）"></a>SIR模型（易感-感染-康复）</h4><p><strong>基本概念</strong>：</p>
-<ul>
-<li>SIR模型描述了个体在感染后会获得长期免疫力，感染后不会再返回易感状态。</li>
-</ul>
-<p><strong>状态定义</strong>：</p>
-<ul>
-<li><strong>S</strong>（易感者）：个体未感染，能被感染。</li>
-<li><strong>I</strong>（感染者）：个体正在感染，能传播给易感者。</li>
-<li><strong>R</strong>（康复者）：个体已经感染并康复，获得免疫，无法再次感染。</li>
-</ul>
-<p><strong>模型方程</strong>：</p>
-<img src="./images/efigure07.png" alt="图7" style="zoom: 80%;" />
-
-<p><strong>特点</strong>：</p>
-<ul>
-<li>在该模型中，感染者一旦康复后，会转移到康复者状态，并获得免疫，不再返回易感状态。</li>
-</ul>
-<h4 id="比较和应用"><a href="#比较和应用" class="headerlink" title="比较和应用"></a>比较和应用</h4><ul>
-<li><strong>循环性</strong>：SIS模型适用于没有长期免疫的疾病（如某些细菌性感染），而SIR模型适用于有免疫的疾病（如流感、麻疹等）。</li>
-<li><strong>传播动力学</strong>：两者都可以通过基本再生数 ( R_0 )（传染病在易感者中的传播能力）来分析疾病的传播。如果 ( R_0 &gt; 1 )，疾病将持续传播；如果 ( R_0 &lt; 1 )，疾病将最终消失。</li>
-</ul>
-<h4 id="总结-5"><a href="#总结-5" class="headerlink" title="总结"></a>总结</h4><p>SIS模型和SIR模型是理解传染病传播的重要工具。通过这些模型，研究人员可以分析疾病的传播动态、预测流行趋势，并评估干预措施的效果。</p>
-<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><h3 id="一、复杂系统的拓扑特征"><a href="#一、复杂系统的拓扑特征" class="headerlink" title="一、复杂系统的拓扑特征"></a>一、复杂系统的拓扑特征</h3><p>复杂系统的拓扑特征是研究复杂系统（如社交网络、生物网络、生态系统等）中元素（节点）之间关系（边）的结构和性质的重要方面。以下是一些关键的拓扑特征及其解释：</p>
-<h4 id="1-节点度分布"><a href="#1-节点度分布" class="headerlink" title="1. 节点度分布"></a>1. <strong>节点度分布</strong></h4><ul>
-<li><strong>定义</strong>：节点度是指与该节点相连的边的数量。度分布描述了网络中各节点度的分布情况。</li>
-<li><strong>特点</strong>：<ul>
-<li>在许多复杂网络中，节点度分布往往呈现幂律分布（scale-free distribution），即大多数节点的度较小，而少数节点的度极大，形成“枢纽”节点。</li>
-</ul>
-</li>
-</ul>
-<h4 id="2-聚类系数"><a href="#2-聚类系数" class="headerlink" title="2. 聚类系数"></a>2. <strong>聚类系数</strong></h4><ul>
-<li><strong>定义</strong>：聚类系数衡量的是一个节点的邻居之间相互连接的程度。它反映了网络的局部结构。</li>
-<li><strong>特点</strong>：<ul>
-<li>高聚类系数意味着节点的邻居之间连接紧密，这种特征在社交网络和生物网络中很常见。</li>
-</ul>
-</li>
-</ul>
-<h4 id="3-平均路径长度"><a href="#3-平均路径长度" class="headerlink" title="3. 平均路径长度"></a>3. <strong>平均路径长度</strong></h4><ul>
-<li><strong>定义</strong>：网络中任意两个节点之间最短路径的平均长度。</li>
-<li><strong>特点</strong>：<ul>
-<li>较短的平均路径长度通常表明网络中信息传播效率高，节点之间的连接性强。例如，许多社交网络的平均路径长度相对较短，显示了“六度分隔”理论。</li>
-</ul>
-</li>
-</ul>
-<h4 id="4-连通性"><a href="#4-连通性" class="headerlink" title="4. 连通性"></a>4. <strong>连通性</strong></h4><ul>
-<li><strong>定义</strong>：网络的连通性是指网络中任意两个节点之间是否存在路径。</li>
-<li><strong>特点</strong>：<ul>
-<li>连通性可以分为强连通（所有节点都可以到达）和弱连通（存在路径，但方向不一致）两种类型。复杂网络通常具有强连通性，即使在节点失效或故障的情况下。</li>
-</ul>
-</li>
-</ul>
-<h4 id="5-社区结构"><a href="#5-社区结构" class="headerlink" title="5. 社区结构"></a>5. <strong>社区结构</strong></h4><ul>
-<li><strong>定义</strong>：社区是指网络中节点的集群，通常内部节点之间的连接密集，而与其他集群的连接较少。</li>
-<li><strong>特点</strong>：<ul>
-<li>社区结构在社交网络、生态系统和信息网络中普遍存在，识别社区可以帮助理解网络的功能和组织。</li>
-</ul>
-</li>
-</ul>
-<h4 id="6-小世界性质"><a href="#6-小世界性质" class="headerlink" title="6. 小世界性质"></a>6. <strong>小世界性质</strong></h4><ul>
-<li><strong>定义</strong>：小世界网络具有较短的平均路径长度和较高的聚类系数。</li>
-<li><strong>特点</strong>：<ul>
-<li>这意味着在大规模网络中，任何两个节点之间的距离相对较短，同时局部的紧密性较强，这一特性在许多自然和人造网络中被观察到。</li>
-</ul>
-</li>
-</ul>
-<h4 id="7-网络的异质性"><a href="#7-网络的异质性" class="headerlink" title="7. 网络的异质性"></a>7. <strong>网络的异质性</strong></h4><ul>
-<li><strong>定义</strong>：网络的异质性指的是网络中节点和连接的不均匀性。</li>
-<li><strong>特点</strong>：<ul>
-<li>许多复杂网络表现出异质性，表现在节点的度、性质和连接模式上，这种特性影响了网络的动态行为和稳定性。</li>
-</ul>
-</li>
-</ul>
-<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><p>复杂系统的拓扑特征在多个领域中有重要应用，例如：</p>
-<ul>
-<li><strong>社交网络分析</strong>：了解社交网络中信息传播和影响力的机制。</li>
-<li><strong>生物网络</strong>：揭示生物体内不同分子（如蛋白质、基因）之间的相互作用。</li>
-<li><strong>交通网络</strong>：优化交通流，降低拥堵和提高效率。</li>
-</ul>
-<h4 id="总结-6"><a href="#总结-6" class="headerlink" title="总结"></a>总结</h4><p>复杂系统的拓扑特征为我们理解和分析这些系统的结构和动态提供了重要的视角。通过这些特征，可以更好地理解复杂系统的行为、传播过程及其对外部干扰的响应。</p>
-<h3 id="二、二分图的异质性"><a href="#二、二分图的异质性" class="headerlink" title="二、二分图的异质性"></a>二、二分图的异质性</h3><p><strong>二分图</strong>（Bipartite Graph）是一种特殊类型的图，其节点可以分为两个不相交的集合，且图中的边仅连接两个不同集合中的节点。二分图的异质性指的是两个集合之间的差异性和多样性，这种差异性可能体现在节点的性质、连接方式、度分布等方面。以下是二分图异质性的几个关键特征和应用：</p>
-<h4 id="1-节点特性异质性"><a href="#1-节点特性异质性" class="headerlink" title="1. 节点特性异质性"></a>1. <strong>节点特性异质性</strong></h4><ul>
-<li><strong>定义</strong>：在二分图中，两个集合的节点可能具有不同的特性，例如在社交网络中，一个集合可以代表用户，另一个集合可以代表兴趣或活动。不同节点的属性可能导致其在网络中的行为和连接方式存在显著差异。</li>
-<li><strong>示例</strong>：在推荐系统中，用户和产品之间的二分图中，用户的购买偏好（如性别、年龄、消费习惯等）与产品的属性（如类别、价格、品牌等）可能表现出异质性。</li>
-</ul>
-<h4 id="2-连接模式异质性"><a href="#2-连接模式异质性" class="headerlink" title="2. 连接模式异质性"></a>2. <strong>连接模式异质性</strong></h4><ul>
-<li><strong>定义</strong>：二分图中节点之间的连接方式可能不均匀。某些节点可能与许多其他节点连接，而其他节点则可能连接较少，这种连接的差异性可以影响网络的整体结构和功能。</li>
-<li><strong>示例</strong>：在学术合作网络中，研究人员（一个集合）和研究主题（另一个集合）之间的连接可能显示出异质性，某些研究主题可能吸引了更多研究人员的关注。</li>
-</ul>
-<h4 id="3-度分布异质性"><a href="#3-度分布异质性" class="headerlink" title="3. 度分布异质性"></a>3. <strong>度分布异质性</strong></h4><ul>
-<li><strong>定义</strong>：二分图中的度分布可以显示出异质性特征。在一个二分图中，一个集合的节点的连接数量（度）可能呈现出较大的变化。例如，有些用户可能与许多产品连接，而有些用户则仅与少数产品连接。</li>
-<li><strong>示例</strong>：在社交网络中，某些用户（如网红）可能与大量其他用户或活动连接，而普通用户的连接较少。</li>
-</ul>
-<h4 id="4-功能异质性"><a href="#4-功能异质性" class="headerlink" title="4. 功能异质性"></a>4. <strong>功能异质性</strong></h4><ul>
-<li><strong>定义</strong>：在二分图中，不同节点的功能或角色可能存在显著差异。一个集合中的节点可能承担某种特定角色，而另一个集合中的节点可能扮演不同的角色。</li>
-<li><strong>示例</strong>：在二分图中，病人（一个集合）和医生（另一个集合）之间的连接可以反映医疗服务的异质性，不同医生可能专注于不同领域，服务于不同类型的病人。</li>
-</ul>
-<h4 id="应用-1"><a href="#应用-1" class="headerlink" title="应用"></a>应用</h4><ul>
-<li><strong>推荐系统</strong>：通过分析用户和物品之间的二分图，可以更好地理解用户偏好，从而提高推荐效果。</li>
-<li><strong>社交网络分析</strong>：识别网络中的关键节点（如影响者），分析信息传播路径。</li>
-<li><strong>生物信息学</strong>：在基因和疾病之间的二分图中，分析特定基因与特定疾病之间的关系。</li>
-</ul>
-<h4 id="总结-7"><a href="#总结-7" class="headerlink" title="总结"></a>总结</h4><p>二分图的异质性提供了深入分析复杂网络结构和动态行为的框架。通过研究节点特性、连接模式和度分布的异质性，可以更好地理解网络的结构和功能。</p>
-<h3 id="三、二分图的投影图"><a href="#三、二分图的投影图" class="headerlink" title="三、二分图的投影图"></a>三、二分图的投影图</h3><p>二分图的<strong>投影图</strong>是将二分图中的一个集合的节点与另一个集合的节点之间的关系“投影”到一个新的图中，从而形成新的图结构。投影图可以帮助我们更好地理解二分图中两个集合之间的交互关系。</p>
-<h3 id="二分图的定义"><a href="#二分图的定义" class="headerlink" title="二分图的定义"></a>二分图的定义</h3><p>一个<strong>二分图</strong> ( G &#x3D; (U, V, E) ) 由两个不相交的节点集合 ( U ) 和 ( V ) 组成，其中的边 ( E ) 仅连接 ( U ) 中的节点与 ( V ) 中的节点。</p>
-<h3 id="投影图的构建"><a href="#投影图的构建" class="headerlink" title="投影图的构建"></a>投影图的构建</h3><p>对于二分图 ( G )，我们可以根据其中一个集合（例如 ( U ) 或 ( V )）来构建投影图。以下是投影图的构建步骤：</p>
-<ol>
-<li><strong>选择投影的集合</strong>：决定要投影的集合，例如选择 ( U )。</li>
-<li><strong>创建新的图</strong>：创建一个新的图 ( G<sub>U</sub> )，其节点集合等于 ( U )。</li>
-<li><strong>添加边</strong>：<ul>
-<li>对于 ( U ) 中的任意两个节点 ( u<sub>1</sub>, u<sub>2</sub> )，如果它们在二分图 G 中通过同一个节点 ( v \in V ) 连接（即 ( (u<br><sub>1</sub>, v) \in E ) 且 ( (u<sub>2</sub>, v) \in E )），则在投影图 ( G<sub>U</sub> ) 中添加一条边 ( (u<sub>1</sub>, u<sub>2</sub>) )。</li>
-</ul>
-</li>
-</ol>
-<h3 id="投影图的性质"><a href="#投影图的性质" class="headerlink" title="投影图的性质"></a>投影图的性质</h3><ul>
-<li><strong>聚类</strong>：投影图中的边表示原始二分图中两个节点通过共同的连接建立的关系，通常会形成聚类结构。</li>
-<li><strong>多重边</strong>：如果 ( u_1 ) 和 ( u_2 ) 通过多个 ( v ) 节点连接，那么在投影图中可能会出现多条边。</li>
-<li><strong>节点度</strong>：投影图中节点的度数表示该节点与多少个其他节点通过同一节点相连。</li>
-</ul>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>假设我们有一个简单的二分图 ( G )：</p>
-<ul>
-<li>( U &#x3D; {A, B, C} )</li>
-<li>( V &#x3D; {1, 2, 3} )</li>
-<li>边集 ( E &#x3D; {(A, 1), (A, 2), (B, 2), (B, 3), (C, 1)} )</li>
-</ul>
-<p><strong>投影图 ( G_U )</strong>：</p>
-<ul>
-<li>节点集合为 ( U &#x3D; {A, B, C} )。</li>
-<li>边：<ul>
-<li>( A ) 和 ( B ) 通过 ( 2 ) 连接，添加边 ( (A, B) )。</li>
-<li>( A ) 和 ( C ) 通过 ( 1 ) 连接，添加边 ( (A, C) )。</li>
-<li>( B ) 和 ( C ) 没有通过同一个 ( V ) 节点连接，因此不添加边。</li>
-</ul>
-</li>
-</ul>
-<p>投影图 ( G<sub>U</sub> ) 的结构为：</p>
-<ul>
-<li>节点：( A, B, C )</li>
-<li>边：( (A, B), (A, C) )</li>
-</ul>
-<h3 id="应用-2"><a href="#应用-2" class="headerlink" title="应用"></a>应用</h3><ul>
-<li><strong>社交网络</strong>：在社交网络分析中，投影图可以帮助识别社交群体。例如，用户和事件之间的二分图可以转化为用户之间的互动图。</li>
-<li><strong>推荐系统</strong>：在推荐系统中，可以通过商品和用户的二分图构建用户之间的相似度图，便于进行推荐。</li>
-<li><strong>生物信息学</strong>：在基因和疾病的二分图中，投影图可以揭示基因之间的相互关系。</li>
-</ul>
-<h3 id="总结-8"><a href="#总结-8" class="headerlink" title="总结"></a>总结</h3><p>二分图的投影图是分析和理解复杂网络的重要工具。通过投影，可以更好地揭示节点之间的关系和结构特征，从而支持各种应用。</p>
-]]></content>
-      <categories>
-        <category>复杂网络</category>
-      </categories>
-      <tags>
-        <tag>索琪超网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python进阶</title>
-    <url>/2024/09/06/python%E8%BF%9B%E9%98%B6/</url>
-    <content><![CDATA[<h1 id="python进阶"><a href="#python进阶" class="headerlink" title="python进阶"></a>python进阶</h1><h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>定义：是一个事件，这个事件在程序执行过程中发生，影响了程序的正常执行。</p>
-<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>语法格式一：</p>
-<p>try:</p>
-<p>​	可能引发异常现象的代码</p>
-<p>except:</p>
-<p>​	出现异常现象的处理代码</p>
-<p>语法格式二：</p>
-<p>try:</p>
-<p>​	可能引发异常现象的代码</p>
-<p>except:</p>
-<p>​	出现异常现象的处理代码</p>
-<p>else:</p>
-<p>​	try 代码块结束后运行的代码</p>
-<h3 id="异常传递"><a href="#异常传递" class="headerlink" title="异常传递"></a>异常传递</h3><p>当函数&#x2F;方法执行出现异常，会将异常传递给函数&#x2F;方法的调用一方</p>
-<p>如果传递到主程序，仍没有异常处理，程序才会被终止</p>
-<h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><p>特性：</p>
-<ol>
-<li>必须有一个明确的结束条件</li>
-<li>每次进入更深一层递归时，问题规模相比上一次递归都应有所减少</li>
-<li>相邻两次重复之前有紧密联系，前一次要为后一次做准备</li>
-<li>递归效率不高，递归层次过多导致栈溢出</li>
-<li>优点：定义简单，逻辑清晰</li>
-</ol>
-<p>递推：给递归实现拆解，递归每次都是基于上一次进行下一次的执行</p>
-<p>回溯：遇到终止条件之前，从最后往回返，一级一级的把值返回来</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#应用：</span></span><br><span class="line"><span class="comment">#累加</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> fun(n-<span class="number">1</span>)+n</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"><span class="built_in">print</span>(fun(<span class="number">7</span>))   	</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#斐波那契数列 1,1,2,3,5,8,13,21</span></span><br><span class="line">list1 = []</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> n</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> fun(n-<span class="number">1</span>) + fun(n-<span class="number">2</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>):</span><br><span class="line">    list1.append(fun(i))</span><br><span class="line"><span class="built_in">print</span>(list1)<span class="comment">#[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="函数引用"><a href="#函数引用" class="headerlink" title="函数引用"></a>函数引用</h2><p>定义：如果函数收到的是一个可变对象（比如字典或列表）的引用，就能够修改对象的原始——相当于通过”传引用”来传递对象；如果函数接收到的是一个不可变对象（如数字字符元组）的引用，就不能直接修改原始对象——相当于”‘传值”来传对象</p>
-<p>函数引用：如函数名的引用，函数传递时的引用传递</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def test1():</span><br><span class="line">    print(&quot;---in test1 func---&quot;)</span><br><span class="line">test1()</span><br><span class="line">res = test1</span><br><span class="line">print(id(res))</span><br><span class="line">print(id(test1()))</span><br></pre></td></tr></table></figure>
-
-<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>定义：闭包是函数内部定义的函数</p>
-<ol>
-<li>闭包是嵌套在函数中的函数</li>
-<li>闭包必须是内层函数对外层函数变量的引用</li>
-</ol>
-<p>构成条件</p>
-<ol>
-<li>函数中嵌套一个函数</li>
-<li>内层嵌套函数，对外部作用域有一个非全局变量的引用</li>
-<li>外层函数的返回值是内层函数的函数名</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#闭包模版</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">outF</span>():</span><br><span class="line">    <span class="built_in">sum</span> = n <span class="comment">#定义一个非全局变量</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inF</span>(<span class="params">n</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span>+<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> inF <span class="comment">#外层函数返回值是内层函数的函数名</span></span><br></pre></td></tr></table></figure>
-
-<p>闭包的作用：</p>
-<p>​	保存局部信息不被销毁，保证数据的安全性</p>
-<p>闭包的应用：</p>
-<ol>
-<li>可以保存一些非全局变量，不易被销毁、改变的数据</li>
-<li>装饰器</li>
-<li>实现数据锁定</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#例子</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">outer</span>(<span class="params">m</span>):</span><br><span class="line">    n = <span class="number">10</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;inner函数&quot;</span>,n+m)</span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line">t = outer(<span class="number">2</span>)</span><br><span class="line">t()<span class="comment">#inner函数 12</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><p>装饰器本质就是一个闭包函数，装饰器的返回值也是一个函数对象</p>
-<p>他可以让其他函数在不需要做任何代码变动的前提下增加额外的功能</p>
-<p>装饰器功能</p>
-<ol>
-<li>函数执行时间统计</li>
-<li>可以用在框架的路由传参上</li>
-<li>插入日志</li>
-<li>事务处理</li>
-<li>权限校验</li>
-<li>缓存</li>
-</ol>
-<p>装饰器使用方法：</p>
-<ol>
-<li>先定义一个装饰函数（帽子）</li>
-<li>在定义一个你的业务函数</li>
-<li>最后把这个帽子戴在这个人的头上</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#日志打印</span></span><br><span class="line"><span class="comment">#语法一</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">logger</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>(<span class="params">*args</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我准备计算开始：&#123;&#125;函数了&quot;</span>.<span class="built_in">format</span>(func.__name__))</span><br><span class="line">        <span class="comment">#真正执行的业务</span></span><br><span class="line">        func(*args)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我计算完了&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="comment">#第一种方法</span></span><br><span class="line"><span class="comment">#真正的业务函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">a, b</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; + &#123;&#125; = &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(a, b, a + b))</span><br><span class="line"></span><br><span class="line"><span class="comment">#使用装饰器来装饰函数</span></span><br><span class="line"><span class="comment">#把函数add作为参数传入到装饰函数</span></span><br><span class="line">te = logger(add) <span class="comment">#调用logger函数</span></span><br><span class="line">te(<span class="number">12</span>,<span class="number">55</span>) <span class="comment">#实现了wrapper的调用</span></span><br><span class="line">/*我准备计算开始：add函数了</span><br><span class="line"><span class="number">12</span> + <span class="number">55</span> = <span class="number">67</span></span><br><span class="line">我计算完了*/</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#日志打印</span></span><br><span class="line"><span class="comment">#语法二</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">logger</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>(<span class="params">*args</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我准备计算开始：&#123;&#125;函数了&quot;</span>.<span class="built_in">format</span>(func.__name__))</span><br><span class="line">        <span class="comment">#真正执行的业务</span></span><br><span class="line">        func(*args)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我计算完了&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"><span class="comment">#第二种语法@</span></span><br><span class="line"><span class="comment">#真正的业务函数</span></span><br><span class="line"><span class="meta">@logger</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">a, b</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; + &#123;&#125; = &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(a, b, a + b))</span><br><span class="line">add(<span class="number">1</span>, <span class="number">200</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="无参数的装饰器"><a href="#无参数的装饰器" class="headerlink" title="无参数的装饰器"></a>无参数的装饰器</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">te</span>(<span class="params">fun</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;这是inner&quot;</span>)</span><br><span class="line">        fun()</span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"><span class="comment">#方法一</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">t1</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;哈哈哈&quot;</span>)</span><br><span class="line"></span><br><span class="line">t = te(t1)</span><br><span class="line">t()</span><br></pre></td></tr></table></figure>
-
-<h2 id="有参数的装饰器"><a href="#有参数的装饰器" class="headerlink" title="有参数的装饰器"></a>有参数的装饰器</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">exam</span>(<span class="params">fun</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>(<span class="params">a,b</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;inner函数中的值：%s,%s&quot;</span>%(a,b))</span><br><span class="line">        fun(a,b)<span class="comment">#真正的业务函数</span></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"><span class="meta">@exam</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">te</span>(<span class="params">a,b</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;结果是：&quot;</span>,(a+b))</span><br><span class="line">te(<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">/*</span><br><span class="line">inner函数中的值：<span class="number">1</span>,<span class="number">2</span></span><br><span class="line">结果是： <span class="number">3</span></span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
-
-<h2 id="多层嵌套"><a href="#多层嵌套" class="headerlink" title="多层嵌套"></a>多层嵌套</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">exam</span>(<span class="params">fn</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">x,y</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;hello&quot;</span>,x,y)</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">inner</span>(<span class="params">a,b</span>):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;inner函数中的值：%s，%s&quot;</span>%(a,b))</span><br><span class="line">            fn(a,b)</span><br><span class="line">        <span class="keyword">return</span> inner</span><br><span class="line">    <span class="keyword">return</span> fun</span><br><span class="line"><span class="meta">@exam</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">te</span>(<span class="params">a,b</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;结果是：&quot;</span>, (a + b))</span><br><span class="line">te(<span class="number">1</span>,<span class="number">2</span>)(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">/*</span><br><span class="line">hello <span class="number">1</span> <span class="number">2</span></span><br><span class="line">inner函数中的值：<span class="number">3</span>，<span class="number">4</span></span><br><span class="line">结果是： <span class="number">7</span></span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
-
-<h2 id="属性与方法"><a href="#属性与方法" class="headerlink" title="属性与方法"></a>属性与方法</h2><p>属性：对象的特征描述，实际为定义的变量，该变量为属性</p>
-<p>方法：对象具有的行为（本质是函数），类中定义的函数即方法</p>
-<h3 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h3><p>对象的创建格式</p>
-<p>​	对象名 &#x3D; 类名（）</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python基础</tag>
-        <tag>python进阶</tag>
-        <tag>python的networkx库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python的networkx库</title>
-    <url>/2024/09/23/python%E7%9A%84networkx%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="无向图"><a href="#无向图" class="headerlink" title="无向图"></a>无向图</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G = nx.Graph()</span><br><span class="line"><span class="comment">#添加节点</span></span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="comment">#添加边</span></span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>)])</span><br><span class="line"><span class="comment">#可视化</span></span><br><span class="line">nx.draw(G, with_labels=<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#保存图片地址</span></span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取图的邻接矩阵</span></span><br><span class="line">As = nx.adjacency_matrix(G)</span><br><span class="line"><span class="built_in">print</span>(As)</span><br><span class="line"></span><br><span class="line"><span class="comment">#转化为二维的矩阵</span></span><br><span class="line">A= As.todense()</span><br><span class="line"><span class="built_in">print</span>(A)</span><br></pre></td></tr></table></figure>
-
-<p>如下图：<img src="./images/figure.png" alt="figure" style="zoom:33%;" /></p>
-<p>输出为：<img src="./images/01input.png" alt="01input" style="zoom:67%;" /></p>
-<h1 id="根据邻接矩阵创建图"><a href="#根据邻接矩阵创建图" class="headerlink" title="根据邻接矩阵创建图"></a>根据邻接矩阵创建图</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment">#已知邻接矩阵创建图</span></span><br><span class="line">A = np.array([[<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>]])</span><br><span class="line">T = nx.from_numpy_array(A)</span><br><span class="line">nx.draw(T, with_labels=<span class="literal">True</span>)</span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure02.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>结果如图<img src="./images/figure02.png" alt="figure02" style="zoom:33%;" /></p>
-<h1 id="加权图"><a href="#加权图" class="headerlink" title="加权图"></a>加权图</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line">G.add_weighted_edges_from([(<span class="number">0</span>,<span class="number">1</span>,<span class="number">3.0</span>),(<span class="number">1</span>,<span class="number">2</span>,<span class="number">7.5</span>),(<span class="number">0</span>,<span class="number">2</span>,<span class="number">1.5</span>)])</span><br><span class="line">As = nx.adjacency_matrix(G)</span><br><span class="line"><span class="built_in">print</span>(As.todense())</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure03.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>结果如图<img src="./images/figure03.png" alt="figure03" style="zoom:33%;" /></p>
-<p>输入结果如图<img src="./images/03input.png" alt="03input" style="zoom:67%;" /></p>
-<h1 id="有向图"><a href="#有向图" class="headerlink" title="有向图"></a>有向图</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加边</span></span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">3</span>,<span class="number">4</span>)])</span><br><span class="line">nx.draw(G)</span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure04.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>结果如图：<img src="./images/figure04.png" alt="figure04" style="zoom:33%;" /></p>
-<h1 id="获取网络图G的度"><a href="#获取网络图G的度" class="headerlink" title="获取网络图G的度"></a>获取网络图G的度</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line"><span class="comment">#添加节点</span></span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加边</span></span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">4</span>)])</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取网络G的度</span></span><br><span class="line">d = nx.degree(G)</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"></span><br><span class="line"><span class="comment">#平均度</span></span><br><span class="line">d2 = <span class="built_in">dict</span>(nx.degree(G))</span><br><span class="line"><span class="built_in">print</span>(d2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;平均度为：&quot;</span>,<span class="built_in">sum</span>(d2.values())/<span class="built_in">len</span>(G.nodes))</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取分布情况</span></span><br><span class="line">degree_counts = nx.degree_histogram(G)<span class="comment">#返回所有位于区间[0,dmax]的度的值</span></span><br><span class="line"><span class="built_in">print</span>(degree_counts)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>结果如图：<img src="./images/05input.png" alt="05input" style="zoom:67%;" /></p>
-<h1 id="直方图绘制"><a href="#直方图绘制" class="headerlink" title="直方图绘制"></a>直方图绘制</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line"><span class="comment">#添加节点</span></span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加边</span></span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">4</span>)])</span><br><span class="line"></span><br><span class="line">d = <span class="built_in">dict</span>(nx.degree(G))</span><br><span class="line"></span><br><span class="line">x = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="built_in">max</span>(d.values()) + <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">y = [i/<span class="built_in">len</span>(G.nodes()) <span class="keyword">for</span> i <span class="keyword">in</span> nx.degree_histogram(G)]</span><br><span class="line"></span><br><span class="line">plt.bar(x,y)</span><br><span class="line"></span><br><span class="line">plt.xlabel(<span class="string">&quot;$k$&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.ylabel(<span class="string">&quot;$p_k$&quot;</span>)</span><br><span class="line">plt.xlim([<span class="number">0</span>,<span class="number">4</span>])</span><br><span class="line">bar_path = <span class="string">&#x27;E:/MyBlog/source/images/figure05.png&#x27;</span></span><br><span class="line">plt.savefig(bar_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>结果如图：<img src="./images/figure05.png" alt="figure05" style="zoom:50%;" /></p>
-<h1 id="路径与平均路径长度"><a href="#路径与平均路径长度" class="headerlink" title="路径与平均路径长度"></a>路径与平均路径长度</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G =nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">4</span>,<span class="number">5</span>)])</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure06.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>如图<img src="./images/figure06.png" alt="figure06" style="zoom:33%;" /></p>
-<h2 id="最短路径"><a href="#最短路径" class="headerlink" title="最短路径"></a>最短路径</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#获取节点1~4的最短路径</span></span><br><span class="line"><span class="built_in">list</span> = nx.shortest_path(G,source = <span class="number">1</span>, target = <span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
-
-<p>运行结果为：[1, 2, 3, 4]</p>
-<h2 id="两个节点之间的所有最短路径"><a href="#两个节点之间的所有最短路径" class="headerlink" title="两个节点之间的所有最短路径"></a>两个节点之间的所有最短路径</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">list2 = <span class="built_in">list</span>(nx.all_shortest_paths(G, source = <span class="number">1</span>, target = <span class="number">4</span>))</span><br><span class="line"><span class="built_in">print</span>(list2)</span><br></pre></td></tr></table></figure>
-
-<p>运行结果：[[1, 2, 3, 4], [1, 2, 5, 4]]</p>
-<h2 id="求两个节点的最短路径的长度"><a href="#求两个节点的最短路径的长度" class="headerlink" title="求两个节点的最短路径的长度"></a>求两个节点的最短路径的长度</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#求这两个节点的最短路径长度（距离）</span></span><br><span class="line"><span class="built_in">len</span> = nx.shortest_path_length(G, source=<span class="number">1</span>, target=<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>)</span><br></pre></td></tr></table></figure>
-
-<p>运行结果：3</p>
-<h2 id="求整个网络的平均距离"><a href="#求整个网络的平均距离" class="headerlink" title="求整个网络的平均距离"></a>求整个网络的平均距离</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#求整个网络的平均距离</span></span><br><span class="line">av_len = nx.average_shortest_path_length(G)</span><br><span class="line"><span class="built_in">print</span>(av_len)</span><br></pre></td></tr></table></figure>
-
-<p>运行结果为：1.6</p>
-<h1 id="连通性"><a href="#连通性" class="headerlink" title="连通性"></a>连通性</h1><h2 id="非连通图判断连通性"><a href="#非连通图判断连通性" class="headerlink" title="非连通图判断连通性"></a>非连通图判断连通性</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">4</span>,<span class="number">7</span>),(<span class="number">5</span>,<span class="number">6</span>),(<span class="number">5</span>,<span class="number">7</span>),(<span class="number">6</span>,<span class="number">7</span>)])</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure07.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#联通图判断</span></span><br><span class="line"><span class="built_in">print</span>(nx.is_connected(G))  <span class="comment">#False</span></span><br></pre></td></tr></table></figure>
-
-<p>结果如图：<img src="./images/figure07.png" alt="figure07" style="zoom:33%;" /></p>
-<h2 id="连通图判断联通性"><a href="#连通图判断联通性" class="headerlink" title="连通图判断联通性"></a>连通图判断联通性</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">Ga = nx.Graph()</span><br><span class="line">Ga.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>])</span><br><span class="line">Ga.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">4</span>,<span class="number">7</span>),(<span class="number">5</span>,<span class="number">6</span>),(<span class="number">5</span>,<span class="number">7</span>),(<span class="number">6</span>,<span class="number">7</span>)])</span><br><span class="line">nx.draw(Ga,with_labels=<span class="literal">True</span>)</span><br><span class="line">Ga_path = <span class="string">&#x27;E:/MyBlog/source/images/figure08.png&#x27;</span></span><br><span class="line">plt.savefig(Ga_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#联通图判断</span></span><br><span class="line"><span class="built_in">print</span>(nx.is_connected(Ga))  <span class="comment">#Ture</span></span><br></pre></td></tr></table></figure>
-
-<p>如图<img src="./images/figure08.png" alt="figure08" style="zoom:33%;" /></p>
-<h1 id="集聚系数"><a href="#集聚系数" class="headerlink" title="集聚系数"></a>集聚系数</h1><h2 id="图一"><a href="#图一" class="headerlink" title="图一"></a>图一</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G =nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">4</span>),(<span class="number">1</span>,<span class="number">5</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">5</span>),(<span class="number">4</span>,<span class="number">5</span>)])</span><br><span class="line">Ga_path = <span class="string">&#x27;E:/MyBlog/source/images/figure09.png&#x27;</span></span><br><span class="line">plt.savefig(Ga_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#节点1的聚集系数</span></span><br><span class="line"><span class="built_in">print</span>(nx.clustering(G,<span class="number">1</span>)) <span class="comment">#1.0</span></span><br></pre></td></tr></table></figure>
-
-<p>如图<img src="./../images/figure09.png" alt="figure09" style="zoom:33%;" /></p>
-<h2 id="图二"><a href="#图二" class="headerlink" title="图二"></a>图二</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G = nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">4</span>,<span class="number">5</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">4</span>),(<span class="number">1</span>,<span class="number">5</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">3</span>,<span class="number">5</span>)])</span><br><span class="line"><span class="comment">#去除边</span></span><br><span class="line">G.remove_edges_from([(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">5</span>)])</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">Ga_path = <span class="string">&#x27;E:/MyBlog/source/images/figure0902.png&#x27;</span></span><br><span class="line">plt.savefig(Ga_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="built_in">print</span>(nx.clustering(G,<span class="number">1</span>)) <span class="comment">#0.5</span></span><br></pre></td></tr></table></figure>
-
-<p>如图<img src="./images/figure0902.png" alt="figure0902" style="zoom:33%;" /></p>
-<h2 id="图三"><a href="#图三" class="headerlink" title="图三"></a>图三</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G = nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">4</span>,<span class="number">5</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">4</span>),(<span class="number">1</span>,<span class="number">5</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">3</span>,<span class="number">5</span>)])</span><br><span class="line"><span class="comment">#去除边</span></span><br><span class="line">G.remove_edges_from([(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">5</span>)])</span><br><span class="line">G.remove_edges_from([(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">4</span>,<span class="number">5</span>)])</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">Ga_path = <span class="string">&#x27;E:/MyBlog/source/images/figure0903.png&#x27;</span></span><br><span class="line">plt.savefig(Ga_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="built_in">print</span>(nx.clustering(G,<span class="number">1</span>)) <span class="comment">#0.0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>如图<img src="./images/figure0903.png" alt="figure0903" style="zoom:33%;" /></p>
-<h1 id="平均集聚系数与全局聚集系数"><a href="#平均集聚系数与全局聚集系数" class="headerlink" title="平均集聚系数与全局聚集系数"></a>平均集聚系数与全局聚集系数</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">4</span>,<span class="number">5</span>),(<span class="number">4</span>,<span class="number">6</span>),(<span class="number">4</span>,<span class="number">7</span>),(<span class="number">5</span>,<span class="number">7</span>)])</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">Ga_path = <span class="string">&#x27;E:/MyBlog/source/images/figure10.png&#x27;</span></span><br><span class="line">plt.savefig(Ga_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#平均聚集系数</span></span><br><span class="line"><span class="built_in">print</span>(nx.average_clustering(G)) <span class="comment">#0.3095238095238095</span></span><br><span class="line"><span class="comment">#全局聚集系数</span></span><br><span class="line"><span class="built_in">print</span>(nx.transitivity(G))<span class="comment"># 0.375</span></span><br></pre></td></tr></table></figure>
-
-<p>如图：<img src="./images/figure10.png" alt="figure10" style="zoom:33%;" /></p>
-<h1 id="复杂网络的统计特征"><a href="#复杂网络的统计特征" class="headerlink" title="复杂网络的统计特征"></a>复杂网络的统计特征</h1><h2 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建一个随机网络</span></span><br><span class="line">n = <span class="number">10000</span> <span class="comment"># 网络节点数</span></span><br><span class="line">p = <span class="number">0.001</span> <span class="comment"># 连边的概率0.001</span></span><br><span class="line"><span class="comment"># 生成ER网络</span></span><br><span class="line">ER = nx.erdos_renyi_graph(n, p)</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取平均度</span></span><br><span class="line">d = <span class="built_in">dict</span>(nx.degree(ER))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;平均度为：&quot;</span>,<span class="built_in">sum</span>(d.values())/<span class="built_in">len</span>(ER.nodes))<span class="comment">#平均度为： 9.9996</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#获取所有可能得度值对应的概率</span></span><br><span class="line">x = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="built_in">max</span>(d.values())+<span class="number">1</span>))</span><br><span class="line">y = [i/n <span class="keyword">for</span> i <span class="keyword">in</span> nx.degree_histogram(ER)]</span><br><span class="line"></span><br><span class="line">plt.plot(x,y,<span class="string">&#x27;ro-&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;$k$&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;$p_k$&quot;</span>)</span><br><span class="line">ER_path = <span class="string">&#x27;E:/MyBlog/source/images/figure1101.png&#x27;</span></span><br><span class="line">plt.savefig(ER_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>如图<img src="./images/figure1101.png" alt="figure1101" style="zoom: 33%;" /></p>
-<h2 id="BA无标度网络"><a href="#BA无标度网络" class="headerlink" title="BA无标度网络"></a>BA无标度网络</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建一个随机网络</span></span><br><span class="line">n = <span class="number">100000</span> <span class="comment"># 网络节点数</span></span><br><span class="line">m = <span class="number">3</span> </span><br><span class="line"></span><br><span class="line">BA = nx.barabasi_albert_graph(n,m)</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取平均度</span></span><br><span class="line">d = <span class="built_in">dict</span>(nx.degree(BA))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;平均度为&quot;</span>,<span class="built_in">sum</span>(d.values())/<span class="built_in">len</span>(BA.nodes))<span class="comment">#平均度为 5.99982</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#获取所有可能得度值对应的概率</span></span><br><span class="line">x = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="built_in">max</span>(d.values())+<span class="number">1</span>))</span><br><span class="line">y = [i/n <span class="keyword">for</span> i <span class="keyword">in</span> nx.degree_histogram(BA)]</span><br><span class="line"></span><br><span class="line"><span class="comment">#普通坐标轴下</span></span><br><span class="line"><span class="comment"># plt.plot(x, y, &#x27;o-&#x27;, color=&#x27;b&#x27;)</span></span><br><span class="line"><span class="comment"># plt.xlabel(&quot;$k$&quot;)</span></span><br><span class="line"><span class="comment"># plt.ylabel(&quot;$p_k$&quot;)</span></span><br><span class="line"><span class="comment"># BA_path = &#x27;E:/MyBlog/source/images/figure11021.png&#x27;</span></span><br><span class="line"><span class="comment"># plt.savefig(BA_path)</span></span><br><span class="line"><span class="comment"># plt.show()</span></span><br><span class="line"><span class="comment">#在双对数轴下显示</span></span><br><span class="line"><span class="comment"># plt.plot(x,y,&#x27;ro-&#x27;)</span></span><br><span class="line"><span class="comment"># plt.xscale(&#x27;log&#x27;)</span></span><br><span class="line"><span class="comment"># plt.yscale(&#x27;log&#x27;)</span></span><br><span class="line"><span class="comment"># plt.xlabel(&quot;$k$&quot;)</span></span><br><span class="line"><span class="comment"># plt.ylabel(&quot;$p_k$&quot;)</span></span><br><span class="line"><span class="comment"># BA_path = &#x27;E:/MyBlog/source/images/figure11021.png&#x27;</span></span><br><span class="line"><span class="comment"># plt.savefig(BA_path)</span></span><br><span class="line"><span class="comment"># plt.show()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#在双对数坐标轴下绘制，并且把点0值坐标排除</span></span><br><span class="line">new_x = []</span><br><span class="line">new_y = []</span><br><span class="line"><span class="comment"># 删除0值</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(x)):</span><br><span class="line">    <span class="keyword">if</span> y[i] != <span class="number">0</span>:</span><br><span class="line">        new_x.append(x[i])</span><br><span class="line">        new_y.append(y[i])</span><br><span class="line">plt.plot(new_x,new_y,<span class="string">&#x27;ro-&#x27;</span>)</span><br><span class="line">plt.xscale(<span class="string">&#x27;log&#x27;</span>)</span><br><span class="line">plt.yscale(<span class="string">&#x27;log&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;$k$&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;$p_k$&quot;</span>)</span><br><span class="line">BA_path = <span class="string">&#x27;E:/MyBlog/source/images/figure11022.png&#x27;</span></span><br><span class="line">plt.savefig(BA_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>普通轴下如图<img src="./images/figure1102.png" alt="figure1102" style="zoom:33%;" /></p>
-<p>双对数轴下如图：<img src="./images/figure11021.png" alt="figure" style="zoom:33%;" /></p>
-<p>去除0值坐标下图像如图<img src="./images/figure11022.png" alt="figure" style="zoom:33%;" /></p>
-<h1 id="网络的直径、效率和平均最短距离"><a href="#网络的直径、效率和平均最短距离" class="headerlink" title="网络的直径、效率和平均最短距离"></a>网络的直径、效率和平均最短距离</h1>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python基础</tag>
-        <tag>python进阶</tag>
-        <tag>python的networkx库</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python</title>
     <url>/2024/04/24/python%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h1><h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><p>整型（int）浮点类型（float） 布尔（bool）复数（complex，z &#x3D; a + bj , j为虚部）</p>
@@ -1307,6 +571,1067 @@
         <tag>python基础</tag>
         <tag>python进阶</tag>
         <tag>python的networkx库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++</title>
+    <url>/2024/09/05/C/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>蓝桥杯</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python的networkx库</title>
+    <url>/2024/09/23/python%E7%9A%84networkx%E5%BA%93/</url>
+    <content><![CDATA[<h1 id="无向图"><a href="#无向图" class="headerlink" title="无向图"></a>无向图</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G = nx.Graph()</span><br><span class="line"><span class="comment">#添加节点</span></span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="comment">#添加边</span></span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>)])</span><br><span class="line"><span class="comment">#可视化</span></span><br><span class="line">nx.draw(G, with_labels=<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#保存图片地址</span></span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取图的邻接矩阵</span></span><br><span class="line">As = nx.adjacency_matrix(G)</span><br><span class="line"><span class="built_in">print</span>(As)</span><br><span class="line"></span><br><span class="line"><span class="comment">#转化为二维的矩阵</span></span><br><span class="line">A= As.todense()</span><br><span class="line"><span class="built_in">print</span>(A)</span><br></pre></td></tr></table></figure>
+
+<p>如下图：<img src="./images/figure.png" alt="figure" style="zoom:33%;" /></p>
+<p>输出为：<img src="./images/01input.png" alt="01input" style="zoom:67%;" /></p>
+<h1 id="根据邻接矩阵创建图"><a href="#根据邻接矩阵创建图" class="headerlink" title="根据邻接矩阵创建图"></a>根据邻接矩阵创建图</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment">#已知邻接矩阵创建图</span></span><br><span class="line">A = np.array([[<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>]])</span><br><span class="line">T = nx.from_numpy_array(A)</span><br><span class="line">nx.draw(T, with_labels=<span class="literal">True</span>)</span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure02.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>结果如图<img src="./images/figure02.png" alt="figure02" style="zoom:33%;" /></p>
+<h1 id="加权图"><a href="#加权图" class="headerlink" title="加权图"></a>加权图</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line">G.add_weighted_edges_from([(<span class="number">0</span>,<span class="number">1</span>,<span class="number">3.0</span>),(<span class="number">1</span>,<span class="number">2</span>,<span class="number">7.5</span>),(<span class="number">0</span>,<span class="number">2</span>,<span class="number">1.5</span>)])</span><br><span class="line">As = nx.adjacency_matrix(G)</span><br><span class="line"><span class="built_in">print</span>(As.todense())</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure03.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>结果如图<img src="./images/figure03.png" alt="figure03" style="zoom:33%;" /></p>
+<p>输入结果如图<img src="./images/03input.png" alt="03input" style="zoom:67%;" /></p>
+<h1 id="有向图"><a href="#有向图" class="headerlink" title="有向图"></a>有向图</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加边</span></span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">3</span>,<span class="number">4</span>)])</span><br><span class="line">nx.draw(G)</span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure04.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>结果如图：<img src="./images/figure04.png" alt="figure04" style="zoom:33%;" /></p>
+<h1 id="获取网络图G的度"><a href="#获取网络图G的度" class="headerlink" title="获取网络图G的度"></a>获取网络图G的度</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line"><span class="comment">#添加节点</span></span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加边</span></span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">4</span>)])</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取网络G的度</span></span><br><span class="line">d = nx.degree(G)</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"></span><br><span class="line"><span class="comment">#平均度</span></span><br><span class="line">d2 = <span class="built_in">dict</span>(nx.degree(G))</span><br><span class="line"><span class="built_in">print</span>(d2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;平均度为：&quot;</span>,<span class="built_in">sum</span>(d2.values())/<span class="built_in">len</span>(G.nodes))</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取分布情况</span></span><br><span class="line">degree_counts = nx.degree_histogram(G)<span class="comment">#返回所有位于区间[0,dmax]的度的值</span></span><br><span class="line"><span class="built_in">print</span>(degree_counts)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>结果如图：<img src="./images/05input.png" alt="05input" style="zoom:67%;" /></p>
+<h1 id="直方图绘制"><a href="#直方图绘制" class="headerlink" title="直方图绘制"></a>直方图绘制</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line"><span class="comment">#添加节点</span></span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加边</span></span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">4</span>)])</span><br><span class="line"></span><br><span class="line">d = <span class="built_in">dict</span>(nx.degree(G))</span><br><span class="line"></span><br><span class="line">x = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="built_in">max</span>(d.values()) + <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">y = [i/<span class="built_in">len</span>(G.nodes()) <span class="keyword">for</span> i <span class="keyword">in</span> nx.degree_histogram(G)]</span><br><span class="line"></span><br><span class="line">plt.bar(x,y)</span><br><span class="line"></span><br><span class="line">plt.xlabel(<span class="string">&quot;$k$&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.ylabel(<span class="string">&quot;$p_k$&quot;</span>)</span><br><span class="line">plt.xlim([<span class="number">0</span>,<span class="number">4</span>])</span><br><span class="line">bar_path = <span class="string">&#x27;E:/MyBlog/source/images/figure05.png&#x27;</span></span><br><span class="line">plt.savefig(bar_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>结果如图：<img src="./images/figure05.png" alt="figure05" style="zoom:50%;" /></p>
+<h1 id="路径与平均路径长度"><a href="#路径与平均路径长度" class="headerlink" title="路径与平均路径长度"></a>路径与平均路径长度</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G =nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">4</span>,<span class="number">5</span>)])</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure06.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>如图<img src="./images/figure06.png" alt="figure06" style="zoom:33%;" /></p>
+<h2 id="最短路径"><a href="#最短路径" class="headerlink" title="最短路径"></a>最短路径</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#获取节点1~4的最短路径</span></span><br><span class="line"><span class="built_in">list</span> = nx.shortest_path(G,source = <span class="number">1</span>, target = <span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果为：[1, 2, 3, 4]</p>
+<h2 id="两个节点之间的所有最短路径"><a href="#两个节点之间的所有最短路径" class="headerlink" title="两个节点之间的所有最短路径"></a>两个节点之间的所有最短路径</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">list2 = <span class="built_in">list</span>(nx.all_shortest_paths(G, source = <span class="number">1</span>, target = <span class="number">4</span>))</span><br><span class="line"><span class="built_in">print</span>(list2)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：[[1, 2, 3, 4], [1, 2, 5, 4]]</p>
+<h2 id="求两个节点的最短路径的长度"><a href="#求两个节点的最短路径的长度" class="headerlink" title="求两个节点的最短路径的长度"></a>求两个节点的最短路径的长度</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#求这两个节点的最短路径长度（距离）</span></span><br><span class="line"><span class="built_in">len</span> = nx.shortest_path_length(G, source=<span class="number">1</span>, target=<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：3</p>
+<h2 id="求整个网络的平均距离"><a href="#求整个网络的平均距离" class="headerlink" title="求整个网络的平均距离"></a>求整个网络的平均距离</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#求整个网络的平均距离</span></span><br><span class="line">av_len = nx.average_shortest_path_length(G)</span><br><span class="line"><span class="built_in">print</span>(av_len)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果为：1.6</p>
+<h1 id="连通性"><a href="#连通性" class="headerlink" title="连通性"></a>连通性</h1><h2 id="非连通图判断连通性"><a href="#非连通图判断连通性" class="headerlink" title="非连通图判断连通性"></a>非连通图判断连通性</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">4</span>,<span class="number">7</span>),(<span class="number">5</span>,<span class="number">6</span>),(<span class="number">5</span>,<span class="number">7</span>),(<span class="number">6</span>,<span class="number">7</span>)])</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure07.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#联通图判断</span></span><br><span class="line"><span class="built_in">print</span>(nx.is_connected(G))  <span class="comment">#False</span></span><br></pre></td></tr></table></figure>
+
+<p>结果如图：<img src="./images/figure07.png" alt="figure07" style="zoom:33%;" /></p>
+<h2 id="连通图判断联通性"><a href="#连通图判断联通性" class="headerlink" title="连通图判断联通性"></a>连通图判断联通性</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">Ga = nx.Graph()</span><br><span class="line">Ga.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>])</span><br><span class="line">Ga.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">4</span>,<span class="number">7</span>),(<span class="number">5</span>,<span class="number">6</span>),(<span class="number">5</span>,<span class="number">7</span>),(<span class="number">6</span>,<span class="number">7</span>)])</span><br><span class="line">nx.draw(Ga,with_labels=<span class="literal">True</span>)</span><br><span class="line">Ga_path = <span class="string">&#x27;E:/MyBlog/source/images/figure08.png&#x27;</span></span><br><span class="line">plt.savefig(Ga_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#联通图判断</span></span><br><span class="line"><span class="built_in">print</span>(nx.is_connected(Ga))  <span class="comment">#Ture</span></span><br></pre></td></tr></table></figure>
+
+<p>如图<img src="./images/figure08.png" alt="figure08" style="zoom:33%;" /></p>
+<h1 id="集聚系数"><a href="#集聚系数" class="headerlink" title="集聚系数"></a>集聚系数</h1><h2 id="图一"><a href="#图一" class="headerlink" title="图一"></a>图一</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G =nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">4</span>),(<span class="number">1</span>,<span class="number">5</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">5</span>),(<span class="number">4</span>,<span class="number">5</span>)])</span><br><span class="line">Ga_path = <span class="string">&#x27;E:/MyBlog/source/images/figure09.png&#x27;</span></span><br><span class="line">plt.savefig(Ga_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#节点1的聚集系数</span></span><br><span class="line"><span class="built_in">print</span>(nx.clustering(G,<span class="number">1</span>)) <span class="comment">#1.0</span></span><br></pre></td></tr></table></figure>
+
+<p>如图<img src="./../images/figure09.png" alt="figure09" style="zoom:33%;" /></p>
+<h2 id="图二"><a href="#图二" class="headerlink" title="图二"></a>图二</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G = nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">4</span>,<span class="number">5</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">4</span>),(<span class="number">1</span>,<span class="number">5</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">3</span>,<span class="number">5</span>)])</span><br><span class="line"><span class="comment">#去除边</span></span><br><span class="line">G.remove_edges_from([(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">5</span>)])</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">Ga_path = <span class="string">&#x27;E:/MyBlog/source/images/figure0902.png&#x27;</span></span><br><span class="line">plt.savefig(Ga_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="built_in">print</span>(nx.clustering(G,<span class="number">1</span>)) <span class="comment">#0.5</span></span><br></pre></td></tr></table></figure>
+
+<p>如图<img src="./images/figure0902.png" alt="figure0902" style="zoom:33%;" /></p>
+<h2 id="图三"><a href="#图三" class="headerlink" title="图三"></a>图三</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G = nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">4</span>,<span class="number">5</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">4</span>),(<span class="number">1</span>,<span class="number">5</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">3</span>,<span class="number">5</span>)])</span><br><span class="line"><span class="comment">#去除边</span></span><br><span class="line">G.remove_edges_from([(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">4</span>),(<span class="number">3</span>,<span class="number">5</span>)])</span><br><span class="line">G.remove_edges_from([(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">4</span>,<span class="number">5</span>)])</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">Ga_path = <span class="string">&#x27;E:/MyBlog/source/images/figure0903.png&#x27;</span></span><br><span class="line">plt.savefig(Ga_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="built_in">print</span>(nx.clustering(G,<span class="number">1</span>)) <span class="comment">#0.0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如图<img src="./images/figure0903.png" alt="figure0903" style="zoom:33%;" /></p>
+<h1 id="平均集聚系数与全局聚集系数"><a href="#平均集聚系数与全局聚集系数" class="headerlink" title="平均集聚系数与全局聚集系数"></a>平均集聚系数与全局聚集系数</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G=nx.Graph()</span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>])</span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>),(<span class="number">2</span>,<span class="number">5</span>),(<span class="number">4</span>,<span class="number">5</span>),(<span class="number">4</span>,<span class="number">6</span>),(<span class="number">4</span>,<span class="number">7</span>),(<span class="number">5</span>,<span class="number">7</span>)])</span><br><span class="line">nx.draw(G,with_labels=<span class="literal">True</span>)</span><br><span class="line">Ga_path = <span class="string">&#x27;E:/MyBlog/source/images/figure10.png&#x27;</span></span><br><span class="line">plt.savefig(Ga_path)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#平均聚集系数</span></span><br><span class="line"><span class="built_in">print</span>(nx.average_clustering(G)) <span class="comment">#0.3095238095238095</span></span><br><span class="line"><span class="comment">#全局聚集系数</span></span><br><span class="line"><span class="built_in">print</span>(nx.transitivity(G))<span class="comment"># 0.375</span></span><br></pre></td></tr></table></figure>
+
+<p>如图：<img src="./images/figure10.png" alt="figure10" style="zoom:33%;" /></p>
+<h1 id="复杂网络的统计特征"><a href="#复杂网络的统计特征" class="headerlink" title="复杂网络的统计特征"></a>复杂网络的统计特征</h1><h2 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建一个随机网络</span></span><br><span class="line">n = <span class="number">10000</span> <span class="comment"># 网络节点数</span></span><br><span class="line">p = <span class="number">0.001</span> <span class="comment"># 连边的概率0.001</span></span><br><span class="line"><span class="comment"># 生成ER网络</span></span><br><span class="line">ER = nx.erdos_renyi_graph(n, p)</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取平均度</span></span><br><span class="line">d = <span class="built_in">dict</span>(nx.degree(ER))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;平均度为：&quot;</span>,<span class="built_in">sum</span>(d.values())/<span class="built_in">len</span>(ER.nodes))<span class="comment">#平均度为： 9.9996</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#获取所有可能得度值对应的概率</span></span><br><span class="line">x = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="built_in">max</span>(d.values())+<span class="number">1</span>))</span><br><span class="line">y = [i/n <span class="keyword">for</span> i <span class="keyword">in</span> nx.degree_histogram(ER)]</span><br><span class="line"></span><br><span class="line">plt.plot(x,y,<span class="string">&#x27;ro-&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;$k$&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;$p_k$&quot;</span>)</span><br><span class="line">ER_path = <span class="string">&#x27;E:/MyBlog/source/images/figure1101.png&#x27;</span></span><br><span class="line">plt.savefig(ER_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>如图<img src="./images/figure1101.png" alt="figure1101" style="zoom: 33%;" /></p>
+<h2 id="BA无标度网络"><a href="#BA无标度网络" class="headerlink" title="BA无标度网络"></a>BA无标度网络</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建一个随机网络</span></span><br><span class="line">n = <span class="number">100000</span> <span class="comment"># 网络节点数</span></span><br><span class="line">m = <span class="number">3</span> </span><br><span class="line"></span><br><span class="line">BA = nx.barabasi_albert_graph(n,m)</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取平均度</span></span><br><span class="line">d = <span class="built_in">dict</span>(nx.degree(BA))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;平均度为&quot;</span>,<span class="built_in">sum</span>(d.values())/<span class="built_in">len</span>(BA.nodes))<span class="comment">#平均度为 5.99982</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#获取所有可能得度值对应的概率</span></span><br><span class="line">x = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="built_in">max</span>(d.values())+<span class="number">1</span>))</span><br><span class="line">y = [i/n <span class="keyword">for</span> i <span class="keyword">in</span> nx.degree_histogram(BA)]</span><br><span class="line"></span><br><span class="line"><span class="comment">#普通坐标轴下</span></span><br><span class="line"><span class="comment"># plt.plot(x, y, &#x27;o-&#x27;, color=&#x27;b&#x27;)</span></span><br><span class="line"><span class="comment"># plt.xlabel(&quot;$k$&quot;)</span></span><br><span class="line"><span class="comment"># plt.ylabel(&quot;$p_k$&quot;)</span></span><br><span class="line"><span class="comment"># BA_path = &#x27;E:/MyBlog/source/images/figure11021.png&#x27;</span></span><br><span class="line"><span class="comment"># plt.savefig(BA_path)</span></span><br><span class="line"><span class="comment"># plt.show()</span></span><br><span class="line"><span class="comment">#在双对数轴下显示</span></span><br><span class="line"><span class="comment"># plt.plot(x,y,&#x27;ro-&#x27;)</span></span><br><span class="line"><span class="comment"># plt.xscale(&#x27;log&#x27;)</span></span><br><span class="line"><span class="comment"># plt.yscale(&#x27;log&#x27;)</span></span><br><span class="line"><span class="comment"># plt.xlabel(&quot;$k$&quot;)</span></span><br><span class="line"><span class="comment"># plt.ylabel(&quot;$p_k$&quot;)</span></span><br><span class="line"><span class="comment"># BA_path = &#x27;E:/MyBlog/source/images/figure11021.png&#x27;</span></span><br><span class="line"><span class="comment"># plt.savefig(BA_path)</span></span><br><span class="line"><span class="comment"># plt.show()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#在双对数坐标轴下绘制，并且把点0值坐标排除</span></span><br><span class="line">new_x = []</span><br><span class="line">new_y = []</span><br><span class="line"><span class="comment"># 删除0值</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(x)):</span><br><span class="line">    <span class="keyword">if</span> y[i] != <span class="number">0</span>:</span><br><span class="line">        new_x.append(x[i])</span><br><span class="line">        new_y.append(y[i])</span><br><span class="line">plt.plot(new_x,new_y,<span class="string">&#x27;ro-&#x27;</span>)</span><br><span class="line">plt.xscale(<span class="string">&#x27;log&#x27;</span>)</span><br><span class="line">plt.yscale(<span class="string">&#x27;log&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;$k$&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;$p_k$&quot;</span>)</span><br><span class="line">BA_path = <span class="string">&#x27;E:/MyBlog/source/images/figure11022.png&#x27;</span></span><br><span class="line">plt.savefig(BA_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>普通轴下如图<img src="./images/figure1102.png" alt="figure1102" style="zoom:33%;" /></p>
+<p>双对数轴下如图：<img src="./images/figure11021.png" alt="figure" style="zoom:33%;" /></p>
+<p>去除0值坐标下图像如图<img src="./images/figure11022.png" alt="figure" style="zoom:33%;" /></p>
+<h1 id="网络的直径、效率和平均最短距离"><a href="#网络的直径、效率和平均最短距离" class="headerlink" title="网络的直径、效率和平均最短距离"></a>网络的直径、效率和平均最短距离</h1>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
+        <tag>python进阶</tag>
+        <tag>python的networkx库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python进阶</title>
+    <url>/2024/09/06/python%E8%BF%9B%E9%98%B6/</url>
+    <content><![CDATA[<h1 id="python进阶"><a href="#python进阶" class="headerlink" title="python进阶"></a>python进阶</h1><h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>定义：是一个事件，这个事件在程序执行过程中发生，影响了程序的正常执行。</p>
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>语法格式一：</p>
+<p>try:</p>
+<p>​	可能引发异常现象的代码</p>
+<p>except:</p>
+<p>​	出现异常现象的处理代码</p>
+<p>语法格式二：</p>
+<p>try:</p>
+<p>​	可能引发异常现象的代码</p>
+<p>except:</p>
+<p>​	出现异常现象的处理代码</p>
+<p>else:</p>
+<p>​	try 代码块结束后运行的代码</p>
+<h3 id="异常传递"><a href="#异常传递" class="headerlink" title="异常传递"></a>异常传递</h3><p>当函数&#x2F;方法执行出现异常，会将异常传递给函数&#x2F;方法的调用一方</p>
+<p>如果传递到主程序，仍没有异常处理，程序才会被终止</p>
+<h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><p>特性：</p>
+<ol>
+<li>必须有一个明确的结束条件</li>
+<li>每次进入更深一层递归时，问题规模相比上一次递归都应有所减少</li>
+<li>相邻两次重复之前有紧密联系，前一次要为后一次做准备</li>
+<li>递归效率不高，递归层次过多导致栈溢出</li>
+<li>优点：定义简单，逻辑清晰</li>
+</ol>
+<p>递推：给递归实现拆解，递归每次都是基于上一次进行下一次的执行</p>
+<p>回溯：遇到终止条件之前，从最后往回返，一级一级的把值返回来</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#应用：</span></span><br><span class="line"><span class="comment">#累加</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> fun(n-<span class="number">1</span>)+n</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"><span class="built_in">print</span>(fun(<span class="number">7</span>))   	</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#斐波那契数列 1,1,2,3,5,8,13,21</span></span><br><span class="line">list1 = []</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> n</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> fun(n-<span class="number">1</span>) + fun(n-<span class="number">2</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>):</span><br><span class="line">    list1.append(fun(i))</span><br><span class="line"><span class="built_in">print</span>(list1)<span class="comment">#[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="函数引用"><a href="#函数引用" class="headerlink" title="函数引用"></a>函数引用</h2><p>定义：如果函数收到的是一个可变对象（比如字典或列表）的引用，就能够修改对象的原始——相当于通过”传引用”来传递对象；如果函数接收到的是一个不可变对象（如数字字符元组）的引用，就不能直接修改原始对象——相当于”‘传值”来传对象</p>
+<p>函数引用：如函数名的引用，函数传递时的引用传递</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def test1():</span><br><span class="line">    print(&quot;---in test1 func---&quot;)</span><br><span class="line">test1()</span><br><span class="line">res = test1</span><br><span class="line">print(id(res))</span><br><span class="line">print(id(test1()))</span><br></pre></td></tr></table></figure>
+
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>定义：闭包是函数内部定义的函数</p>
+<ol>
+<li>闭包是嵌套在函数中的函数</li>
+<li>闭包必须是内层函数对外层函数变量的引用</li>
+</ol>
+<p>构成条件</p>
+<ol>
+<li>函数中嵌套一个函数</li>
+<li>内层嵌套函数，对外部作用域有一个非全局变量的引用</li>
+<li>外层函数的返回值是内层函数的函数名</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#闭包模版</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">outF</span>():</span><br><span class="line">    <span class="built_in">sum</span> = n <span class="comment">#定义一个非全局变量</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inF</span>(<span class="params">n</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span>+<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> inF <span class="comment">#外层函数返回值是内层函数的函数名</span></span><br></pre></td></tr></table></figure>
+
+<p>闭包的作用：</p>
+<p>​	保存局部信息不被销毁，保证数据的安全性</p>
+<p>闭包的应用：</p>
+<ol>
+<li>可以保存一些非全局变量，不易被销毁、改变的数据</li>
+<li>装饰器</li>
+<li>实现数据锁定</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#例子</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">outer</span>(<span class="params">m</span>):</span><br><span class="line">    n = <span class="number">10</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;inner函数&quot;</span>,n+m)</span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line">t = outer(<span class="number">2</span>)</span><br><span class="line">t()<span class="comment">#inner函数 12</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><p>装饰器本质就是一个闭包函数，装饰器的返回值也是一个函数对象</p>
+<p>他可以让其他函数在不需要做任何代码变动的前提下增加额外的功能</p>
+<p>装饰器功能</p>
+<ol>
+<li>函数执行时间统计</li>
+<li>可以用在框架的路由传参上</li>
+<li>插入日志</li>
+<li>事务处理</li>
+<li>权限校验</li>
+<li>缓存</li>
+</ol>
+<p>装饰器使用方法：</p>
+<ol>
+<li>先定义一个装饰函数（帽子）</li>
+<li>在定义一个你的业务函数</li>
+<li>最后把这个帽子戴在这个人的头上</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#日志打印</span></span><br><span class="line"><span class="comment">#语法一</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">logger</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>(<span class="params">*args</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我准备计算开始：&#123;&#125;函数了&quot;</span>.<span class="built_in">format</span>(func.__name__))</span><br><span class="line">        <span class="comment">#真正执行的业务</span></span><br><span class="line">        func(*args)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我计算完了&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="comment">#第一种方法</span></span><br><span class="line"><span class="comment">#真正的业务函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">a, b</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; + &#123;&#125; = &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(a, b, a + b))</span><br><span class="line"></span><br><span class="line"><span class="comment">#使用装饰器来装饰函数</span></span><br><span class="line"><span class="comment">#把函数add作为参数传入到装饰函数</span></span><br><span class="line">te = logger(add) <span class="comment">#调用logger函数</span></span><br><span class="line">te(<span class="number">12</span>,<span class="number">55</span>) <span class="comment">#实现了wrapper的调用</span></span><br><span class="line">/*我准备计算开始：add函数了</span><br><span class="line"><span class="number">12</span> + <span class="number">55</span> = <span class="number">67</span></span><br><span class="line">我计算完了*/</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#日志打印</span></span><br><span class="line"><span class="comment">#语法二</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">logger</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>(<span class="params">*args</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我准备计算开始：&#123;&#125;函数了&quot;</span>.<span class="built_in">format</span>(func.__name__))</span><br><span class="line">        <span class="comment">#真正执行的业务</span></span><br><span class="line">        func(*args)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我计算完了&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"><span class="comment">#第二种语法@</span></span><br><span class="line"><span class="comment">#真正的业务函数</span></span><br><span class="line"><span class="meta">@logger</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">a, b</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; + &#123;&#125; = &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(a, b, a + b))</span><br><span class="line">add(<span class="number">1</span>, <span class="number">200</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="无参数的装饰器"><a href="#无参数的装饰器" class="headerlink" title="无参数的装饰器"></a>无参数的装饰器</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">te</span>(<span class="params">fun</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;这是inner&quot;</span>)</span><br><span class="line">        fun()</span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"><span class="comment">#方法一</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">t1</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;哈哈哈&quot;</span>)</span><br><span class="line"></span><br><span class="line">t = te(t1)</span><br><span class="line">t()</span><br></pre></td></tr></table></figure>
+
+<h2 id="有参数的装饰器"><a href="#有参数的装饰器" class="headerlink" title="有参数的装饰器"></a>有参数的装饰器</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">exam</span>(<span class="params">fun</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>(<span class="params">a,b</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;inner函数中的值：%s,%s&quot;</span>%(a,b))</span><br><span class="line">        fun(a,b)<span class="comment">#真正的业务函数</span></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"><span class="meta">@exam</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">te</span>(<span class="params">a,b</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;结果是：&quot;</span>,(a+b))</span><br><span class="line">te(<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">/*</span><br><span class="line">inner函数中的值：<span class="number">1</span>,<span class="number">2</span></span><br><span class="line">结果是： <span class="number">3</span></span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+
+<h2 id="多层嵌套"><a href="#多层嵌套" class="headerlink" title="多层嵌套"></a>多层嵌套</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">exam</span>(<span class="params">fn</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">x,y</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;hello&quot;</span>,x,y)</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">inner</span>(<span class="params">a,b</span>):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;inner函数中的值：%s，%s&quot;</span>%(a,b))</span><br><span class="line">            fn(a,b)</span><br><span class="line">        <span class="keyword">return</span> inner</span><br><span class="line">    <span class="keyword">return</span> fun</span><br><span class="line"><span class="meta">@exam</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">te</span>(<span class="params">a,b</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;结果是：&quot;</span>, (a + b))</span><br><span class="line">te(<span class="number">1</span>,<span class="number">2</span>)(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">/*</span><br><span class="line">hello <span class="number">1</span> <span class="number">2</span></span><br><span class="line">inner函数中的值：<span class="number">3</span>，<span class="number">4</span></span><br><span class="line">结果是： <span class="number">7</span></span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+
+<h2 id="属性与方法"><a href="#属性与方法" class="headerlink" title="属性与方法"></a>属性与方法</h2><p>属性：对象的特征描述，实际为定义的变量，该变量为属性</p>
+<p>方法：对象具有的行为（本质是函数），类中定义的函数即方法</p>
+<h3 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h3><p>对象的创建格式</p>
+<p>​	对象名 &#x3D; 类名（）</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
+        <tag>python进阶</tag>
+        <tag>python的networkx库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文知识点</title>
+    <url>/2024/10/09/%E8%AE%BA%E6%96%87%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<h1 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h3 id="一、超网络的结构测度指标体系"><a href="#一、超网络的结构测度指标体系" class="headerlink" title="一、超网络的结构测度指标体系"></a>一、超网络的结构测度指标体系</h3><p>超网络（<strong>hypernetwork</strong>）的结构测度指标体系是网络科学中的一个研究热点，旨在宽松和分析超网络的结构特性。超网络是一种特殊类型的网络，其中的边可以连接多个节点，而不仅仅是节点。这种复杂性的关系拓展了两个传统图论的边连接形式，因此需要专门的测度指标来描述其结构。</p>
+<p>以下是一些常用的超网络结构测度指标：</p>
+<h4 id="1-度分布（Degree-Distribution）"><a href="#1-度分布（Degree-Distribution）" class="headerlink" title="1.度分布（Degree Distribution）"></a>1.<strong>度分布（Degree Distribution）</strong></h4><ul>
+<li><h5 id="节点度（Node-Degree）：表示一个节点参与的超边数量。在超网络中，节点的度可以表示为其参与的超边数量。"><a href="#节点度（Node-Degree）：表示一个节点参与的超边数量。在超网络中，节点的度可以表示为其参与的超边数量。" class="headerlink" title="节点度（Node Degree）：表示一个节点参与的超边数量。在超网络中，节点的度可以表示为其参与的超边数量。"></a><strong>节点度（Node Degree）</strong>：表示一个节点参与的超边数量。在超网络中，节点的度可以表示为其参与的超边数量。</h5></li>
+<li><h5 id="超边度（Hyperedge-Degree）：表示每个超边连接的节点数量，也即每条超边的维度大小。"><a href="#超边度（Hyperedge-Degree）：表示每个超边连接的节点数量，也即每条超边的维度大小。" class="headerlink" title="超边度（Hyperedge Degree）：表示每个超边连接的节点数量，也即每条超边的维度大小。"></a><strong>超边度（Hyperedge Degree）</strong>：表示每个超边连接的节点数量，也即每条超边的维度大小。</h5></li>
+</ul>
+<h4 id="2-节点中心性（Node-Centrality）"><a href="#2-节点中心性（Node-Centrality）" class="headerlink" title="2.节点中心性（Node Centrality）"></a>2.<strong>节点中心性（Node Centrality）</strong></h4><p>这是缓慢网络中的要点在结构上是否受到关注的重要位置的指标：</p>
+<ul>
+<li><strong>度中心性（Degree Centrality）</strong>：根据节点参与的超边数量来降低其重要性。</li>
+<li><strong>接近中心性（Closeness Centrality）</strong>：通过计算节点与其他节点的最短路径距离，反映节点的传递效率。</li>
+<li><strong>内部中心性（Betweenness Centrality）</strong>：一个反映节点在最短路径中充当“桥梁”的程度，即该节点在网络中信息流动的枢纽角色。</li>
+</ul>
+<h4 id="3-聚类系数（Clustering-Coefficient）"><a href="#3-聚类系数（Clustering-Coefficient）" class="headerlink" title="3.聚类系数（Clustering Coefficient）"></a>3.<strong>聚类系数（Clustering Coefficient）</strong></h4><p>传统网络中的迭代次数被用于计算节点间和邻居节点之间的加权程度。而在超网络中，迭代次数的定义更复杂，可能涉及计算节点间通过共享超边进行连接的概率。</p>
+<h4 id="4-模块性（Modularity）"><a href="#4-模块性（Modularity）" class="headerlink" title="4.模块性（Modularity）"></a>4.<strong>模块性（Modularity）</strong></h4><p>模块性用于最简单网络中的社区结构，即网络能否划分为若干模块或子群体，使得相同模块内的节点比外部模块之间的节点连接更紧密。超网络中的模块性测度可以扩展为考虑多节点超边的影响。</p>
+<h4 id="5-连通性（Connectivity）"><a href="#5-连通性（Connectivity）" class="headerlink" title="5.连通性（Connectivity）"></a>5.<strong>连通性（Connectivity）</strong></h4><p>替代性是指网络中节点通过超边的连接情况：</p>
+<ul>
+<li><strong>强干扰性（Strong Connectivity）</strong>：表示是否存在强弱的子图，使得所有节点都通过超边相互相邻。</li>
+<li><strong>弱感知性（Weak Connectivity）</strong>：不要求所有节点之间都直接关联，而是可以通过多跳超边连通。</li>
+</ul>
+<h4 id="6-路径长度（Path-Length）"><a href="#6-路径长度（Path-Length）" class="headerlink" title="6.路径长度（Path Length）"></a>6.<strong>路径长度（Path Length）</strong></h4><p>在超网络中，路径长度可以通过多个节点的超边来定义和关注。例如，在两个节点间，是否存在通过一系列超边的路径。</p>
+<h4 id="7-超边的覆盖度和重叠度（Hyperedge-Coverage-and-Overlap）"><a href="#7-超边的覆盖度和重叠度（Hyperedge-Coverage-and-Overlap）" class="headerlink" title="7.超边的覆盖度和重叠度（Hyperedge Coverage and Overlap）"></a>7.<strong>超边的覆盖度和重叠度（Hyperedge Coverage and Overlap）</strong></h4><ul>
+<li><strong>覆盖度</strong>：最小网络中的节点被超边覆盖的程度。即某个节点的所有可能的邻居是否都在节点条父条超边中。</li>
+<li><strong>重叠度</strong>：不同超边之间的节点重叠程度，表示网络中节点在多个超边之间共享的程度。</li>
+</ul>
+<h4 id="8-子结构与模式识别（子结构和基序分析）"><a href="#8-子结构与模式识别（子结构和基序分析）" class="headerlink" title="8.子结构与模式识别（子结构和基序分析）"></a>8.<strong>子结构与模式识别（子结构和基序分析）</strong></h4><p>超网络中的子结构或模式分析旨在识别网络中经常出现的结构特征。这可以帮助我们了解超网络的功能特性或设置规律。</p>
+<h4 id="9-信息传播效率（Information-Diffusion-Efficiency）"><a href="#9-信息传播效率（Information-Diffusion-Efficiency）" class="headerlink" title="9.信息传播效率（Information Diffusion Efficiency）"></a>9.<strong>信息传播效率（Information Diffusion Efficiency）</strong></h4><p>信息传播的效率是指信息在超网络中通过节点和超边缘传播的速度和范围。这涉及计算信息在不同超网络结构中的传播路径和扩散模型。</p>
+<h4 id="10-超边维度（Hyperedge-Dimension）"><a href="#10-超边维度（Hyperedge-Dimension）" class="headerlink" title="10.超边维度（Hyperedge Dimension）"></a>10.<strong>超边维度（Hyperedge Dimension）</strong></h4><p>超边维度是超网络中超边连接的节点数量的分布情况，它反映了每条超边的复杂程度。</p>
+<p>这些结构测度指标有助于研究人员理解超网络的复杂性和行为，尤其是在大规模、多层次的网络关系中，这些指标可以揭示隐藏的网络模式或特性。</p>
+<p>超网络中，<strong>强度</strong>、<strong>超边度</strong>、<strong>超边强度</strong>、和<strong>超边基数</strong>等概念都是用来描述节点和超边之间复杂关系的关键指标。它们与传统网络中的概念有所不同，具体的定义和内涵如下：</p>
+<h3 id="二、强度、超边度、超边强度、超边基数等概念的定义和内涵"><a href="#二、强度、超边度、超边强度、超边基数等概念的定义和内涵" class="headerlink" title="二、强度、超边度、超边强度、超边基数等概念的定义和内涵"></a>二、强度、超边度、超边强度、超边基数等概念的定义和内涵</h3><h4 id="1-强度（Strength）"><a href="#1-强度（Strength）" class="headerlink" title="1. 强度（Strength）"></a>1. <strong>强度（Strength）</strong></h4><p>   在超网络中，节点的强度通常是指一个节点与其他节点通过超边相连接的<strong>总权重</strong>。这一概念与传统网络中的“节点强度”相似，但在超网络中，超边的权重可以根据连接的节点数、连接的重要性等进行加权计算。</p>
+<ul>
+<li><strong>定义</strong>：某个节点强度是该节点所参与的超边的权重之和。</li>
+<li><strong>内涵</strong>：强度描述了节点在网络中的参与度和影响力，强度越大，表明该节点在网络中与其他节点的关联越多或越强。</li>
+</ul>
+<h4 id="2-超边度（Hyperedge-Degree）"><a href="#2-超边度（Hyperedge-Degree）" class="headerlink" title="2. 超边度（Hyperedge Degree）"></a>2. <strong>超边度（Hyperedge Degree）</strong></h4><p>   超边度是指某个超边中所包含的<strong>节点的数量</strong>。在传统网络中，一条边连接两个节点，而在超网络中，超边可以连接多个节点，因此超边度描述了这条超边的“多度性”。</p>
+<ul>
+<li><strong>定义</strong>：某条超边度是该超边所连接的节点数量。</li>
+<li><strong>内涵</strong>：超边度反映了超边的复杂程度，也可以反映超边在网络中连接多个节点的能力，超边度越高，表示该超边涉及的节点越多。</li>
+</ul>
+<h4 id="3-超边强度（Hyperedge-Strength）"><a href="#3-超边强度（Hyperedge-Strength）" class="headerlink" title="3. 超边强度（Hyperedge Strength）"></a>3. <strong>超边强度（Hyperedge Strength）</strong></h4><p>   超边强度表示的是某一超边的<strong>总权重</strong>。这一概念与节点强度类似，但针对的是超边本身。超边强度可以通过超边连接的节点间的交互频率、关系重要性等因素来加权计算。</p>
+<ul>
+<li><strong>定义</strong>：某条超边强度是该超边中所有节点对之间关系的权重总和。</li>
+<li><strong>内涵</strong>：超边强度反映了超边中节点之间关联的强弱程度，强度越高，说明该超边内节点的关系越紧密或相互影响力越大。</li>
+</ul>
+<h4 id="4-超边基数（Hyperedge-Cardinality）"><a href="#4-超边基数（Hyperedge-Cardinality）" class="headerlink" title="4. 超边基数（Hyperedge Cardinality）"></a>4. <strong>超边基数（Hyperedge Cardinality）</strong></h4><p>   超边基数是超网络中的一个基础概念，指的是某一条超边连接的<strong>节点的数目</strong>。与超边度相似，但“基数”更侧重于表示这条超边在形式上的“连接数量”属性，而非具体的网络结构含义。</p>
+<ul>
+<li><strong>定义</strong>：超边基数是指某条超边所连接的节点数量。</li>
+<li><strong>内涵</strong>：超边基数是一个纯粹的集合论概念，直接反映了超边的规模。它与超边度的内涵相似，但可以更直接地用于一些集合论形式化的分析中。</li>
+</ul>
+<h4 id="这四个概念的关系："><a href="#这四个概念的关系：" class="headerlink" title="这四个概念的关系："></a>这四个概念的关系：</h4><ol>
+<li><strong>强度</strong>和<strong>超边强度</strong>都涉及权重，但强度是针对<strong>节点</strong>，而超边强度是针对<strong>超边</strong>。</li>
+<li><strong>超边度</strong>和<strong>超边基数</strong>都描述了超边的节点数目，两者在定义上非常接近，但基数通常在集合论上下文中使用，表示形式化的节点数，而超边度则更多用于结构性分析。</li>
+<li>强度和超边度共同影响网络的整体拓扑结构，尤其是在研究网络中节点的影响力或网络中的信息传递时，它们是重要的衡量指标。</li>
+</ol>
+<p>这些指标对于理解超网络的复杂结构非常重要，有助于揭示节点在超网络中扮演的角色以及节点之间关系的强度。</p>
+<h3 id="三、聚集指标"><a href="#三、聚集指标" class="headerlink" title="三、聚集指标"></a>三、聚集指标</h3><p><strong>聚集指标（Aggregation Measures）</strong> 是用来衡量网络中节点及其邻居之间的连通性或凝聚性，通常用来描述节点之间形成紧密团体或子结构的程度。在网络科学中，聚集性是理解节点间局部结构特性的一个重要方面，尤其是在社交网络或合作网络中，它反映了节点间相互依赖或协作的强度。</p>
+<p>对于<strong>传统网络</strong>，最常见的聚集性指标是<strong>聚类系数（Clustering Coefficient）</strong>，而在<strong>超网络</strong>中，由于超边可以连接多个节点，聚集性指标的计算和含义会更加复杂。下面是聚集性相关的主要指标和它们的内涵：</p>
+<h4 id="1-聚类系数（Clustering-Coefficient）"><a href="#1-聚类系数（Clustering-Coefficient）" class="headerlink" title="1. 聚类系数（Clustering Coefficient）"></a>1. <strong>聚类系数（Clustering Coefficient）</strong></h4><p>   聚类系数衡量网络中节点的邻居之间互相连接的紧密程度。它是局部聚集性的常用度量，通常分为以下两种类型：</p>
+<ul>
+<li><p><strong>局部聚类系数（Local Clustering Coefficient）</strong>：</p>
+<ul>
+<li><strong>定义</strong>：对于某个节点，局部聚类系数是其邻居节点之间实际存在的连边数量与可能存在的连边数量的比值。</li>
+<li><strong>内涵</strong>：局部聚类系数反映了某个节点周围形成“团体”或“圈子”的程度。值越大，说明该节点的邻居节点之间的连接越紧密。</li>
+<li><strong>公式</strong>（传统网络）：<br><img src="/./images/efigure02.png" alt="图"></li>
+</ul>
+</li>
+<li><p><strong>全局聚类系数（Global Clustering Coefficient）</strong>：</p>
+<ul>
+<li><strong>定义</strong>：全局聚类系数是网络中所有节点的局部聚类系数的平均值，或者通过三角形与三节点子图的比例来计算。</li>
+<li><strong>内涵</strong>：全局聚类系数反映整个网络中的聚集性特征，描述网络整体上节点是否倾向于形成聚集的小团体。</li>
+</ul>
+</li>
+</ul>
+<p>   在<strong>超网络</strong>中，聚类系数的计算更加复杂，因为超边可以连接多个节点。常见的扩展方式包括：</p>
+<ul>
+<li><strong>超边聚类系数（Hyperedge Clustering Coefficient）</strong>：基于共享超边来定义，计算节点与其邻居之间通过共同超边连接的概率。</li>
+<li><strong>超网络的高阶聚集性</strong>：考虑超边与超边之间的相互交叠和共享节点的关系，用来描述超边之间的紧密度。</li>
+</ul>
+<h4 id="2-三角形闭合率（Triangle-Closure-Rate）"><a href="#2-三角形闭合率（Triangle-Closure-Rate）" class="headerlink" title="2. 三角形闭合率（Triangle Closure Rate）"></a>2. <strong>三角形闭合率（Triangle Closure Rate）</strong></h4><ul>
+<li><strong>定义</strong>：三角形闭合率是网络中两两节点与第三个共同邻居形成三角形的概率。它是另一种衡量聚集性的指标，尤其在社交网络中，朋友的朋友往往也会成为朋友，这种现象就体现在三角形闭合率上。</li>
+<li><strong>超网络中的扩展</strong>：超网络中的三角形闭合可以扩展为多节点子结构的闭合，或者通过分析某些节点与其他多个节点共同形成的紧密结构来计算。</li>
+</ul>
+<h4 id="3-模块度（Modularity）"><a href="#3-模块度（Modularity）" class="headerlink" title="3. 模块度（Modularity）"></a>3. <strong>模块度（Modularity）</strong></h4><p>   虽然模块度通常用于衡量网络的社区结构，但它也与聚集性紧密相关，因为高模块度的网络意味着网络中存在高度聚集的子群体。模块度高的网络倾向于形成社区，即网络中的节点分为若干个内部连接紧密而外部连接稀疏的群体。</p>
+<ul>
+<li><strong>定义</strong>：模块度通过衡量网络中的实际边数与随机分配边数之间的差异，来评价网络划分为社区的优劣。</li>
+<li><strong>公式</strong>：<br><img src="/./images/efigure01.png" alt="图1"></li>
+</ul>
+<h4 id="4-超边重叠度（Hyperedge-Overlap）"><a href="#4-超边重叠度（Hyperedge-Overlap）" class="headerlink" title="4. 超边重叠度（Hyperedge Overlap）"></a>4. <strong>超边重叠度（Hyperedge Overlap）</strong></h4><ul>
+<li><strong>定义</strong>：超边重叠度反映超网络中不同超边之间共享节点的程度。两个超边之间如果共享更多的节点，它们之间的重叠度就越高。</li>
+<li><strong>内涵</strong>：超边重叠度是超网络中高阶聚集性的反映，说明网络中的节点倾向于通过多个超边彼此紧密联系。</li>
+</ul>
+<h4 id="5-社团系数（Community-Coefficient）"><a href="#5-社团系数（Community-Coefficient）" class="headerlink" title="5. 社团系数（Community Coefficient）"></a>5. <strong>社团系数（Community Coefficient）</strong></h4><ul>
+<li><strong>定义</strong>：社团系数是描述网络中节点聚集成若干社区的能力。它是通过分析网络的模块结构，计算网络在不同社区中节点连接的紧密程度。</li>
+<li><strong>内涵</strong>：社团系数较高意味着网络有明显的聚集性，形成了多个社区或群体。</li>
+</ul>
+<h4 id="6-凝聚子图（Cohesive-Subgraphs）"><a href="#6-凝聚子图（Cohesive-Subgraphs）" class="headerlink" title="6. 凝聚子图（Cohesive Subgraphs）"></a>6. <strong>凝聚子图（Cohesive Subgraphs）</strong></h4><ul>
+<li><strong>定义</strong>：凝聚子图是指节点之间相互连接紧密的子结构。k-核心（k-core）是一个典型的凝聚子图，它是由所有度至少为 ( k ) 的节点及其连边构成的子图。</li>
+<li><strong>内涵</strong>：凝聚子图反映了网络中节点局部聚集性，k-核心分析可以帮助识别网络中高度凝聚的子结构。</li>
+</ul>
+<h4 id="7-过度连通性（Hyperconnectivity）"><a href="#7-过度连通性（Hyperconnectivity）" class="headerlink" title="7. 过度连通性（Hyperconnectivity）"></a>7. <strong>过度连通性（Hyperconnectivity）</strong></h4><ul>
+<li><strong>定义</strong>：过度连通性是超网络中节点通过超边的连接程度，即节点之间不仅通过直接超边相连，而且与多个其他节点共享相同的超边，形成紧密的聚集结构。</li>
+<li><strong>内涵</strong>：过度连通性体现了超网络中节点间多维度的连接关系，反映了网络的复杂聚集性。</li>
+</ul>
+<h4 id="8-超网络的k-核心（k-core-in-Hypernetwork）"><a href="#8-超网络的k-核心（k-core-in-Hypernetwork）" class="headerlink" title="8. 超网络的k-核心（k-core in Hypernetwork）"></a>8. <strong>超网络的k-核心（k-core in Hypernetwork）</strong></h4><ul>
+<li><strong>定义</strong>：超网络中的k-核心是由所有度至少为 ( k ) 的节点构成的子结构，它表示节点的局部密集区域。由于超网络中的边可以是多节点连接，因此k-核心的定义需要扩展以适应超边的复杂性。</li>
+<li><strong>内涵</strong>：超网络的k-核心分析帮助识别网络中最具凝聚力的区域，通常用于识别网络中最核心的子群体。</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>聚集指标反映了网络中的节点及其邻居之间的连通性，尤其在超网络中，这种聚集性更为复杂，涉及多个节点通过超边进行连接的多维度结构。通过这些聚集性指标，我们可以更深入地理解网络的局部特性和群体结构，从而发现隐藏在网络中的紧密关系和社区模式。</p>
+<h3 id="四、超边相似性的个性化推荐框架"><a href="#四、超边相似性的个性化推荐框架" class="headerlink" title="四、超边相似性的个性化推荐框架"></a>四、超边相似性的个性化推荐框架</h3><p>在超网络中，<strong>超边相似性</strong>可以为个性化推荐提供新的视角。与传统网络中基于节点之间的连接不同，超网络中的超边连接多个节点，因此可以捕捉到多节点之间的复杂关系。这使得基于超边相似性构建的个性化推荐框架更适合复杂数据集中的推荐任务，如社交媒体、电子商务、科研合作等场景。</p>
+<p>超边相似性在个性化推荐中可以通过度量用户或物品的行为模式相似性，从而为用户提供更为精准的推荐。以下是超边相似性推荐框架的核心组成部分：</p>
+<h4 id="1-数据表示与超网络构建"><a href="#1-数据表示与超网络构建" class="headerlink" title="1. 数据表示与超网络构建"></a>1. <strong>数据表示与超网络构建</strong></h4><p>   在个性化推荐系统中，数据通常包含用户与物品的交互，如用户点击、购买、评论等。在超网络中，这些交互可以通过<strong>超边</strong>来表示，例如：</p>
+<ul>
+<li>用户-物品-类别的多重关系可以构建为超网络中的一个超边，连接用户、物品以及其类别标签。</li>
+<li>用户之间共享的行为（如共同参与某个活动）也可以通过超边表示，超边连接了所有参与同一活动的用户。</li>
+</ul>
+<p>   <strong>步骤</strong>：</p>
+<ul>
+<li><strong>节点表示</strong>：用户、物品和相关属性（如类别、标签等）作为超网络的节点。</li>
+<li><strong>超边构建</strong>：通过分析用户行为的共同特征（如同时购买的物品或参与的活动），构建超边，将多个相关节点连接起来。</li>
+</ul>
+<h4 id="2-超边相似性计算"><a href="#2-超边相似性计算" class="headerlink" title="2. 超边相似性计算"></a>2. <strong>超边相似性计算</strong></h4><p>   要进行个性化推荐，关键是定义和计算超边的相似性。超边相似性可以通过以下方法计算：</p>
+<ul>
+<li><p><strong>基于节点的相似性</strong>：</p>
+<ul>
+<li><strong>节点交叠度</strong>：如果两个超边共享相同的节点（例如，用户参与了多个相同的物品），可以认为它们具有较高的相似性。相似性可以通过计算超边共享节点的数量来定义：<br><img src="/./images/efigure03.png" alt="图3"></li>
+</ul>
+</li>
+<li><p><strong>基于特征向量的相似性</strong>：</p>
+<ul>
+<li>对每个超边中的节点进行嵌入表示，将节点的属性和行为编码为向量。然后使用余弦相似性、欧几里得距离等方法计算超边之间的相似性：<br><img src="/./images/efigure04.png" alt="图4"></li>
+</ul>
+</li>
+<li><p><strong>基于信息传播的相似性</strong>：</p>
+<ul>
+<li>考虑超网络中信息传播的路径。如果信息从一个超边传播到另一个超边的效率较高（例如通过短路径、多节点传播等），那么可以认为它们相似性较高。信息传播效率可以通过随机游走、图卷积等方法进行计算。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-推荐算法设计"><a href="#3-推荐算法设计" class="headerlink" title="3. 推荐算法设计"></a>3. <strong>推荐算法设计</strong></h4><p>基于超边相似性，可以设计多种个性化推荐算法，核心思想是利用相似的超边来为用户生成个性化的推荐列表：</p>
+<ul>
+<li><p><strong>基于邻居的协同过滤（Neighborhood-based Collaborative Filtering）</strong>：</p>
+<ul>
+<li>为每个用户构建一个包含与其相关的超边集合，基于这些超边找到与之最相似的超边集合。然后推荐这些相似超边中的物品或服务给用户。</li>
+<li>具体步骤：先找到用户所在的超边，然后根据超边相似性找到最相似的超边，从中提取新的物品并推荐给用户。</li>
+</ul>
+</li>
+<li><p><strong>矩阵分解方法（Matrix Factorization）</strong>：</p>
+<ul>
+<li>将超网络中的节点和超边转化为用户-物品矩阵，通过矩阵分解来学习潜在的用户和物品的特征表示。通过超边的相似性，优化矩阵分解过程，预测用户对未见物品的评分。</li>
+<li>与传统矩阵分解不同，超边的高维连接性使得在分解过程中需要考虑更多的上下文信息，适合捕捉复杂的用户行为模式。</li>
+</ul>
+</li>
+<li><p><strong>图嵌入与深度学习（Graph Embedding &amp; Deep Learning）</strong>：</p>
+<ul>
+<li>基于超边构建用户和物品的特征向量，通过深度学习模型（如图神经网络 GNN）对超网络进行嵌入学习。通过训练模型学习到节点和超边的高维表示，然后基于超边相似性进行推荐。</li>
+<li>例如，使用图卷积网络（GCN）在超网络中传播信息，更新节点的嵌入表示，从而更好地捕捉用户和物品之间的复杂关系。</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-个性化推荐生成"><a href="#4-个性化推荐生成" class="headerlink" title="4. 个性化推荐生成"></a>4. <strong>个性化推荐生成</strong></h4><ul>
+<li><strong>Top-N推荐</strong>：基于超边相似性，为每个用户生成与其行为最相关的超边推荐列表，然后从这些超边中提取出最有可能吸引用户的物品，最终生成Top-N推荐列表。</li>
+<li><strong>推荐多样性</strong>：通过控制推荐中的超边相似性阈值，增加推荐结果的多样性。例如，除了推荐与用户行为最相似的超边，也可以适当推荐相似度较低但潜在兴趣较大的超边。</li>
+</ul>
+<h4 id="5-评价与优化"><a href="#5-评价与优化" class="headerlink" title="5. 评价与优化"></a>5. <strong>评价与优化</strong></h4><ul>
+<li><strong>精确率和召回率</strong>：衡量推荐系统的准确性，精确率反映推荐结果的准确程度，召回率表示推荐覆盖了多少用户潜在感兴趣的物品。</li>
+<li><strong>覆盖率</strong>：衡量系统推荐的物品范围是否广泛，即推荐是否过于集中于少数流行物品。</li>
+<li><strong>新颖性与多样性</strong>：评价系统是否能够推荐给用户一些新颖的或不太常见的物品，避免推荐同质化。</li>
+</ul>
+<h4 id="案例应用："><a href="#案例应用：" class="headerlink" title="案例应用："></a>案例应用：</h4><ol>
+<li><strong>电商推荐</strong>：在电子商务平台中，超边可以表示用户的购物行为和商品的多属性信息（如品牌、类别）。基于超边相似性，可以为用户推荐符合其历史购买偏好的新商品。</li>
+<li><strong>社交媒体推荐</strong>：在社交媒体中，超边可以表示用户的社交群体和内容互动行为（如共同参与的活动、点赞的内容等）。基于超边相似性，可以推荐用户感兴趣的帖子、群组或好友。</li>
+</ol>
+<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>基于超边相似性的个性化推荐框架通过分析用户、物品及其复杂的多维关系，能够捕捉到传统网络难以揭示的用户兴趣模式和行为特征。这一框架在电子商务、社交媒体、科研合作等多个领域具有广泛的应用潜力，并且能够通过灵活的超网络构建和相似性度量方法，进一步提高推荐系统的精准性和多样性。</p>
+<h3 id="五、合作网络、竞争网络、交通网络"><a href="#五、合作网络、竞争网络、交通网络" class="headerlink" title="五、合作网络、竞争网络、交通网络"></a>五、合作网络、竞争网络、交通网络</h3><p><strong>合作网络</strong>、<strong>竞争网络</strong>和<strong>交通网络</strong>是复杂网络研究中的典型应用领域，它们反映了不同系统中节点（如个体、组织或地点）之间的特定交互关系。以下是对这三类网络的介绍及其主要特性：</p>
+<h4 id="1-合作网络（Collaboration-Network）"><a href="#1-合作网络（Collaboration-Network）" class="headerlink" title="1. 合作网络（Collaboration Network）"></a>1. <strong>合作网络（Collaboration Network）</strong></h4><p>   <strong>定义</strong>：合作网络是描述个体或组织之间协作关系的网络，节点代表个体或组织，边表示它们之间的合作关系。这类网络常见于科研、商业和创新等领域。</p>
+<p>   <strong>应用场景</strong>：</p>
+<ul>
+<li><strong>科研合作</strong>：科研人员之间的合作构成了典型的合作网络，边表示他们在同一篇论文或项目上的合作。</li>
+<li><strong>商业合作</strong>：企业或公司之间的合作、联盟构成商业合作网络，例如公司共同开发产品、分享技术。</li>
+<li><strong>创新生态系统</strong>：在技术创新领域，企业、研发机构等通过合作共同推动创新，形成复杂的合作网络。</li>
+</ul>
+<p>   <strong>特性</strong>：</p>
+<ul>
+<li><strong>高聚集性</strong>：在合作网络中，合作伙伴往往倾向于形成三角关系或更紧密的团体，合作网络的聚集系数较高。</li>
+<li><strong>中心性</strong>：一些节点（如科研领军人物、核心企业）会成为合作网络的中心节点，拥有较高的度和中心性。</li>
+<li><strong>小世界效应</strong>：合作网络通常表现出小世界效应，意味着通过少数中介节点，两个任意节点之间的距离很短。</li>
+</ul>
+<p>   <strong>研究方法</strong>：</p>
+<ul>
+<li><strong>节点中心性分析</strong>：识别网络中最具影响力的个体或组织（如具有高度中心性的科研人员或企业）。</li>
+<li><strong>社团检测</strong>：分析网络中的合作群体，找出具有紧密合作关系的子网络（如科研领域中的特定研究团队）。</li>
+</ul>
+<h4 id="2-竞争网络（Competition-Network）"><a href="#2-竞争网络（Competition-Network）" class="headerlink" title="2. 竞争网络（Competition Network）"></a>2. <strong>竞争网络（Competition Network）</strong></h4><p>   <strong>定义</strong>：竞争网络描述个体或组织之间的竞争关系。节点代表竞争主体（如企业、个体等），边表示它们之间的竞争。与合作网络不同，竞争网络中的关系具有对抗性。</p>
+<p>   <strong>应用场景</strong>：</p>
+<ul>
+<li><strong>市场竞争</strong>：企业之间在产品市场上的竞争，边表示企业之间争夺同一市场份额的关系。</li>
+<li><strong>生态竞争</strong>：在生物学中，物种之间为资源而竞争也构成竞争网络，物种通过争夺栖息地、食物等资源进行竞争。</li>
+<li><strong>社交竞争</strong>：个人在社交网络中的地位竞争，例如影响力、关注度的争夺，形成竞争关系。</li>
+</ul>
+<p>   <strong>特性</strong>：</p>
+<ul>
+<li><strong>异质性</strong>：竞争网络通常由不同规模、不同实力的节点构成，节点的度分布可能高度不均匀，少数节点（如行业巨头）可能与许多节点存在竞争关系。</li>
+<li><strong>对抗性结构</strong>：竞争网络中的关系更多表现为负向关系（即“竞争”），而不是协作；因此，网络中可能会形成相互竞争的团体或结构。</li>
+<li><strong>权力法则分布</strong>：竞争网络中的度分布常常遵循幂律分布，表明大多数节点只有少数竞争对手，而少数节点有大量的竞争对手。</li>
+</ul>
+<p>   <strong>研究方法</strong>：</p>
+<ul>
+<li><strong>对抗性图模型</strong>：使用正负边表示竞争和合作关系的对抗性图来分析竞争网络中的动态变化和稳定结构。</li>
+<li><strong>博弈论分析</strong>：在竞争网络中，通过博弈论分析参与者的竞争策略，预测网络中竞争平衡的演化趋势。</li>
+</ul>
+<h4 id="3-交通网络（Transportation-Network）"><a href="#3-交通网络（Transportation-Network）" class="headerlink" title="3. 交通网络（Transportation Network）"></a>3. <strong>交通网络（Transportation Network）</strong></h4><p>   <strong>定义</strong>：交通网络描述了地理位置之间的运输或通信连接，节点代表地点（如城市、站点），边代表连接这些地点的交通路线（如道路、铁路、航线等）。交通网络广泛存在于实际生活中的各种运输和物流系统中。</p>
+<p>   <strong>应用场景</strong>：</p>
+<ul>
+<li><strong>城市交通系统</strong>：城市中的公交线路、地铁线路、道路系统构成了典型的交通网络，边表示站点之间的道路或轨道连接。</li>
+<li><strong>航空网络</strong>：机场之间的航班航线构成了全球航空交通网络，节点是机场，边表示航线。</li>
+<li><strong>物流网络</strong>：企业的供应链或物流网络也是一种交通网络，节点为仓库或配送中心，边表示货物的运输路径。</li>
+</ul>
+<p>   <strong>特性</strong>：</p>
+<ul>
+<li><strong>空间嵌入性</strong>：交通网络中的节点和边通常依赖于空间位置，网络中的连接与地理距离有关。</li>
+<li><strong>网络效率</strong>：交通网络的效率非常重要，它衡量货物、人员或信息能否快速、便捷地从一个节点传递到另一个节点。</li>
+<li><strong>层级结构</strong>：交通网络往往具有层级结构，少数枢纽节点（如大型机场或交通枢纽）承担着连接大量边的作用，而大多数节点与枢纽节点相连。</li>
+</ul>
+<p>   <strong>研究方法</strong>：</p>
+<ul>
+<li><strong>最短路径算法</strong>：交通网络中最常用的分析方法，用于寻找节点之间的最优路径，以最小化运输成本或时间。</li>
+<li><strong>网络鲁棒性分析</strong>：分析交通网络在面对突发事件（如道路中断、天气影响等）时的稳定性和应对能力。</li>
+<li><strong>中心性分析</strong>：识别交通网络中的重要节点（如交通枢纽），这些节点往往具有较高的度中心性或介数中心性。</li>
+</ul>
+<h4 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h4><ul>
+<li><strong>合作网络</strong>强调个体或组织间的协作与共赢关系，常见于科研、商业等领域，具有高聚集性和小世界效应。</li>
+<li><strong>竞争网络</strong>侧重于个体或组织间的竞争与对抗关系，广泛存在于经济、生态等系统中，具有异质性和对抗性。</li>
+<li><strong>交通网络</strong>则描述了地理位置之间的连接，重点在于如何高效、安全地进行运输或通信，通常依赖于空间嵌入性和层级结构。</li>
+</ul>
+<p>三者的主要区别在于节点之间的关系性质：合作网络以协作为主，竞争网络以对抗为主，而交通网络则注重连接与运输效率。这三种网络的研究对理解复杂系统中的不同交互模式具有重要意义。</p>
+<h3 id="六、网络演化的因素"><a href="#六、网络演化的因素" class="headerlink" title="六、网络演化的因素"></a>六、网络演化的因素</h3><p>驱动网络演化的因素是指影响网络结构随时间变化的主要原因或机制。不同类型的网络（如合作网络、竞争网络、社交网络、生态网络等）会受到不同的因素驱动，但通常以下几个关键因素在多种网络演化过程中起着重要作用：</p>
+<h4 id="1-节点增长（Node-Growth）"><a href="#1-节点增长（Node-Growth）" class="headerlink" title="1. 节点增长（Node Growth）"></a>1. <strong>节点增长（Node Growth）</strong></h4><p><strong>定义</strong>：网络中的新节点不断加入，导致网络规模逐渐扩大。</p>
+<p><strong>影响</strong>：</p>
+<ul>
+<li><strong>社交网络</strong>：随着时间推移，新用户不断加入社交平台，形成新的连接关系，网络规模迅速扩展。</li>
+<li><strong>交通网络</strong>：新城市、站点的加入扩展了网络的地理覆盖范围，增加了交通线路的复杂性。</li>
+<li><strong>科研合作网络</strong>：随着新研究人员进入某个领域，他们与现有科研人员合作，形成新的合作关系。</li>
+</ul>
+<p><strong>机制</strong>：</p>
+<ul>
+<li><strong>优先连接机制</strong>：即“富者愈富”现象，新节点倾向于连接已有网络中的高度中心节点，导致度分布呈现幂律分布，这种机制广泛存在于互联网、社交网络、科学合作网络等系统中。</li>
+</ul>
+<h4 id="2-边的重组和丢失（Edge-Rewiring-and-Loss）"><a href="#2-边的重组和丢失（Edge-Rewiring-and-Loss）" class="headerlink" title="2. 边的重组和丢失（Edge Rewiring and Loss）"></a>2. <strong>边的重组和丢失（Edge Rewiring and Loss）</strong></h4><p><strong>定义</strong>：现有的连接（边）可以被重新排列或丢失，改变了网络中的连接结构。</p>
+<p><strong>影响</strong>：</p>
+<ul>
+<li><strong>合作网络</strong>：企业或科研团队之间的合作关系可能随项目结束或战略变化而终止，同时可能与新的合作伙伴建立联系。</li>
+<li><strong>社交网络</strong>：人与人之间的社交关系可能随时间淡化或断裂，老朋友的联系可能减少，新朋友的联系增加。</li>
+<li><strong>生态网络</strong>：物种间的竞争或协作关系可能随着生态环境的变化而调整，导致某些物种间的交互关系发生变化。</li>
+</ul>
+<p><strong>机制</strong>：</p>
+<ul>
+<li><strong>连接偏好变化</strong>：节点的连接偏好（如合作对象、竞争对手等）可能随着时间变化而发生改变，这会导致边的重新分配。</li>
+<li><strong>资源竞争与合作演化</strong>：在竞争和合作网络中，随着资源或市场变化，竞争或合作关系可能发生转变，影响边的存在与否。</li>
+</ul>
+<h4 id="3-网络中的局部相互作用（Local-Interaction）"><a href="#3-网络中的局部相互作用（Local-Interaction）" class="headerlink" title="3. 网络中的局部相互作用（Local Interaction）"></a>3. <strong>网络中的局部相互作用（Local Interaction）</strong></h4><p><strong>定义</strong>：节点通过与邻居的局部交互，影响到整个网络的演化。</p>
+<p><strong>影响</strong>：</p>
+<ul>
+<li><strong>社交网络</strong>：朋友之间的意见影响力、模仿行为等会促使个体改变连接行为，例如通过共同朋友认识新的人，形成新的连接。</li>
+<li><strong>生态网络</strong>：物种的局部相互作用（如捕食、竞争）会影响网络的稳定性和演化趋势，局部互动可能导致物种灭绝或繁荣。</li>
+</ul>
+<p><strong>机制</strong>：</p>
+<ul>
+<li><strong>同质性偏好（Homophily）</strong>：个体更倾向于与相似的个体建立联系，导致网络中节点之间的相似性不断增强。</li>
+<li><strong>三角闭合（Triadic Closure）</strong>：如果两个节点有共同的邻居，那么它们更有可能建立连接，形成闭合三角形的关系。</li>
+</ul>
+<h4 id="4-外部冲击与干扰（External-Shocks-and-Disturbances）"><a href="#4-外部冲击与干扰（External-Shocks-and-Disturbances）" class="headerlink" title="4. 外部冲击与干扰（External Shocks and Disturbances）"></a>4. <strong>外部冲击与干扰（External Shocks and Disturbances）</strong></h4><p><strong>定义</strong>：外部环境的变化或重大事件会对网络结构产生深远影响。</p>
+<p><strong>影响</strong>：</p>
+<ul>
+<li><strong>交通网络</strong>：自然灾害、战争、政策变化等外部因素可能导致部分交通线路中断、重建或扩展，改变网络的整体结构。</li>
+<li><strong>金融网络</strong>：市场崩溃、金融危机等外部冲击会导致网络中的企业、银行破产或重组，改变它们之间的金融依赖关系。</li>
+<li><strong>生态网络</strong>：气候变化、物种入侵或人类活动等外部干扰会导致物种灭绝或迁移，进而改变生态网络中的关系。</li>
+</ul>
+<p><strong>机制</strong>：</p>
+<ul>
+<li><strong>脆弱性与鲁棒性</strong>：网络中某些节点或边对外部冲击特别敏感，这些关键节点或边的变化会对网络整体结构产生深远影响。</li>
+<li><strong>适应性演化</strong>：某些网络（如生物网络或社会网络）具有适应外部冲击的能力，能够通过内部调整来缓冲外部影响。</li>
+</ul>
+<h4 id="5-节点属性和偏好的变化（Node-Attributes-and-Preferences-Changes）"><a href="#5-节点属性和偏好的变化（Node-Attributes-and-Preferences-Changes）" class="headerlink" title="5. 节点属性和偏好的变化（Node Attributes and Preferences Changes）"></a>5. <strong>节点属性和偏好的变化（Node Attributes and Preferences Changes）</strong></h4><p><strong>定义</strong>：节点的属性（如年龄、偏好、资源等）或其偏好随着时间推移发生变化，影响其连接行为。</p>
+<p><strong>影响</strong>：</p>
+<ul>
+<li><strong>社交网络</strong>：随着时间推移，人的兴趣、职业、居住地发生变化，可能导致社交关系的调整和重组。</li>
+<li><strong>科研合作网络</strong>：科研人员的研究方向或兴趣发生变化，会促使他们寻找新的合作伙伴，改变科研网络的结构。</li>
+<li><strong>竞争网络</strong>：公司或个体的策略、资源发生变化，可能使得它们从一个竞争对手转向另一个竞争对手。</li>
+</ul>
+<p><strong>机制</strong>：</p>
+<ul>
+<li><strong>兴趣趋同效应</strong>：节点的偏好趋同会导致它们更容易相互连接，例如在社交网络中，拥有相似兴趣的用户更容易形成联系。</li>
+<li><strong>节点成熟度与演化</strong>：一些网络中节点随着“成长”而改变连接行为，例如新公司进入市场时可能与小公司竞争，但随着扩展会与大公司竞争。</li>
+</ul>
+<h4 id="6-随机性与噪声（Randomness-and-Noise）"><a href="#6-随机性与噪声（Randomness-and-Noise）" class="headerlink" title="6. 随机性与噪声（Randomness and Noise）"></a>6. <strong>随机性与噪声（Randomness and Noise）</strong></h4><p><strong>定义</strong>：网络的演化过程有时受到随机因素或噪声的影响，导致不可预测的变化。</p>
+<p><strong>影响</strong>：</p>
+<ul>
+<li><strong>社交网络</strong>：个体之间的联系可能由于偶然的事件或短暂的交互而形成，形成随机连接。</li>
+<li><strong>交通网络</strong>：道路建设或关闭可能并非完全计划内，而是受到偶然事件（如突发需求、政治决策）的影响。</li>
+<li><strong>生态网络</strong>：物种关系的演化过程中存在一定的随机性，例如突发事件导致某个物种灭绝或迁移。</li>
+</ul>
+<p><strong>机制</strong>：</p>
+<ul>
+<li><strong>随机图模型</strong>：在某些网络中，随机连接或断裂可能会随着网络增长而发生，导致结构演化呈现一定的随机特性。</li>
+<li><strong>随机游走模型</strong>：某些网络演化模型考虑节点随机游走来寻找连接伙伴，这种随机性影响网络的最终结构。</li>
+</ul>
+<h4 id="7-反馈机制（Feedback-Mechanisms）"><a href="#7-反馈机制（Feedback-Mechanisms）" class="headerlink" title="7. 反馈机制（Feedback Mechanisms）"></a>7. <strong>反馈机制（Feedback Mechanisms）</strong></h4><p><strong>定义</strong>：网络中节点的行为会反馈到整个网络，进而推动网络的演化。</p>
+<p><strong>影响</strong>：</p>
+<ul>
+<li><strong>经济网络</strong>：企业间的合作或竞争关系会影响市场的反馈，进而调整企业的竞争策略，导致网络结构随之变化。</li>
+<li><strong>社交网络</strong>：个体的行为（如发帖、评论等）影响其社交反馈（如点赞、评论数），这又进一步影响其未来的连接行为。</li>
+<li><strong>生态网络</strong>：物种间的捕食和竞争关系会形成生态反馈，导致物种之间的关系动态调整。</li>
+</ul>
+<p><strong>机制</strong>：</p>
+<ul>
+<li><strong>正反馈循环</strong>：节点之间的某种行为（如合作）会产生增强该行为的反馈，导致网络中的合作关系更加紧密。</li>
+<li><strong>负反馈机制</strong>：竞争或资源限制导致的负反馈可能会抑制某些关系的进一步发展，促使网络中的节点或边进行调整。</li>
+</ul>
+<h4 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h4><p>网络的演化通常是由多种因素共同作用的结果，这些因素既包括网络内部节点和边的行为（如节点增长、局部相互作用），也包括外部环境变化（如外部冲击、随机事件）。网络的结构在这些驱动因素的影响下，不断进行调整、扩展或收缩，从而展现出复杂的演化模式。理解这些驱动因素有助于预测网络未来的演化趋势，并为实际系统中的问题（如社交网络的增长、交通网络的优化、生态网络的保护）提供参考。</p>
+<h3 id="七、连接机制、竞争驱动机制、节点状态转换机制"><a href="#七、连接机制、竞争驱动机制、节点状态转换机制" class="headerlink" title="七、连接机制、竞争驱动机制、节点状态转换机制"></a>七、连接机制、竞争驱动机制、节点状态转换机制</h3><ol>
+<li><h4 id="混合连接机制："><a href="#混合连接机制：" class="headerlink" title="混合连接机制："></a><strong>混合连接机制</strong>：</h4><ul>
+<li>这种机制结合了不同类型的连接方式，旨在提高系统的灵活性和效率。在网络中，它可能涉及将有线和无线连接结合在一起，利用各自的优势来满足不同的需求。混合连接机制可以在数据传输、网络负载均衡和资源分配等方面发挥重要作用。</li>
+</ul>
+</li>
+<li><h4 id="竞争驱动机制："><a href="#竞争驱动机制：" class="headerlink" title="竞争驱动机制："></a><strong>竞争驱动机制</strong>：</h4><ul>
+<li>该机制涉及多个参与者之间的竞争，驱动它们优化自身的行为，以获得资源或达成目标。在经济学和博弈论中，这种机制常用于描述市场竞争。在技术系统中，竞争驱动机制可以促使不同的算法或技术不断改进，以便在特定任务中表现更好。</li>
+</ul>
+</li>
+<li><h4 id="节点状态转换机制："><a href="#节点状态转换机制：" class="headerlink" title="节点状态转换机制："></a><strong>节点状态转换机制</strong>：</h4><ul>
+<li>这个机制描述了系统中节点如何在不同状态之间转换。通常用于图论和网络理论中，节点可能根据特定的规则或事件（如接收到的信息、时间变化等）在不同状态（如激活、待机、故障等）之间切换。节点状态转换机制可以用于建模复杂系统的动态行为，如计算机网络、社交网络或生物网络。</li>
+</ul>
+</li>
+</ol>
+<h3 id="八、邻域择优机制、允许老节点互连机制、断边重连机制驱"><a href="#八、邻域择优机制、允许老节点互连机制、断边重连机制驱" class="headerlink" title="八、邻域择优机制、允许老节点互连机制、断边重连机制驱"></a>八、邻域择优机制、允许老节点互连机制、断边重连机制驱</h3><p>这三种机制通常与网络结构、拓扑优化以及动态系统中的节点管理相关。以下是对每个机制的简要解释：</p>
+<ol>
+<li><h4 id="邻域择优机制："><a href="#邻域择优机制：" class="headerlink" title="邻域择优机制："></a><strong>邻域择优机制</strong>：</h4><ul>
+<li>该机制涉及在网络中选择最佳邻居节点进行连接或通信。在多种应用中，例如无线网络、社交网络或分布式计算中，节点通常会基于某些标准（如信号强度、节点性能、延迟等）来选择邻居。这种机制可以提高网络的整体效率和性能，确保信息在网络中有效传递。</li>
+</ul>
+</li>
+<li><h4 id="允许老节点互连机制："><a href="#允许老节点互连机制：" class="headerlink" title="允许老节点互连机制："></a><strong>允许老节点互连机制</strong>：</h4><ul>
+<li>这个机制允许网络中较老的节点之间建立直接连接。这种设计有助于维持网络的稳定性和可靠性，尤其是在节点频繁失效或更新的情况下。通过促进老节点的互连，网络可以增强信息传递的冗余性，并确保系统能够继续运行，即使部分新节点出现问题。</li>
+</ul>
+</li>
+<li><h4 id="断边重连机制："><a href="#断边重连机制：" class="headerlink" title="断边重连机制："></a><strong>断边重连机制</strong>：</h4><ul>
+<li>该机制描述了在网络中如何处理断开的连接（边）。当节点之间的连接因故障或其他原因中断时，断边重连机制允许这些节点尝试重新建立连接，或者选择新的邻居节点进行连接。通过灵活的重连策略，网络能够适应动态变化，保持其连通性和稳定性。这在动态网络（如移动自组织网络）中尤为重要。</li>
+</ul>
+</li>
+</ol>
+<h3 id="九、Poisson-过程理论和平均场方法"><a href="#九、Poisson-过程理论和平均场方法" class="headerlink" title="九、Poisson 过程理论和平均场方法"></a>九、Poisson 过程理论和平均场方法</h3><p><strong>Poisson过程理论</strong>和<strong>平均场方法</strong>是概率论和统计物理中的两个重要概念，分别用于建模随机事件和分析复杂系统的行为。下面是对这两个理论的简要介绍：</p>
+<h4 id="Poisson过程理论"><a href="#Poisson过程理论" class="headerlink" title="Poisson过程理论"></a>Poisson过程理论</h4><p><strong>定义</strong>：</p>
+<ul>
+<li>Poisson过程是一种随机过程，用于描述在固定时间间隔内发生独立事件的数量。它被广泛应用于排队论、信号处理、网络流量等领域。</li>
+</ul>
+<p><strong>主要特性</strong>：</p>
+<ol>
+<li><strong>事件发生的独立性</strong>：在任意两个不重叠的时间区间内发生事件的数量是相互独立的。</li>
+<li><strong>均匀性</strong>：在单位时间内发生事件的期望数量是一个常数，通常记为 λ（lambda），称为事件的强度或速率。</li>
+<li><strong>概率分布</strong>：在时间区间 [0, t] 内发生的事件数量服从 Poisson 分布，其概率质量函数为：<br><img src="/./images/efigure05.png" alt="图5"></li>
+</ol>
+<p><strong>应用</strong>：</p>
+<ul>
+<li>该理论在各种领域中应用广泛，如电话呼叫的到达、交通流量、网络数据包的到达等。</li>
+</ul>
+<h4 id="平均场方法"><a href="#平均场方法" class="headerlink" title="平均场方法"></a>平均场方法</h4><p><strong>定义</strong>：</p>
+<ul>
+<li>平均场方法是一种用于分析复杂系统（如统计物理、网络和生物系统）行为的技术。该方法通过假设系统中每个单元（如粒子、节点等）在某种平均条件下相互作用，从而简化系统的分析。</li>
+</ul>
+<p><strong>主要特性</strong>：</p>
+<ol>
+<li><strong>均匀假设</strong>：假设系统中的每个单元都与所有其他单元相互作用，并且每个单元的行为都是在平均场中进行的。</li>
+<li><strong>简化模型</strong>：通过引入均值或平均场变量，平均场方法能够将复杂的相互作用转化为简化的方程，从而使得求解问题更加可行。</li>
+<li><strong>动态系统的分析</strong>：平均场方法常用于分析动态系统的稳定性和相变行为，可以帮助理解系统的全局性质。</li>
+</ol>
+<p><strong>应用</strong>：</p>
+<ul>
+<li>在统计物理中，平均场理论被用来分析相变和临界现象。在机器学习中，平均场方法用于推断和优化算法。</li>
+</ul>
+<h4 id="总结-4"><a href="#总结-4" class="headerlink" title="总结"></a>总结</h4><p><strong>Poisson过程理论</strong>主要用于描述和建模独立随机事件的发生，而<strong>平均场方法</strong>则用于分析复杂系统中单元之间的相互作用，尤其是在系统规模较大时。这两者可以结合使用，以更好地理解随机过程和动态系统中的行为。</p>
+<h3 id="十、传染病动力学的-SIS-模型和-SIR-模型"><a href="#十、传染病动力学的-SIS-模型和-SIR-模型" class="headerlink" title="十、传染病动力学的 SIS 模型和 SIR 模型"></a>十、传染病动力学的 SIS 模型和 SIR 模型</h3><p>在传染病动力学中，<strong>SIS模型</strong>和<strong>SIR模型</strong>是两个基本且广泛使用的数学模型，用于描述疾病传播过程。它们通过将人口划分为不同的状态（如易感、感染、康复等）来分析疾病的传播特征和动态变化。以下是这两个模型的详细介绍：</p>
+<h4 id="SIS模型（易感-感染-易感）"><a href="#SIS模型（易感-感染-易感）" class="headerlink" title="SIS模型（易感-感染-易感）"></a>SIS模型（易感-感染-易感）</h4><p><strong>基本概念</strong>：</p>
+<ul>
+<li>在SIS模型中，个体在感染后不会获得长期免疫力。感染个体在治愈后会重新回到易感状态，因此整个过程是循环的。</li>
+</ul>
+<p><strong>状态定义</strong>：</p>
+<ul>
+<li><strong>S</strong>（易感者）：个体未感染，但有可能感染。</li>
+<li><strong>I</strong>（感染者）：个体正在感染，并能传染给易感者。</li>
+</ul>
+<p><strong>模型方程</strong>：</p>
+<p><img src="/./images/efigure06.png" alt="图6"></p>
+<p><strong>特点</strong>：</p>
+<ul>
+<li>在该模型中，个体在感染后会在一段时间后恢复并返回易感状态，形成一个封闭的循环。</li>
+</ul>
+<h4 id="SIR模型（易感-感染-康复）"><a href="#SIR模型（易感-感染-康复）" class="headerlink" title="SIR模型（易感-感染-康复）"></a>SIR模型（易感-感染-康复）</h4><p><strong>基本概念</strong>：</p>
+<ul>
+<li>SIR模型描述了个体在感染后会获得长期免疫力，感染后不会再返回易感状态。</li>
+</ul>
+<p><strong>状态定义</strong>：</p>
+<ul>
+<li><strong>S</strong>（易感者）：个体未感染，能被感染。</li>
+<li><strong>I</strong>（感染者）：个体正在感染，能传播给易感者。</li>
+<li><strong>R</strong>（康复者）：个体已经感染并康复，获得免疫，无法再次感染。</li>
+</ul>
+<p><strong>模型方程</strong>：</p>
+<img src="./images/efigure07.png" alt="图7" style="zoom: 80%;" />
+
+<p><strong>特点</strong>：</p>
+<ul>
+<li>在该模型中，感染者一旦康复后，会转移到康复者状态，并获得免疫，不再返回易感状态。</li>
+</ul>
+<h4 id="比较和应用"><a href="#比较和应用" class="headerlink" title="比较和应用"></a>比较和应用</h4><ul>
+<li><strong>循环性</strong>：SIS模型适用于没有长期免疫的疾病（如某些细菌性感染），而SIR模型适用于有免疫的疾病（如流感、麻疹等）。</li>
+<li><strong>传播动力学</strong>：两者都可以通过基本再生数 ( R_0 )（传染病在易感者中的传播能力）来分析疾病的传播。如果 ( R_0 &gt; 1 )，疾病将持续传播；如果 ( R_0 &lt; 1 )，疾病将最终消失。</li>
+</ul>
+<h4 id="总结-5"><a href="#总结-5" class="headerlink" title="总结"></a>总结</h4><p>SIS模型和SIR模型是理解传染病传播的重要工具。通过这些模型，研究人员可以分析疾病的传播动态、预测流行趋势，并评估干预措施的效果。</p>
+<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><h3 id="一、复杂系统的拓扑特征"><a href="#一、复杂系统的拓扑特征" class="headerlink" title="一、复杂系统的拓扑特征"></a>一、复杂系统的拓扑特征</h3><p>复杂系统的拓扑特征是研究复杂系统（如社交网络、生物网络、生态系统等）中元素（节点）之间关系（边）的结构和性质的重要方面。以下是一些关键的拓扑特征及其解释：</p>
+<h4 id="1-节点度分布"><a href="#1-节点度分布" class="headerlink" title="1. 节点度分布"></a>1. <strong>节点度分布</strong></h4><ul>
+<li><strong>定义</strong>：节点度是指与该节点相连的边的数量。度分布描述了网络中各节点度的分布情况。</li>
+<li><strong>特点</strong>：<ul>
+<li>在许多复杂网络中，节点度分布往往呈现幂律分布（scale-free distribution），即大多数节点的度较小，而少数节点的度极大，形成“枢纽”节点。</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-聚类系数"><a href="#2-聚类系数" class="headerlink" title="2. 聚类系数"></a>2. <strong>聚类系数</strong></h4><ul>
+<li><strong>定义</strong>：聚类系数衡量的是一个节点的邻居之间相互连接的程度。它反映了网络的局部结构。</li>
+<li><strong>特点</strong>：<ul>
+<li>高聚类系数意味着节点的邻居之间连接紧密，这种特征在社交网络和生物网络中很常见。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-平均路径长度"><a href="#3-平均路径长度" class="headerlink" title="3. 平均路径长度"></a>3. <strong>平均路径长度</strong></h4><ul>
+<li><strong>定义</strong>：网络中任意两个节点之间最短路径的平均长度。</li>
+<li><strong>特点</strong>：<ul>
+<li>较短的平均路径长度通常表明网络中信息传播效率高，节点之间的连接性强。例如，许多社交网络的平均路径长度相对较短，显示了“六度分隔”理论。</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-连通性"><a href="#4-连通性" class="headerlink" title="4. 连通性"></a>4. <strong>连通性</strong></h4><ul>
+<li><strong>定义</strong>：网络的连通性是指网络中任意两个节点之间是否存在路径。</li>
+<li><strong>特点</strong>：<ul>
+<li>连通性可以分为强连通（所有节点都可以到达）和弱连通（存在路径，但方向不一致）两种类型。复杂网络通常具有强连通性，即使在节点失效或故障的情况下。</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-社区结构"><a href="#5-社区结构" class="headerlink" title="5. 社区结构"></a>5. <strong>社区结构</strong></h4><ul>
+<li><strong>定义</strong>：社区是指网络中节点的集群，通常内部节点之间的连接密集，而与其他集群的连接较少。</li>
+<li><strong>特点</strong>：<ul>
+<li>社区结构在社交网络、生态系统和信息网络中普遍存在，识别社区可以帮助理解网络的功能和组织。</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-小世界性质"><a href="#6-小世界性质" class="headerlink" title="6. 小世界性质"></a>6. <strong>小世界性质</strong></h4><ul>
+<li><strong>定义</strong>：小世界网络具有较短的平均路径长度和较高的聚类系数。</li>
+<li><strong>特点</strong>：<ul>
+<li>这意味着在大规模网络中，任何两个节点之间的距离相对较短，同时局部的紧密性较强，这一特性在许多自然和人造网络中被观察到。</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-网络的异质性"><a href="#7-网络的异质性" class="headerlink" title="7. 网络的异质性"></a>7. <strong>网络的异质性</strong></h4><ul>
+<li><strong>定义</strong>：网络的异质性指的是网络中节点和连接的不均匀性。</li>
+<li><strong>特点</strong>：<ul>
+<li>许多复杂网络表现出异质性，表现在节点的度、性质和连接模式上，这种特性影响了网络的动态行为和稳定性。</li>
+</ul>
+</li>
+</ul>
+<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><p>复杂系统的拓扑特征在多个领域中有重要应用，例如：</p>
+<ul>
+<li><strong>社交网络分析</strong>：了解社交网络中信息传播和影响力的机制。</li>
+<li><strong>生物网络</strong>：揭示生物体内不同分子（如蛋白质、基因）之间的相互作用。</li>
+<li><strong>交通网络</strong>：优化交通流，降低拥堵和提高效率。</li>
+</ul>
+<h4 id="总结-6"><a href="#总结-6" class="headerlink" title="总结"></a>总结</h4><p>复杂系统的拓扑特征为我们理解和分析这些系统的结构和动态提供了重要的视角。通过这些特征，可以更好地理解复杂系统的行为、传播过程及其对外部干扰的响应。</p>
+<h3 id="二、二分图的异质性"><a href="#二、二分图的异质性" class="headerlink" title="二、二分图的异质性"></a>二、二分图的异质性</h3><p><strong>二分图</strong>（Bipartite Graph）是一种特殊类型的图，其节点可以分为两个不相交的集合，且图中的边仅连接两个不同集合中的节点。二分图的异质性指的是两个集合之间的差异性和多样性，这种差异性可能体现在节点的性质、连接方式、度分布等方面。以下是二分图异质性的几个关键特征和应用：</p>
+<h4 id="1-节点特性异质性"><a href="#1-节点特性异质性" class="headerlink" title="1. 节点特性异质性"></a>1. <strong>节点特性异质性</strong></h4><ul>
+<li><strong>定义</strong>：在二分图中，两个集合的节点可能具有不同的特性，例如在社交网络中，一个集合可以代表用户，另一个集合可以代表兴趣或活动。不同节点的属性可能导致其在网络中的行为和连接方式存在显著差异。</li>
+<li><strong>示例</strong>：在推荐系统中，用户和产品之间的二分图中，用户的购买偏好（如性别、年龄、消费习惯等）与产品的属性（如类别、价格、品牌等）可能表现出异质性。</li>
+</ul>
+<h4 id="2-连接模式异质性"><a href="#2-连接模式异质性" class="headerlink" title="2. 连接模式异质性"></a>2. <strong>连接模式异质性</strong></h4><ul>
+<li><strong>定义</strong>：二分图中节点之间的连接方式可能不均匀。某些节点可能与许多其他节点连接，而其他节点则可能连接较少，这种连接的差异性可以影响网络的整体结构和功能。</li>
+<li><strong>示例</strong>：在学术合作网络中，研究人员（一个集合）和研究主题（另一个集合）之间的连接可能显示出异质性，某些研究主题可能吸引了更多研究人员的关注。</li>
+</ul>
+<h4 id="3-度分布异质性"><a href="#3-度分布异质性" class="headerlink" title="3. 度分布异质性"></a>3. <strong>度分布异质性</strong></h4><ul>
+<li><strong>定义</strong>：二分图中的度分布可以显示出异质性特征。在一个二分图中，一个集合的节点的连接数量（度）可能呈现出较大的变化。例如，有些用户可能与许多产品连接，而有些用户则仅与少数产品连接。</li>
+<li><strong>示例</strong>：在社交网络中，某些用户（如网红）可能与大量其他用户或活动连接，而普通用户的连接较少。</li>
+</ul>
+<h4 id="4-功能异质性"><a href="#4-功能异质性" class="headerlink" title="4. 功能异质性"></a>4. <strong>功能异质性</strong></h4><ul>
+<li><strong>定义</strong>：在二分图中，不同节点的功能或角色可能存在显著差异。一个集合中的节点可能承担某种特定角色，而另一个集合中的节点可能扮演不同的角色。</li>
+<li><strong>示例</strong>：在二分图中，病人（一个集合）和医生（另一个集合）之间的连接可以反映医疗服务的异质性，不同医生可能专注于不同领域，服务于不同类型的病人。</li>
+</ul>
+<h4 id="应用-1"><a href="#应用-1" class="headerlink" title="应用"></a>应用</h4><ul>
+<li><strong>推荐系统</strong>：通过分析用户和物品之间的二分图，可以更好地理解用户偏好，从而提高推荐效果。</li>
+<li><strong>社交网络分析</strong>：识别网络中的关键节点（如影响者），分析信息传播路径。</li>
+<li><strong>生物信息学</strong>：在基因和疾病之间的二分图中，分析特定基因与特定疾病之间的关系。</li>
+</ul>
+<h4 id="总结-7"><a href="#总结-7" class="headerlink" title="总结"></a>总结</h4><p>二分图的异质性提供了深入分析复杂网络结构和动态行为的框架。通过研究节点特性、连接模式和度分布的异质性，可以更好地理解网络的结构和功能。</p>
+<h3 id="三、二分图的投影图"><a href="#三、二分图的投影图" class="headerlink" title="三、二分图的投影图"></a>三、二分图的投影图</h3><p>二分图的<strong>投影图</strong>是将二分图中的一个集合的节点与另一个集合的节点之间的关系“投影”到一个新的图中，从而形成新的图结构。投影图可以帮助我们更好地理解二分图中两个集合之间的交互关系。</p>
+<h3 id="二分图的定义"><a href="#二分图的定义" class="headerlink" title="二分图的定义"></a>二分图的定义</h3><p>一个<strong>二分图</strong> ( G &#x3D; (U, V, E) ) 由两个不相交的节点集合 ( U ) 和 ( V ) 组成，其中的边 ( E ) 仅连接 ( U ) 中的节点与 ( V ) 中的节点。</p>
+<h3 id="投影图的构建"><a href="#投影图的构建" class="headerlink" title="投影图的构建"></a>投影图的构建</h3><p>对于二分图 ( G )，我们可以根据其中一个集合（例如 ( U ) 或 ( V )）来构建投影图。以下是投影图的构建步骤：</p>
+<ol>
+<li><strong>选择投影的集合</strong>：决定要投影的集合，例如选择 ( U )。</li>
+<li><strong>创建新的图</strong>：创建一个新的图 ( G<sub>U</sub> )，其节点集合等于 ( U )。</li>
+<li><strong>添加边</strong>：<ul>
+<li>对于 ( U ) 中的任意两个节点 ( u<sub>1</sub>, u<sub>2</sub> )，如果它们在二分图 G 中通过同一个节点 ( v \in V ) 连接（即 ( (u<br><sub>1</sub>, v) \in E ) 且 ( (u<sub>2</sub>, v) \in E )），则在投影图 ( G<sub>U</sub> ) 中添加一条边 ( (u<sub>1</sub>, u<sub>2</sub>) )。</li>
+</ul>
+</li>
+</ol>
+<h3 id="投影图的性质"><a href="#投影图的性质" class="headerlink" title="投影图的性质"></a>投影图的性质</h3><ul>
+<li><strong>聚类</strong>：投影图中的边表示原始二分图中两个节点通过共同的连接建立的关系，通常会形成聚类结构。</li>
+<li><strong>多重边</strong>：如果 ( u_1 ) 和 ( u_2 ) 通过多个 ( v ) 节点连接，那么在投影图中可能会出现多条边。</li>
+<li><strong>节点度</strong>：投影图中节点的度数表示该节点与多少个其他节点通过同一节点相连。</li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>假设我们有一个简单的二分图 ( G )：</p>
+<ul>
+<li>( U &#x3D; {A, B, C} )</li>
+<li>( V &#x3D; {1, 2, 3} )</li>
+<li>边集 ( E &#x3D; {(A, 1), (A, 2), (B, 2), (B, 3), (C, 1)} )</li>
+</ul>
+<p><strong>投影图 ( G_U )</strong>：</p>
+<ul>
+<li>节点集合为 ( U &#x3D; {A, B, C} )。</li>
+<li>边：<ul>
+<li>( A ) 和 ( B ) 通过 ( 2 ) 连接，添加边 ( (A, B) )。</li>
+<li>( A ) 和 ( C ) 通过 ( 1 ) 连接，添加边 ( (A, C) )。</li>
+<li>( B ) 和 ( C ) 没有通过同一个 ( V ) 节点连接，因此不添加边。</li>
+</ul>
+</li>
+</ul>
+<p>投影图 ( G<sub>U</sub> ) 的结构为：</p>
+<ul>
+<li>节点：( A, B, C )</li>
+<li>边：( (A, B), (A, C) )</li>
+</ul>
+<h3 id="应用-2"><a href="#应用-2" class="headerlink" title="应用"></a>应用</h3><ul>
+<li><strong>社交网络</strong>：在社交网络分析中，投影图可以帮助识别社交群体。例如，用户和事件之间的二分图可以转化为用户之间的互动图。</li>
+<li><strong>推荐系统</strong>：在推荐系统中，可以通过商品和用户的二分图构建用户之间的相似度图，便于进行推荐。</li>
+<li><strong>生物信息学</strong>：在基因和疾病的二分图中，投影图可以揭示基因之间的相互关系。</li>
+</ul>
+<h3 id="总结-8"><a href="#总结-8" class="headerlink" title="总结"></a>总结</h3><p>二分图的投影图是分析和理解复杂网络的重要工具。通过投影，可以更好地揭示节点之间的关系和结构特征，从而支持各种应用。</p>
+<h3 id="四、基于网络的超网络-Supernetwork，Network-of-Network-和基于超图的超网络-Hypernetwork"><a href="#四、基于网络的超网络-Supernetwork，Network-of-Network-和基于超图的超网络-Hypernetwork" class="headerlink" title="四、基于网络的超网络(Supernetwork，Network of Network)和基于超图的超网络(Hypernetwork)"></a>四、基于网络的超网络(Supernetwork，Network of Network)和基于超图的超网络(Hypernetwork)</h3><p><strong>基于网络的超网络</strong>（Supernetwork或Network of Networks）和<strong>基于超图的超网络</strong>（Hypernetwork）是描述复杂系统中高阶关系的两种不同概念。以下是对这两者的详细比较和解释：</p>
+<h4 id="基于网络的超网络（Supernetwork-Network-of-Networks）"><a href="#基于网络的超网络（Supernetwork-Network-of-Networks）" class="headerlink" title="基于网络的超网络（Supernetwork &#x2F; Network of Networks）"></a>基于网络的超网络（Supernetwork &#x2F; Network of Networks）</h4><p><strong>定义</strong>：</p>
+<ul>
+<li>基于网络的超网络是一种复杂网络模型，它将多个网络作为节点，通过它们之间的连接形成一个更高层次的网络。也就是说，每个网络可以是不同的类型，且它们之间可以通过边相连。</li>
+</ul>
+<p><strong>特性</strong>：</p>
+<ol>
+<li><strong>多层结构</strong>：每个网络代表一个系统的不同部分，例如交通网络、社交网络、信息网络等。</li>
+<li><strong>互联性</strong>：网络之间的连接可以是多样的，表示它们之间的相互影响和相互作用。</li>
+<li><strong>动态性</strong>：网络的拓扑结构可能会随着时间变化，节点和边可以动态添加或删除。</li>
+<li><strong>复杂性</strong>：能够捕捉到系统中不同网络之间的复杂关系和依赖性。</li>
+</ol>
+<p><strong>应用示例</strong>：</p>
+<ul>
+<li>在城市基础设施中，交通网络、水管网络和电力网络可以构成一个超网络，各个网络之间的交互影响了城市的运作。</li>
+<li>社交网络和信息网络的结合可以帮助理解信息传播和社会影响。</li>
+</ul>
+<h4 id="基于超图的超网络（Hypernetwork）"><a href="#基于超图的超网络（Hypernetwork）" class="headerlink" title="基于超图的超网络（Hypernetwork）"></a>基于超图的超网络（Hypernetwork）</h4><p><strong>定义</strong>：</p>
+<ul>
+<li>基于超图的超网络是一种特殊的网络结构，允许超边连接多个节点。超图是一个包含多个节点集合和连接这些节点的边（超边）的图。</li>
+</ul>
+<p><strong>特性</strong>：</p>
+<ol>
+<li><strong>超边</strong>：超边可以连接两个以上的节点，表示高阶关系。例如，在科学合作中，一个超边可以代表多个作者共同撰写的一篇论文。</li>
+<li><strong>灵活性</strong>：能够表达节点之间的复杂关系，适用于多方协作的场景。</li>
+<li><strong>简单性</strong>：通常超图的结构比基于网络的超网络更简单，因为它只涉及节点和超边的关系。</li>
+</ol>
+<p><strong>应用示例</strong>：</p>
+<ul>
+<li>在生物信息学中，基因与疾病之间的关系可以用超图表示，基因可能通过多个超边同时影响多个疾病。</li>
+</ul>
+<h4 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>基于网络的超网络</th>
+<th>基于超图的超网络</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>节点表示</strong></td>
+<td>多个独立网络</td>
+<td>单个网络中的多个节点</td>
+</tr>
+<tr>
+<td><strong>边的类型</strong></td>
+<td>网络之间的连接</td>
+<td>超边连接多个节点</td>
+</tr>
+<tr>
+<td><strong>复杂性</strong></td>
+<td>更复杂，涉及多个网络和相互作用</td>
+<td>相对简单，主要涉及节点和超边的关系</td>
+</tr>
+<tr>
+<td><strong>动态性</strong></td>
+<td>网络结构和连接可以动态变化</td>
+<td>超图结构通常是静态的</td>
+</tr>
+<tr>
+<td><strong>应用场景</strong></td>
+<td>城市基础设施、社交网络与信息网络的结合</td>
+<td>科学合作、生态网络、推荐系统</td>
+</tr>
+</tbody></table>
+<h4 id="总结-9"><a href="#总结-9" class="headerlink" title="总结"></a>总结</h4><ul>
+<li><strong>基于网络的超网络</strong>强调多个网络之间的关系，适合描述复杂系统中不同部分的互联性和动态性。</li>
+<li><strong>基于超图的超网络</strong>则关注于节点之间的高阶关系，通过超边连接多个节点，适用于表达多方协作和复杂交互的场景。</li>
+</ul>
+<p>这两者各有优势，具体应用取决于研究的具体问题和数据结构。</p>
+<h3 id="五、同质与异质节点"><a href="#五、同质与异质节点" class="headerlink" title="五、同质与异质节点"></a>五、同质与异质节点</h3><p>在网络科学中，节点的同质性和异质性是描述网络中节点特性差异的重要概念。以下是对同质节点和异质节点的详细介绍及其在复杂网络中的应用。</p>
+<h4 id="同质节点（Homogeneous-Nodes）"><a href="#同质节点（Homogeneous-Nodes）" class="headerlink" title="同质节点（Homogeneous Nodes）"></a>同质节点（Homogeneous Nodes）</h4><p><strong>定义</strong>：</p>
+<ul>
+<li>同质节点是指在某一特征或属性上相似或相同的节点。这些节点在网络中的角色、功能或行为基本一致。</li>
+</ul>
+<p><strong>特性</strong>：</p>
+<ol>
+<li><strong>相似性</strong>：同质节点通常在某些属性（如度、功能、行为等）上表现出高度相似性。</li>
+<li><strong>简化模型</strong>：在分析和建模中，同质节点可以简化网络的复杂性，因为它们可以被视为一个整体。</li>
+<li><strong>均匀性</strong>：同质节点的连接模式通常较为一致。</li>
+</ol>
+<p><strong>应用示例</strong>：</p>
+<ul>
+<li>在社交网络中，某个特定群体（如同学、同事）可以被视为同质节点，它们在社交行为和互动方式上可能比较相似。</li>
+<li>在生物网络中，同一种类的基因或蛋白质可以被视为同质节点，因为它们在功能和属性上较为相似。</li>
+</ul>
+<h4 id="异质节点（Heterogeneous-Nodes）"><a href="#异质节点（Heterogeneous-Nodes）" class="headerlink" title="异质节点（Heterogeneous Nodes）"></a>异质节点（Heterogeneous Nodes）</h4><p><strong>定义</strong>：</p>
+<ul>
+<li>异质节点是指在特征或属性上存在显著差异的节点。这些节点在网络中的角色、功能或行为表现出多样性。</li>
+</ul>
+<p><strong>特性</strong>：</p>
+<ol>
+<li><strong>多样性</strong>：异质节点通常在许多属性上具有不同的特征，可能导致不同的连接模式和行为。</li>
+<li><strong>复杂性</strong>：网络的异质性增加了分析的复杂性，因为不同类型的节点可能在不同的上下文中发挥不同的作用。</li>
+<li><strong>功能差异</strong>：异质节点在网络中的功能和影响力可能各不相同。</li>
+</ol>
+<p><strong>应用示例</strong>：</p>
+<ul>
+<li>在社交网络中，用户、品牌和活动可以被视为异质节点，因为它们在影响力、连接模式和交互行为上存在显著差异。</li>
+<li>在生态系统中，植物、动物和微生物可以被视为异质节点，它们在生态平衡中发挥不同的角色。</li>
+</ul>
+<h4 id="比较-1"><a href="#比较-1" class="headerlink" title="比较"></a>比较</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>同质节点</th>
+<th>异质节点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>相似性</strong></td>
+<td>属性、行为一致</td>
+<td>属性、行为多样</td>
+</tr>
+<tr>
+<td><strong>网络复杂性</strong></td>
+<td>简化网络分析</td>
+<td>增加网络分析复杂性</td>
+</tr>
+<tr>
+<td><strong>功能</strong></td>
+<td>扮演相似角色</td>
+<td>扮演不同角色</td>
+</tr>
+<tr>
+<td><strong>连接模式</strong></td>
+<td>通常一致</td>
+<td>通常多样</td>
+</tr>
+</tbody></table>
+<h4 id="在复杂网络中的影响"><a href="#在复杂网络中的影响" class="headerlink" title="在复杂网络中的影响"></a>在复杂网络中的影响</h4><ul>
+<li><p><strong>同质网络</strong>：同质节点有助于形成紧密的社区结构，因为相似的节点之间更容易建立连接。这种网络通常具有较高的聚类系数。</p>
+</li>
+<li><p><strong>异质网络</strong>：异质节点可以促进信息传播和创新，因为不同类型的节点可以提供多样的视角和资源。异质性有助于增强网络的鲁棒性和适应性，但也可能导致连接不均匀。</p>
+</li>
+</ul>
+<h4 id="总结-10"><a href="#总结-10" class="headerlink" title="总结"></a>总结</h4><p>节点的同质性和异质性是理解复杂网络结构和动态行为的关键因素。通过分析网络中的同质和异质节点，可以揭示网络的特性、功能及其在不同应用场景中的表现。</p>
+<h3 id="六、三元超图结构"><a href="#六、三元超图结构" class="headerlink" title="六、三元超图结构"></a>六、三元超图结构</h3><p><strong>三元超图结构</strong>是一种扩展的图结构，旨在捕捉节点之间更复杂的关系。在这种结构中，边（称为超边）可以连接三个或多个节点。三元超图特别适合于表示高阶关系，如三元关系或多方互动。</p>
+<h3 id="三元超图的定义"><a href="#三元超图的定义" class="headerlink" title="三元超图的定义"></a>三元超图的定义</h3><ul>
+<li><strong>节点</strong>：在三元超图中，节点代表系统中的个体或实体。</li>
+<li><strong>超边</strong>：超边连接三个或更多节点，表示这些节点之间的特定关系或互动。</li>
+</ul>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ol>
+<li><p><strong>高阶关系</strong>：与传统图（每条边连接两个节点）相比，三元超图能够捕捉更复杂的关系。例如，超边可以表示三人合作、三种资源共享等。</p>
+</li>
+<li><p><strong>灵活性</strong>：三元超图允许任意数量的节点参与同一超边，使其适合于多种复杂网络的建模。</p>
+</li>
+<li><p><strong>多样性</strong>：三元超图的超边可以表示多种关系类型，可以是无向或有向的，具体取决于应用场景。</p>
+</li>
+</ol>
+<h3 id="数学表示"><a href="#数学表示" class="headerlink" title="数学表示"></a>数学表示</h3><p>一个三元超图 ( H ) 可以表示为一个三元组：<br>[ H &#x3D; (V, E, f) ]</p>
+<ul>
+<li>( V )：节点集合。</li>
+<li>( E )：超边集合，每个超边连接三个或更多节点。例如，一个超边 ( e<sub>i</sub> ) 可能连接节点 ( v<sub>j</sub>, v<sub>k</sub>, v<sub>l</sub> )。</li>
+<li>( f )：一个函数，将每个超边与其连接的节点对应起来。</li>
+</ul>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
+<li><p><strong>社交网络</strong>：</p>
+<ul>
+<li>在社交网络中，三元超图可以表示三人之间的关系，例如三人共同参加的活动或共同发表的研究。</li>
+</ul>
+</li>
+<li><p><strong>推荐系统</strong>：</p>
+<ul>
+<li>在产品推荐中，三元超图可以用来表示用户、产品和评价之间的关系，帮助推荐算法更好地理解用户偏好。</li>
+</ul>
+</li>
+<li><p><strong>生态系统</strong>：</p>
+<ul>
+<li>在生态学中，三元超图可以用来描述物种之间的相互作用，如捕食、竞争或共生关系。</li>
+</ul>
+</li>
+<li><p><strong>数据挖掘</strong>：</p>
+<ul>
+<li>在数据挖掘中，三元超图可以用来识别多方关系模式，例如在商业交易中，客户、产品和交易之间的关系。</li>
+</ul>
+</li>
+</ol>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><p>假设我们有三个节点 ( A, B, C )，以及一个超边 ( e<sub>1</sub> )，连接这三个节点。在三元超图中，表示为：</p>
+<ul>
+<li>节点集合 ( V &#x3D; { A, B, C } )</li>
+<li>超边集合 ( E &#x3D; { e<sub>1</sub> } )，其中 ( e<sub>1</sub> ) 连接节点 ( A, B, C )</li>
+</ul>
+<h3 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h3><ol>
+<li><p><strong>三元关系</strong>：在数据库或知识图谱中，三元超图可以用于表示三元关系，例如“用户-产品-评价”。</p>
+</li>
+<li><p><strong>超图的分解</strong>：可以将三元超图分解为多个二元超图，以便进行更简单的分析和处理。</p>
+</li>
+</ol>
+<h3 id="总结-11"><a href="#总结-11" class="headerlink" title="总结"></a>总结</h3><p>三元超图结构提供了一种灵活的方式来建模复杂关系，尤其是涉及三个或多个参与者的场景。它在社交网络、推荐系统、生态学等多个领域有广泛的应用。通过理解三元超图的结构和特性，可以更好地分析和设计复杂系统。</p>
+<h3 id="七、新陈代谢网络"><a href="#七、新陈代谢网络" class="headerlink" title="七、新陈代谢网络"></a>七、新陈代谢网络</h3><p><strong>新陈代谢网络</strong>是生物学中的一个重要概念，通常用于描述细胞内的代谢过程。它通过网络模型来展示细胞内的化学反应、代谢物（如小分子）和酶之间的相互作用。以下是对新陈代谢网络的详细介绍，包括其定义、特性、应用及分析方法。</p>
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>新陈代谢网络是一个图结构，节点代表代谢物或酶，边代表化学反应或代谢路径。这种网络有助于理解生物体如何进行能量转换、物质合成和分解。</p>
+<h4 id="组成要素"><a href="#组成要素" class="headerlink" title="组成要素"></a>组成要素</h4><ol>
+<li><p><strong>节点</strong>：</p>
+<ul>
+<li><strong>代谢物</strong>：网络中的化学物质，如葡萄糖、氨基酸、脂肪酸等。</li>
+<li><strong>酶</strong>：催化生化反应的蛋白质，帮助将底物转化为产品。</li>
+</ul>
+</li>
+<li><p><strong>边</strong>：</p>
+<ul>
+<li><strong>化学反应</strong>：连接代谢物和酶的边表示生化反应。每条边通常表示一个特定的反应过程。</li>
+</ul>
+</li>
+</ol>
+<h4 id="特性-1"><a href="#特性-1" class="headerlink" title="特性"></a>特性</h4><ol>
+<li><p><strong>网络拓扑</strong>：新陈代谢网络的结构通常具有复杂的拓扑特性，如小世界性质、高聚类系数等，这反映了代谢反应的高度连接性和协同作用。</p>
+</li>
+<li><p><strong>代谢通路</strong>：新陈代谢网络包含多个代谢通路，路径由一系列连续的反应构成，反映了从底物到产品的转化过程。</p>
+</li>
+<li><p><strong>模块性</strong>：许多代谢网络具有模块化结构，即一些反应和代谢物的组合可以形成独立的功能单位。</p>
+</li>
+</ol>
+<h4 id="应用-3"><a href="#应用-3" class="headerlink" title="应用"></a>应用</h4><ol>
+<li><p><strong>系统生物学</strong>：新陈代谢网络用于研究细胞的整体代谢行为，帮助理解代谢调控和信号传导。</p>
+</li>
+<li><p><strong>疾病研究</strong>：通过分析代谢网络，可以识别与疾病相关的代谢异常，帮助开发新的治疗策略。</p>
+</li>
+<li><p><strong>生物工程</strong>：在代谢工程中，通过设计和优化代谢网络，可以提高细胞的生产能力，制造生物燃料和药物。</p>
+</li>
+<li><p><strong>生态系统建模</strong>：新陈代谢网络在生态系统中用于理解物种之间的相互作用，特别是在食物链和物质循环中。</p>
+</li>
+</ol>
+<h4 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h4><ol>
+<li><p><strong>网络建模</strong>：通过实验数据和生物信息学工具构建代谢网络模型，通常使用图论方法表示代谢通路。</p>
+</li>
+<li><p><strong>网络分析</strong>：应用图论指标（如度分布、聚类系数、路径长度等）分析网络的拓扑特性，揭示代谢网络的结构特征。</p>
+</li>
+<li><p><strong>动态模拟</strong>：使用动态模型（如代谢流分析、动态系统建模）模拟代谢网络的行为，预测在不同条件下的代谢反应。</p>
+</li>
+<li><p><strong>比较分析</strong>：比较不同生物体或不同条件下的代谢网络，以识别保守的代谢途径和特异性反应。</p>
+</li>
+</ol>
+<h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h4><p>以下是新陈代谢网络的一些典型实例：</p>
+<ul>
+<li><p><strong>糖酵解途径</strong>：糖酵解是细胞代谢中的一个重要过程，涉及多个代谢物（如葡萄糖、丙酮酸）和酶的反应。该途径的网络图展示了从葡萄糖到丙酮酸的转化过程，以及涉及的关键酶。</p>
+</li>
+<li><p><strong>三羧酸循环（Krebs Cycle）</strong>：这是细胞呼吸的核心途径，包含一系列反应，将丙酮酸转化为能量。在代谢网络中，该循环的节点和边展示了能量代谢的重要环节。</p>
+</li>
+</ul>
+<h4 id="总结-12"><a href="#总结-12" class="headerlink" title="总结"></a>总结</h4><p>新陈代谢网络是生物学研究中不可或缺的一部分，通过网络模型，可以更深入地理解代谢过程的复杂性和调控机制。这种分析方法在基础研究、药物开发和生物工程等领域具有广泛的应用。</p>
+<h3 id="八、网络的拓扑性质、演化模型和动力学机制"><a href="#八、网络的拓扑性质、演化模型和动力学机制" class="headerlink" title="八、网络的拓扑性质、演化模型和动力学机制"></a>八、网络的拓扑性质、演化模型和动力学机制</h3><p>网络的拓扑性质、演化模型和动力学机制是网络科学中的三个核心概念，彼此相互关联，共同影响网络的结构和行为。以下是对这三者的详细探讨，包括定义、特性和相互关系。</p>
+<h4 id="1-网络的拓扑性质"><a href="#1-网络的拓扑性质" class="headerlink" title="1. 网络的拓扑性质"></a>1. 网络的拓扑性质</h4><p><strong>定义</strong>：<br>网络的拓扑性质是指网络结构的基本特征，包括节点之间的连接方式和模式。这些性质可以用来描述网络的整体形态以及节点间的相互关系。</p>
+<p><strong>主要拓扑性质</strong>：</p>
+<ul>
+<li><p><strong>度分布</strong>：</p>
+<ul>
+<li>表示每个节点的连接数（度）的分布情况。常见的度分布类型包括泊松分布（随机网络）、幂律分布（无标度网络）等。</li>
+</ul>
+</li>
+<li><p><strong>聚类系数</strong>：</p>
+<ul>
+<li>描述节点之间形成三角形（即邻居之间的连接）的程度。高聚类系数通常表示网络中存在较多的局部紧密群体。</li>
+</ul>
+</li>
+<li><p><strong>路径长度</strong>：</p>
+<ul>
+<li>网络中任意两个节点之间的最短路径的平均长度。小世界网络通常具有短路径长度和高聚类系数。</li>
+</ul>
+</li>
+<li><p><strong>连通性</strong>：</p>
+<ul>
+<li>描述网络的整体连通性程度，包括强连通性（每个节点都能到达其他节点）和弱连通性（忽略方向的连通性）。</li>
+</ul>
+</li>
+</ul>
+<p><strong>应用</strong>：<br>网络的拓扑性质对于理解网络的功能、韧性和信息传播等方面至关重要。不同类型的网络（如社交网络、生物网络、交通网络等）往往具有不同的拓扑特征。</p>
+<h4 id="2-演化模型"><a href="#2-演化模型" class="headerlink" title="2. 演化模型"></a>2. 演化模型</h4><p><strong>定义</strong>：<br>演化模型用于描述网络随时间变化的过程，通常关注节点和边的添加、删除以及网络结构的演化。</p>
+<p><strong>主要演化模型</strong>：</p>
+<ul>
+<li><p><strong>巴尔巴西-阿尔伯特模型（BA模型）</strong>：</p>
+<ul>
+<li>无标度网络的经典模型，通过“优先连接”机制（即新节点倾向于连接已有较多连接的节点）生成幂律度分布。</li>
+</ul>
+</li>
+<li><p><strong>小世界模型</strong>：</p>
+<ul>
+<li>通过随机重连边的方式将规则网络转变为小世界网络，具有短路径和高聚类特性。</li>
+</ul>
+</li>
+<li><p><strong>动态网络模型</strong>：</p>
+<ul>
+<li>描述网络结构在时间上的变化，节点和边可以动态添加或删除，考虑复杂的交互作用。</li>
+</ul>
+</li>
+</ul>
+<p><strong>应用</strong>：<br>演化模型用于预测和分析网络如何随时间发展，帮助理解社交网络的形成、流行病传播的动态过程等。</p>
+<h4 id="3-动力学机制"><a href="#3-动力学机制" class="headerlink" title="3. 动力学机制"></a>3. 动力学机制</h4><p><strong>定义</strong>：<br>动力学机制指的是网络中节点和边之间的相互作用如何驱动系统行为和演化的过程。这些机制通常涉及个体行为、交互模式和外部环境等因素。</p>
+<p><strong>主要动力学机制</strong>：</p>
+<ul>
+<li><p><strong>传播机制</strong>：</p>
+<ul>
+<li>包括信息传播、病毒传播等，通过节点之间的连接和状态变化（如感染、传播、接收等）影响网络的动态行为。</li>
+</ul>
+</li>
+<li><p><strong>竞争与合作机制</strong>：</p>
+<ul>
+<li>描述网络中个体之间的竞争与合作行为，影响网络中资源的分配和信息的流动。</li>
+</ul>
+</li>
+<li><p><strong>反馈机制</strong>：</p>
+<ul>
+<li>网络中个体对其他个体行为的反应，可能导致自增强或自抑制的效应，影响网络的稳定性和演化。</li>
+</ul>
+</li>
+</ul>
+<p><strong>应用</strong>：<br>动力学机制用于分析和建模网络中的各种动态过程，如流行病传播、创新扩散、舆论形成等。</p>
+<h4 id="三者的相互关系"><a href="#三者的相互关系" class="headerlink" title="三者的相互关系"></a>三者的相互关系</h4><ul>
+<li><p><strong>拓扑性质与演化模型</strong>：</p>
+<ul>
+<li>网络的拓扑性质影响其演化模型的设计。例如，无标度网络的特性促使研究者发展基于优先连接的演化模型。</li>
+</ul>
+</li>
+<li><p><strong>演化模型与动力学机制</strong>：</p>
+<ul>
+<li>演化模型提供了网络的结构变化框架，而动力学机制则通过节点和边的交互驱动这些变化。例如，信息传播机制可以通过修改网络的结构（如增加新连接）来影响信息的传播效率。</li>
+</ul>
+</li>
+<li><p><strong>拓扑性质与动力学机制</strong>：</p>
+<ul>
+<li>网络的拓扑性质会影响其动力学行为。例如，具有高聚类系数的网络在信息传播方面可能更高效，而度分布的变化会影响个体之间的交互模式。</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结-13"><a href="#总结-13" class="headerlink" title="总结"></a>总结</h3><p>网络的拓扑性质、演化模型和动力学机制是理解复杂网络行为的关键要素。通过结合这三者，可以深入探讨网络在不同环境和条件下的表现，从而为实际应用（如社交网络分析、流行病建模和资源管理等）提供重要的理论支持。</p>
+]]></content>
+      <categories>
+        <category>复杂网络</category>
+      </categories>
+      <tags>
+        <tag>索琪超网络</tag>
       </tags>
   </entry>
 </search>
