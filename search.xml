@@ -1628,14 +1628,16 @@
 <h3 id="总结-13"><a href="#总结-13" class="headerlink" title="总结"></a>总结</h3><p>网络的拓扑性质、演化模型和动力学机制是理解复杂网络行为的关键要素。通过结合这三者，可以深入探讨网络在不同环境和条件下的表现，从而为实际应用（如社交网络分析、流行病建模和资源管理等）提供重要的理论支持。</p>
 <h3 id="九、度及其相关指标"><a href="#九、度及其相关指标" class="headerlink" title="九、度及其相关指标"></a>九、度及其相关指标</h3><p>“度”（Degree）是网络分析中最基本的中心性度量之一，表示节点与其他节点的直接连接数。在网络图中，节点的度能够反映该节点的基本活跃度和重要性。根据网络的类型，度可以分为几种不同的形式：</p>
 <h4 id="1-度（Degree）"><a href="#1-度（Degree）" class="headerlink" title="1. 度（Degree）"></a>1. <strong>度（Degree）</strong></h4><ul>
-<li><p><strong>无向网络</strong>：在无向网络中，节点的度就是与该节点相连的边的数量。如果一个节点与3个其他节点相连，则其度为3。<br>$\sum_{i&#x3D;0}^n$<br>其中 (A_{vi}) 是邻接矩阵中的元素，表示节点 (v) 和节点 (i) 之间是否存在连边。</p>
+<li><p><strong>无向网络</strong>：在无向网络中，节点的度就是与该节点相连的边的数量。如果一个节点与3个其他节点相连，则其度为3。<br><img src="/./images/efigure09.png" alt="图九"></p>
+</li>
+<li><p>A<sub>vi</sub>是邻接矩阵中的元素，表示节点 (v) 和节点 (i) 之间是否存在连边。</p>
 </li>
 <li><p><strong>有向网络</strong>：在有向网络中，度可以分为入度（in-degree）和出度（out-degree）。</p>
 <ul>
 <li><strong>入度</strong>：指向该节点的边的数量，表示该节点接收的连接数。</li>
 <li><strong>出度</strong>：从该节点指向其他节点的边的数量，表示该节点发出的连接数。</li>
 </ul>
-<p>[<br>k_{\text{in}}(v) &#x3D; \sum_{i} A_{iv}, \quad k_{\text{out}}(v) &#x3D; \sum_{i} A_{vi}<br>]</p>
+<p><img src="/./images/efigure10.png" alt="图10"></p>
 </li>
 </ul>
 <h4 id="2-度分布（Degree-Distribution）"><a href="#2-度分布（Degree-Distribution）" class="headerlink" title="2. 度分布（Degree Distribution）"></a>2. <strong>度分布（Degree Distribution）</strong></h4><p>度分布描述了网络中各个节点的度的分布情况。度分布常用于了解网络的全局结构特性。对于一个网络，度分布 (P(k)) 表示度为 (k) 的节点的比例。常见的度分布包括：</p>
@@ -1643,14 +1645,14 @@
 <li><strong>泊松分布</strong>：随机图中节点度通常服从泊松分布。</li>
 <li><strong>幂律分布</strong>：许多现实网络（如社交网络、互联网等）往往呈现幂律分布，即大多数节点度较小，但少数节点具有非常高的度。这些高度节点被称为<strong>枢纽节点</strong>（hubs）。</li>
 </ul>
-<h4 id="3-平均度（Average-Degree）"><a href="#3-平均度（Average-Degree）" class="headerlink" title="3. 平均度（Average Degree）"></a>3. <strong>平均度（Average Degree）</strong></h4><p>整个网络的平均度表示网络中节点的平均连接数，计算方式为：<br>[<br>\langle k \rangle &#x3D; \frac{2E}{N}<br>]<br>其中 (E) 是边的数量，(N) 是节点的数量。平均度可以用来衡量网络的稠密性。</p>
-<h4 id="4-加权度（Weighted-Degree）"><a href="#4-加权度（Weighted-Degree）" class="headerlink" title="4. 加权度（Weighted Degree）"></a>4. <strong>加权度（Weighted Degree）</strong></h4><p>在加权网络中，边不只是简单的0或1，而是有权重。加权度反映了与一个节点相连的边的权重总和。对于节点 (v)，其加权度为：<br>[<br>w(v) &#x3D; \sum_{i} W_{vi}<br>]<br>其中 (W_{vi}) 是节点 (v) 和节点 (i) 之间边的权重。</p>
-<h4 id="5-度中心性（Degree-Centrality）"><a href="#5-度中心性（Degree-Centrality）" class="headerlink" title="5. 度中心性（Degree Centrality）"></a>5. <strong>度中心性（Degree Centrality）</strong></h4><p>度中心性是最简单的一种中心性度量，直接使用节点的度来衡量其重要性。度中心性 (C_D(v)) 表示节点 (v) 的度与网络中其他节点数的比值：<br>[<br>C_D(v) &#x3D; \frac{k(v)}{N-1}<br>]<br>度中心性反映了节点在网络中的直接连接数量，度越高的节点通常被视为更具影响力或更为活跃。</p>
+<h4 id="3-平均度（Average-Degree）"><a href="#3-平均度（Average-Degree）" class="headerlink" title="3. 平均度（Average Degree）"></a>3. <strong>平均度（Average Degree）</strong></h4><p>整个网络的平均度表示网络中节点的平均连接数，计算方式为：<br><img src="/./images/efigure11.png" alt="图10"><br>其中 (E) 是边的数量，(N) 是节点的数量。平均度可以用来衡量网络的稠密性。</p>
+<h4 id="4-加权度（Weighted-Degree）"><a href="#4-加权度（Weighted-Degree）" class="headerlink" title="4. 加权度（Weighted Degree）"></a>4. <strong>加权度（Weighted Degree）</strong></h4><p>在加权网络中，边不只是简单的0或1，而是有权重。加权度反映了与一个节点相连的边的权重总和。对于节点 (v)，其加权度为：<br><img src="/./images/efigure12.png" alt="图11"><br>其中 (W<sup>vi</sup>) 是节点 (v) 和节点 (i) 之间边的权重。</p>
+<h4 id="5-度中心性（Degree-Centrality）"><a href="#5-度中心性（Degree-Centrality）" class="headerlink" title="5. 度中心性（Degree Centrality）"></a>5. <strong>度中心性（Degree Centrality）</strong></h4><p>度中心性是最简单的一种中心性度量，直接使用节点的度来衡量其重要性。度中心性 (C<sub>D</sub>(v)) 表示节点 (v) 的度与网络中其他节点数的比值：<br><img src="/./images/efigure13.png" alt="图13"><br>度中心性反映了节点在网络中的直接连接数量，度越高的节点通常被视为更具影响力或更为活跃。</p>
 <h4 id="6-相关度量"><a href="#6-相关度量" class="headerlink" title="6. 相关度量"></a>6. <strong>相关度量</strong></h4><ul>
 <li><p><strong>邻居数（Neighbors）</strong>：某个节点的邻居数即为其度数，表示该节点直接相连的节点数。</p>
 </li>
 <li><p><strong>邻居的度（Neighbors’ Degree）</strong>：网络中的高度节点通常倾向于与其他高度节点相连，这一特性被称为<strong>同配性</strong>（assortativity）。可以通过计算邻居节点的平均度来评估某个节点的连接特性。</p>
-<p>平均邻居度（average neighbor degree）为：<br>[<br>\langle k_{\text{nn}}(v) \rangle &#x3D; \frac{1}{k(v)} \sum_{i \in \text{neighbors of } v} k(i)<br>]</p>
+<p>平均邻居度（average neighbor degree）为：<br><img src="/./images/efigure13.png" alt="图14"></p>
 </li>
 <li><p><strong>聚类系数（Clustering Coefficient）</strong>：度与聚类系数结合在一起能更好地描述节点所处的局部网络结构。聚类系数衡量节点邻居间彼此相连的程度，反映了网络的团簇性。</p>
 </li>
@@ -1663,8 +1665,98 @@
 <li><strong>生物网络</strong>：在蛋白质相互作用网络中，节点的度可以帮助识别关键的蛋白质。</li>
 <li><strong>互联网</strong>：在互联网拓扑中，度用于衡量网站或服务器的连接性。</li>
 </ul>
-<p>了解这些概念可以帮助更深入地分析复杂网络的结构和特性。你是否希望深入探讨某个具体的度量指标或其应用？</p>
-<h3 id="十、节点的子图中心性"><a href="#十、节点的子图中心性" class="headerlink" title="十、节点的子图中心性"></a>十、节点的子图中心性</h3><p>节点的子图中心性（Subgraph Centrality）是一种用于衡量网络中节点重要性的方法，它反映了一个节点参与不同子图的频率。该中心性考虑了节点处于各种规模子图中的贡献，尤其是三角形、四边形等子图。它通过计算节点在这些子图中的存在程度来确定节点的重要性。</p>
+<h3 id="十、节点的余平均超度"><a href="#十、节点的余平均超度" class="headerlink" title="十、节点的余平均超度"></a>十、节点的余平均超度</h3><p><strong>余平均超度</strong>（Residual Average Hyperdegree）是超图（hypergraph）中的一个节点度量，用于衡量某个节点在其邻域中与其他节点的平均连接强度。它是传统图中的“余平均度”在超图中的推广。</p>
+<h4 id="1-超度（Hyperdegree）"><a href="#1-超度（Hyperdegree）" class="headerlink" title="1. 超度（Hyperdegree）"></a>1. <strong>超度（Hyperdegree）</strong></h4><p>在超图中，节点的<strong>超度</strong>指的是与该节点相关联的超边数量。每个超边可以连接多个节点，因此一个节点的超度衡量的是它参与的超边数量。例如，如果某节点 (v) 出现在5条超边中，则它的超度为5。</p>
+<h4 id="2-余平均超度（Residual-Average-Hyperdegree）"><a href="#2-余平均超度（Residual-Average-Hyperdegree）" class="headerlink" title="2. 余平均超度（Residual Average Hyperdegree）"></a>2. <strong>余平均超度（Residual Average Hyperdegree）</strong></h4><p>余平均超度反映的是一个节点的邻居节点的超度的平均值，类似于图中的“余平均度”，即“某个节点的邻居节点的平均度”。在超图中，对于一个节点 (v)，其余平均超度定义为该节点在与它相连的所有超边中，其他节点的平均超度。这能够揭示该节点在其局部结构中所处的位置和影响力。</p>
+<h4 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h4><p>假设节点 (v) 与 (k(v)) 个超边相连，且每个超边 (e_i) 包含若干节点。节点 (v) 的余平均超度 (r(v)) 可以表示为：<br><img src="/./images/efigure14.png" alt="图14"><br>其中：</p>
+<ul>
+<li>(E(v)) 是节点 (v) 所连接的超边集合；</li>
+<li>(|e|) 是超边 (e) 中的节点总数；</li>
+<li>(k(u)) 是节点 (u) 的超度，表示节点 (u) 参与的超边数。</li>
+</ul>
+<h4 id="解释："><a href="#解释：" class="headerlink" title="解释："></a>解释：</h4><ol>
+<li>对于每个与节点 (v) 相连的超边 (e)，计算除了节点 (v) 以外的其他节点的超度。</li>
+<li>对每条超边中的这些邻居节点的超度进行平均，然后对所有超边的结果取平均。</li>
+</ol>
+<p>这样计算出的余平均超度衡量了节点 (v) 所连接的邻居节点的活跃度。换句话说，如果节点的余平均超度较高，说明它的邻居节点都参与了较多的超边，节点所处的网络区域较为活跃。</p>
+<h4 id="3-余平均超度的意义"><a href="#3-余平均超度的意义" class="headerlink" title="3. 余平均超度的意义"></a>3. <strong>余平均超度的意义</strong></h4><ul>
+<li><p><strong>本地网络结构</strong>：余平均超度反映了节点周围的超图结构。如果一个节点的余平均超度较高，则说明它所连接的其他节点在超图中也相对活跃，表明节点所在的区域连接紧密、互动频繁。</p>
+</li>
+<li><p><strong>网络的异质性</strong>：如果余平均超度与超度之间存在较大的差异，则意味着节点的邻居节点之间的连接模式不同，超图呈现异质性特征。相反，如果超度与余平均超度接近，则意味着网络的局部结构较为均匀。</p>
+</li>
+</ul>
+<h4 id="4-应用场景"><a href="#4-应用场景" class="headerlink" title="4. 应用场景"></a>4. <strong>应用场景</strong></h4><ul>
+<li><p><strong>社交网络</strong>：在社交超图中，一个节点的余平均超度可以用来衡量该节点的朋友（邻居节点）的社交活跃度。比如，某人在多个社交群体中活动，而这些群体中的其他成员都较为活跃，则该人的余平均超度可能较高。</p>
+</li>
+<li><p><strong>合作网络</strong>：在科研合作网络中，科研人员通过合作论文形成超边。如果某科研人员的余平均超度较高，则意味着该科研人员的合作者往往是多产且活跃的研究者。</p>
+</li>
+<li><p><strong>生物网络</strong>：在生物分子超图中，一个分子的余平均超度可以反映其相互作用分子的关联度和重要性，帮助理解其在分子网络中的功能角色。</p>
+</li>
+</ul>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>余平均超度是对节点局部结构的度量，反映了节点的邻居节点的活跃度和连接强度。在超图中，它通过考虑节点连接的超边中的其他节点来更全面地描述节点在网络中的重要性和影响力。</p>
+<h3 id="十一、中心性指标"><a href="#十一、中心性指标" class="headerlink" title="十一、中心性指标"></a>十一、中心性指标</h3><p><strong>中心性指标</strong>（Centrality Metrics）是网络分析中用于衡量节点在网络中重要性、影响力或位置的指标。不同的中心性指标强调节点在网络结构中的不同特征，适用于不同的分析目的。常见的中心性指标包括<strong>度中心性</strong>、<strong>介数中心性</strong>、<strong>接近中心性</strong>、<strong>特征向量中心性</strong>等。以下是几种主要的中心性指标及其定义和应用场景：</p>
+<h4 id="1-度中心性（Degree-Centrality）"><a href="#1-度中心性（Degree-Centrality）" class="headerlink" title="1. 度中心性（Degree Centrality）"></a>1. <strong>度中心性（Degree Centrality）</strong></h4><p>度中心性是最基本的中心性度量，表示一个节点的连接数，即该节点与多少其他节点直接相连。</p>
+<ul>
+<li><p><strong>公式</strong>：对于无向网络，节点 (v) 的度中心性为：<br>C<sub>D</sub>(v) &#x3D; k(v)<br>对于有向网络，分别有入度中心性（in-degree）和出度中心性（out-degree）。</p>
+</li>
+<li><p><strong>解释</strong>：度中心性表示节点的局部影响力。度越高的节点直接连接的其他节点越多，通常被认为更活跃或重要。</p>
+</li>
+<li><p><strong>应用</strong>：社交网络中，度中心性可以用于衡量某人有多少直接的朋友或联系人。在互联网拓扑中，度中心性可以表示服务器或网站的连接数。</p>
+</li>
+</ul>
+<h4 id="2-介数中心性（Betweenness-Centrality）"><a href="#2-介数中心性（Betweenness-Centrality）" class="headerlink" title="2. 介数中心性（Betweenness Centrality）"></a>2. <strong>介数中心性（Betweenness Centrality）</strong></h4><p>介数中心性衡量一个节点在网络中作为其他节点对之间最短路径的中介程度。节点的介数中心性越高，说明该节点越多地处于其他节点之间的最短路径上。</p>
+<ul>
+<li><p><strong>公式</strong>：<br><img src="/./images/efigure15.png" alt="图15"></p>
+</li>
+<li><p><strong>解释</strong>：介数中心性反映了节点作为“桥梁”或“中介”的作用，重要性体现在信息传播和控制流通上。</p>
+</li>
+<li><p><strong>应用</strong>：在交通网络中，介数中心性高的节点可以是交通枢纽。在社交网络中，介数中心性可以用来识别在不同群体间起到桥梁作用的人物。</p>
+</li>
+</ul>
+<h4 id="3-接近中心性（Closeness-Centrality）"><a href="#3-接近中心性（Closeness-Centrality）" class="headerlink" title="3. 接近中心性（Closeness Centrality）"></a>3. <strong>接近中心性（Closeness Centrality）</strong></h4><p>接近中心性度量的是一个节点与网络中其他所有节点的距离的倒数，表示一个节点能以多快的速度触达网络中所有其他节点。接近中心性越高，说明节点距离其他节点越近。</p>
+<ul>
+<li><p><strong>公式</strong>：<br>[<br>C_C(v) &#x3D; \frac{1}{\sum_{u} d(v, u)}<br>]<br>其中 (d(v, u)) 表示节点 (v) 和 (u) 之间的最短路径距离。</p>
+</li>
+<li><p><strong>解释</strong>：接近中心性反映了节点在网络中的整体位置，离其他节点越近，其在网络中的信息传播能力越强。</p>
+</li>
+<li><p><strong>应用</strong>：接近中心性适合分析信息传播网络或电信网络中的节点，可以用来衡量信息传播的效率。</p>
+</li>
+</ul>
+<h4 id="4-特征向量中心性（Eigenvector-Centrality）"><a href="#4-特征向量中心性（Eigenvector-Centrality）" class="headerlink" title="4. 特征向量中心性（Eigenvector Centrality）"></a>4. <strong>特征向量中心性（Eigenvector Centrality）</strong></h4><p>特征向量中心性不仅考虑节点的度，还考虑与其相连的节点的重要性。如果一个节点与很多高重要性的节点相连，则其特征向量中心性会更高。换句话说，特征向量中心性衡量了节点的“影响力”。</p>
+<ul>
+<li><p><strong>公式</strong>：<br><img src="/./../images/efigure16.png" alt="图6"></p>
+</li>
+<li><p><strong>解释</strong>：特征向量中心性与度中心性类似，但更强调节点所连接的节点的权重。通过迭代计算，最终得到网络中所有节点的相对重要性。</p>
+</li>
+<li><p><strong>应用</strong>：特征向量中心性在社交网络和网页排名（如Google的PageRank算法）中有广泛应用，能够识别不仅活跃而且连接有影响力节点的节点。</p>
+</li>
+</ul>
+<h4 id="5-PageRank"><a href="#5-PageRank" class="headerlink" title="5. PageRank"></a>5. <strong>PageRank</strong></h4><p>PageRank 是特征向量中心性的特例，最初由Google用于网页排名。PageRank 计算的是通过随机游走，一个节点被访问的概率。它不仅考虑节点的连接数，还考虑与其相连的节点的重要性。</p>
+<ul>
+<li><p><strong>公式</strong>：<br><img src="/./images/efigure17.png" alt="图"><br>其中，(d) 是阻尼因子（通常设为 0.85），(N(v)) 是节点 (v) 的邻居，(k(u)) 是邻居节点 (u) 的度。</p>
+</li>
+<li><p><strong>应用</strong>：PageRank 常用于排序网页的重要性，也可以用于社交网络中衡量节点的重要性。</p>
+</li>
+</ul>
+<h4 id="6-Katz-中心性（Katz-Centrality）"><a href="#6-Katz-中心性（Katz-Centrality）" class="headerlink" title="6. Katz 中心性（Katz Centrality）"></a>6. <strong>Katz 中心性（Katz Centrality）</strong></h4><p>Katz 中心性度量一个节点的影响力，考虑节点的直接连接和间接连接（通过其他节点的连接）。它通过加权的方式，将距离较远的节点影响力降低。</p>
+<ul>
+<li><p><strong>公式</strong>：<br><img src="/./images/efigure18.png" alt="图"></p>
+</li>
+<li><p><strong>应用</strong>：适用于分析权力分布和信息流通的场景。</p>
+</li>
+</ul>
+<h4 id="7-近邻中心性（Local-Centrality）"><a href="#7-近邻中心性（Local-Centrality）" class="headerlink" title="7. 近邻中心性（Local Centrality）"></a>7. <strong>近邻中心性（Local Centrality）</strong></h4><p>近邻中心性是节点在其局部网络中的影响力，常用于分析节点在其邻居中所占据的中心位置。</p>
+<h4 id="8-传播中心性（Propagation-Centrality）"><a href="#8-传播中心性（Propagation-Centrality）" class="headerlink" title="8. 传播中心性（Propagation Centrality）"></a>8. <strong>传播中心性（Propagation Centrality）</strong></h4><p>这种中心性衡量节点在网络中传播信息的能力，特别适用于动态传播网络，例如疾病传播或信息扩散。</p>
+<h4 id="总结-14"><a href="#总结-14" class="headerlink" title="总结"></a><strong>总结</strong></h4><p>不同的中心性指标从不同的角度揭示了网络中节点的重要性：</p>
+<ul>
+<li><strong>度中心性</strong>：反映直接连接的数量；</li>
+<li><strong>介数中心性</strong>：反映节点在网络中起到桥梁作用的程度；</li>
+<li><strong>接近中心性</strong>：表示节点距离其他节点的紧密程度；</li>
+<li><strong>特征向量中心性</strong>：衡量节点和其邻居的重要性；</li>
+<li><strong>PageRank</strong>：考虑随机游走的概率；</li>
+<li><strong>Katz 中心性</strong>：同时考虑直接和间接连接的影响力。</li>
+</ul>
+<h3 id="十二、节点的子图中心性"><a href="#十二、节点的子图中心性" class="headerlink" title="十二、节点的子图中心性"></a>十二、节点的子图中心性</h3><p>节点的子图中心性（Subgraph Centrality）是一种用于衡量网络中节点重要性的方法，它反映了一个节点参与不同子图的频率。该中心性考虑了节点处于各种规模子图中的贡献，尤其是三角形、四边形等子图。它通过计算节点在这些子图中的存在程度来确定节点的重要性。</p>
 <p>具体来说，子图中心性基于邻接矩阵的谱特性。通过邻接矩阵的特征值和特征向量，可以计算出节点的子图中心性。它不仅考虑节点在局部结构中的参与情况，还可以权衡节点在整个网络结构中的影响力。公式通常使用矩阵指数（matrix exponential）来表达：</p>
 <p><img src="/./images/efigure08.png" alt="图8"></p>
 <p>其中：</p>
@@ -1679,6 +1771,68 @@
 <li><strong>生物网络分析</strong>：在基因调控网络或蛋白质相互作用网络中用于发现关键的生物分子。</li>
 <li><strong>信息传播</strong>：可以帮助分析信息在网络中如何有效传播。</li>
 </ul>
+<h3 id="十三、结构度量指标"><a href="#十三、结构度量指标" class="headerlink" title="十三、结构度量指标"></a>十三、结构度量指标</h3><p><strong>结构度量指标</strong>（Structural Metrics）是用于描述网络结构特征的指标，帮助理解网络的整体形态、局部特征和连接模式。通过这些度量，可以量化网络的稠密性、集群性、分层性等不同性质，从而揭示网络的功能和行为模式。以下是常见的结构度量指标：</p>
+<h4 id="1-平均度（Average-Degree）"><a href="#1-平均度（Average-Degree）" class="headerlink" title="1. 平均度（Average Degree）"></a>1. <strong>平均度（Average Degree）</strong></h4><ul>
+<li><strong>定义</strong>：平均度是网络中所有节点度的平均值，反映了网络的整体连接性。</li>
+<li><strong>公式</strong>：<br><img src="/./images/efigure11.png" alt="图10"><br>其中，(E) 是网络中的边数，(N) 是节点数。</li>
+<li><strong>解释</strong>：平均度描述了每个节点与其他节点连接的平均数量，能够衡量网络的稠密性。</li>
+</ul>
+<h4 id="2-度分布（Degree-Distribution）-1"><a href="#2-度分布（Degree-Distribution）-1" class="headerlink" title="2. 度分布（Degree Distribution）"></a>2. <strong>度分布（Degree Distribution）</strong></h4><ul>
+<li><strong>定义</strong>：度分布 (P(k)) 是度为 (k) 的节点所占的比例，反映了网络中节点连接的异质性。</li>
+<li><strong>解释</strong>：网络的度分布可以呈现不同的形态，如<strong>泊松分布</strong>（随机网络）、<strong>幂律分布</strong>（无标度网络），帮助理解网络的拓扑结构特征。</li>
+<li><strong>应用</strong>：幂律分布常见于社交网络、互联网等现实世界网络，少数节点具有极高的度（枢纽节点），而大多数节点度较小。</li>
+</ul>
+<h4 id="3-聚类系数（Clustering-Coefficient）-1"><a href="#3-聚类系数（Clustering-Coefficient）-1" class="headerlink" title="3. 聚类系数（Clustering Coefficient）"></a>3. <strong>聚类系数（Clustering Coefficient）</strong></h4><ul>
+<li><strong>定义</strong>：聚类系数衡量一个节点的邻居之间相互连接的程度，反映了网络的局部集群性。节点 (v) 的聚类系数 (C(v)) 由其邻居之间实际存在的边数与最大可能边数的比值决定。</li>
+<li><strong>公式</strong>：<br><img src="/./images/efigure19.png"><br>其中，(E<sub>v</sub>) 是节点 (v) 的邻居之间的边数，(k(v)) 是节点 (v) 的度。</li>
+<li><strong>平均聚类系数</strong>：整个网络的平均聚类系数为所有节点聚类系数的平均值。</li>
+<li><strong>解释</strong>：聚类系数高的网络通常表现出团状结构，表明节点倾向于与其邻居形成紧密的群体。</li>
+</ul>
+<h4 id="4-路径长度（Path-Length）"><a href="#4-路径长度（Path-Length）" class="headerlink" title="4. 路径长度（Path Length）"></a>4. <strong>路径长度（Path Length）</strong></h4><ul>
+<li><strong>定义</strong>：路径长度是网络中两个节点之间的最短路径的边数。平均路径长度是所有节点对之间最短路径长度的平均值。</li>
+<li><strong>公式</strong>：<br><img src="/./images/efigure20.png"><br>其中，(d(i, j)) 是节点 (i) 和节点 (j) 之间的最短路径距离。</li>
+<li><strong>解释</strong>：平均路径长度描述了网络中信息传播的效率，路径越短，网络内信息或资源传播的速度越快。<strong>小世界网络</strong>具有较短的平均路径长度和高聚类系数。</li>
+</ul>
+<h4 id="5-网络直径（Network-Diameter）"><a href="#5-网络直径（Network-Diameter）" class="headerlink" title="5. 网络直径（Network Diameter）"></a>5. <strong>网络直径（Network Diameter）</strong></h4><ul>
+<li><strong>定义</strong>：网络直径是网络中任意两个节点之间的最短路径中的最大值。</li>
+<li><strong>解释</strong>：网络直径代表了网络的“宽度”，即网络中最远节点之间的距离。直径越大，网络整体传播过程的时间越长。</li>
+</ul>
+<h4 id="6-连通性（Connectivity）"><a href="#6-连通性（Connectivity）" class="headerlink" title="6. 连通性（Connectivity）"></a>6. <strong>连通性（Connectivity）</strong></h4><ul>
+<li><strong>定义</strong>：连通性衡量网络中节点之间的可达性，即节点对之间是否存在路径。网络的连通性可通过<strong>连通分量</strong>（connected components）来表示。<ul>
+<li><strong>强连通分量</strong>（Strongly Connected Components）：在有向图中，所有节点之间均可互相到达的子集。</li>
+<li><strong>弱连通分量</strong>（Weakly Connected Components）：在有向图中，忽略边的方向后，所有节点之间均可互相到达的子集。</li>
+</ul>
+</li>
+<li><strong>解释</strong>：连通性指标反映网络的整体连通程度，有助于理解网络的全局结构。</li>
+</ul>
+<h4 id="7-密度（Density）"><a href="#7-密度（Density）" class="headerlink" title="7. 密度（Density）"></a>7. <strong>密度（Density）</strong></h4><ul>
+<li><p><strong>定义</strong>：网络密度表示实际存在的边数与可能存在的最大边数的比值，衡量网络的稠密程度。</p>
+</li>
+<li><p><strong>公式</strong>：</p>
+</li>
+<li><p>其中，(E) 是网络中的边数，(N) 是节点数。</p>
+</li>
+<li><p><strong>解释</strong>：密度越高，说明网络中的节点间联系越紧密。密度通常用于评估小型网络或局部网络的结构特征。</p>
+</li>
+</ul>
+<h4 id="8-同配性（Assortativity）"><a href="#8-同配性（Assortativity）" class="headerlink" title="8. 同配性（Assortativity）"></a>8. <strong>同配性（Assortativity）</strong></h4><ul>
+<li><strong>定义</strong>：同配性衡量网络中具有相似属性的节点之间是否更倾向于相连。对于度的同配性，通常研究高度节点是否倾向于与其他高度节点相连。</li>
+<li><strong>公式</strong>：<br>[<br>r &#x3D; \frac{\sum_{i}(k_i - \langle k \rangle)(k_j - \langle k \rangle)}{\sum_{i}(k_i - \langle k \rangle)^2}<br>]<br>其中，(k_i) 和 (k_j) 是相连节点的度，(\langle k \rangle) 是平均度。</li>
+<li><strong>解释</strong>：正同配性（(r &gt; 0)）表明高度节点倾向于相互连接，负同配性（(r &lt; 0)）表明高低度节点之间更多相连。</li>
+</ul>
+<h4 id="9-核心度（k-core）"><a href="#9-核心度（k-core）" class="headerlink" title="9. 核心度（k-core）"></a>9. <strong>核心度（k-core）</strong></h4><ul>
+<li><strong>定义</strong>：k-core 是网络中的一个子图，其中每个节点的度至少为 (k)。通过去除度小于 (k) 的节点，不断形成更小的 k-core 子图，直到剩余节点的度均大于等于 (k)。</li>
+<li><strong>解释</strong>：k-core 用于识别网络中的核心群体，揭示网络中节点的层级结构或中心性。</li>
+</ul>
+<h4 id="10-模块度（Modularity）"><a href="#10-模块度（Modularity）" class="headerlink" title="10. 模块度（Modularity）"></a>10. <strong>模块度（Modularity）</strong></h4><ul>
+<li><strong>定义</strong>：模块度是衡量网络中社区结构的指标，反映网络中的节点是否倾向于形成多个内部连接密集、外部连接稀疏的群体（社区）。模块度越高，说明社区结构越明显。</li>
+<li><strong>公式</strong>：<br>[<br>Q &#x3D; \frac{1}{2E} \sum_{i,j} \left[ A_{ij} - \frac{k_i k_j}{2E} \right] \delta(c_i, c_j)<br>]<br>其中，(A_{ij}) 是邻接矩阵，(k_i) 是节点 (i) 的度，(c_i) 是节点 (i) 的社区标签。</li>
+<li><strong>解释</strong>：模块度用于衡量网络是否具有明显的社区划分，并可以用于评估社区检测算法的效果。</li>
+</ul>
+<h4 id="11-子图中心性（Subgraph-Centrality）"><a href="#11-子图中心性（Subgraph-Centrality）" class="headerlink" title="11. 子图中心性（Subgraph Centrality）"></a>11. <strong>子图中心性（Subgraph Centrality）</strong></h4><ul>
+<li><strong>定义</strong>：子图中心性衡量节点参与不同规模闭合路径（如环形路径、循环）的程度。子图中心性高的节点倾向于位于多个闭合路径中，反映其在局部网络中的重要性。</li>
+</ul>
+<h3 id="总结-15"><a href="#总结-15" class="headerlink" title="总结"></a><strong>总结</strong></h3><p>结构度量指标用于定量分析网络的各种拓扑特性，如节点连接模式、网络的紧密性、社区结构等。通过这些指标，可以更好地理解复杂网络的性质，并为应用场景中的网络优化和分析提供数据支持。根据具体的研究问题，可以选择相应的结构度量来揭示网络的整体或局部特性。</p>
 ]]></content>
       <categories>
         <category>复杂网络</category>
