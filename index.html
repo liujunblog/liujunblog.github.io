@@ -221,7 +221,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-12 17:48:07" itemprop="dateModified" datetime="2024-10-12T17:48:07+08:00">2024-10-12</time>
+      <time title="修改时间：2024-10-12 18:22:52" itemprop="dateModified" datetime="2024-10-12T18:22:52+08:00">2024-10-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1287,18 +1287,17 @@
 <li><strong>解释</strong>：连通性指标反映网络的整体连通程度，有助于理解网络的全局结构。</li>
 </ul>
 <h4 id="7-密度（Density）"><a href="#7-密度（Density）" class="headerlink" title="7. 密度（Density）"></a>7. <strong>密度（Density）</strong></h4><ul>
-<li><p><strong>定义</strong>：网络密度表示实际存在的边数与可能存在的最大边数的比值，衡量网络的稠密程度。</p>
-</li>
-<li><p><strong>公式</strong>：</p>
-</li>
-<li><p>其中，(E) 是网络中的边数，(N) 是节点数。</p>
-</li>
-<li><p><strong>解释</strong>：密度越高，说明网络中的节点间联系越紧密。密度通常用于评估小型网络或局部网络的结构特征。</p>
-</li>
+<li><strong>定义</strong>：网络密度表示实际存在的边数与可能存在的最大边数的比值，衡量网络的稠密程度。</li>
+<li><strong>公式</strong>：</li>
+</ul>
+<p><img src="/./images/efigure21.png"></p>
+<ul>
+<li>其中，(E) 是网络中的边数，(N) 是节点数。</li>
+<li><strong>解释</strong>：密度越高，说明网络中的节点间联系越紧密。密度通常用于评估小型网络或局部网络的结构特征。</li>
 </ul>
 <h4 id="8-同配性（Assortativity）"><a href="#8-同配性（Assortativity）" class="headerlink" title="8. 同配性（Assortativity）"></a>8. <strong>同配性（Assortativity）</strong></h4><ul>
 <li><strong>定义</strong>：同配性衡量网络中具有相似属性的节点之间是否更倾向于相连。对于度的同配性，通常研究高度节点是否倾向于与其他高度节点相连。</li>
-<li><strong>公式</strong>：<br>[<br>r &#x3D; \frac{\sum_{i}(k_i - \langle k \rangle)(k_j - \langle k \rangle)}{\sum_{i}(k_i - \langle k \rangle)^2}<br>]<br>其中，(k_i) 和 (k_j) 是相连节点的度，(\langle k \rangle) 是平均度。</li>
+<li><strong>公式</strong>：<br><img src="/./images/efigure22.png"><br>其中，(k<sub>i</sub>) 和 (k<sub>j</sub>) 是相连节点的度，(&lt; k &gt;) 是平均度。</li>
 <li><strong>解释</strong>：正同配性（(r &gt; 0)）表明高度节点倾向于相互连接，负同配性（(r &lt; 0)）表明高低度节点之间更多相连。</li>
 </ul>
 <h4 id="9-核心度（k-core）"><a href="#9-核心度（k-core）" class="headerlink" title="9. 核心度（k-core）"></a>9. <strong>核心度（k-core）</strong></h4><ul>
@@ -1307,13 +1306,71 @@
 </ul>
 <h4 id="10-模块度（Modularity）"><a href="#10-模块度（Modularity）" class="headerlink" title="10. 模块度（Modularity）"></a>10. <strong>模块度（Modularity）</strong></h4><ul>
 <li><strong>定义</strong>：模块度是衡量网络中社区结构的指标，反映网络中的节点是否倾向于形成多个内部连接密集、外部连接稀疏的群体（社区）。模块度越高，说明社区结构越明显。</li>
-<li><strong>公式</strong>：<br>[<br>Q &#x3D; \frac{1}{2E} \sum_{i,j} \left[ A_{ij} - \frac{k_i k_j}{2E} \right] \delta(c_i, c_j)<br>]<br>其中，(A_{ij}) 是邻接矩阵，(k_i) 是节点 (i) 的度，(c_i) 是节点 (i) 的社区标签。</li>
+<li><strong>公式</strong>：<br><img src="/./images/efigure23.png"><br>其中，(A<sub>ij</sub>) 是邻接矩阵，(k<sub>i</sub>) 是节点 (i) 的度，(c<sub>i</sub>) 是节点 (i) 的社区标签。</li>
 <li><strong>解释</strong>：模块度用于衡量网络是否具有明显的社区划分，并可以用于评估社区检测算法的效果。</li>
 </ul>
 <h4 id="11-子图中心性（Subgraph-Centrality）"><a href="#11-子图中心性（Subgraph-Centrality）" class="headerlink" title="11. 子图中心性（Subgraph Centrality）"></a>11. <strong>子图中心性（Subgraph Centrality）</strong></h4><ul>
 <li><strong>定义</strong>：子图中心性衡量节点参与不同规模闭合路径（如环形路径、循环）的程度。子图中心性高的节点倾向于位于多个闭合路径中，反映其在局部网络中的重要性。</li>
 </ul>
 <h3 id="总结-15"><a href="#总结-15" class="headerlink" title="总结"></a><strong>总结</strong></h3><p>结构度量指标用于定量分析网络的各种拓扑特性，如节点连接模式、网络的紧密性、社区结构等。通过这些指标，可以更好地理解复杂网络的性质，并为应用场景中的网络优化和分析提供数据支持。根据具体的研究问题，可以选择相应的结构度量来揭示网络的整体或局部特性。</p>
+<h3 id="十四、聚集指标"><a href="#十四、聚集指标" class="headerlink" title="十四、聚集指标"></a>十四、聚集指标</h3><p><strong>聚集指标</strong>（Aggregation Metrics）是用来衡量网络中节点间形成团体、集群或子群的程度。它们主要关注节点间的紧密连接程度、群体结构以及子群体在网络中的分布情况。常用的聚集指标包括<strong>聚类系数</strong>、<strong>模块度</strong>、<strong>k-core</strong>分析等。以下是几种常见的聚集指标及其详细介绍：</p>
+<h4 id="1-聚类系数（Clustering-Coefficient）-1"><a href="#1-聚类系数（Clustering-Coefficient）-1" class="headerlink" title="1. 聚类系数（Clustering Coefficient）"></a>1. <strong>聚类系数（Clustering Coefficient）</strong></h4><p>聚类系数是衡量网络中节点的局部聚集性的指标，反映了某节点的邻居之间相互连接的紧密程度。</p>
+<ul>
+<li><p><strong>节点的聚类系数</strong>：表示节点的邻居之间有多大概率互相连接。节点 (v) 的聚类系数 (C(v)) 由其邻居之间的实际边数与最大可能边数的比值决定。</p>
+<p><strong>公式</strong>：<br><img src="/./images/efigure19.png"><br>其中，(E<sub>v</sub>) 是节点 (v) 的邻居之间的实际边数，(k(v)) 是节点 (v) 的度。</p>
+</li>
+<li><p><strong>全网络的平均聚类系数</strong>：表示整个网络的平均局部连接性，等于所有节点聚类系数的平均值。</p>
+<p><strong>公式</strong>：<br><img src="/./images/efigure24.png"><br>其中，(N) 是网络中的节点总数，(V) 是所有节点的集合。</p>
+</li>
+<li><p><strong>解释</strong>：聚类系数高的节点表示其邻居间的联系较紧密，通常形成团体或小群体。平均聚类系数高的网络表明具有较高的局部群体结构。</p>
+</li>
+</ul>
+<h4 id="2-模块度（Modularity）"><a href="#2-模块度（Modularity）" class="headerlink" title="2. 模块度（Modularity）"></a>2. <strong>模块度（Modularity）</strong></h4><p>模块度是衡量网络中社区结构的指标，反映网络是否具有明显的群体或社区划分。高模块度意味着网络中存在一些节点之间连接紧密、但与其他社区连接稀疏的群体。</p>
+<ul>
+<li><p><strong>公式</strong>：<br><img src="/./images/efigure23.png"><br>其中：</p>
+<ul>
+<li>(E) 是网络中的总边数；</li>
+<li>(A<sub>ij</sub>) 是节点 (i) 和节点 (j) 之间的邻接矩阵；</li>
+<li>(k<sub>i</sub>) 和 (k<sub>j</sub>) 分别是节点 (i) 和节点 (j) 的度；</li>
+<li>(c<sub>i</sub>) 和 (c<sub>j</sub>) 表示节点的社区标签，((c<sub>i</sub>, c<sub>j</sub>)) 当 (c<sub>i</sub> &#x3D; c<sub>j</sub>) 时为1，否则为0。</li>
+</ul>
+</li>
+<li><p><strong>解释</strong>：模块度越高，说明网络中的社区划分越明显。社区内的节点彼此之间的联系紧密，而社区之间的联系较少。模块度是用于社区检测算法的常见评价指标。</p>
+</li>
+</ul>
+<h4 id="3-k-core分析"><a href="#3-k-core分析" class="headerlink" title="3. k-core分析"></a>3. <strong>k-core分析</strong></h4><p>k-core 是网络中的一个子图，其中每个节点的度至少为 (k)。通过去除度小于 (k) 的节点，可以识别出网络中的“核心”结构。</p>
+<ul>
+<li><p><strong>定义</strong>：k-core 是由所有度不小于 (k) 的节点及其连接构成的最大子图。通过逐步剥离度小于 (k) 的节点，可以识别出不同层次的核心群体。</p>
+</li>
+<li><p><strong>解释</strong>：k-core 分析揭示了网络的层级结构，有助于识别网络中的核心节点和团体。这在社交网络、合作网络中尤其有用，用于找到最重要的群体或“精英”圈层。</p>
+</li>
+</ul>
+<h4 id="4-团体系数（Clique-Coefficient）"><a href="#4-团体系数（Clique-Coefficient）" class="headerlink" title="4. 团体系数（Clique Coefficient）"></a>4. <strong>团体系数（Clique Coefficient）</strong></h4><p>团体系数是用来衡量网络中节点参与完全子图（团体，clique）的程度。在完全子图中，任意两个节点之间都相互连接。</p>
+<ul>
+<li><p><strong>定义</strong>：一个 (k)-团体是包含 (k) 个节点的完全子图，节点间两两相连。团体系数计算某个节点或整个网络中完全子图的数量或参与程度。</p>
+</li>
+<li><p><strong>应用</strong>：用于社交网络中识别密切合作的小组，或者在生物网络中找出功能模块。</p>
+</li>
+</ul>
+<h4 id="5-嵌套度（Nestedness）"><a href="#5-嵌套度（Nestedness）" class="headerlink" title="5. 嵌套度（Nestedness）"></a>5. <strong>嵌套度（Nestedness）</strong></h4><p>嵌套度是指网络中不同群体的嵌套关系，特别是在双模式网络（如生态系统网络或互惠网络）中衡量节点子集间的包容关系。</p>
+<ul>
+<li><p><strong>定义</strong>：嵌套度高的网络表示某些子集的节点之间关系更加集中，较小的子集通常被包含在较大的子集中。</p>
+</li>
+<li><p><strong>应用</strong>：嵌套度在生态网络中广泛应用，用于衡量物种或互作组的层次结构及其稳定性。</p>
+</li>
+</ul>
+<h4 id="6-凝聚性（Cohesiveness）"><a href="#6-凝聚性（Cohesiveness）" class="headerlink" title="6. 凝聚性（Cohesiveness）"></a>6. <strong>凝聚性（Cohesiveness）</strong></h4><p>凝聚性用于评估网络中群体之间的紧密程度。通常通过最大连通分量的大小、图的连通性或网络的最小割（cut）来衡量。</p>
+<ul>
+<li><p><strong>定义</strong>：凝聚性高的网络具有强连通性，节点之间更难分离。连通性差的网络则容易被分成孤立的小团体。</p>
+</li>
+<li><p><strong>应用</strong>：凝聚性指标可以用于评估社交网络的紧密性，或者在生物网络中衡量分子间的合作强度。</p>
+</li>
+</ul>
+<h4 id="7-社团指数（Community-Index）"><a href="#7-社团指数（Community-Index）" class="headerlink" title="7. 社团指数（Community Index）"></a>7. <strong>社团指数（Community Index）</strong></h4><p>社团指数衡量网络中不同社团（社区、群体）的内外连接差异。社团指数较高的网络意味着群体内的节点连接密集，而群体间的连接较稀疏。</p>
+<ul>
+<li><strong>公式</strong>：不同的社团检测算法可以根据具体定义计算出社团指数，用于比较不同社团划分方案的质量。</li>
+</ul>
+<h4 id="总结-16"><a href="#总结-16" class="headerlink" title="总结"></a><strong>总结</strong></h4><p>聚集指标主要用于衡量网络中节点之间形成团体或社区的倾向性，帮助分析局部和全局的群体结构。它们在许多领域中有广泛应用，如社交网络分析、合作网络中的团队发现、生物网络中的功能模块识别等</p>
 
       
     </div>
