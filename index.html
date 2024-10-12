@@ -221,7 +221,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-10 18:19:41" itemprop="dateModified" datetime="2024-10-10T18:19:41+08:00">2024-10-10</time>
+      <time title="修改时间：2024-10-12 16:29:49" itemprop="dateModified" datetime="2024-10-12T16:29:49+08:00">2024-10-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -656,7 +656,7 @@
 </ul>
 <h4 id="比较和应用"><a href="#比较和应用" class="headerlink" title="比较和应用"></a>比较和应用</h4><ul>
 <li><strong>循环性</strong>：SIS模型适用于没有长期免疫的疾病（如某些细菌性感染），而SIR模型适用于有免疫的疾病（如流感、麻疹等）。</li>
-<li><strong>传播动力学</strong>：两者都可以通过基本再生数 ( R_0 )（传染病在易感者中的传播能力）来分析疾病的传播。如果 ( R_0 &gt; 1 )，疾病将持续传播；如果 ( R_0 &lt; 1 )，疾病将最终消失。</li>
+<li><strong>传播动力学</strong>：两者都可以通过基本再生数 ( R<sub>0</sub> )（传染病在易感者中的传播能力）来分析疾病的传播。如果 ( R<sub>0</sub> &gt; 1 )，疾病将持续传播；如果 ( R<sub>0</sub> &lt; 1 )，疾病将最终消失。</li>
 </ul>
 <h4 id="总结-5"><a href="#总结-5" class="headerlink" title="总结"></a>总结</h4><p>SIS模型和SIR模型是理解传染病传播的重要工具。通过这些模型，研究人员可以分析疾病的传播动态、预测流行趋势，并评估干预措施的效果。</p>
 <h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><h3 id="一、复杂系统的拓扑特征"><a href="#一、复杂系统的拓扑特征" class="headerlink" title="一、复杂系统的拓扑特征"></a>一、复杂系统的拓扑特征</h3><p>复杂系统的拓扑特征是研究复杂系统（如社交网络、生物网络、生态系统等）中元素（节点）之间关系（边）的结构和性质的重要方面。以下是一些关键的拓扑特征及其解释：</p>
@@ -752,7 +752,7 @@
 </ol>
 <h3 id="投影图的性质"><a href="#投影图的性质" class="headerlink" title="投影图的性质"></a>投影图的性质</h3><ul>
 <li><strong>聚类</strong>：投影图中的边表示原始二分图中两个节点通过共同的连接建立的关系，通常会形成聚类结构。</li>
-<li><strong>多重边</strong>：如果 ( u_1 ) 和 ( u_2 ) 通过多个 ( v ) 节点连接，那么在投影图中可能会出现多条边。</li>
+<li><strong>多重边</strong>：如果 ( u<sub>1</sub> ) 和 ( u<sub>2</sub> ) 通过多个 ( v ) 节点连接，那么在投影图中可能会出现多条边。</li>
 <li><strong>节点度</strong>：投影图中节点的度数表示该节点与多少个其他节点通过同一节点相连。</li>
 </ul>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>假设我们有一个简单的二分图 ( G )：</p>
@@ -761,7 +761,7 @@
 <li>( V &#x3D; {1, 2, 3} )</li>
 <li>边集 ( E &#x3D; {(A, 1), (A, 2), (B, 2), (B, 3), (C, 1)} )</li>
 </ul>
-<p><strong>投影图 ( G_U )</strong>：</p>
+<p><strong>投影图 ( G<sub>U</sub> )</strong>：</p>
 <ul>
 <li>节点集合为 ( U &#x3D; {A, B, C} )。</li>
 <li>边：<ul>
@@ -1107,6 +1107,59 @@
 </li>
 </ul>
 <h3 id="总结-13"><a href="#总结-13" class="headerlink" title="总结"></a>总结</h3><p>网络的拓扑性质、演化模型和动力学机制是理解复杂网络行为的关键要素。通过结合这三者，可以深入探讨网络在不同环境和条件下的表现，从而为实际应用（如社交网络分析、流行病建模和资源管理等）提供重要的理论支持。</p>
+<h3 id="九、度及其相关指标"><a href="#九、度及其相关指标" class="headerlink" title="九、度及其相关指标"></a>九、度及其相关指标</h3><p>“度”（Degree）是网络分析中最基本的中心性度量之一，表示节点与其他节点的直接连接数。在网络图中，节点的度能够反映该节点的基本活跃度和重要性。根据网络的类型，度可以分为几种不同的形式：</p>
+<h4 id="1-度（Degree）"><a href="#1-度（Degree）" class="headerlink" title="1. 度（Degree）"></a>1. <strong>度（Degree）</strong></h4><ul>
+<li><p><strong>无向网络</strong>：在无向网络中，节点的度就是与该节点相连的边的数量。如果一个节点与3个其他节点相连，则其度为3。<br>$\sum_{i&#x3D;0}^n$<br>其中 (A_{vi}) 是邻接矩阵中的元素，表示节点 (v) 和节点 (i) 之间是否存在连边。</p>
+</li>
+<li><p><strong>有向网络</strong>：在有向网络中，度可以分为入度（in-degree）和出度（out-degree）。</p>
+<ul>
+<li><strong>入度</strong>：指向该节点的边的数量，表示该节点接收的连接数。</li>
+<li><strong>出度</strong>：从该节点指向其他节点的边的数量，表示该节点发出的连接数。</li>
+</ul>
+<p>[<br>k_{\text{in}}(v) &#x3D; \sum_{i} A_{iv}, \quad k_{\text{out}}(v) &#x3D; \sum_{i} A_{vi}<br>]</p>
+</li>
+</ul>
+<h4 id="2-度分布（Degree-Distribution）"><a href="#2-度分布（Degree-Distribution）" class="headerlink" title="2. 度分布（Degree Distribution）"></a>2. <strong>度分布（Degree Distribution）</strong></h4><p>度分布描述了网络中各个节点的度的分布情况。度分布常用于了解网络的全局结构特性。对于一个网络，度分布 (P(k)) 表示度为 (k) 的节点的比例。常见的度分布包括：</p>
+<ul>
+<li><strong>泊松分布</strong>：随机图中节点度通常服从泊松分布。</li>
+<li><strong>幂律分布</strong>：许多现实网络（如社交网络、互联网等）往往呈现幂律分布，即大多数节点度较小，但少数节点具有非常高的度。这些高度节点被称为<strong>枢纽节点</strong>（hubs）。</li>
+</ul>
+<h4 id="3-平均度（Average-Degree）"><a href="#3-平均度（Average-Degree）" class="headerlink" title="3. 平均度（Average Degree）"></a>3. <strong>平均度（Average Degree）</strong></h4><p>整个网络的平均度表示网络中节点的平均连接数，计算方式为：<br>[<br>\langle k \rangle &#x3D; \frac{2E}{N}<br>]<br>其中 (E) 是边的数量，(N) 是节点的数量。平均度可以用来衡量网络的稠密性。</p>
+<h4 id="4-加权度（Weighted-Degree）"><a href="#4-加权度（Weighted-Degree）" class="headerlink" title="4. 加权度（Weighted Degree）"></a>4. <strong>加权度（Weighted Degree）</strong></h4><p>在加权网络中，边不只是简单的0或1，而是有权重。加权度反映了与一个节点相连的边的权重总和。对于节点 (v)，其加权度为：<br>[<br>w(v) &#x3D; \sum_{i} W_{vi}<br>]<br>其中 (W_{vi}) 是节点 (v) 和节点 (i) 之间边的权重。</p>
+<h4 id="5-度中心性（Degree-Centrality）"><a href="#5-度中心性（Degree-Centrality）" class="headerlink" title="5. 度中心性（Degree Centrality）"></a>5. <strong>度中心性（Degree Centrality）</strong></h4><p>度中心性是最简单的一种中心性度量，直接使用节点的度来衡量其重要性。度中心性 (C_D(v)) 表示节点 (v) 的度与网络中其他节点数的比值：<br>[<br>C_D(v) &#x3D; \frac{k(v)}{N-1}<br>]<br>度中心性反映了节点在网络中的直接连接数量，度越高的节点通常被视为更具影响力或更为活跃。</p>
+<h4 id="6-相关度量"><a href="#6-相关度量" class="headerlink" title="6. 相关度量"></a>6. <strong>相关度量</strong></h4><ul>
+<li><p><strong>邻居数（Neighbors）</strong>：某个节点的邻居数即为其度数，表示该节点直接相连的节点数。</p>
+</li>
+<li><p><strong>邻居的度（Neighbors’ Degree）</strong>：网络中的高度节点通常倾向于与其他高度节点相连，这一特性被称为<strong>同配性</strong>（assortativity）。可以通过计算邻居节点的平均度来评估某个节点的连接特性。</p>
+<p>平均邻居度（average neighbor degree）为：<br>[<br>\langle k_{\text{nn}}(v) \rangle &#x3D; \frac{1}{k(v)} \sum_{i \in \text{neighbors of } v} k(i)<br>]</p>
+</li>
+<li><p><strong>聚类系数（Clustering Coefficient）</strong>：度与聚类系数结合在一起能更好地描述节点所处的局部网络结构。聚类系数衡量节点邻居间彼此相连的程度，反映了网络的团簇性。</p>
+</li>
+<li><p><strong>度关联性（Degree Assortativity）</strong>：表示节点的度是否倾向于与具有相似度的其他节点相连。如果高度节点倾向于与其他高度节点相连，则网络是同配的；反之则为异配。</p>
+</li>
+</ul>
+<h4 id="7-度的应用"><a href="#7-度的应用" class="headerlink" title="7. 度的应用"></a>7. <strong>度的应用</strong></h4><p>度及其相关度量在很多领域有广泛的应用：</p>
+<ul>
+<li><strong>社交网络</strong>：节点度可以用来衡量用户的社交活跃度或信息传播能力。</li>
+<li><strong>生物网络</strong>：在蛋白质相互作用网络中，节点的度可以帮助识别关键的蛋白质。</li>
+<li><strong>互联网</strong>：在互联网拓扑中，度用于衡量网站或服务器的连接性。</li>
+</ul>
+<p>了解这些概念可以帮助更深入地分析复杂网络的结构和特性。你是否希望深入探讨某个具体的度量指标或其应用？</p>
+<h3 id="十、节点的子图中心性"><a href="#十、节点的子图中心性" class="headerlink" title="十、节点的子图中心性"></a>十、节点的子图中心性</h3><p>节点的子图中心性（Subgraph Centrality）是一种用于衡量网络中节点重要性的方法，它反映了一个节点参与不同子图的频率。该中心性考虑了节点处于各种规模子图中的贡献，尤其是三角形、四边形等子图。它通过计算节点在这些子图中的存在程度来确定节点的重要性。</p>
+<p>具体来说，子图中心性基于邻接矩阵的谱特性。通过邻接矩阵的特征值和特征向量，可以计算出节点的子图中心性。它不仅考虑节点在局部结构中的参与情况，还可以权衡节点在整个网络结构中的影响力。公式通常使用矩阵指数（matrix exponential）来表达：</p>
+<p><img src="/./images/efigure08.png" alt="图8"></p>
+<p>其中：</p>
+<ul>
+<li>(C(v)) 表示节点 (v) 的子图中心性。</li>
+<li>(A<sup>k</sup>) 是邻接矩阵 (A) 的 (k) 次幂，表示网络中长度为 (k) 的路径。</li>
+<li>((A<sup>k</sup>)<sub>vv</sub>}) 是 (A<sup>k</sup>) 对角线上与节点 (v) 对应的元素，表示节点 (v) 参与的闭合路径（子图）。</li>
+</ul>
+<p>这种中心性能够很好地捕捉节点在网络中不同规模的结构中所处的位置，因此是一种能够全面反映节点重要性的度量方法。</p>
+<h4 id="子图中心性的应用"><a href="#子图中心性的应用" class="headerlink" title="子图中心性的应用"></a>子图中心性的应用</h4><ul>
+<li><strong>社交网络分析</strong>：用来识别在社交网络中影响力大的个人。</li>
+<li><strong>生物网络分析</strong>：在基因调控网络或蛋白质相互作用网络中用于发现关键的生物分子。</li>
+<li><strong>信息传播</strong>：可以帮助分析信息在网络中如何有效传播。</li>
+</ul>
 
       
     </div>
