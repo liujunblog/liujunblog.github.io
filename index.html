@@ -1754,7 +1754,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-23 14:06:17" itemprop="dateModified" datetime="2024-10-23T14:06:17+08:00">2024-10-23</time>
+      <time title="修改时间：2024-10-23 16:16:16" itemprop="dateModified" datetime="2024-10-23T16:16:16+08:00">2024-10-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1777,7 +1777,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="复杂网络基本性质"><a href="#复杂网络基本性质" class="headerlink" title="复杂网络基本性质"></a>复杂网络基本性质</h1><h2 id="度、平均度以及度分布"><a href="#度、平均度以及度分布" class="headerlink" title="度、平均度以及度分布"></a>度、平均度以及度分布</h2><h3 id="1-度（Degree）"><a href="#1-度（Degree）" class="headerlink" title="1. 度（Degree）"></a>1. <strong>度（Degree）</strong></h3><p><strong>度</strong>是一个节点的连接数，表示该节点与其他节点之间的边的数量。</p>
-<h4 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h4><p><img src="/./images/efigure001.png" alt="img"></p>
+<h4 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h4><p><img src="/images/efigure001.png" alt="img"></p>
 <p>对于有向图，每个节点有两个度：</p>
 <ul>
 <li><strong>入度（In-degree）</strong>：其他节点指向该节点的边的数量。</li>
@@ -1788,7 +1788,7 @@
 <li>节点度越高，说明它与其他节点的连接越多，可能起到关键的传输或枢纽作用。</li>
 </ul>
 <h3 id="2-平均度（Average-Degree）"><a href="#2-平均度（Average-Degree）" class="headerlink" title="2. 平均度（Average Degree）"></a>2. <strong>平均度（Average Degree）</strong></h3><p><strong>平均度</strong>（⟨k⟩）是网络中所有节点度的平均值，用于描述网络的整体连接性。</p>
-<p><img src="/./images/efigure002.png" alt="img"></p>
+<p><img src="/images/efigure002.png" alt="img"></p>
 <h4 id="解释：-1"><a href="#解释：-1" class="headerlink" title="解释："></a>解释：</h4><ul>
 <li>平均度提供了网络中每个节点平均连接多少个其他节点的一个概况。</li>
 <li>网络的连通性可以通过平均度来衡量。较大的平均度意味着网络较为紧密，节点之间的连接较多；较小的平均度则表明网络较稀疏。</li>
@@ -1804,7 +1804,16 @@
 </ul>
 <h1 id="聚集系数"><a href="#聚集系数" class="headerlink" title="聚集系数"></a>聚集系数</h1><h2 id="聚集系数用来捕获给定节点的邻居节点之间的连接程度。"><a href="#聚集系数用来捕获给定节点的邻居节点之间的连接程度。" class="headerlink" title="聚集系数用来捕获给定节点的邻居节点之间的连接程度。"></a>聚集系数用来捕获给定节点的邻居节点之间的连接程度。</h2><p>对于一个度为ki的节点i，局部集聚系数定义为</p>
 <p><img src="/./images/efigure02.png" alt="img"></p>
-<h2 id="全局集聚系数"><a href="#全局集聚系数" class="headerlink" title="全局集聚系数"></a>全局集聚系数</h2><p>网络的<strong>全局聚集系数</strong>是对所有节点的局部聚集系数的平均值，用于衡量整个网络的聚集程度。</p>
+<h2 id="全局集聚系数"><a href="#全局集聚系数" class="headerlink" title="全局集聚系数"></a>全局集聚系数</h2><p>全局聚集系数（Global Clustering Coefficient）也称为<strong>网络的三角形系数</strong>，是复杂网络中度量节点之间形成三角形闭合连接的比例。它的计算方式是基于<strong>已闭合三元组</strong>与<strong>所有可能的三元组</strong>的比例。</p>
+<ul>
+<li><strong>三元组</strong>：指由一个节点及其两个邻居构成的连接关系，分为<strong>开三元组</strong>（没有形成三角形）和<strong>闭三元组</strong>（形成三角形）。</li>
+<li><strong>全局聚集系数公式</strong>：<img src="/images/figure005.png"></li>
+<li>三角形的数量 这里，三元组的数量包括所有可能的三元组，而三角形数量表示实际存在的三角形。</li>
+</ul>
+<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><ul>
+<li><strong>较高的全局聚集系数</strong>：说明网络具有较强的<strong>团体性</strong>，邻居节点之间更倾向于相互连接，常见于社交网络。</li>
+<li><strong>较低的全局聚集系数</strong>：表示网络的节点连接较为松散，节点的邻居之间不太倾向于相互连接。</li>
+</ul>
 <h1 id="无向图"><a href="#无向图" class="headerlink" title="无向图"></a>无向图</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">G = nx.Graph()</span><br><span class="line"><span class="comment">#添加节点</span></span><br><span class="line">G.add_nodes_from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="comment">#添加边</span></span><br><span class="line">G.add_edges_from([(<span class="number">1</span>,<span class="number">2</span>),(<span class="number">1</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">4</span>)])</span><br><span class="line"><span class="comment">#可视化</span></span><br><span class="line">nx.draw(G, with_labels=<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#保存图片地址</span></span><br><span class="line">G_path = <span class="string">&#x27;E:/MyBlog/source/images/figure.png&#x27;</span></span><br><span class="line">plt.savefig(G_path)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取图的邻接矩阵</span></span><br><span class="line">As = nx.adjacency_matrix(G)</span><br><span class="line"><span class="built_in">print</span>(As)</span><br><span class="line"></span><br><span class="line"><span class="comment">#转化为二维的矩阵</span></span><br><span class="line">A= As.todense()</span><br><span class="line"><span class="built_in">print</span>(A)</span><br></pre></td></tr></table></figure>
 
 <p>如下图：<img src="./images/figure.png" style="zoom:33%;" /></p>
@@ -1866,7 +1875,48 @@
 <p>普通轴下如图<img src="./images/figure1102.png" alt="figure1102" style="zoom:33%;" /></p>
 <p>双对数轴下如图：<img src="./images/figure11021.png" alt="figure" style="zoom:33%;" /></p>
 <p>去除0值坐标下图像如图<img src="./images/figure11022.png" alt="figure" style="zoom:33%;" /></p>
-<h1 id="网络的直径、效率和平均最短距离"><a href="#网络的直径、效率和平均最短距离" class="headerlink" title="网络的直径、效率和平均最短距离"></a>网络的直径、效率和平均最短距离</h1>
+<h1 id="网络的直径、效率和平均最短距离"><a href="#网络的直径、效率和平均最短距离" class="headerlink" title="网络的直径、效率和平均最短距离"></a>网络的直径、效率和平均最短距离</h1><p>在复杂网络中，<strong>网络的直径</strong>、<strong>效率</strong>和<strong>平均最短距离</strong>是衡量网络结构和信息传递特性的重要指标。它们能帮助理解网络的全局特性以及节点之间的相互连接情况。</p>
+<h3 id="1-网络的直径（Diameter-of-a-Network）"><a href="#1-网络的直径（Diameter-of-a-Network）" class="headerlink" title="1. 网络的直径（Diameter of a Network）"></a>1. <strong>网络的直径（Diameter of a Network）</strong></h3><ul>
+<li><p><strong>定义</strong>：网络直径是网络中所有节点对之间最短路径长度的最大值，代表网络中最远的两个节点之间的距离。它是网络中最长的最短路径。</p>
+</li>
+<li><p><strong>意义</strong>：直径反映了网络的“扩展性”或“广度”，即信息在网络中传播需要经过的最大步数。直径越小，表示网络中任何两个节点之间的距离相对较短，信息传播更快。</p>
+</li>
+<li><p><strong>计算</strong>：通过计算所有节点对的最短路径，并取这些最短路径中的最大值来得到网络的直径。</p>
+</li>
+</ul>
+<h3 id="2-网络效率（Network-Efficiency）"><a href="#2-网络效率（Network-Efficiency）" class="headerlink" title="2. 网络效率（Network Efficiency）"></a>2. <strong>网络效率（Network Efficiency）</strong></h3><ul>
+<li><p><strong>定义</strong>：网络效率用来衡量网络中信息传播的效率，是所有节点对之间的最短路径长度的倒数的平均值。</p>
+<p><img src="/images/efigure006.png"></p>
+</li>
+<li><p><strong>意义</strong>：网络效率反映了整个网络的信息传递能力。效率越高，说明信息可以在网络中快速传播，节点之间的连接较为紧密。特别是在无标度网络或小世界网络中，网络效率通常较高。</p>
+</li>
+<li><p><strong>局部和全局效率</strong>：</p>
+<ul>
+<li><strong>局部效率</strong>：衡量每个节点周围子网络的效率，主要用于反映局部结构的稳健性。</li>
+<li><strong>全局效率</strong>：衡量整个网络的信息传递效率。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-平均最短路径长度（Average-Shortest-Path-Length）"><a href="#3-平均最短路径长度（Average-Shortest-Path-Length）" class="headerlink" title="3. 平均最短路径长度（Average Shortest Path Length）"></a>3. <strong>平均最短路径长度（Average Shortest Path Length）</strong></h3><ul>
+<li><p><strong>定义</strong>：平均最短路径长度是网络中所有节点对之间的最短路径长度的平均值，表示节点间的平均距离。</p>
+<p><img src="/images/efigure008.jpg"></p>
+</li>
+<li><p><strong>意义</strong>：平均最短路径长度反映了网络中任意两个节点之间的平均距离。它描述了网络的连通性和紧密性，平均最短路径越小，说明网络节点之间的距离较短，信息传播的速度更快。</p>
+</li>
+<li><p><strong>与网络类型的关系</strong>：</p>
+<ul>
+<li>在小世界网络中，平均最短路径长度通常较小，即便网络规模很大，节点之间的平均距离仍然较短。</li>
+<li>随机网络和规则网络的平均最短路径长度则可能相对较大。</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><strong>直径</strong>：最大最短路径，反映网络最远的两个节点的距离。</li>
+<li><strong>效率</strong>：衡量网络中信息传播的效率，路径越短，效率越高。</li>
+<li><strong>平均最短路径长度</strong>：所有节点对之间的平均最短路径，表示节点间平均距离。</li>
+</ul>
+<p>这些指标有助于分析网络的连通性和信息传播的效率，尤其在社会网络、交通网络和互联网等实际应用中非常关键。</p>
+
       
     </div>
 
