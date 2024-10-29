@@ -1754,7 +1754,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-28 17:30:14" itemprop="dateModified" datetime="2024-10-28T17:30:14+08:00">2024-10-28</time>
+      <time title="修改时间：2024-10-29 15:49:17" itemprop="dateModified" datetime="2024-10-29T15:49:17+08:00">2024-10-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2094,6 +2094,22 @@
 <h3 id="第二种G（N，p）python代码实现如下"><a href="#第二种G（N，p）python代码实现如下" class="headerlink" title="第二种G（N，p）python代码实现如下"></a>第二种G（N，p）python代码实现如下</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">GNP</span> (N,p):</span><br><span class="line">    edges = itertools.combinations(<span class="built_in">range</span>(N),<span class="number">2</span>)</span><br><span class="line">    G = nx.Graph()</span><br><span class="line">    G.add_nodes_from(<span class="built_in">range</span>(N))</span><br><span class="line">    <span class="keyword">for</span> e <span class="keyword">in</span> edges:</span><br><span class="line">        <span class="keyword">if</span> random.random() &lt; p:</span><br><span class="line">            G.add_edge(*e)</span><br><span class="line">    <span class="keyword">return</span> G</span><br><span class="line"></span><br><span class="line">G = GNP(<span class="number">10</span>,<span class="number">0.6</span>)</span><br><span class="line">nx.draw(G)</span><br><span class="line">Ga_path = <span class="string">&#x27;E:/MyBlog/source/images/figure2016.png&#x27;</span></span><br><span class="line">plt.savefig(Ga_path)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 <p>如图<img src="/images/figure2016.png"></p>
+<h1 id="小世界网络"><a href="#小世界网络" class="headerlink" title="小世界网络"></a>小世界网络</h1><p>小世界网络模型（Small-World Network Model）是一种网络结构模型，最初由D.J. Watts和S.H. Strogatz在1998年提出。这个模型描述了具有高聚集性和短路径特征的网络，通常用于研究社交网络、信息传播、生物网络等。</p>
+<h3 id="主要特征："><a href="#主要特征：" class="headerlink" title="主要特征："></a>主要特征：</h3><ol>
+<li><p><strong>高聚集性</strong>：小世界网络中的节点倾向于与其邻近节点建立连接，形成紧密的群体。这样的特性使得相邻节点之间的连接概率高。</p>
+</li>
+<li><p><strong>短路径长度</strong>：尽管小世界网络可能是一个大型网络，但任意两个节点之间的平均路径长度较短。即使节点之间没有直接连接，通过少量的中间节点也能实现快速连接。</p>
+</li>
+<li><p><strong>随机性</strong>：小世界网络在其结构中引入了一些随机连接，这样即使在局部聚集性较高的情况下，也能打破局部结构，使得网络具有更好的连通性。</p>
+</li>
+</ol>
+<h3 id="典型应用："><a href="#典型应用：" class="headerlink" title="典型应用："></a>典型应用：</h3><ul>
+<li><strong>社交网络</strong>：研究朋友之间的连接、信息传播的速度等。</li>
+<li><strong>生物网络</strong>：如神经网络和生态系统中的物种间相互作用。</li>
+<li><strong>互联网</strong>：分析网站链接结构、数据传输等。</li>
+</ul>
+<h3 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h3><p>一个经典的例子是“六度分隔”理论，表明在社交网络中，任意两个个体之间的联系通常可以通过最多六个中介达到。</p>
+<p>小世界网络模型在网络科学中具有重要意义，帮助理解复杂系统中的连接和传播机制。</p>
 
       
     </div>
