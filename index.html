@@ -882,13 +882,13 @@
 </ul>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>假设我们有一个简单的二分图 ( G )：</p>
 <ul>
-<li>( U = {A, B, C} )</li>
-<li>( V = {1, 2, 3} )</li>
-<li>边集 ( E = {(A, 1), (A, 2), (B, 2), (B, 3), (C, 1)} )</li>
+<li>( U = \{A, B, C\} )</li>
+<li>( V = \{1, 2, 3\} )</li>
+<li>边集 ( E = \{(A, 1), (A, 2), (B, 2), (B, 3), (C, 1)\} )</li>
 </ul>
 <p><strong>投影图 ( G<sub>U</sub> )</strong>：</p>
 <ul>
-<li>节点集合为 ( U = {A, B, C} )。</li>
+<li>节点集合为 ( U = \{A, B, C\} )。</li>
 <li>边：<ul>
 <li>( A ) 和 ( B ) 通过 ( 2 ) 连接，添加边 ( (A, B) )。</li>
 <li>( A ) 和 ( C ) 通过 ( 1 ) 连接，添加边 ( (A, C) )。</li>
@@ -1095,8 +1095,8 @@
 </ol>
 <h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><p>假设我们有三个节点 ( A, B, C )，以及一个超边 ( e<sub>1</sub> )，连接这三个节点。在三元超图中，表示为：</p>
 <ul>
-<li>节点集合 ( V = { A, B, C } )</li>
-<li>超边集合 ( E = { e<sub>1</sub> } )，其中 ( e<sub>1</sub> ) 连接节点 ( A, B, C )</li>
+<li>节点集合 ( V = \{ A, B, C \} )</li>
+<li>超边集合 ( E = \{ e<sub>1</sub> \} )，其中 ( e<sub>1</sub> ) 连接节点 ( A, B, C )</li>
 </ul>
 <h3 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h3><ol>
 <li><p><strong>三元关系</strong>：在数据库或知识图谱中，三元超图可以用于表示三元关系，例如“用户-产品-评价”。</p>
@@ -1329,7 +1329,7 @@
 </ul>
 <h4 id="3-接近中心性（Closeness-Centrality）"><a href="#3-接近中心性（Closeness-Centrality）" class="headerlink" title="3. 接近中心性（Closeness Centrality）"></a>3. <strong>接近中心性（Closeness Centrality）</strong></h4><p>接近中心性度量的是一个节点与网络中其他所有节点的距离的倒数，表示一个节点能以多快的速度触达网络中所有其他节点。接近中心性越高，说明节点距离其他节点越近。</p>
 <ul>
-<li><p><strong>公式</strong>：<br>[<br>C<em>C(v) = \frac{1}{\sum</em>{u} d(v, u)}<br>]<br>其中 (d(v, u)) 表示节点 (v) 和 (u) 之间的最短路径距离。</p>
+<li><p><strong>公式</strong>：<br>[<br>C_C(v) = \frac{1}{\sum_{u} d(v, u)}<br>]<br>其中 (d(v, u)) 表示节点 (v) 和 (u) 之间的最短路径距离。</p>
 </li>
 <li><p><strong>解释</strong>：接近中心性反映了节点在网络中的整体位置，离其他节点越近，其在网络中的信息传播能力越强。</p>
 </li>
