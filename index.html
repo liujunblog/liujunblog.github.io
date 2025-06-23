@@ -508,7 +508,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-03 17:59:17" itemprop="dateModified" datetime="2025-06-03T17:59:17+08:00">2025-06-03</time>
+      <time title="修改时间：2025-06-23 18:51:04" itemprop="dateModified" datetime="2025-06-23T18:51:04+08:00">2025-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -9698,6 +9698,255 @@
 <li>合并不相似簇（如 $C_3$ 和 $C_4$）：<br>$\frac{P(C_3 \cup C_4)}{P(C_3) P(C_4)} &lt; 1$ → 距离大 → 质量下降  </li>
 </ul>
 <p>该距离公式的核心思想是：用概率模型量化合并簇的质量变化，并将最大化质量改进转化为最小化距离问题。</p>
+<h3 id="节点2的局部结构熵（-L-E-2-）计算过程："><a href="#节点2的局部结构熵（-L-E-2-）计算过程：" class="headerlink" title="节点2的局部结构熵（$L_{E_2}$）计算过程："></a>节点2的局部结构熵（$L_{E_2}$）计算过程：</h3><h4 id="步骤1-确定局部网络范围"><a href="#步骤1-确定局部网络范围" class="headerlink" title="步骤1: 确定局部网络范围"></a>步骤1: 确定局部网络范围</h4><ul>
+<li>节点2的局部网络包括自身及其所有邻居</li>
+<li>邻居节点：1, 4, 5, 6, 7</li>
+<li>局部网络节点集合：{2, 1, 4, 5, 6, 7}（共6个节点）</li>
+</ul>
+<h4 id="步骤2-计算每个节点的度（全局图中）"><a href="#步骤2-计算每个节点的度（全局图中）" class="headerlink" title="步骤2: 计算每个节点的度（全局图中）"></a>步骤2: 计算每个节点的度（全局图中）</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>节点</th>
+<th>连接情况</th>
+<th>度值 $k_j$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>连接1,4,5,6,7</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>连接2,3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>连接2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>连接2,6</td>
+<td>2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>连接2,5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>连接2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="步骤3-计算局部网络度值总和"><a href="#步骤3-计算局部网络度值总和" class="headerlink" title="步骤3: 计算局部网络度值总和"></a>步骤3: 计算局部网络度值总和</h4><p>$\sum_{j=1}^{n_i} k_j = k_2 + k_1 + k_4 + k_5 + k_6 + k_7 = 5 + 2 + 1 + 2 + 2 + 1 = 13$</p>
+<h4 id="步骤4-计算概率分布-p-ij"><a href="#步骤4-计算概率分布-p-ij" class="headerlink" title="步骤4: 计算概率分布 $p_{ij}$"></a>步骤4: 计算概率分布 $p_{ij}$</h4><p>$p_{ij} = \frac{k_j}{\sum k} = \frac{k_j}{13}$</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>节点</th>
+<th>$k_j$</th>
+<th>$p_{ij}$</th>
+<th>计算式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>5</td>
+<td>5/13 ≈ 0.3846</td>
+<td>$\frac{5}{13}$</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>2/13 ≈ 0.1538</td>
+<td>$\frac{2}{13}$</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>1/13 ≈ 0.0769</td>
+<td>$\frac{1}{13}$</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>2/13 ≈ 0.1538</td>
+<td>$\frac{2}{13}$</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2</td>
+<td>2/13 ≈ 0.1538</td>
+<td>$\frac{2}{13}$</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1</td>
+<td>1/13 ≈ 0.0769</td>
+<td>$\frac{1}{13}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="步骤5-计算熵值-L-E-2"><a href="#步骤5-计算熵值-L-E-2" class="headerlink" title="步骤5: 计算熵值 $L_{E_2}$"></a>步骤5: 计算熵值 $L_{E_2}$</h4><p>$L_{E_2} = -\sum p_{ij} \ln p_{ij}$</p>
+<p>计算每一项：</p>
+<ul>
+<li>$p_{2}\ln p_{2} = \frac{5}{13} \ln \frac{5}{13} ≈ 0.3846 × (-0.9555) ≈ -0.3675$</li>
+<li>$p_{1}\ln p_{1} = \frac{2}{13} \ln \frac{2}{13} ≈ 0.1538 × (-1.872) ≈ -0.2880$</li>
+<li>$p_{4}\ln p_{4} = \frac{1}{13} \ln \frac{1}{13} ≈ 0.0769 × (-2.565) ≈ -0.1973$</li>
+<li>$p_{5}\ln p_{5} = \frac{2}{13} \ln \frac{2}{13} ≈ 0.1538 × (-1.872) ≈ -0.2880$</li>
+<li>$p_{6}\ln p_{6} = \frac{2}{13} \ln \frac{2}{13} ≈ 0.1538 × (-1.872) ≈ -0.2880$</li>
+<li>$p_{7}\ln p_{7} = \frac{1}{13} \ln \frac{1}{13} ≈ 0.0769 × (-2.565) ≈ -0.1973$</li>
+</ul>
+<p>求和：<br>$\sum p_{ij} \ln p_{ij} ≈ (-0.3675) + (-0.2880) + (-0.1973) + (-0.2880) + (-0.2880) + (-0.1973) = -1.6261$</p>
+<p>取负号：<br>$L_{E_2} = -(-1.6261) = 1.6261$</p>
+<hr>
+<h3 id="节点3的局部结构熵（-L-E-3-）计算过程："><a href="#节点3的局部结构熵（-L-E-3-）计算过程：" class="headerlink" title="节点3的局部结构熵（$L_{E_3}$）计算过程："></a>节点3的局部结构熵（$L_{E_3}$）计算过程：</h3><h4 id="步骤1-确定局部网络范围-1"><a href="#步骤1-确定局部网络范围-1" class="headerlink" title="步骤1: 确定局部网络范围"></a>步骤1: 确定局部网络范围</h4><ul>
+<li>节点3的局部网络包括自身及其所有邻居</li>
+<li>邻居节点：1, 8, 9, 10, 11</li>
+<li>局部网络节点集合：{3, 1, 8, 9, 10, 11}（共6个节点）</li>
+</ul>
+<h4 id="步骤2-计算每个节点的度（全局图中）-1"><a href="#步骤2-计算每个节点的度（全局图中）-1" class="headerlink" title="步骤2: 计算每个节点的度（全局图中）"></a>步骤2: 计算每个节点的度（全局图中）</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>节点</th>
+<th>连接情况</th>
+<th>度值 $k_j$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>连接1,8,9,10,11</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>连接2,3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>8</td>
+<td>连接3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>9</td>
+<td>连接3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>连接3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>11</td>
+<td>连接3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="步骤3-计算局部网络度值总和-1"><a href="#步骤3-计算局部网络度值总和-1" class="headerlink" title="步骤3: 计算局部网络度值总和"></a>步骤3: 计算局部网络度值总和</h4><p>$\sum_{j=1}^{n_i} k_j = k_3 + k_1 + k_8 + k_9 + k_{10} + k_{11} = 5 + 2 + 1 + 1 + 1 + 1 = 11$</p>
+<h4 id="步骤4-计算概率分布-p-ij-1"><a href="#步骤4-计算概率分布-p-ij-1" class="headerlink" title="步骤4: 计算概率分布 $p_{ij}$"></a>步骤4: 计算概率分布 $p_{ij}$</h4><p>$p_{ij} = \frac{k_j}{\sum k} = \frac{k_j}{11}$</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>节点</th>
+<th>$k_j$</th>
+<th>$p_{ij}$</th>
+<th>计算式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>5</td>
+<td>5/11 ≈ 0.4545</td>
+<td>$\frac{5}{11}$</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>2/11 ≈ 0.1818</td>
+<td>$\frac{2}{11}$</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1</td>
+<td>1/11 ≈ 0.0909</td>
+<td>$\frac{1}{11}$</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1</td>
+<td>1/11 ≈ 0.0909</td>
+<td>$\frac{1}{11}$</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1</td>
+<td>1/11 ≈ 0.0909</td>
+<td>$\frac{1}{11}$</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1</td>
+<td>1/11 ≈ 0.0909</td>
+<td>$\frac{1}{11}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="步骤5-计算熵值-L-E-3"><a href="#步骤5-计算熵值-L-E-3" class="headerlink" title="步骤5: 计算熵值 $L_{E_3}$"></a>步骤5: 计算熵值 $L_{E_3}$</h4><p>$L_{E_3} = -\sum p_{ij} \ln p_{ij}$</p>
+<p>计算每一项：</p>
+<ul>
+<li>$p_{3}\ln p_{3} = \frac{5}{11} \ln \frac{5}{11} ≈ 0.4545 × (-0.7885) ≈ -0.3584$</li>
+<li>$p_{1}\ln p_{1} = \frac{2}{11} \ln \frac{2}{11} ≈ 0.1818 × (-1.7047) ≈ -0.3099$</li>
+<li>$p_{8}\ln p_{8} = \frac{1}{11} \ln \frac{1}{11} ≈ 0.0909 × (-2.3979) ≈ -0.2180$</li>
+<li>$p_{9}\ln p_{9} = \frac{1}{11} \ln \frac{1}{11} ≈ 0.0909 × (-2.3979) ≈ -0.2180$</li>
+<li>$p_{10}\ln p_{10} = \frac{1}{11} \ln \frac{1}{11} ≈ 0.0909 × (-2.3979) ≈ -0.2180$</li>
+<li>$p_{11}\ln p_{11} = \frac{1}{11} \ln \frac{1}{11} ≈ 0.0909 × (-2.3979) ≈ -0.2180$</li>
+</ul>
+<p>求和：<br>$\sum p_{ij} \ln p_{ij} ≈ (-0.3584) + (-0.3099) + (-0.2180) + (-0.2180) + (-0.2180) + (-0.2180) = -1.5403$</p>
+<p>取负号：<br>$L_{E_3} = -(-1.5403) = 1.5403$</p>
+<hr>
+<h3 id="结果总结："><a href="#结果总结：" class="headerlink" title="结果总结："></a>结果总结：</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>节点</th>
+<th>$L_E$ 值</th>
+<th>解释说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>1.6261</td>
+<td>局部结构更复杂，邻居节点度分布更不均匀</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.5403</td>
+<td>局部结构相对简单，邻居节点度分布更均匀</td>
+</tr>
+</tbody>
+</table>
+</div>
 
       
     </div>
