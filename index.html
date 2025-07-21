@@ -221,7 +221,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-07-21 20:12:11" itemprop="dateModified" datetime="2025-07-21T20:12:11+08:00">2025-07-21</time>
+      <time title="修改时间：2025-07-21 22:11:03" itemprop="dateModified" datetime="2025-07-21T22:11:03+08:00">2025-07-21</time>
     </span>
 
   
@@ -234,109 +234,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>你提到的三个关键词——<strong>行为同步</strong>、<strong>动态演化</strong>、<strong>疫情传播</strong>——通常在复杂网络、系统科学或多智能体系统中是紧密相关的重要主题。以下是对它们的简要解释及其关联：</p>
-<hr>
-<h3 id="1-行为同步（Behavioral-Synchronization）"><a href="#1-行为同步（Behavioral-Synchronization）" class="headerlink" title="1. 行为同步（Behavioral Synchronization）"></a>1. <strong>行为同步（Behavioral Synchronization）</strong></h3><ul>
-<li><p>指多个个体或节点在网络中相互作用后，其行为（如运动、意见、状态等）趋于一致的过程。</p>
-</li>
-<li><p>示例：社交网络中人们的意见趋同，神经网络中神经元同步放电。</p>
-</li>
-</ul>
-<hr>
-<h3 id="2-动态演化（Dynamical-Evolution）"><a href="#2-动态演化（Dynamical-Evolution）" class="headerlink" title="2. 动态演化（Dynamical Evolution）"></a>2. <strong>动态演化（Dynamical Evolution）</strong></h3><ul>
-<li>指网络结构、节点状态、连接关系等随时间变化的过程。</li>
-<li>可细分为：<ul>
-<li><strong>静态网络上状态的演化</strong>（如节点状态变化）</li>
-<li><strong>动态网络结构</strong>（如节点/边随时间出现或消失）</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="3-疫情传播（Epidemic-Spreading）"><a href="#3-疫情传播（Epidemic-Spreading）" class="headerlink" title="3. 疫情传播（Epidemic Spreading）"></a>3. <strong>疫情传播（Epidemic Spreading）</strong></h3><ul>
-<li>描述病毒、谣言或信息在网络中传播的过程。</li>
-<li>常见模型：<ul>
-<li><strong>SIS</strong>（易感-感染-易感）</li>
-<li><strong>SIR</strong>（易感-感染-移除）</li>
-</ul>
-</li>
-<li>传播受限于网络拓扑结构（如度分布、群体结构、中心性）以及节点行为（如自我保护、隔离）。</li>
-</ul>
-<hr>
-<h3 id="三者之间的联系："><a href="#三者之间的联系：" class="headerlink" title="三者之间的联系："></a>三者之间的联系：</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>主题</th>
-<th>联系点示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>行为同步 ↔ 疫情传播</td>
-<td>人群因疫情信息同步调整行为，如佩戴口罩、减少接触。</td>
-</tr>
-<tr>
-<td>动态演化 ↔ 疫情传播</td>
-<td>疫情改变网络结构（例如封锁地区），网络结构又影响传播路径。</td>
-</tr>
-<tr>
-<td>行为同步 ↔ 动态演化</td>
-<td>群体行为趋同可导致网络关系的重组，例如志同道合者形成新的社群结构。</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<p>以下是将上面的内容整理后的 <strong>Markdown 格式</strong>：</p>
-<hr>
-<h2 id="🔹定义3：PageRank"><a href="#🔹定义3：PageRank" class="headerlink" title="🔹定义3：PageRank"></a>🔹定义3：PageRank</h2><p>PageRank 是 Google 创始人提出的一种用于衡量网页“重要性”或“影响力”的算法，后来被广泛应用于网络科学中的 <strong>节点排序</strong> 问题。</p>
-<hr>
-<h3 id="🔸基本思想"><a href="#🔸基本思想" class="headerlink" title="🔸基本思想"></a>🔸基本思想</h3><p>给定一个网络，其邻接矩阵为 $A$，PageRank 通过 <strong>归一化的邻接矩阵</strong> 得到 <strong>转移概率矩阵</strong> $P$。每个元素 $P_{ij}$ 表示从节点 $j$ 转移到节点 $i$ 的概率，定义为：</p>
-<p>Pij=aij∑iaijP_{ij} = \frac{a_{ij}}{\sum_i a_{ij}}</p>
-<p>也就是说，<strong>按列归一化</strong>，每列加和为 1，构成了一个 <strong>随机游走的转移矩阵</strong>（即列归一的马尔可夫链）。</p>
-<hr>
-<h3 id="🔸基本-PageRank-迭代公式"><a href="#🔸基本-PageRank-迭代公式" class="headerlink" title="🔸基本 PageRank 迭代公式"></a>🔸基本 PageRank 迭代公式</h3><p>x(t)=PTx(t−1)(3)x(t) = P^T x(t - 1) \tag{3}</p>
-<p>其中：</p>
-<ul>
-<li>$x(t) \in \mathbb{R}^N$：时间 $t$ 时各节点的 PageRank 向量；</li>
-<li>$x_i(t)$：第 $i$ 个节点在时刻 $t$ 的 PageRank 值；</li>
-<li>$P^T$：转置的转移矩阵，表示由<strong>入边</strong>传播 PageRank。</li>
-</ul>
-<p>这意味着 PageRank 值是前一时刻的传播结果。</p>
-<hr>
-<h3 id="🔸引入阻尼因子-s"><a href="#🔸引入阻尼因子-s" class="headerlink" title="🔸引入阻尼因子 $s$"></a>🔸引入阻尼因子 $s$</h3><p>某些网页可能构成一个互相链接的小圈子，与外部没有连接，导致 PageRank 停留在这个子集里。为解决这一问题，引入阻尼系数 $s \in (0, 1)$，修正后的 PageRank 公式为：</p>
-<p>x(t)=sPTx(t−1)+u(1−s)N(4)x(t) = s P^T x(t - 1) + \frac{u(1 - s)}{N} \tag{4}</p>
-<p>其中：</p>
-<ul>
-<li>$s$：阻尼因子，常设为 $0.85$；</li>
-<li>$u \in \mathbb{R}^N$：所有元素均为 $1$ 的向量；</li>
-<li>$\frac{u(1 - s)}{N}$：均匀跳转项，确保每个节点都有一定概率被访问。</li>
-</ul>
-<p>这样可以避免“陷入孤岛”或结构失衡问题。</p>
-<hr>
-<h3 id="🔸初始状态与收敛性"><a href="#🔸初始状态与收敛性" class="headerlink" title="🔸初始状态与收敛性"></a>🔸初始状态与收敛性</h3><ul>
-<li><p>初始 PageRank 通常设置为均匀分布：</p>
-<p>x(0)=1N⋅1x(0) = \frac{1}{N} \cdot \mathbf{1}</p>
-</li>
-<li><p>迭代过程中，$x(t)$ 会逐步收敛，得到一个稳定状态下的 PageRank 排序。</p>
-</li>
-</ul>
-<hr>
-<h3 id="🔸其他补充内容"><a href="#🔸其他补充内容" class="headerlink" title="🔸其他补充内容"></a>🔸其他补充内容</h3><ul>
-<li><p>LeaderRank 是 PageRank 的改进版本，通过添加一个“地面节点”连接所有其他节点，从而避免 PageRank 的跳转参数设置问题。</p>
-</li>
-<li><p>文中还提到另一种构造转移矩阵的方式：</p>
-<p>P=[diag(k1,k2,…,k9)]−1AP = \left[ \text{diag}(k_1, k_2, \ldots, k_9) \right]^{-1} A</p>
-<p>其中 $k_i$ 是第 $i$ 个节点的度，表示按节点度对邻接矩阵 $A$ 进行归一化。</p>
-</li>
-</ul>
-<hr>
-<h3 id="✅总结"><a href="#✅总结" class="headerlink" title="✅总结"></a>✅总结</h3><ul>
-<li>PageRank 是一种基于网络结构传播机制的节点影响力评估算法；</li>
-<li>通过引入阻尼项，可以避免结构死循环，确保算法稳定；</li>
-<li>广泛应用于网页排名、社交网络分析、科研引用网络、交通传播网络等领域。</li>
-</ul>
-<hr>
+          <p>pei子软可</p>
+<p><img src="images/image-20250721221043239.png" alt="image-20250721221043239"></p>
 <p>这张图片展示的是一个关于“利用最小生成树（MST）进行超图约简”的算法。算法的目标是通过某种方式对超图进行简化，生成一个简化后的超图 RH。下面是该算法的内容及每行代码的解释：</p>
 <h3 id="算法内容："><a href="#算法内容：" class="headerlink" title="算法内容："></a>算法内容：</h3><ol>
 <li><strong>数据输入：</strong><ul>
