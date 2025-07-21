@@ -19,16 +19,19 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"liujunblog.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="pei子软可  这张图片展示的是一个关于“利用最小生成树（MST）进行超图约简”的算法。算法的目标是通过某种方式对超图进行简化，生成一个简化后的超图 RH。下面是该算法的内容及每行代码的解释： 算法内容： 数据输入： L(H) &#x3D; (E; A) 表示输入超图的边集 E 和顶点集 A。 L(H) 表示超图 H 的一个具体实例。 H(L(n)) 是超图 H 的一部分。   结果输出： RH 是经过约简">
+    <meta name="description" content="pei子软可   以下是优化后的内容，可以直接复制到 Typora 中正常显示（无需代码框）：  PageRank 算法详解定义3（PageRank）完整解析1. 基本概念PageRank 是一种用于衡量网络中节点重要性的算法，其核心思想是：    重要性传递：一个节点的重要性取决于指向它的其他节点的重要性。   随机游走模型：将网络中的链接视为随机游走的路径。    2. 数学定义(1) 矩阵定">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图论">
 <meta property="og:url" content="https://liujunblog.github.io/2025/06/03/%E5%9B%BE%E8%AE%BA/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="pei子软可  这张图片展示的是一个关于“利用最小生成树（MST）进行超图约简”的算法。算法的目标是通过某种方式对超图进行简化，生成一个简化后的超图 RH。下面是该算法的内容及每行代码的解释： 算法内容： 数据输入： L(H) &#x3D; (E; A) 表示输入超图的边集 E 和顶点集 A。 L(H) 表示超图 H 的一个具体实例。 H(L(n)) 是超图 H 的一部分。   结果输出： RH 是经过约简">
+<meta property="og:description" content="pei子软可   以下是优化后的内容，可以直接复制到 Typora 中正常显示（无需代码框）：  PageRank 算法详解定义3（PageRank）完整解析1. 基本概念PageRank 是一种用于衡量网络中节点重要性的算法，其核心思想是：    重要性传递：一个节点的重要性取决于指向它的其他节点的重要性。   随机游走模型：将网络中的链接视为随机游走的路径。    2. 数学定义(1) 矩阵定">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://liujunblog.github.io/2025/06/03/%E5%9B%BE%E8%AE%BA/images/image44.png">
+<meta property="og:image" content="https://liujunblog.github.io/2025/06/03/%E5%9B%BE%E8%AE%BA/images/smm.png">
+<meta property="og:image" content="https://liujunblog.github.io/2025/06/03/%E5%9B%BE%E8%AE%BA/images/imgesss.jpg">
+<meta property="og:image" content="https://liujunblog.github.io/2025/06/03/%E5%9B%BE%E8%AE%BA/images/mgg11.jpg">
 <meta property="article:published_time" content="2025-06-03T02:59:27.000Z">
-<meta property="article:modified_time" content="2025-07-21T14:16:00.903Z">
+<meta property="article:modified_time" content="2025-07-21T15:18:07.882Z">
 <meta property="article:author" content="LiuJun">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://liujunblog.github.io/2025/06/03/%E5%9B%BE%E8%AE%BA/images/image44.png">
@@ -140,7 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%86%85%E5%AE%B9%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">算法内容：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E9%87%8A%E6%AF%8F%E4%B8%AA%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">解释每个步骤：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">总结：</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PageRank-%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">PageRank 算法详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%893%EF%BC%88PageRank%EF%BC%89%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">定义3（PageRank）完整解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%95%B0%E5%AD%A6%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 数学定义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%9F%A9%E9%98%B5%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">(1) 矩阵定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%9F%BA%E6%9C%AC-PageRank-%E5%85%AC%E5%BC%8F"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">(2) 基本 PageRank 公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E4%BF%AE%E6%AD%A3-PageRank-%E5%85%AC%E5%BC%8F"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">(3) 修正 PageRank 公式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%AE%97%E6%B3%95%E5%AF%B9%E6%AF%94"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 算法对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%85%B3%E9%94%AE%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 关键实现步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%BA%94%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.1.5.</span> <span class="nav-text">5. 应用注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%898%EF%BC%88%E9%AB%98%E9%98%B6PageRank%E2%80%94HOP%EF%BC%89%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.1.6.</span> <span class="nav-text">定义8（高阶PageRank—HOP）详解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-1"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">1. 基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%95%B0%E5%AD%A6%E5%AE%9A%E4%B9%89%E8%A7%A3%E6%9E%90"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">2. 数学定义解析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%AB%98%E9%98%B6%E8%BD%AC%E7%A7%BB%E7%9F%A9%E9%98%B5-P-n"><span class="nav-number">1.1.6.2.1.</span> <span class="nav-text">(1) 高阶转移矩阵 ( P_n )</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E7%A8%B3%E6%80%81%E5%88%86%E5%B8%83-P-n-infty"><span class="nav-number">1.1.6.2.2.</span> <span class="nav-text">(2) 稳态分布 $( P_n^\infty )$</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E9%AB%98%E9%98%B6PageRank%E5%85%AC%E5%BC%8F"><span class="nav-number">1.1.6.2.3.</span> <span class="nav-text">(3) 高阶PageRank公式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%AE%A1%E7%AE%97%E6%AD%A5%E9%AA%A4%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.1.6.3.</span> <span class="nav-text">3. 计算步骤示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E4%B8%8E%E4%BC%A0%E7%BB%9FPageRank%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-number">1.1.6.4.</span> <span class="nav-text">4. 与传统PageRank的对比</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3"><span class="nav-number">1.1.6.5.</span> <span class="nav-text">5. 关键问题与解决</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">1.1.6.6.</span> <span class="nav-text">6. 应用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.1.7.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%899%EF%BC%88%E9%AB%98%E9%98%B6%E7%8E%AF%E6%AF%94%E7%8E%87%E2%80%94HOC%EF%BC%89%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90"><span class="nav-number">1.1.8.</span> <span class="nav-text">定义9（高阶环比率—HOC）完整解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-2"><span class="nav-number">1.1.8.1.</span> <span class="nav-text">1. 基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%95%B0%E5%AD%A6%E5%AE%9A%E4%B9%89%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.1.8.2.</span> <span class="nav-text">2. 数学定义详解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-n-%E7%8E%AF%E7%9A%84%E5%BD%A2%E6%88%90%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.1.8.2.1.</span> <span class="nav-text">(1) n-环的形成条件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%9C%80%E5%B0%8Fn-%E7%8E%AF%E4%B8%8E%E5%85%B3%E8%81%94%E7%9F%A9%E9%98%B5"><span class="nav-number">1.1.8.2.2.</span> <span class="nav-text">(2) 最小n-环与关联矩阵</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-HOC%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="nav-number">1.1.8.2.3.</span> <span class="nav-text">(3) HOC计算公式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%AE%A1%E7%AE%97%E7%A4%BA%E4%BE%8B%EF%BC%88%E5%9B%BE1-b-%E4%B8%AD%E7%9A%842-clique%E7%BD%91%E7%BB%9C%EF%BC%89"><span class="nav-number">1.1.8.3.</span> <span class="nav-text">3. 计算示例（图1(b)中的2-clique网络）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A41%EF%BC%9A%E8%AF%86%E5%88%AB%E6%9C%80%E5%B0%8F2-%E7%8E%AF"><span class="nav-number">1.1.8.3.1.</span> <span class="nav-text">步骤1：识别最小2-环</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A42%EF%BC%9A%E6%9E%84%E5%BB%BA%E5%85%B3%E8%81%94%E7%9F%A9%E9%98%B5-T-2"><span class="nav-number">1.1.8.3.2.</span> <span class="nav-text">步骤2：构建关联矩阵 ( T_2 )</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A43%EF%BC%9A%E8%AE%A1%E7%AE%97%E7%8E%AF%E6%95%B0%E9%87%8F%E7%9F%A9%E9%98%B5-c-2"><span class="nav-number">1.1.8.3.3.</span> <span class="nav-text">步骤3：计算环数量矩阵 ( c_2 )</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A44%EF%BC%9A%E8%AE%A1%E7%AE%97HOC%E5%80%BC"><span class="nav-number">1.1.8.3.4.</span> <span class="nav-text">步骤4：计算HOC值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%85%B3%E9%94%AE%E7%82%B9%E6%80%BB%E7%BB%93"><span class="nav-number">1.1.8.4.</span> <span class="nav-text">4. 关键点总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E4%B8%8E%E5%85%B6%E4%BB%96%E9%AB%98%E9%98%B6%E4%B8%AD%E5%BF%83%E6%80%A7%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.8.5.</span> <span class="nav-text">5. 与其他高阶中心性的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="nav-number">1.1.8.6.</span> <span class="nav-text">6. 应用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-number">1.1.9.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%86%85%E5%AE%B9%EF%BC%9A"><span class="nav-number">1.1.10.</span> <span class="nav-text">算法内容：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E9%87%8A%E6%AF%8F%E4%B8%AA%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number">1.1.11.</span> <span class="nav-text">解释每个步骤：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="nav-number">1.1.12.</span> <span class="nav-text">总结：</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -229,7 +232,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-07-21 22:16:00" itemprop="dateModified" datetime="2025-07-21T22:16:00+08:00">2025-07-21</time>
+      <time title="修改时间：2025-07-21 23:18:07" itemprop="dateModified" datetime="2025-07-21T23:18:07+08:00">2025-07-21</time>
     </span>
 
   
@@ -243,6 +246,262 @@
     
     <div class="post-body" itemprop="articleBody"><p>pei子软可</p>
 <p><img src="images/image44.png" alt=""></p>
+<p><img src="images/smm.png" alt=""></p>
+<p>以下是优化后的内容，可以直接复制到 Typora 中正常显示（无需代码框）：</p>
+<hr>
+<h1 id="PageRank-算法详解"><a href="#PageRank-算法详解" class="headerlink" title="PageRank 算法详解"></a>PageRank 算法详解</h1><h2 id="定义3（PageRank）完整解析"><a href="#定义3（PageRank）完整解析" class="headerlink" title="定义3（PageRank）完整解析"></a>定义3（PageRank）完整解析</h2><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h3><p>PageRank 是一种用于衡量网络中节点重要性的算法，其核心思想是：  </p>
+<ul>
+<li><strong>重要性传递</strong>：一个节点的重要性取决于指向它的其他节点的重要性。  </li>
+<li><strong>随机游走模型</strong>：将网络中的链接视为随机游走的路径。  </li>
+</ul>
+<h3 id="2-数学定义"><a href="#2-数学定义" class="headerlink" title="2. 数学定义"></a>2. 数学定义</h3><h4 id="1-矩阵定义"><a href="#1-矩阵定义" class="headerlink" title="(1) 矩阵定义"></a>(1) 矩阵定义</h4><ul>
+<li><strong>邻接矩阵 A</strong>：  <ul>
+<li>描述有向连接关系。  </li>
+<li>$( a_{ij} = 1 )$ 表示节点 ( j ) 指向节点 ( i )。  </li>
+</ul>
+</li>
+<li><strong>转移概率矩阵 P</strong>：  <ul>
+<li>通过归一化邻接矩阵得到。  </li>
+<li>$( P_{ij} = \frac{a_{ij}}{\sum_i a_{ij}} )$。  </li>
+</ul>
+</li>
+</ul>
+<h4 id="2-基本-PageRank-公式"><a href="#2-基本-PageRank-公式" class="headerlink" title="(2) 基本 PageRank 公式"></a>(2) 基本 PageRank 公式</h4><p>$[ x(t) = P^T x(t - 1) ]  $</p>
+<p><strong>参数说明</strong>：  </p>
+<ul>
+<li>$( x(t) \in \mathbb{R}^N )$：时刻 ( t ) 各节点的 PageRank 值向量。  </li>
+<li>$( P^T )：( P ) $的转置矩阵。  </li>
+</ul>
+<h4 id="3-修正-PageRank-公式"><a href="#3-修正-PageRank-公式" class="headerlink" title="(3) 修正 PageRank 公式"></a>(3) 修正 PageRank 公式</h4><p>$[ x(t) = s P^T x(t - 1) + \frac{u(1 - s)}{N} ]  $</p>
+<p><strong>修正原因</strong>：  </p>
+<ol>
+<li>解决“悬挂节点”问题（无出边的节点）。  </li>
+<li>防止 PageRank 值被困在内部互连的节点组中。  </li>
+</ol>
+<p><strong>参数说明</strong>：  </p>
+<ul>
+<li>$( s \in (0, 1) )$：阻尼因子（通常取 0.85）。  </li>
+<li>$( u )$：全 1 向量。  </li>
+<li>$( x(0) )$：初始化为$ ( \frac{1}{N} )$。  </li>
+</ul>
+<h3 id="3-算法对比"><a href="#3-算法对比" class="headerlink" title="3. 算法对比"></a>3. 算法对比</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>算法</th>
+<th>解决悬挂问题的方法</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PageRank</td>
+<td>引入阻尼因子和随机跳转</td>
+<td>经典实现</td>
+</tr>
+<tr>
+<td>LeaderRank</td>
+<td>添加接地节点</td>
+<td>需要修改网络结构</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="4-关键实现步骤"><a href="#4-关键实现步骤" class="headerlink" title="4. 关键实现步骤"></a>4. 关键实现步骤</h3><ol>
+<li>构建邻接矩阵 ( A )。  </li>
+<li>计算转移矩阵 ( P )（列归一化）。  </li>
+<li>初始化 PageRank 向量 $( x(0) = \left[\frac{1}{N}, \ldots, \frac{1}{N}\right]^T )$。  </li>
+<li>迭代计算直至收敛：<br>$[ x(t) = s P^T x(t - 1) + \frac{u(1 - s)}{N} ]  $</li>
+</ol>
+<h3 id="5-应用注意事项"><a href="#5-应用注意事项" class="headerlink" title="5. 应用注意事项"></a>5. 应用注意事项</h3><ul>
+<li><strong>收敛条件</strong>：当 $( |x(t) - x(t-1)| &lt; \epsilon ) $时停止。  </li>
+<li><strong>悬挂节点处理</strong>：需要显式检查修正。  </li>
+<li><strong>参数选择</strong>：阻尼因子 ( s ) 通常取 0.85。  </li>
+</ul>
+<blockquote>
+<p><strong>注</strong>：该算法广泛应用于网页排序、社交网络分析等领域。  </p>
+</blockquote>
+<p><img src="images/imgesss.jpg" alt=""></p>
+<p><img src="images/mgg11.jpg" alt=""></p>
+<h3 id="定义8（高阶PageRank—HOP）详解"><a href="#定义8（高阶PageRank—HOP）详解" class="headerlink" title="定义8（高阶PageRank—HOP）详解"></a><strong>定义8（高阶PageRank—HOP）详解</strong></h3><h4 id="1-基本概念-1"><a href="#1-基本概念-1" class="headerlink" title="1. 基本概念"></a><strong>1. 基本概念</strong></h4><p>高阶PageRank（Higher-Order PageRank, HOP）是PageRank算法在<strong>高阶网络</strong>（如n-clique网络）中的推广，用于衡量网络中<strong>高阶结构</strong>（如团、社群）的重要性。其核心思想是：</p>
+<ul>
+<li><strong>高阶随机游走</strong>：将传统PageRank中的节点替换为n-clique（如2-clique表示边，3-clique表示三角形等），通过高阶转移矩阵模拟随机游走过程。</li>
+<li><strong>重要性传递</strong>：一个n-clique的重要性取决于指向它的其他n-clique的重要性。</li>
+</ul>
+<hr>
+<h4 id="2-数学定义解析"><a href="#2-数学定义解析" class="headerlink" title="2. 数学定义解析"></a><strong>2. 数学定义解析</strong></h4><h5 id="1-高阶转移矩阵-P-n"><a href="#1-高阶转移矩阵-P-n" class="headerlink" title="(1) 高阶转移矩阵 ( P_n )"></a><strong>(1) 高阶转移矩阵 ( P_n )</strong></h5><p>$[<br>P_{nij} =<br>\begin{cases}<br>k_I^{-1} \cdot a_{nij} &amp; \text{if } I \neq J, \\<br>0 &amp; \text{if } I = J.<br>\end{cases}<br>]$</p>
+<ul>
+<li><strong>参数说明</strong>：<ul>
+<li>$( a_{nij} )$：高阶邻接矩阵元素，表示n-clique ( J ) 是否指向 ( I )（1或0）。</li>
+<li>$( k_I )：n-clique ( I ) $的<strong>出度</strong>（即它指向的其他n-clique数量）。</li>
+<li>$( P_{nij} )：从n-clique ( J )$ 转移到 ( I ) 的概率。</li>
+</ul>
+</li>
+<li><strong>关键点</strong>：<ul>
+<li>每一列的和为1（概率归一化），保证随机游走的合理性。</li>
+<li>对角线元素为0，避免自环（即n-clique不会直接转移到自身）。</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-稳态分布-P-n-infty"><a href="#2-稳态分布-P-n-infty" class="headerlink" title="(2) 稳态分布 $( P_n^\infty )$"></a><strong>(2) 稳态分布 $( P_n^\infty )$</strong></h5><p>$[<br>P_n^\infty = \lim_{t \to \infty} P_n^t<br>]$</p>
+<ul>
+<li><strong>物理意义</strong>：通过无限次转移矩阵幂运算，收敛到一个稳态分布，表示长期随机游走后停留在各n-clique的概率。</li>
+<li><strong>计算方法</strong>：通常通过迭代法求解，直到$ ( P_n^{t+1} \approx P_n^t )$。</li>
+</ul>
+<h5 id="3-高阶PageRank公式"><a href="#3-高阶PageRank公式" class="headerlink" title="(3) 高阶PageRank公式"></a><strong>(3) 高阶PageRank公式</strong></h5><p>$[<br>x_n(t) = s (P_n^\infty)^T x_n(0) + \frac{u(1-s)}{N_{C_n}}<br>]$</p>
+<ul>
+<li><strong>参数说明</strong>：<ul>
+<li>$( x_n(t) )$：时刻 ( t ) 各n-clique的PageRank值向量。</li>
+<li>( s )：阻尼因子（通常取0.85），表示继续跟随高阶链接的概率。</li>
+<li>( 1-s )：随机跳转到任意n-clique的概率。</li>
+<li>( u )：全1向量，$( \frac{u(1-s)}{N_{C_n}} )$ 表示均匀跳转部分。</li>
+<li>$( N_{C_n} )$：网络中n-clique的总数。</li>
+<li>$( x_n(0) )$：初始PageRank值，通常设为均匀分布$ ( \frac{1}{N_{C_n}} )$。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-计算步骤示例"><a href="#3-计算步骤示例" class="headerlink" title="3. 计算步骤示例"></a><strong>3. 计算步骤示例</strong></h4><p>假设一个2-clique网络（边级网络）：</p>
+<ol>
+<li><strong>构建高阶邻接矩阵 ( A_n )</strong>：  <ul>
+<li>若2-clique ( J ) 指向 ( I )，则$ ( a_{nij} = 1 )$，否则为0。</li>
+</ul>
+</li>
+<li><strong>计算转移矩阵 ( P_n )</strong>：  <ul>
+<li>对每一列 ( J )，计算$ ( P_{nij} = \frac{a_{nij}}{k_J} )$（$( k_J )$ 是 ( J ) 的出度）。</li>
+</ul>
+</li>
+<li><strong>求解稳态分布 ( P_n^\infty )</strong>：  <ul>
+<li>通过迭代 $( P_n^t ) $直至收敛。</li>
+</ul>
+</li>
+<li><strong>计算高阶PageRank</strong>：  <ul>
+<li>代入公式$ ( x_n = s (P_n^\infty)^T x_n(0) + \frac{u(1-s)}{N_{C_n}} )$。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="4-与传统PageRank的对比"><a href="#4-与传统PageRank的对比" class="headerlink" title="4. 与传统PageRank的对比"></a><strong>4. 与传统PageRank的对比</strong></h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>特性</strong></th>
+<th><strong>传统PageRank</strong></th>
+<th><strong>高阶PageRank (HOP)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>作用对象</strong></td>
+<td>节点</td>
+<td>n-clique（如边、三角形等）</td>
+</tr>
+<tr>
+<td><strong>转移矩阵</strong></td>
+<td>节点邻接矩阵归一化</td>
+<td>n-clique邻接矩阵归一化</td>
+</tr>
+<tr>
+<td><strong>应用场景</strong></td>
+<td>网页排序、节点重要性</td>
+<td>社群重要性、高阶结构影响力分析</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h4 id="5-关键问题与解决"><a href="#5-关键问题与解决" class="headerlink" title="5. 关键问题与解决"></a><strong>5. 关键问题与解决</strong></h4><ul>
+<li><strong>悬挂n-clique问题</strong>：<br>若某n-clique无出边（( k_I = 0 )），需将其转移概率设为均匀分布$ ( \frac{1}{N_{C_n}} )$。</li>
+<li><strong>收敛性</strong>：<br>阻尼因子 ( s ) 的引入保证了稳态解的存在性和唯一性。</li>
+</ul>
+<hr>
+<h4 id="6-应用场景"><a href="#6-应用场景" class="headerlink" title="6. 应用场景"></a><strong>6. 应用场景</strong></h4><ol>
+<li><strong>社群检测</strong>：识别网络中重要的子结构（如关键边或三角形）。</li>
+<li><strong>生物网络分析</strong>：评估蛋白质相互作用中高阶模体的重要性。</li>
+<li><strong>社交网络</strong>：分析群组或话题的影响力。</li>
+</ol>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><p>高阶PageRank通过将传统PageRank推广到n-clique网络，实现了对高阶结构重要性的量化。其核心在于：</p>
+<ol>
+<li>定义高阶转移矩阵 ( P_n )。</li>
+<li>通过阻尼因子平衡链接跟随和随机跳转。</li>
+<li>迭代求解稳态分布并计算PageRank值。<br>该方法为分析复杂网络中的高阶模式提供了有力工具。</li>
+</ol>
+<h3 id="定义9（高阶环比率—HOC）完整解析"><a href="#定义9（高阶环比率—HOC）完整解析" class="headerlink" title="定义9（高阶环比率—HOC）完整解析"></a><strong>定义9（高阶环比率—HOC）完整解析</strong></h3><h4 id="1-基本概念-2"><a href="#1-基本概念-2" class="headerlink" title="1. 基本概念"></a><strong>1. 基本概念</strong></h4><p>高阶环比率（Higher-Order Cycle Ratio, HOC）是用于量化<strong>n-clique（如边、三角形等）</strong>在网络中参与<strong>高阶环结构</strong>程度的指标。其核心思想是：</p>
+<ul>
+<li><strong>n-环（n-cycle）</strong>：由多个n-clique组成的闭合高阶结构，例如：<ul>
+<li>2-环：由边（2-clique）构成的简单环（如四边形、六边形）。</li>
+<li>3-环：由三角形（3-clique）构成的闭合曲面（如四面体）。</li>
+</ul>
+</li>
+<li><strong>最小n-环</strong>：包含目标n-clique的<strong>最小规模的n-环</strong>（环中n-clique数量最少）。</li>
+<li><strong>边界操作</strong>：通过集合运算判断n-clique是否形成闭合环。</li>
+</ul>
+<hr>
+<h4 id="2-数学定义详解"><a href="#2-数学定义详解" class="headerlink" title="2. 数学定义详解"></a><strong>2. 数学定义详解</strong></h4><h5 id="1-n-环的形成条件"><a href="#1-n-环的形成条件" class="headerlink" title="(1) n-环的形成条件"></a><strong>(1) n-环的形成条件</strong></h5><ul>
+<li><strong>边界操作定义</strong>：<br>对m个n-clique的边界集合 ( w_1, w_2, \ldots, w_m ) 进行运算：<br>$[<br>w_1 + w_2 + \cdots + w_m := (w_1 \cup w_2 \cup \ldots \cup w_m) - \bigcup_{I \neq J} (w_I \cap w_J)<br>]$<ul>
+<li><strong>形成n-环的条件</strong>：运算结果为空集，或边界元素总数 ≤ m。</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-最小n-环与关联矩阵"><a href="#2-最小n-环与关联矩阵" class="headerlink" title="(2) 最小n-环与关联矩阵"></a><strong>(2) 最小n-环与关联矩阵</strong></h5><ul>
+<li><strong>最小n-环关联矩阵 ( T_n )</strong>：  <ul>
+<li>大小为$ ( N_{c_n} \times N_{c_{sn}} )$（$( N_{c_n} )$为n-clique总数，( $N_{c_{sn}} )$为最小n-环总数）。</li>
+<li>元素 $( t_{IJ} = 1 ) $表示n-clique ( I ) 属于最小n-环 ( J )，否则为0。</li>
+</ul>
+</li>
+<li><strong>n-环数量矩阵 ( c_n )</strong>：<br>$[<br>c_n = T_n T_n^T<br>]$<ul>
+<li>对角元素$ ( c_{II} )：n-clique ( I ) $参与的最小n-环数量。</li>
+<li>非对角元素$ ( c_{IJ} )：n-clique ( I ) 和 ( J ) $<strong>共同参与</strong>的最小n-环数量。</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-HOC计算公式"><a href="#3-HOC计算公式" class="headerlink" title="(3) HOC计算公式"></a><strong>(3) HOC计算公式</strong></h5><p>$[<br>r_I = \sum_{J=1}^{N_{c_n}} \frac{c_{IJ}}{c_{JJ}}<br>]$</p>
+<ul>
+<li><strong>物理意义</strong>：<br>n-clique ( I ) 的HOC值是其与所有其他n-clique的<strong>共同环参与率</strong>之和。<ul>
+<li>若 ( I ) 和 ( J ) 总出现在相同的环中（强关联），则$ ( \frac{c_{IJ}}{c_{JJ}} \approx 1 )$。</li>
+<li>若从不共现，则该项为0。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-计算示例（图1-b-中的2-clique网络）"><a href="#3-计算示例（图1-b-中的2-clique网络）" class="headerlink" title="3. 计算示例（图1(b)中的2-clique网络）"></a><strong>3. 计算示例（图1(b)中的2-clique网络）</strong></h4><h5 id="步骤1：识别最小2-环"><a href="#步骤1：识别最小2-环" class="headerlink" title="步骤1：识别最小2-环"></a><strong>步骤1：识别最小2-环</strong></h5><ul>
+<li><strong>两个最小2-环</strong>：<ol>
+<li>环1：(1,2,3,4) — 包含4条边（2-clique）。</li>
+<li>环2：(4,5,6,7,8,9) — 包含6条边。</li>
+</ol>
+</li>
+</ul>
+<h5 id="步骤2：构建关联矩阵-T-2"><a href="#步骤2：构建关联矩阵-T-2" class="headerlink" title="步骤2：构建关联矩阵 ( T_2 )"></a><strong>步骤2：构建关联矩阵 ( T_2 )</strong></h5><p>$[<br>T_2 =<br>\begin{pmatrix}<br>\text{环1} &amp; \text{环2} \\<br>(1,2,3) &amp; 1 &amp; 0 \\<br>(1,2,4) &amp; 1 &amp; 0 \\<br>(2,3,4) &amp; 1 &amp; 0 \\<br>(4,5,6) &amp; 0 &amp; 1 \\<br>\vdots &amp; \vdots &amp; \vdots \\<br>(4,6,9) &amp; 0 &amp; 1<br>\end{pmatrix}<br>]$</p>
+<h5 id="步骤3：计算环数量矩阵-c-2"><a href="#步骤3：计算环数量矩阵-c-2" class="headerlink" title="步骤3：计算环数量矩阵 ( c_2 )"></a><strong>步骤3：计算环数量矩阵 ( c_2 )</strong></h5><p>$[<br>c_2 = T_2 T_2^T \implies<br>\begin{cases}<br>c_{(1,2,3),(1,2,3)} = 1 &amp; \text{(仅属于环1)} \\<br>c_{(1,2,3),(4,5,6)} = 0 &amp; \text{(无共同环)} \\<br>c_{(4,5,6),(4,5,6)} = 1 &amp; \text{(仅属于环2)}<br>\end{cases}<br>]$</p>
+<h5 id="步骤4：计算HOC值"><a href="#步骤4：计算HOC值" class="headerlink" title="步骤4：计算HOC值"></a><strong>步骤4：计算HOC值</strong></h5><ul>
+<li>对2-clique ( (1,2,3) )：<br>$[<br>r_{(1,2,3)} = \frac{c_{(1,2,3),(1,2,3)}}{1} + \frac{c_{(1,2,3),(1,2,4)}}{1} + \cdots = 1 + 1 + 1 + 1 = 4<br>]$<br>（因与环1中其他3条边各共享1个环）。</li>
+</ul>
+<hr>
+<h4 id="4-关键点总结"><a href="#4-关键点总结" class="headerlink" title="4. 关键点总结"></a><strong>4. 关键点总结</strong></h4><ol>
+<li><strong>n-环的闭合性</strong>：通过边界操作的空集结果验证。</li>
+<li><strong>最小n-环的意义</strong>：反映n-clique在网络中的<strong>局部紧密性</strong>。</li>
+<li><strong>HOC的物理意义</strong>：值越高，说明该n-clique越处于<strong>多个环的交汇处</strong>，可能是网络的关键连接。</li>
+</ol>
+<hr>
+<h4 id="5-与其他高阶中心性的关系"><a href="#5-与其他高阶中心性的关系" class="headerlink" title="5. 与其他高阶中心性的关系"></a><strong>5. 与其他高阶中心性的关系</strong></h4><ul>
+<li><strong>HOD（高阶度）</strong>：仅统计n-clique的邻居数量。</li>
+<li><strong>HOH（高阶H指数）</strong>：基于邻居的HOD值计算。</li>
+<li><strong>HOC</strong>：关注n-clique在环结构中的参与度，<strong>反映全局拓扑特性</strong>。</li>
+</ul>
+<hr>
+<h4 id="6-应用场景-1"><a href="#6-应用场景-1" class="headerlink" title="6. 应用场景"></a><strong>6. 应用场景</strong></h4><ol>
+<li><strong>网络鲁棒性分析</strong>：高HOC的n-clique若被移除，可能导致多个环断裂。</li>
+<li><strong>生物网络</strong>：识别蛋白质相互作用中的关键功能模块（如代谢通路中的循环结构）。</li>
+<li><strong>社交网络</strong>：发现信息传播中的核心关系链。</li>
+</ol>
+<hr>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a><strong>总结</strong></h3><p>高阶环比率（HOC）通过量化n-clique在最小闭合环中的参与程度，揭示了高阶结构在网络中的全局重要性。其计算分为三步：</p>
+<ol>
+<li><strong>识别最小n-环</strong>（如Algorithm 2）。</li>
+<li><strong>构建环关联矩阵</strong> ( T_n ) 和数量矩阵 ( c_n )。</li>
+<li><strong>求和共同环比率</strong>得到HOC值。<br>该方法为分析复杂网络中的高阶循环模式提供了数学工具。</li>
+</ol>
 <p>这张图片展示的是一个关于“利用最小生成树（MST）进行超图约简”的算法。算法的目标是通过某种方式对超图进行简化，生成一个简化后的超图 RH。下面是该算法的内容及每行代码的解释：</p>
 <h3 id="算法内容："><a href="#算法内容：" class="headerlink" title="算法内容："></a>算法内容：</h3><ol>
 <li><strong>数据输入：</strong><ul>
