@@ -215,7 +215,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-10-19 19:43:53 / 修改时间：19:54:27" itemprop="dateCreated datePublished" datetime="2025-10-19T19:43:53+08:00">2025-10-19</time>
+      <time title="创建时间：2025-10-19 19:43:53 / 修改时间：20:17:14" itemprop="dateCreated datePublished" datetime="2025-10-19T19:43:53+08:00">2025-10-19</time>
     </span>
 
   
@@ -270,6 +270,7 @@
 <h3 id="符号含义：-2"><a href="#符号含义：-2" class="headerlink" title="符号含义："></a>符号含义：</h3><ul>
 <li>$\delta_{jl}$：节点 $j$ 到 $l$ 的最短路径总数。</li>
 <li>$\delta_{jl}(i)$：这些路径中经过节点 $i$ 的数量。</li>
+<li>δ 的读音为：<strong>/‘deltə/</strong>，中文音译通常为 “德尔塔”</li>
 </ul>
 <h3 id="核心思想：-2"><a href="#核心思想：-2" class="headerlink" title="核心思想："></a>核心思想：</h3><blockquote>
 <p>衡量节点在网络中作为“中间桥梁”的程度。若一个节点常出现在其他节点的最短路径中，它对信息流或资源流的控制力就强。</p>
@@ -326,6 +327,58 @@
 <p>基于“节点删除前后能量变化”思想。若删除某节点导致网络能量变化大，则该节点影响力高。</p>
 </blockquote>
 <hr>
+<h1 id="CEC方法核心公式推导与矩阵性质详解（Section-2-2-Proposed-method）"><a href="#CEC方法核心公式推导与矩阵性质详解（Section-2-2-Proposed-method）" class="headerlink" title="CEC方法核心公式推导与矩阵性质详解（Section 2.2 Proposed method）"></a>CEC方法核心公式推导与矩阵性质详解（Section 2.2 Proposed method）</h1><p>本文《Identifying influential nodes in complex networks based on closeness energy》第 4-5 页提出的 CEC（接近度能量中心性）方法，其关键公式的来龙去脉、推导逻辑及矩阵性质详细说明如下：</p>
+<hr>
+<h1 id="1-为什么把“接近度矩阵”定义为-C-G-：-C-G-i-j-2-d-ij-（-i-neq-j-，对角为-0）"><a href="#1-为什么把“接近度矩阵”定义为-C-G-：-C-G-i-j-2-d-ij-（-i-neq-j-，对角为-0）" class="headerlink" title="1) 为什么把“接近度矩阵”定义为 $C_G$ ：$C_G(i,j)=2^{-d_{ij}}$（$i\neq j$，对角为 0）"></a>1) 为什么把“接近度矩阵”定义为 $C_G$ ：$C_G(i,j)=2^{-d_{ij}}$（$i\neq j$，对角为 0）</h1><h2 id="原文位置：式-11-，第-4-页"><a href="#原文位置：式-11-，第-4-页" class="headerlink" title="原文位置：式 (11)，第 4 页"></a>原文位置：式 (11)，第 4 页</h2><h2 id="设计动机（合理性）"><a href="#设计动机（合理性）" class="headerlink" title="设计动机（合理性）"></a>设计动机（合理性）</h2><ul>
+<li><strong>可用于非连通图</strong>：若两点不连通，按定义 $d_{ij}=\infty$，于是 $2^{-\infty}=0$。这样“没有路径”的点对自然得到 0，相当于“没有接近度”，从而避免了传统距离矩阵在非连通图上的“无穷大不可用”问题。这正是作者用 closeness matrix 的核心动机：让方法适用于非连通网络。</li>
+<li><strong>随距离单调衰减</strong>：$2^{-d}$ 随 $d$ 增大严格下降；越近的点对权值越大，符合“接近度”直觉。</li>
+<li><strong>尺度与底数</strong>：文中备注（Remark 2.1）指出，若把底数 2 换成任意 $s&gt;1$（如 $s^{-d_{ij}}$），<strong>各节点的绝对分数会整体缩放，但排序不变</strong>，所以选 2 只是便于书写与数值稳定。见第 4 页。</li>
+</ul>
+<h2 id="对称与非负"><a href="#对称与非负" class="headerlink" title="对称与非负"></a>对称与非负</h2><ul>
+<li><strong>对称</strong>：最短路距离对无向图满足 $d_{ij}=d_{ji}$，因此 $C_G(i,j)=2^{-d_{ij}}=2^{-d_{ji}}=C_G(j,i)$。</li>
+<li><strong>非负</strong>：$2^{-d_{ij}}\ge 0$，且当不连通时为 0；对角定义为 0。<br>这些在式 (11) 后作者也直接指出“According to the definition, $C_G$ is a symmetric non-negative matrix”（第 4 页）。</li>
+</ul>
+<hr>
+<h1 id="2-C-G-的谱性质与式-12-–-13-的来历"><a href="#2-C-G-的谱性质与式-12-–-13-的来历" class="headerlink" title="2) $C_G$ 的谱性质与式 (12)–(13) 的来历"></a>2) $C_G$ 的谱性质与式 (12)–(13) 的来历</h1><h2 id="原文位置：式-12-、-13-，第-4-页"><a href="#原文位置：式-12-、-13-，第-4-页" class="headerlink" title="原文位置：式 (12)、(13)，第 4 页"></a>原文位置：式 (12)、(13)，第 4 页</h2><p>令 $\lambda_1,\dots,\lambda_n$ 为 $C_G$ 的特征值。因为 $C_G$ <strong>对称</strong>，所以特征值全为实数（文中亦指出）。由基本线性代数结论：</p>
+<ul>
+<li><p><strong>特征值之和等于迹</strong>：$\sum_i \lambda_i=\mathrm{tr}(C_G)$。又因 $C_G$ 对角元全为 0（式 (11)），$\mathrm{tr}(C_G)=0$。于是得到<br>$\sum_{i=1}^n \lambda_i = 0$，即式 (12)。</p>
+</li>
+<li><p><strong>特征值平方和等于 $\mathrm{tr}(C_G^2)$</strong>：$\sum_i \lambda_i^2=\mathrm{tr}(C_G^2)$。而<br>$\mathrm{tr}(C_G^2)=\sum_{i}(C_G^2)_{ii} = \sum_i \sum_j C_G(i,j)\,C_G(j,i) = \sum_{i,j} C_G(i,j)^2$，<br>利用对称性 $C_G(i,j)=C_G(j,i)$。由于对角为 0，双重求和可化成<br>$\sum_{i\ne j} C_G(i,j)^2 = 2\sum_{1\le i&lt;j\le n} C_G(i,j)^2$。<br>代入 $C_G(i,j)=2^{-d_{ij}}$ 得<br>$\sum_{i=1}^n \lambda_i^2 = 2\sum_{i&lt;j} (2^{-d_{ij}})^2 = 2\sum_{i&lt;j} 2^{-2d_{ij}} = \sum_{i&lt;j} 2^{\,1-2d_{ij}}$，<br>即式 (13)（文中右端写成 $\sum_{i&lt;j}2^{\,1-2d_{ij}}$ 的等价形式）。</p>
+</li>
+</ul>
+<blockquote>
+<p>小结：式 (12) 来自“迹=特征值之和且对角为 0”；式 (13) 来自“$\mathrm{tr}(C^2)=|C|_F^2$”与对称、对角为 0 的代数展开。</p>
+</blockquote>
+<hr>
+<h1 id="3-“接近度能量”-E-C-G-的两种写法与为何能写成式-15"><a href="#3-“接近度能量”-E-C-G-的两种写法与为何能写成式-15" class="headerlink" title="3) “接近度能量” $E_C(G)$ 的两种写法与为何能写成式 (15)"></a>3) “接近度能量” $E_C(G)$ 的两种写法与为何能写成式 (15)</h1><h2 id="原文位置：式-14-与式-15-，第-4–5-页"><a href="#原文位置：式-14-与式-15-，第-4–5-页" class="headerlink" title="原文位置：式 (14) 与式 (15)，第 4–5 页"></a>原文位置：式 (14) 与式 (15)，第 4–5 页</h2><ul>
+<li>文中先<strong>参照“图能量”的传统定义</strong>给出<br>$E_C(G)=\sum_{i=1}^n |\lambda_i|$（式 (14)）。</li>
+<li>随后作者为了<strong>计算简化</strong>，改用与之“等价排序”的二次型能量（不再取绝对值而取平方，并说明用“矩阵平方的迹”替代）：<br>$E_C(G)=\sum_{i=1}^n \lambda_i^2 = \mathrm{tr}(C_G^2) = 2\sum_{1\le i&lt;j\le n} (2^{-d_{ij}})^2 = \sum_{i&lt;j} 2^{\,1-2d_{ij}}$（式 (15)）。<br>这样做的理由：用 $\sum \lambda_i^2$（Frobenius 范数的平方）<strong>既能快速计算</strong>，又与节点删除前后“能量差”的比较在<strong>排序意义上保持一致</strong>（同一底数的幂和比较与绝对值和比较在本方法里给出一致的排名结论）。文中在 Remark 2.1 也解释了底数变化不影响排序（第 4 页）。</li>
+</ul>
+<hr>
+<h1 id="4-CEC-指标的定义与“哪些项会变化”"><a href="#4-CEC-指标的定义与“哪些项会变化”" class="headerlink" title="4) CEC 指标的定义与“哪些项会变化”"></a>4) CEC 指标的定义与“哪些项会变化”</h1><h2 id="原文位置：式-16-，第-5-页"><a href="#原文位置：式-16-，第-5-页" class="headerlink" title="原文位置：式 (16)，第 5 页"></a>原文位置：式 (16)，第 5 页</h2><ul>
+<li><strong>定义</strong>：删除节点 $k$（及其关联边）得到子图 $G_k$，则<br>$\mathrm{CEC}(k) = E_C(G)-E_C(G_k)\ge 0$。</li>
+<li><strong>到底哪些求和项在变化？</strong><br>按式 (15)，$E_C(G)$ 是对所有点对 $(i,j)$ 的函数 $2^{\,1-2d_{ij}}$ 的求和（$i&lt;j$）。删除 $k$ 后，<strong>只有那些最短路因删除 $k$ 而改变的点对</strong>，其 $d_{ij}$（从而 $2^{-2d_{ij}}$）会变；其它点对的距离不变，对应项抵消。因此 $\mathrm{CEC}(k)$ 主要由“经由 $k$ 的最短路点对”及“删除后原本连通变不连通（项从正数变 0）”或“最短路拉长（幂更小）”所贡献。</li>
+</ul>
+<hr>
+<h1 id="5-C-G-为何“仅当-G-连通时才是不可约”（何谓“可约-不可约”）"><a href="#5-C-G-为何“仅当-G-连通时才是不可约”（何谓“可约-不可约”）" class="headerlink" title="5) $C_G$ 为何“仅当 $G$ 连通时才是不可约”（何谓“可约/不可约”）"></a>5) $C_G$ 为何“仅当 $G$ 连通时才是不可约”（何谓“可约/不可约”）</h1><h2 id="原文位置：式-11-后对-C-G-性质的说明（第-4-页）。可约-不可约的概念是矩阵论常识，这里结合本矩阵解释。"><a href="#原文位置：式-11-后对-C-G-性质的说明（第-4-页）。可约-不可约的概念是矩阵论常识，这里结合本矩阵解释。" class="headerlink" title="原文位置：式 (11) 后对 $C_G$ 性质的说明（第 4 页）。可约/不可约的概念是矩阵论常识，这里结合本矩阵解释。"></a>原文位置：式 (11) 后对 $C_G$ 性质的说明（第 4 页）。可约/不可约的概念是矩阵论常识，这里结合本矩阵解释。</h2><h2 id="术语先验"><a href="#术语先验" class="headerlink" title="术语先验"></a>术语先验</h2><ul>
+<li><strong>可约矩阵（reducible）</strong>：存在一个排列矩阵 $P$，使得<br>$P^\top A P=\begin{bmatrix} B &amp; <em>\\ 0 &amp; D \end{bmatrix}$<br>呈“上块三角”形（存在一个非平凡不变子空间），等价于矩阵关联的有向图<em>*不是强连通</em></em>。</li>
+<li><strong>不可约矩阵（irreducible）</strong>：不存在上述分解；等价于其关联有向图<strong>强连通</strong>。</li>
+</ul>
+<h2 id="为什么对-C-G-成立“连通-Leftrightarrow-不可约”"><a href="#为什么对-C-G-成立“连通-Leftrightarrow-不可约”" class="headerlink" title="为什么对 $C_G$ 成立“连通 $\Leftrightarrow$ 不可约”"></a>为什么对 $C_G$ 成立“连通 $\Leftrightarrow$ 不可约”</h2><ul>
+<li><strong>若 $G$ 非连通</strong>：把所有顶点按连通分量重排，任意不同分量间点对距离 $d_{ij}=\infty\Rightarrow C_G(i,j)=0$。于是 $C_G$ 变成严格的<strong>块对角矩阵</strong>（跨分量的块全 0），显然<strong>可约</strong>。</li>
+<li><strong>若 $G$ 连通</strong>：任意 $i\neq j$ 都有有限 $d_{ij}$，于是<br>$C_G(i,j)=2^{-d_{ij}}&gt;0$。<br>换言之，除对角外<strong>所有元素都正</strong>（positive matrix）。对非负矩阵论而言，<strong>所有非对角元皆正</strong>蕴含矩阵不可约（更强：是 primitive）。因此 $C_G$ <strong>不可约</strong>。</li>
+</ul>
+<p>所以，“$C_G$ 不可约”与“$G$ 连通”是一一对应的。文中这点在式 (11) 后一句话里直接给出结论（第 4 页），上面的推导是原因。</p>
+<hr>
+<h1 id="6-小结：公式脉络一览（对应文中编号）"><a href="#6-小结：公式脉络一览（对应文中编号）" class="headerlink" title="6) 小结：公式脉络一览（对应文中编号）"></a>6) 小结：公式脉络一览（对应文中编号）</h1><ul>
+<li><strong>定义接近度矩阵</strong>：$C_G(i,j)=2^{-d_{ij}},\,i\neq j;\;C_G(i,i)=0$。对称、非负；非连通点对给 0（式 (11)）。</li>
+<li><strong>谱基本量</strong>：$\sum \lambda_i=\mathrm{tr}(C_G)=0$（式 (12)）；<br>$\sum \lambda_i^2=\mathrm{tr}(C_G^2)=2\sum_{i&lt;j}2^{-2d_{ij}}=\sum_{i&lt;j}2^{\,1-2d_{ij}}$（式 (13)）。</li>
+<li><strong>能量定义</strong>：先给 $\sum |\lambda_i|$（式 (14)），为便于计算改用 $\sum \lambda_i^2=\mathrm{tr}(C_G^2)$ 的等价排序版本，显式写成点对和（式 (15)）。</li>
+<li><strong>节点影响力（CEC）</strong>：$\mathrm{CEC}(k)=E_C(G)-E_C(G_k)$，只由“最短路因删 $k$ 改变”的点对贡献（式 (16)）。</li>
+<li><strong>矩阵不可约 ⇄ 图连通</strong>：连通 $\Rightarrow$ 所有非对角元正 $\Rightarrow$ 不可约；不连通 $\Rightarrow$ 可重排成块对角 $\Rightarrow$ 可约（式 (11) 后说明）。</li>
+</ul>
+<hr>
+<h1 id="7-额外提示：如何直观理解-CEC-的“能量差”"><a href="#7-额外提示：如何直观理解-CEC-的“能量差”" class="headerlink" title="7) 额外提示：如何直观理解 CEC 的“能量差”"></a>7) 额外提示：如何直观理解 CEC 的“能量差”</h1><p>把式 (15) 看成“<strong>全体点对接近度平方的加权叠加</strong>”。删除节点 $k$ 后，凡是<strong>经由 $k$ 的最短路</strong>都会变长（或断开变 0），这些点对在求和中的贡献都会<strong>下降</strong>，因此 $E_C$ 下降、$\mathrm{CEC}(k)$ 为正且越大，表示 $k$ 对“全网接近性”的贡献越关键。也因此，CEC 在传播仿真与鲁棒性实验中表现良好（见文中第 6–10 页图表与表 2–7），与 DLC/CC 相关性高且适用于<strong>非连通</strong>网络。</p>
 
       
     </div>
