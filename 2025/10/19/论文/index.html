@@ -27,7 +27,7 @@
 <meta property="og:description" content="八种传统中心性方法（Section 2.1.1）论文《Identifying influential nodes in complex networks based on closeness energy》（《基于接近度能量的复杂网络影响力节点识别》）第 2.1.1 节 “The classical ways to identify influencers” 中，用于对比的八种传统中心性方法详细说">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-10-19T11:43:53.000Z">
-<meta property="article:modified_time" content="2025-10-19T12:17:14.407Z">
+<meta property="article:modified_time" content="2025-10-20T01:51:23.055Z">
 <meta property="article:author" content="LiuJun">
 <meta name="twitter:card" content="summary">
 
@@ -138,7 +138,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E7%A7%8D%E4%BC%A0%E7%BB%9F%E4%B8%AD%E5%BF%83%E6%80%A7%E6%96%B9%E6%B3%95%EF%BC%88Section-2-1-1%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">八种传统中心性方法（Section 2.1.1）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A0-Degree-Centrality%EF%BC%88%E5%BA%A6%E4%B8%AD%E5%BF%83%E6%80%A7-DC%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">① Degree Centrality（度中心性, DC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-1-%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">公式 (1)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A"><span class="nav-number">1.1.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A"><span class="nav-number">1.1.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A1-Closeness-Centrality%EF%BC%88%E6%8E%A5%E8%BF%91%E4%B8%AD%E5%BF%83%E6%80%A7-CC%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">② Closeness Centrality（接近中心性, CC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-2-%EF%BC%9A"><span class="nav-number">1.2.1.</span> <span class="nav-text">公式 (2)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A2-Betweenness-Centrality%EF%BC%88%E4%B8%AD%E4%BB%8B%E4%B8%AD%E5%BF%83%E6%80%A7-BC%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">③ Betweenness Centrality（中介中心性, BC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-3-%EF%BC%9A"><span class="nav-number">1.3.1.</span> <span class="nav-text">公式 (3)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A3-Eigenvector-Centrality%EF%BC%88%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F%E4%B8%AD%E5%BF%83%E6%80%A7-EC%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">④ Eigenvector Centrality（特征向量中心性, EC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-4-%EF%BC%9A"><span class="nav-number">1.4.1.</span> <span class="nav-text">公式 (4)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-3"><span class="nav-number">1.4.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-3"><span class="nav-number">1.4.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A4-Gravity-Centrality%EF%BC%88%E5%BC%95%E5%8A%9B%E4%B8%AD%E5%BF%83%E6%80%A7-GC%EF%BC%89"><span class="nav-number">1.5.</span> <span class="nav-text">⑤ Gravity Centrality（引力中心性, GC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-5-%EF%BC%9A"><span class="nav-number">1.5.1.</span> <span class="nav-text">公式 (5)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-4"><span class="nav-number">1.5.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-4"><span class="nav-number">1.5.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A5-Quasi-Laplacian-Centrality%EF%BC%88%E6%8B%9F%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E8%83%BD%E9%87%8F%E4%B8%AD%E5%BF%83%E6%80%A7-QC%EF%BC%89"><span class="nav-number">1.6.</span> <span class="nav-text">⑥ Quasi-Laplacian Centrality（拟拉普拉斯能量中心性, QC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-6-%EF%BC%9A"><span class="nav-number">1.6.1.</span> <span class="nav-text">公式 (6)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-5"><span class="nav-number">1.6.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-5"><span class="nav-number">1.6.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A6-Laplacian-Energy-Centrality%EF%BC%88%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E8%83%BD%E9%87%8F%E4%B8%AD%E5%BF%83%E6%80%A7-LC%EF%BC%89"><span class="nav-number">1.7.</span> <span class="nav-text">⑦ Laplacian Energy Centrality（拉普拉斯能量中心性, LC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-7-%EF%BC%9A"><span class="nav-number">1.7.1.</span> <span class="nav-text">公式 (7)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-6"><span class="nav-number">1.7.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-6"><span class="nav-number">1.7.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A7-Distance-Laplacian-Centrality%EF%BC%88%E8%B7%9D%E7%A6%BB%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E8%83%BD%E9%87%8F%E4%B8%AD%E5%BF%83%E6%80%A7-DLC%EF%BC%89"><span class="nav-number">1.8.</span> <span class="nav-text">⑧ Distance Laplacian Centrality（距离拉普拉斯能量中心性, DLC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-8-%EF%BC%9A"><span class="nav-number">1.8.1.</span> <span class="nav-text">公式 (8)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%85%E5%8A%A9%E5%85%AC%E5%BC%8F%EF%BC%9A"><span class="nav-number">1.8.2.</span> <span class="nav-text">辅助公式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-7"><span class="nav-number">1.8.3.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-7"><span class="nav-number">1.8.4.</span> <span class="nav-text">核心思想：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CEC%E6%96%B9%E6%B3%95%E6%A0%B8%E5%BF%83%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC%E4%B8%8E%E7%9F%A9%E9%98%B5%E6%80%A7%E8%B4%A8%E8%AF%A6%E8%A7%A3%EF%BC%88Section-2-2-Proposed-method%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">CEC方法核心公式推导与矩阵性质详解（Section 2.2 Proposed method）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8A%8A%E2%80%9C%E6%8E%A5%E8%BF%91%E5%BA%A6%E7%9F%A9%E9%98%B5%E2%80%9D%E5%AE%9A%E4%B9%89%E4%B8%BA-C-G-%EF%BC%9A-C-G-i-j-2-d-ij-%EF%BC%88-i-neq-j-%EF%BC%8C%E5%AF%B9%E8%A7%92%E4%B8%BA-0%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">1) 为什么把“接近度矩阵”定义为 $C_G$ ：$C_G(i,j)&#x3D;2^{-d_{ij}}$（$i\neq j$，对角为 0）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E6%96%87%E4%BD%8D%E7%BD%AE%EF%BC%9A%E5%BC%8F-11-%EF%BC%8C%E7%AC%AC-4-%E9%A1%B5"><span class="nav-number">3.1.</span> <span class="nav-text">原文位置：式 (11)，第 4 页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E5%8A%A8%E6%9C%BA%EF%BC%88%E5%90%88%E7%90%86%E6%80%A7%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">设计动机（合理性）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%A7%B0%E4%B8%8E%E9%9D%9E%E8%B4%9F"><span class="nav-number">3.3.</span> <span class="nav-text">对称与非负</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-C-G-%E7%9A%84%E8%B0%B1%E6%80%A7%E8%B4%A8%E4%B8%8E%E5%BC%8F-12-%E2%80%93-13-%E7%9A%84%E6%9D%A5%E5%8E%86"><span class="nav-number">4.</span> <span class="nav-text">2) $C_G$ 的谱性质与式 (12)–(13) 的来历</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E6%96%87%E4%BD%8D%E7%BD%AE%EF%BC%9A%E5%BC%8F-12-%E3%80%81-13-%EF%BC%8C%E7%AC%AC-4-%E9%A1%B5"><span class="nav-number">4.1.</span> <span class="nav-text">原文位置：式 (12)、(13)，第 4 页</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E2%80%9C%E6%8E%A5%E8%BF%91%E5%BA%A6%E8%83%BD%E9%87%8F%E2%80%9D-E-C-G-%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%86%99%E6%B3%95%E4%B8%8E%E4%B8%BA%E4%BD%95%E8%83%BD%E5%86%99%E6%88%90%E5%BC%8F-15"><span class="nav-number">5.</span> <span class="nav-text">3) “接近度能量” $E_C(G)$ 的两种写法与为何能写成式 (15)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E6%96%87%E4%BD%8D%E7%BD%AE%EF%BC%9A%E5%BC%8F-14-%E4%B8%8E%E5%BC%8F-15-%EF%BC%8C%E7%AC%AC-4%E2%80%935-%E9%A1%B5"><span class="nav-number">5.1.</span> <span class="nav-text">原文位置：式 (14) 与式 (15)，第 4–5 页</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-CEC-%E6%8C%87%E6%A0%87%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E2%80%9C%E5%93%AA%E4%BA%9B%E9%A1%B9%E4%BC%9A%E5%8F%98%E5%8C%96%E2%80%9D"><span class="nav-number">6.</span> <span class="nav-text">4) CEC 指标的定义与“哪些项会变化”</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E6%96%87%E4%BD%8D%E7%BD%AE%EF%BC%9A%E5%BC%8F-16-%EF%BC%8C%E7%AC%AC-5-%E9%A1%B5"><span class="nav-number">6.1.</span> <span class="nav-text">原文位置：式 (16)，第 5 页</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-C-G-%E4%B8%BA%E4%BD%95%E2%80%9C%E4%BB%85%E5%BD%93-G-%E8%BF%9E%E9%80%9A%E6%97%B6%E6%89%8D%E6%98%AF%E4%B8%8D%E5%8F%AF%E7%BA%A6%E2%80%9D%EF%BC%88%E4%BD%95%E8%B0%93%E2%80%9C%E5%8F%AF%E7%BA%A6-%E4%B8%8D%E5%8F%AF%E7%BA%A6%E2%80%9D%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">5) $C_G$ 为何“仅当 $G$ 连通时才是不可约”（何谓“可约&#x2F;不可约”）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E6%96%87%E4%BD%8D%E7%BD%AE%EF%BC%9A%E5%BC%8F-11-%E5%90%8E%E5%AF%B9-C-G-%E6%80%A7%E8%B4%A8%E7%9A%84%E8%AF%B4%E6%98%8E%EF%BC%88%E7%AC%AC-4-%E9%A1%B5%EF%BC%89%E3%80%82%E5%8F%AF%E7%BA%A6-%E4%B8%8D%E5%8F%AF%E7%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5%E6%98%AF%E7%9F%A9%E9%98%B5%E8%AE%BA%E5%B8%B8%E8%AF%86%EF%BC%8C%E8%BF%99%E9%87%8C%E7%BB%93%E5%90%88%E6%9C%AC%E7%9F%A9%E9%98%B5%E8%A7%A3%E9%87%8A%E3%80%82"><span class="nav-number">7.1.</span> <span class="nav-text">原文位置：式 (11) 后对 $C_G$ 性质的说明（第 4 页）。可约&#x2F;不可约的概念是矩阵论常识，这里结合本矩阵解释。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AF%E8%AF%AD%E5%85%88%E9%AA%8C"><span class="nav-number">7.2.</span> <span class="nav-text">术语先验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AF%B9-C-G-%E6%88%90%E7%AB%8B%E2%80%9C%E8%BF%9E%E9%80%9A-Leftrightarrow-%E4%B8%8D%E5%8F%AF%E7%BA%A6%E2%80%9D"><span class="nav-number">7.3.</span> <span class="nav-text">为什么对 $C_G$ 成立“连通 $\Leftrightarrow$ 不可约”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E5%B0%8F%E7%BB%93%EF%BC%9A%E5%85%AC%E5%BC%8F%E8%84%89%E7%BB%9C%E4%B8%80%E8%A7%88%EF%BC%88%E5%AF%B9%E5%BA%94%E6%96%87%E4%B8%AD%E7%BC%96%E5%8F%B7%EF%BC%89"><span class="nav-number">8.</span> <span class="nav-text">6) 小结：公式脉络一览（对应文中编号）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E9%A2%9D%E5%A4%96%E6%8F%90%E7%A4%BA%EF%BC%9A%E5%A6%82%E4%BD%95%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3-CEC-%E7%9A%84%E2%80%9C%E8%83%BD%E9%87%8F%E5%B7%AE%E2%80%9D"><span class="nav-number">9.</span> <span class="nav-text">7) 额外提示：如何直观理解 CEC 的“能量差”</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E7%A7%8D%E4%BC%A0%E7%BB%9F%E4%B8%AD%E5%BF%83%E6%80%A7%E6%96%B9%E6%B3%95%EF%BC%88Section-2-1-1%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">八种传统中心性方法（Section 2.1.1）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A0-Degree-Centrality%EF%BC%88%E5%BA%A6%E4%B8%AD%E5%BF%83%E6%80%A7-DC%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">① Degree Centrality（度中心性, DC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-1-%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">公式 (1)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A"><span class="nav-number">1.1.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A"><span class="nav-number">1.1.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A1-Closeness-Centrality%EF%BC%88%E6%8E%A5%E8%BF%91%E4%B8%AD%E5%BF%83%E6%80%A7-CC%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">② Closeness Centrality（接近中心性, CC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-2-%EF%BC%9A"><span class="nav-number">1.2.1.</span> <span class="nav-text">公式 (2)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A2-Betweenness-Centrality%EF%BC%88%E4%B8%AD%E4%BB%8B%E4%B8%AD%E5%BF%83%E6%80%A7-BC%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">③ Betweenness Centrality（中介中心性, BC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-3-%EF%BC%9A"><span class="nav-number">1.3.1.</span> <span class="nav-text">公式 (3)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A3-Eigenvector-Centrality%EF%BC%88%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F%E4%B8%AD%E5%BF%83%E6%80%A7-EC%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">④ Eigenvector Centrality（特征向量中心性, EC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-4-%EF%BC%9A"><span class="nav-number">1.4.1.</span> <span class="nav-text">公式 (4)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-3"><span class="nav-number">1.4.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-3"><span class="nav-number">1.4.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A4-Gravity-Centrality%EF%BC%88%E5%BC%95%E5%8A%9B%E4%B8%AD%E5%BF%83%E6%80%A7-GC%EF%BC%89"><span class="nav-number">1.5.</span> <span class="nav-text">⑤ Gravity Centrality（引力中心性, GC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-5-%EF%BC%9A"><span class="nav-number">1.5.1.</span> <span class="nav-text">公式 (5)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-4"><span class="nav-number">1.5.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-4"><span class="nav-number">1.5.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A5-Quasi-Laplacian-Centrality%EF%BC%88%E6%8B%9F%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E8%83%BD%E9%87%8F%E4%B8%AD%E5%BF%83%E6%80%A7-QC%EF%BC%89"><span class="nav-number">1.6.</span> <span class="nav-text">⑥ Quasi-Laplacian Centrality（拟拉普拉斯能量中心性, QC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-6-%EF%BC%9A"><span class="nav-number">1.6.1.</span> <span class="nav-text">公式 (6)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-5"><span class="nav-number">1.6.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-5"><span class="nav-number">1.6.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A6-Laplacian-Energy-Centrality%EF%BC%88%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E8%83%BD%E9%87%8F%E4%B8%AD%E5%BF%83%E6%80%A7-LC%EF%BC%89"><span class="nav-number">1.7.</span> <span class="nav-text">⑦ Laplacian Energy Centrality（拉普拉斯能量中心性, LC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-7-%EF%BC%9A"><span class="nav-number">1.7.1.</span> <span class="nav-text">公式 (7)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-6"><span class="nav-number">1.7.2.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-6"><span class="nav-number">1.7.3.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%91%A7-Distance-Laplacian-Centrality%EF%BC%88%E8%B7%9D%E7%A6%BB%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E8%83%BD%E9%87%8F%E4%B8%AD%E5%BF%83%E6%80%A7-DLC%EF%BC%89"><span class="nav-number">1.8.</span> <span class="nav-text">⑧ Distance Laplacian Centrality（距离拉普拉斯能量中心性, DLC）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F-8-%EF%BC%9A"><span class="nav-number">1.8.1.</span> <span class="nav-text">公式 (8)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%85%E5%8A%A9%E5%85%AC%E5%BC%8F%EF%BC%9A"><span class="nav-number">1.8.2.</span> <span class="nav-text">辅助公式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%90%AB%E4%B9%89%EF%BC%9A-7"><span class="nav-number">1.8.3.</span> <span class="nav-text">符号含义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A-7"><span class="nav-number">1.8.4.</span> <span class="nav-text">核心思想：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CEC%E6%96%B9%E6%B3%95%E6%A0%B8%E5%BF%83%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC%E4%B8%8E%E7%9F%A9%E9%98%B5%E6%80%A7%E8%B4%A8%E8%AF%A6%E8%A7%A3%EF%BC%88Section-2-2-Proposed-method%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">CEC方法核心公式推导与矩阵性质详解（Section 2.2 Proposed method）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8A%8A%E2%80%9C%E6%8E%A5%E8%BF%91%E5%BA%A6%E7%9F%A9%E9%98%B5%E2%80%9D%E5%AE%9A%E4%B9%89%E4%B8%BA-C-G-%EF%BC%9A-C-G-i-j-2-d-ij-%EF%BC%88-i-neq-j-%EF%BC%8C%E5%AF%B9%E8%A7%92%E4%B8%BA-0%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">1) 为什么把“接近度矩阵”定义为 $C_G$ ：$C_G(i,j)&#x3D;2^{-d_{ij}}$（$i\neq j$，对角为 0）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E6%96%87%E4%BD%8D%E7%BD%AE%EF%BC%9A%E5%BC%8F-11-%EF%BC%8C%E7%AC%AC-4-%E9%A1%B5"><span class="nav-number">3.1.</span> <span class="nav-text">原文位置：式 (11)，第 4 页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E5%8A%A8%E6%9C%BA%EF%BC%88%E5%90%88%E7%90%86%E6%80%A7%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">设计动机（合理性）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%A7%B0%E4%B8%8E%E9%9D%9E%E8%B4%9F"><span class="nav-number">3.3.</span> <span class="nav-text">对称与非负</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-C-G-%E4%B8%BA%E4%BD%95%E2%80%9C%E4%BB%85%E5%BD%93-G-%E8%BF%9E%E9%80%9A%E6%97%B6%E6%89%8D%E6%98%AF%E4%B8%8D%E5%8F%AF%E7%BA%A6%E2%80%9D%EF%BC%88%E4%BD%95%E8%B0%93%E2%80%9C%E5%8F%AF%E7%BA%A6-%E4%B8%8D%E5%8F%AF%E7%BA%A6%E2%80%9D%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">2) $C_G$ 为何“仅当 $G$ 连通时才是不可约”（何谓“可约&#x2F;不可约”）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E6%96%87%E4%BD%8D%E7%BD%AE%EF%BC%9A%E5%BC%8F-11-%E5%90%8E%E5%AF%B9-C-G-%E6%80%A7%E8%B4%A8%E7%9A%84%E8%AF%B4%E6%98%8E%EF%BC%88%E7%AC%AC-4-%E9%A1%B5%EF%BC%89%E3%80%82%E5%8F%AF%E7%BA%A6-%E4%B8%8D%E5%8F%AF%E7%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5%E6%98%AF%E7%9F%A9%E9%98%B5%E8%AE%BA%E5%B8%B8%E8%AF%86%EF%BC%8C%E8%BF%99%E9%87%8C%E7%BB%93%E5%90%88%E6%9C%AC%E7%9F%A9%E9%98%B5%E8%A7%A3%E9%87%8A%E3%80%82"><span class="nav-number">4.1.</span> <span class="nav-text">原文位置：式 (11) 后对 $C_G$ 性质的说明（第 4 页）。可约&#x2F;不可约的概念是矩阵论常识，这里结合本矩阵解释。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AF%E8%AF%AD%E5%85%88%E9%AA%8C"><span class="nav-number">4.2.</span> <span class="nav-text">术语先验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AF%B9-C-G-%E6%88%90%E7%AB%8B%E2%80%9C%E8%BF%9E%E9%80%9A-Leftrightarrow-%E4%B8%8D%E5%8F%AF%E7%BA%A6%E2%80%9D"><span class="nav-number">4.3.</span> <span class="nav-text">为什么对 $C_G$ 成立“连通 $\Leftrightarrow$ 不可约”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E5%BC%8F-13-%E7%AD%89%E5%BC%8F%E9%93%BE%E8%AF%A6%E7%BB%86%E6%8E%A8%E5%AF%BC%E6%AD%A5%E9%AA%A4"><span class="nav-number">5.</span> <span class="nav-text">论文式(13)等式链详细推导步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E5%AF%BC%E7%9B%AE%E6%A0%87"><span class="nav-number">5.1.</span> <span class="nav-text">推导目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%B0%B1%E2%80%93%E8%BF%B9%E6%81%92%E7%AD%89%E5%BC%8F%EF%BC%88%E5%AE%9E%E5%AF%B9%E7%A7%B0%E7%9F%A9%E9%98%B5%E6%A0%B8%E5%BF%83%E6%80%A7%E8%B4%A8%EF%BC%89"><span class="nav-number">5.2.</span> <span class="nav-text">1. 谱–迹恒等式（实对称矩阵核心性质）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E6%8F%90%EF%BC%9A"><span class="nav-number">5.2.1.</span> <span class="nav-text">前提：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA%EF%BC%9A"><span class="nav-number">5.2.2.</span> <span class="nav-text">结论：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E4%BE%9D%E6%8D%AE%EF%BC%9A"><span class="nav-number">5.2.3.</span> <span class="nav-text">论文依据：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%B1%95%E5%BC%80-operatorname-tr-C-G-2-%EF%BC%88%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95-%E8%BF%B9%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">2. 展开 $\operatorname{tr}(C_G^2)$（矩阵乘法+迹的定义）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E8%A7%A3%E6%9E%90%EF%BC%9A"><span class="nav-number">5.3.1.</span> <span class="nav-text">步骤解析：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%88%A9%E7%94%A8-C-G-%E7%9A%84%E5%AF%B9%E7%A7%B0%E6%80%A7%E8%BF%9B%E4%B8%80%E6%AD%A5%E5%8C%96%E7%AE%80"><span class="nav-number">5.4.</span> <span class="nav-text">3. 利用 $C_G$ 的对称性进一步化简</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E7%BB%88%E6%8E%A8%E5%AF%BC%E7%BB%93%E6%9E%9C%E6%B1%87%E6%80%BB"><span class="nav-number">5.5.</span> <span class="nav-text">最终推导结果汇总</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%88%A9%E7%94%A8%E5%AF%B9%E8%A7%92%E4%B8%BA0%E3%80%81%E5%8F%8C%E8%AE%A1%E6%95%B0%E5%8C%96%E4%B8%BA%E2%80%9C-i-lt-j-%E2%80%9D%E5%BD%A2%E5%BC%8F"><span class="nav-number">5.6.</span> <span class="nav-text">3. 利用对角为0、双计数化为“$i&lt;j$”形式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E6%8F%90%EF%BC%9A-1"><span class="nav-number">5.6.1.</span> <span class="nav-text">前提：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E8%A7%A3%E6%9E%90%EF%BC%9A-1"><span class="nav-number">5.6.2.</span> <span class="nav-text">步骤解析：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%BB%A3%E5%85%A5-C-G-i-j-2-d-ij-%EF%BC%88%E6%8E%A5%E8%BF%91%E5%BA%A6%E7%9F%A9%E9%98%B5%E5%AE%9A%E4%B9%89%EF%BC%89"><span class="nav-number">5.7.</span> <span class="nav-text">4. 代入 $C_G(i,j)&#x3D;2^{-d_{ij}}$（接近度矩阵定义）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E6%8F%90%EF%BC%9A-2"><span class="nav-number">5.7.1.</span> <span class="nav-text">前提：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E8%A7%A3%E6%9E%90%EF%BC%9A-2"><span class="nav-number">5.7.2.</span> <span class="nav-text">步骤解析：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%8A%8A%E5%89%8D%E9%9D%A2%E7%9A%84%E2%80%9C2%E2%80%9D%E5%B9%B6%E5%85%A5%E6%8C%87%E6%95%B0%EF%BC%88%E7%BA%AF%E4%BB%A3%E6%95%B0%E5%8C%96%E7%AE%80%EF%BC%89"><span class="nav-number">5.8.</span> <span class="nav-text">5. 把前面的“2”并入指数（纯代数化简）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%9D%E6%8D%AE%EF%BC%9A"><span class="nav-number">5.8.1.</span> <span class="nav-text">依据：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E8%A7%A3%E6%9E%90%EF%BC%9A-3"><span class="nav-number">5.8.2.</span> <span class="nav-text">步骤解析：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E7%BB%88%E7%AD%89%E5%BC%8F%E9%93%BE%EF%BC%88%E4%B8%B2%E8%81%941-5%E6%AD%A5%EF%BC%89"><span class="nav-number">5.9.</span> <span class="nav-text">最终等式链（串联1-5步）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E8%A6%81%E7%82%B9%E6%80%BB%E7%BB%93"><span class="nav-number">5.10.</span> <span class="nav-text">关键要点总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E9%A2%9D%E5%A4%96%E6%8F%90%E7%A4%BA%EF%BC%9A%E5%A6%82%E4%BD%95%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3-CEC-%E7%9A%84%E2%80%9C%E8%83%BD%E9%87%8F%E5%B7%AE%E2%80%9D"><span class="nav-number">6.</span> <span class="nav-text">7) 额外提示：如何直观理解 CEC 的“能量差”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F%E7%89%A9%E7%90%86%E5%90%AB%E4%B9%89%E8%AF%B4%E6%98%8E"><span class="nav-number">7.</span> <span class="nav-text">公式物理含义说明</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A0%B8%E5%BF%83%E5%85%AC%E5%BC%8F%E5%8F%8A%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89%E6%8B%86%E8%A7%A3"><span class="nav-number">7.1.</span> <span class="nav-text">一、核心公式及物理意义拆解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-frac-1-d-ij-%EF%BC%9A%E8%8A%82%E7%82%B9-i-%E4%B8%8E-j-%E4%B9%8B%E9%97%B4%E7%9A%84%E2%80%9C%E9%80%9A%E4%BF%A1%E6%95%88%E7%8E%87%E2%80%9D"><span class="nav-number">7.1.1.</span> <span class="nav-text">1. $ \frac{1}{d_{ij}} $：节点 $i$ 与 $j$ 之间的“通信效率”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-sum-i-ne-j-frac-1-d-ij-%EF%BC%9A%E6%95%B4%E4%B8%AA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%BB%E9%80%9A%E4%BF%A1%E6%95%88%E7%8E%87"><span class="nav-number">7.1.2.</span> <span class="nav-text">2. $ \sum_{i \ne j} \frac{1}{d_{ij}} $：整个网络的总通信效率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-frac-1-n-n-1-%EF%BC%9A%E5%BD%92%E4%B8%80%E5%8C%96%E7%B3%BB%E6%95%B0"><span class="nav-number">7.1.3.</span> <span class="nav-text">3. $ \frac{1}{n(n-1)} $：归一化系数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%85%B3%E8%81%94%E6%8C%87%E6%A0%87%E6%95%B4%E5%90%88%EF%BC%88%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E%EF%BC%89"><span class="nav-number">7.2.</span> <span class="nav-text">二、关联指标整合（补充说明）</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -219,9 +219,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-10-19 19:43:53 / 修改时间：20:17:14" itemprop="dateCreated datePublished" datetime="2025-10-19T19:43:53+08:00">2025-10-19</time>
+      <time title="创建时间：2025-10-19 19:43:53" itemprop="dateCreated datePublished" datetime="2025-10-19T19:43:53+08:00">2025-10-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-10-20 09:51:23" itemprop="dateModified" datetime="2025-10-20T09:51:23+08:00">2025-10-20</time>
     </span>
 
   
@@ -344,28 +350,7 @@
 <li><strong>非负</strong>：$2^{-d_{ij}}\ge 0$，且当不连通时为 0；对角定义为 0。<br>这些在式 (11) 后作者也直接指出“According to the definition, $C_G$ is a symmetric non-negative matrix”（第 4 页）。</li>
 </ul>
 <hr>
-<h1 id="2-C-G-的谱性质与式-12-–-13-的来历"><a href="#2-C-G-的谱性质与式-12-–-13-的来历" class="headerlink" title="2) $C_G$ 的谱性质与式 (12)–(13) 的来历"></a>2) $C_G$ 的谱性质与式 (12)–(13) 的来历</h1><h2 id="原文位置：式-12-、-13-，第-4-页"><a href="#原文位置：式-12-、-13-，第-4-页" class="headerlink" title="原文位置：式 (12)、(13)，第 4 页"></a>原文位置：式 (12)、(13)，第 4 页</h2><p>令 $\lambda_1,\dots,\lambda_n$ 为 $C_G$ 的特征值。因为 $C_G$ <strong>对称</strong>，所以特征值全为实数（文中亦指出）。由基本线性代数结论：</p>
-<ul>
-<li><p><strong>特征值之和等于迹</strong>：$\sum_i \lambda_i=\mathrm{tr}(C_G)$。又因 $C_G$ 对角元全为 0（式 (11)），$\mathrm{tr}(C_G)=0$。于是得到<br>$\sum_{i=1}^n \lambda_i = 0$，即式 (12)。</p>
-</li>
-<li><p><strong>特征值平方和等于 $\mathrm{tr}(C_G^2)$</strong>：$\sum_i \lambda_i^2=\mathrm{tr}(C_G^2)$。而<br>$\mathrm{tr}(C_G^2)=\sum_{i}(C_G^2)_{ii} = \sum_i \sum_j C_G(i,j)\,C_G(j,i) = \sum_{i,j} C_G(i,j)^2$，<br>利用对称性 $C_G(i,j)=C_G(j,i)$。由于对角为 0，双重求和可化成<br>$\sum_{i\ne j} C_G(i,j)^2 = 2\sum_{1\le i&lt;j\le n} C_G(i,j)^2$。<br>代入 $C_G(i,j)=2^{-d_{ij}}$ 得<br>$\sum_{i=1}^n \lambda_i^2 = 2\sum_{i&lt;j} (2^{-d_{ij}})^2 = 2\sum_{i&lt;j} 2^{-2d_{ij}} = \sum_{i&lt;j} 2^{\,1-2d_{ij}}$，<br>即式 (13)（文中右端写成 $\sum_{i&lt;j}2^{\,1-2d_{ij}}$ 的等价形式）。</p>
-</li>
-</ul>
-<blockquote>
-<p>小结：式 (12) 来自“迹=特征值之和且对角为 0”；式 (13) 来自“$\mathrm{tr}(C^2)=|C|_F^2$”与对称、对角为 0 的代数展开。</p>
-</blockquote>
-<hr>
-<h1 id="3-“接近度能量”-E-C-G-的两种写法与为何能写成式-15"><a href="#3-“接近度能量”-E-C-G-的两种写法与为何能写成式-15" class="headerlink" title="3) “接近度能量” $E_C(G)$ 的两种写法与为何能写成式 (15)"></a>3) “接近度能量” $E_C(G)$ 的两种写法与为何能写成式 (15)</h1><h2 id="原文位置：式-14-与式-15-，第-4–5-页"><a href="#原文位置：式-14-与式-15-，第-4–5-页" class="headerlink" title="原文位置：式 (14) 与式 (15)，第 4–5 页"></a>原文位置：式 (14) 与式 (15)，第 4–5 页</h2><ul>
-<li>文中先<strong>参照“图能量”的传统定义</strong>给出<br>$E_C(G)=\sum_{i=1}^n |\lambda_i|$（式 (14)）。</li>
-<li>随后作者为了<strong>计算简化</strong>，改用与之“等价排序”的二次型能量（不再取绝对值而取平方，并说明用“矩阵平方的迹”替代）：<br>$E_C(G)=\sum_{i=1}^n \lambda_i^2 = \mathrm{tr}(C_G^2) = 2\sum_{1\le i&lt;j\le n} (2^{-d_{ij}})^2 = \sum_{i&lt;j} 2^{\,1-2d_{ij}}$（式 (15)）。<br>这样做的理由：用 $\sum \lambda_i^2$（Frobenius 范数的平方）<strong>既能快速计算</strong>，又与节点删除前后“能量差”的比较在<strong>排序意义上保持一致</strong>（同一底数的幂和比较与绝对值和比较在本方法里给出一致的排名结论）。文中在 Remark 2.1 也解释了底数变化不影响排序（第 4 页）。</li>
-</ul>
-<hr>
-<h1 id="4-CEC-指标的定义与“哪些项会变化”"><a href="#4-CEC-指标的定义与“哪些项会变化”" class="headerlink" title="4) CEC 指标的定义与“哪些项会变化”"></a>4) CEC 指标的定义与“哪些项会变化”</h1><h2 id="原文位置：式-16-，第-5-页"><a href="#原文位置：式-16-，第-5-页" class="headerlink" title="原文位置：式 (16)，第 5 页"></a>原文位置：式 (16)，第 5 页</h2><ul>
-<li><strong>定义</strong>：删除节点 $k$（及其关联边）得到子图 $G_k$，则<br>$\mathrm{CEC}(k) = E_C(G)-E_C(G_k)\ge 0$。</li>
-<li><strong>到底哪些求和项在变化？</strong><br>按式 (15)，$E_C(G)$ 是对所有点对 $(i,j)$ 的函数 $2^{\,1-2d_{ij}}$ 的求和（$i&lt;j$）。删除 $k$ 后，<strong>只有那些最短路因删除 $k$ 而改变的点对</strong>，其 $d_{ij}$（从而 $2^{-2d_{ij}}$）会变；其它点对的距离不变，对应项抵消。因此 $\mathrm{CEC}(k)$ 主要由“经由 $k$ 的最短路点对”及“删除后原本连通变不连通（项从正数变 0）”或“最短路拉长（幂更小）”所贡献。</li>
-</ul>
-<hr>
-<h1 id="5-C-G-为何“仅当-G-连通时才是不可约”（何谓“可约-不可约”）"><a href="#5-C-G-为何“仅当-G-连通时才是不可约”（何谓“可约-不可约”）" class="headerlink" title="5) $C_G$ 为何“仅当 $G$ 连通时才是不可约”（何谓“可约/不可约”）"></a>5) $C_G$ 为何“仅当 $G$ 连通时才是不可约”（何谓“可约/不可约”）</h1><h2 id="原文位置：式-11-后对-C-G-性质的说明（第-4-页）。可约-不可约的概念是矩阵论常识，这里结合本矩阵解释。"><a href="#原文位置：式-11-后对-C-G-性质的说明（第-4-页）。可约-不可约的概念是矩阵论常识，这里结合本矩阵解释。" class="headerlink" title="原文位置：式 (11) 后对 $C_G$ 性质的说明（第 4 页）。可约/不可约的概念是矩阵论常识，这里结合本矩阵解释。"></a>原文位置：式 (11) 后对 $C_G$ 性质的说明（第 4 页）。可约/不可约的概念是矩阵论常识，这里结合本矩阵解释。</h2><h2 id="术语先验"><a href="#术语先验" class="headerlink" title="术语先验"></a>术语先验</h2><ul>
+<h1 id="2-C-G-为何“仅当-G-连通时才是不可约”（何谓“可约-不可约”）"><a href="#2-C-G-为何“仅当-G-连通时才是不可约”（何谓“可约-不可约”）" class="headerlink" title="2) $C_G$ 为何“仅当 $G$ 连通时才是不可约”（何谓“可约/不可约”）"></a>2) $C_G$ 为何“仅当 $G$ 连通时才是不可约”（何谓“可约/不可约”）</h1><h2 id="原文位置：式-11-后对-C-G-性质的说明（第-4-页）。可约-不可约的概念是矩阵论常识，这里结合本矩阵解释。"><a href="#原文位置：式-11-后对-C-G-性质的说明（第-4-页）。可约-不可约的概念是矩阵论常识，这里结合本矩阵解释。" class="headerlink" title="原文位置：式 (11) 后对 $C_G$ 性质的说明（第 4 页）。可约/不可约的概念是矩阵论常识，这里结合本矩阵解释。"></a>原文位置：式 (11) 后对 $C_G$ 性质的说明（第 4 页）。可约/不可约的概念是矩阵论常识，这里结合本矩阵解释。</h2><h2 id="术语先验"><a href="#术语先验" class="headerlink" title="术语先验"></a>术语先验</h2><ul>
 <li><strong>可约矩阵（reducible）</strong>：存在一个排列矩阵 $P$，使得<br>$P^\top A P=\begin{bmatrix} B &amp; <em>\\ 0 &amp; D \end{bmatrix}$<br>呈“上块三角”形（存在一个非平凡不变子空间），等价于矩阵关联的有向图<em>*不是强连通</em></em>。</li>
 <li><strong>不可约矩阵（irreducible）</strong>：不存在上述分解；等价于其关联有向图<strong>强连通</strong>。</li>
 </ul>
@@ -375,15 +360,178 @@
 </ul>
 <p>所以，“$C_G$ 不可约”与“$G$ 连通”是一一对应的。文中这点在式 (11) 后一句话里直接给出结论（第 4 页），上面的推导是原因。</p>
 <hr>
-<h1 id="6-小结：公式脉络一览（对应文中编号）"><a href="#6-小结：公式脉络一览（对应文中编号）" class="headerlink" title="6) 小结：公式脉络一览（对应文中编号）"></a>6) 小结：公式脉络一览（对应文中编号）</h1><ul>
-<li><strong>定义接近度矩阵</strong>：$C_G(i,j)=2^{-d_{ij}},\,i\neq j;\;C_G(i,i)=0$。对称、非负；非连通点对给 0（式 (11)）。</li>
-<li><strong>谱基本量</strong>：$\sum \lambda_i=\mathrm{tr}(C_G)=0$（式 (12)）；<br>$\sum \lambda_i^2=\mathrm{tr}(C_G^2)=2\sum_{i&lt;j}2^{-2d_{ij}}=\sum_{i&lt;j}2^{\,1-2d_{ij}}$（式 (13)）。</li>
-<li><strong>能量定义</strong>：先给 $\sum |\lambda_i|$（式 (14)），为便于计算改用 $\sum \lambda_i^2=\mathrm{tr}(C_G^2)$ 的等价排序版本，显式写成点对和（式 (15)）。</li>
-<li><strong>节点影响力（CEC）</strong>：$\mathrm{CEC}(k)=E_C(G)-E_C(G_k)$，只由“最短路因删 $k$ 改变”的点对贡献（式 (16)）。</li>
-<li><strong>矩阵不可约 ⇄ 图连通</strong>：连通 $\Rightarrow$ 所有非对角元正 $\Rightarrow$ 不可约；不连通 $\Rightarrow$ 可重排成块对角 $\Rightarrow$ 可约（式 (11) 后说明）。</li>
+<h1 id="论文式-13-等式链详细推导步骤"><a href="#论文式-13-等式链详细推导步骤" class="headerlink" title="论文式(13)等式链详细推导步骤"></a>论文式(13)等式链详细推导步骤</h1><h2 id="推导目标"><a href="#推导目标" class="headerlink" title="推导目标"></a>推导目标</h2><p>逐步推导接近度矩阵 $C_G$ 对应的谱性质等式链（论文式(13)）：<br>$<br>\sum_{i=1}^n \lambda_i^2 = 2\sum_{1\le i&lt;j\le n}\bigl(2^{-d_{ij}}\bigr)^2 = \sum_{1\le i&lt;j\le n}2^{\,1-2d_{ij}}<br>$<br>该等式源自接近度矩阵 $C_G$ 的谱与迹的恒等式展开，具体步骤如下：</p>
+<hr>
+<h2 id="1-谱–迹恒等式（实对称矩阵核心性质）"><a href="#1-谱–迹恒等式（实对称矩阵核心性质）" class="headerlink" title="1. 谱–迹恒等式（实对称矩阵核心性质）"></a>1. 谱–迹恒等式（实对称矩阵核心性质）</h2><h3 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h3><p>接近度矩阵 $C_G$ 是<strong>对称非负矩阵</strong>（已在之前的分析中证明：$C_G(i,j)=C_G(j,i)$ 且 $C_G(i,j)\ge0$）。</p>
+<h3 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h3><p>实对称矩阵的特征值全为实数，且满足谱-迹恒等式：<br>$<br>\sum_{i=1}^n \lambda_i^2 = \operatorname{tr}(C_G^2)<br>$<br>其中：</p>
+<ul>
+<li>$\lambda_1,\lambda_2,\dots,\lambda_n$ 是 $C_G$ 的全部特征值；</li>
+<li>$\operatorname{tr}(C_G^2)$ 表示矩阵 $C_G$ 平方后的迹（主对角线元素之和）。<h3 id="论文依据："><a href="#论文依据：" class="headerlink" title="论文依据："></a>论文依据：</h3>论文在式(12)、(13)前明确说明该性质并直接应用结果。</li>
 </ul>
 <hr>
+<h2 id="2-展开-operatorname-tr-C-G-2-（矩阵乘法-迹的定义）"><a href="#2-展开-operatorname-tr-C-G-2-（矩阵乘法-迹的定义）" class="headerlink" title="2. 展开 $\operatorname{tr}(C_G^2)$（矩阵乘法+迹的定义）"></a>2. 展开 $\operatorname{tr}(C_G^2)$（矩阵乘法+迹的定义）</h2><h3 id="步骤解析："><a href="#步骤解析：" class="headerlink" title="步骤解析："></a>步骤解析：</h3><ol>
+<li>按矩阵乘法定义，$C_G^2$ 的第 $i$ 行第 $i$ 列元素为：<br> $<br> (C_G^2)_{ii} = \sum_{j=1}^n C_G(i,j) \cdot C_G(j,i)<br> $</li>
+<li>矩阵乘法定义推导 $(C_G^2)_{ii}$ 的表达式</li>
+</ol>
+<p>核心结论</p>
+<p>$(C_G^2)_{ii} = \sum_{j=1}^n C_G(i,j) \cdot C_G(j,i)$，进一步利用 $C_G$ 的对称性可化简为 $(C_G^2)_{ii} = \sum_{j=1}^n \bigl(C_G(i,j)\bigr)^2$，该结果直接由<strong>矩阵乘法的定义</strong>推导得出。</p>
+<hr>
+<ol>
+<li>矩阵乘法的通用定义</li>
+</ol>
+<p>对任意两个 $n \times n$ 矩阵 $A$ 和 $B$，它们的乘积矩阵 $AB$（记为 $C = AB$）中，第 $i$ 行第 $k$ 列的元素 $(AB)_{ik}$（即 $C_{ik}$）定义为：<br>$<br>(AB)_{ik} = \sum_{j=1}^n A_{ij} \cdot B_{jk}<br>$</p>
+<p>定义解析：</p>
+<ul>
+<li>$A_{ij}$：矩阵 $A$ 第 $i$ 行第 $j$ 列的元素；</li>
+<li>$B_{jk}$：矩阵 $B$ 第 $j$ 行第 $k$ 列的元素；</li>
+<li>求和变量 $j$ 从 1 到 $n$，表示“$A$ 的第 $i$ 行所有元素”与“$B$ 的第 $k$ 列所有对应元素”逐一相乘后求和（即向量点积运算）。</li>
+</ul>
+<hr>
+<ol>
+<li>代入 $A=B=C_G$ 且 $k=i$</li>
+</ol>
+<p>将通用定义中的 $A$ 和 $B$ 均替换为接近度矩阵 $C_G$，同时令列索引 $k = i$（即聚焦乘积矩阵 $C_G^2$ 的主对角线元素），则：<br>$<br>(C_G^2)_{ii} = \sum_{j=1}^n C_G(i,j) \cdot C_G(j,i)<br>$</p>
+<p>直观理解：</p>
+<p>该式本质是 <strong>$C_G$ 的第 $i$ 行（row $i$）与第 $i$ 列（column $i$）的点积</strong>——第 $i$ 行的每个元素 $C_G(i,j)$，与第 $i$ 列的对应元素 $C_G(j,i)$ 相乘，再对所有 $j$ 求和。</p>
+<hr>
+<h2 id="3-利用-C-G-的对称性进一步化简"><a href="#3-利用-C-G-的对称性进一步化简" class="headerlink" title="3. 利用 $C_G$ 的对称性进一步化简"></a>3. 利用 $C_G$ 的对称性进一步化简</h2><p>已知接近度矩阵 $C_G$ 是<strong>对称矩阵</strong>，即对任意 $i,j$ 满足：<br>$<br>C_G(i,j) = C_G(j,i)<br>$<br>将对称性条件代入 $(C_G^2)_{ii}$ 的表达式中，$C_G(j,i)$ 可替换为 $C_G(i,j)$，因此：<br>$<br>(C_G^2)_{ii} = \sum_{j=1}^n C_G(i,j) \cdot C_G(i,j) = \sum_{j=1}^n \bigl(C_G(i,j)\bigr)^2<br>$</p>
+<hr>
+<h2 id="最终推导结果汇总"><a href="#最终推导结果汇总" class="headerlink" title="最终推导结果汇总"></a>最终推导结果汇总</h2><ol>
+<li>由矩阵乘法定义：$ (C_G^2)_{ii} = \sum_{j=1}^n C_G(i,j) \cdot C_G(j,i) $；</li>
+<li><p>结合 $C_G$ 对称性（$C_G(i,j)=C_G(j,i)$）：$ (C_G^2)_{ii} = \sum_{j=1}^n \bigl(C_G(i,j)\bigr)^2 $。</p>
+</li>
+<li><p>按迹的定义（主对角线元素之和），$\operatorname{tr}(C_G^2)$ 为所有主对角线元素求和：<br> $<br> \operatorname{tr}(C_G^2) = \sum_{i=1}^n (C_G^2)_{ii} = \sum_{i=1}^n \sum_{j=1}^n C_G(i,j) \cdot C_G(j,i)<br> $</p>
+</li>
+<li>利用 $C_G$ 的<strong>对称性</strong>（$C_G(i,j)=C_G(j,i)$），可简化为：<br>$<br>\operatorname{tr}(C_G^2) = \sum_{i=1}^n \sum_{j=1}^n C_G(i,j)^2 = \sum_{i,j} C_G(i,j)^2<br>$</li>
+</ol>
+<hr>
+<h2 id="3-利用对角为0、双计数化为“-i-lt-j-”形式"><a href="#3-利用对角为0、双计数化为“-i-lt-j-”形式" class="headerlink" title="3. 利用对角为0、双计数化为“$i&lt;j$”形式"></a>3. 利用对角为0、双计数化为“$i&lt;j$”形式</h2><h3 id="前提：-1"><a href="#前提：-1" class="headerlink" title="前提："></a>前提：</h3><p>按 $C_G$ 的定义，对角元素 $C_G(i,i)=0$（$i=1,2,\dots,n$）。</p>
+<h3 id="步骤解析：-1"><a href="#步骤解析：-1" class="headerlink" title="步骤解析："></a>步骤解析：</h3><ol>
+<li>由于对角元素为0，双重求和可排除 $i=j$ 的情况，仅保留非对角项：<br>$<br>\sum_{i,j} C_G(i,j)^2 = \sum_{i\ne j} C_G(i,j)^2<br>$</li>
+<li>非对角项中，$(i,j)$ 与 $(j,i)$ 是成对出现的（如 $(1,2)$ 和 $(2,1)$），且 $C_G(i,j)=C_G(j,i)$，因此：<br>$<br>\sum_{i\ne j} C_G(i,j)^2 = 2\sum_{1\le i&lt;j\le n} C_G(i,j)^2<br>$<br>（注：$i&lt;j$ 确保每个点对仅被计数一次，乘以2还原成对计数的总贡献）</li>
+</ol>
+<hr>
+<h2 id="4-代入-C-G-i-j-2-d-ij-（接近度矩阵定义）"><a href="#4-代入-C-G-i-j-2-d-ij-（接近度矩阵定义）" class="headerlink" title="4. 代入 $C_G(i,j)=2^{-d_{ij}}$（接近度矩阵定义）"></a>4. 代入 $C_G(i,j)=2^{-d_{ij}}$（接近度矩阵定义）</h2><h3 id="前提：-2"><a href="#前提：-2" class="headerlink" title="前提："></a>前提：</h3><p>$C_G$ 的核心定义为 $C_G(i,j)=2^{-d_{ij}}$（$i\ne j$），其中 $d_{ij}$ 是节点 $i$ 与 $j$ 的最短路径长度。</p>
+<h3 id="步骤解析：-2"><a href="#步骤解析：-2" class="headerlink" title="步骤解析："></a>步骤解析：</h3><p>将定义代入上一步结果，得到：<br>$<br>\operatorname{tr}(C_G^2) = 2\sum_{1\le i&lt;j\le n} \bigl(2^{-d_{ij}}\bigr)^2<br>$<br>根据指数运算法则 $(a^m)^n=a^{mn}$，进一步简化：<br>$<br>\operatorname{tr}(C_G^2) = 2\sum_{1\le i&lt;j\le n} 2^{-2d_{ij}}<br>$</p>
+<hr>
+<h2 id="5-把前面的“2”并入指数（纯代数化简）"><a href="#5-把前面的“2”并入指数（纯代数化简）" class="headerlink" title="5. 把前面的“2”并入指数（纯代数化简）"></a>5. 把前面的“2”并入指数（纯代数化简）</h2><h3 id="依据："><a href="#依据：" class="headerlink" title="依据："></a>依据：</h3><p>指数运算法则 $a^m \cdot a^n = a^{m+n}$，其中 $2=2^1$。</p>
+<h3 id="步骤解析：-3"><a href="#步骤解析：-3" class="headerlink" title="步骤解析："></a>步骤解析：</h3><p>$<br>2 \cdot 2^{-2d_{ij}} = 2^1 \cdot 2^{-2d_{ij}} = 2^{1-2d_{ij}}<br>$<br>因此，求和式可化为：<br>$<br>2\sum_{1\le i&lt;j\le n} 2^{-2d_{ij}} = \sum_{1\le i&lt;j\le n} 2^{1-2d_{ij}}<br>$</p>
+<hr>
+<h2 id="最终等式链（串联1-5步）"><a href="#最终等式链（串联1-5步）" class="headerlink" title="最终等式链（串联1-5步）"></a>最终等式链（串联1-5步）</h2><p>$<br>\sum_{i=1}^n \lambda_i^2 = \operatorname{tr}(C_G^2) = 2\sum_{1\le i&lt;j\le n}\bigl(2^{-d_{ij}}\bigr)^2 = 2\sum_{1\le i&lt;j\le n}2^{-2d_{ij}} = \sum_{1\le i&lt;j\le n}2^{\,1-2d_{ij}}<br>$<br>即论文式(13)的完整推导过程。</p>
+<hr>
+<h2 id="关键要点总结"><a href="#关键要点总结" class="headerlink" title="关键要点总结"></a>关键要点总结</h2><ol>
+<li>对称性质是基础：$C_G$ 对称 $\Rightarrow$ 特征值全实，且 $\sum\lambda_i^2=\operatorname{tr}(C_G^2)$；</li>
+<li>对角为0简化求和：排除对角项贡献，非对角项成对出现 $\Rightarrow$ 引入系数2，转化为 $i&lt;j$ 的单重求和；</li>
+<li>定义代入+指数化简：代入 $C_G(i,j)=2^{-d_{ij}}$ 后，利用指数运算法则合并系数2，得到最终形式。</li>
+</ol>
+<hr>
 <h1 id="7-额外提示：如何直观理解-CEC-的“能量差”"><a href="#7-额外提示：如何直观理解-CEC-的“能量差”" class="headerlink" title="7) 额外提示：如何直观理解 CEC 的“能量差”"></a>7) 额外提示：如何直观理解 CEC 的“能量差”</h1><p>把式 (15) 看成“<strong>全体点对接近度平方的加权叠加</strong>”。删除节点 $k$ 后，凡是<strong>经由 $k$ 的最短路</strong>都会变长（或断开变 0），这些点对在求和中的贡献都会<strong>下降</strong>，因此 $E_C$ 下降、$\mathrm{CEC}(k)$ 为正且越大，表示 $k$ 对“全网接近性”的贡献越关键。也因此，CEC 在传播仿真与鲁棒性实验中表现良好（见文中第 6–10 页图表与表 2–7），与 DLC/CC 相关性高且适用于<strong>非连通</strong>网络。</p>
+<p><strong>DC</strong>（Degree Centrality，度中心性）</p>
+<p><strong>CC</strong>（Closeness Centrality，接近中心性）</p>
+<p><strong>BC</strong>（Betweenness Centrality，介数中心性）</p>
+<p><strong>EC</strong>（Eigenvector Centrality，特征向量中心性）</p>
+<p><strong>GC</strong>（Gravity Centrality，引力中心性）</p>
+<p><strong>QC</strong>（Quasi-Laplacian Centrality，拟拉普拉斯能量中心性）</p>
+<p><strong>LC</strong>（Laplacian Energy Centrality，第三拉普拉斯能量中心性）</p>
+<p><strong>DLC</strong>（Distance Laplacian Centrality，距离拉普拉斯能量中心性）</p>
+<p>恢复概率$ \beta_2 = 1 $：表示节点在<strong>感染一次传播回合后立即恢复</strong>，即不会在下一轮继续传播。</p>
+<p>每个感染节点只能尝试感染它的邻居一次；</p>
+<p>下一步它立即变成“恢复”节点，不再参与传播。</p>
+<p>可以看出，随着时间t的推移，感染节点数量F(t)先增加然后趋于平稳。在美国航空网络（USAir）中，当t<3时，使用CEC方法的感染节点数量低于介数中心性（BC）方法。当t>3时，CEC方法对应的曲线通常在上方；这表明在感染早期，CEC方法识别出的前10个节点更快地感染网络中的其他节点。在Infectious网络中，在t<7时CEC方法始终拥有最多的感染节点；在t>3时BC方法对应的曲线超过了CEC方法。在其他网络中，在研究的感染时间间隔内CEC方法的曲线始终处于顶部，表明CEC方法选择的前10个节点具有更强的传播能力，在网络中引起更大范围的感染。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$R(np)$</td>
+<td>网络在删除比例为 pp 的节点后得到的<strong>平均相对鲁棒性</strong></td>
+<td>表示网络整体抗毁性。</td>
+</tr>
+<tr>
+<td>$n$</td>
+<td>网络节点总数</td>
+<td>例如 Email 网络有 1133 个节点。</td>
+</tr>
+<tr>
+<td>$p$</td>
+<td>节点删除比例（如 0.1 表示删除 10% 节点）</td>
+<td>控制攻击强度。</td>
+</tr>
+<tr>
+<td>$np$</td>
+<td>删除的节点数量</td>
+<td>表示共删除了 npnp 个节点（四舍五入取整数）。</td>
+</tr>
+<tr>
+<td>$S’(V \setminus V_i)$</td>
+<td>删除节点集 ViV_i 后，<strong>剩余网络中最大连通子图的相对规模</strong></td>
+<td>衡量删除节点后网络还连通多少。公式定义为：</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="公式物理含义说明"><a href="#公式物理含义说明" class="headerlink" title="公式物理含义说明"></a>公式物理含义说明</h1><h2 id="一、核心公式及物理意义拆解"><a href="#一、核心公式及物理意义拆解" class="headerlink" title="一、核心公式及物理意义拆解"></a>一、核心公式及物理意义拆解</h2><h3 id="1-frac-1-d-ij-：节点-i-与-j-之间的“通信效率”"><a href="#1-frac-1-d-ij-：节点-i-与-j-之间的“通信效率”" class="headerlink" title="1. $ \frac{1}{d_{ij}} $：节点 $i$ 与 $j$ 之间的“通信效率”"></a>1. $ \frac{1}{d_{ij}} $：节点 $i$ 与 $j$ 之间的“通信效率”</h3><ul>
+<li>定义背景：$d_{ij}$ 表示节点 $i$ 与节点 $j$ 之间的最短路径长度；</li>
+<li>物理含义解读：<ul>
+<li>当 $d_{ij}$ 较小时（两节点距离近）：$ \frac{1}{d_{ij}} $ 数值较大，代表节点 $i$ 与 $j$ 之间信息传递、资源交互的效率高；</li>
+<li>当 $d_{ij}$ 较大时（两节点距离远）：$ \frac{1}{d_{ij}} $ 数值较小，代表节点 $i$ 与 $j$ 之间通信延迟高、效率低；</li>
+<li>当 $d_{ij} = \infty$ 时（两节点不连通）：$ \frac{1}{d_{ij}} = 0 $，代表节点 $i$ 与 $j$ 之间无直接或间接通信路径，无通信能力。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-sum-i-ne-j-frac-1-d-ij-：整个网络的总通信效率"><a href="#2-sum-i-ne-j-frac-1-d-ij-：整个网络的总通信效率" class="headerlink" title="2. $ \sum_{i \ne j} \frac{1}{d_{ij}} $：整个网络的总通信效率"></a>2. $ \sum_{i \ne j} \frac{1}{d_{ij}} $：整个网络的总通信效率</h3><ul>
+<li>求和范围：遍历网络中所有非对角节点对（$i \ne j$，即排除节点自身与自身的无效配对）；</li>
+<li>物理含义：将所有节点对的个体通信效率进行累加，结果反映整个网络的整体通信能力与信息传播潜力——数值越大，说明网络整体连通性越好、信息传递越顺畅。</li>
+</ul>
+<h3 id="3-frac-1-n-n-1-：归一化系数"><a href="#3-frac-1-n-n-1-：归一化系数" class="headerlink" title="3. $ \frac{1}{n(n-1)} $：归一化系数"></a>3. $ \frac{1}{n(n-1)} $：归一化系数</h3><ul>
+<li>符号说明：$n$ 为网络中节点的总数量；</li>
+<li>推导逻辑：$n(n-1)$ 对应网络中所有非对角节点对的总个数（每个节点与其他 $n-1$ 个节点形成一对，共 $n$ 个节点）；</li>
+<li>核心作用：对“总通信效率” $ \sum_{i \ne j} \frac{1}{d_{ij}} $ 进行归一化处理，使最终综合指标 $E$ 的取值被限定在 $0 \sim 1$ 区间内；</li>
+<li>实际价值：消除网络规模（节点数多少）对指标的影响，让不同节点数量的网络之间能够进行横向对比（例如：10 节点网络与 100 节点网络的通信效率可直接通过归一化后的 $E$ 值比较）。</li>
+</ul>
+<h2 id="二、关联指标整合（补充说明）"><a href="#二、关联指标整合（补充说明）" class="headerlink" title="二、关联指标整合（补充说明）"></a>二、关联指标整合（补充说明）</h2><p>若定义网络综合通信效率指标 $E$，则完整表达式为：<br>$ E = \frac{1}{n(n-1)} \sum_{i \ne j} \frac{1}{d_{ij}} $</p>
+<ul>
+<li>取值范围：$0 \le E \le 1$；</li>
+<li>极端情况：<ul>
+<li>完全连通网络（任意两节点直接相连，$d_{ij}=1$ 对所有 $i \ne j$）：$E = 1$，通信效率最优；</li>
+<li>完全孤立网络（所有节点互不连通，$d_{ij}=\infty$ 对所有 $i \ne j$）：$E = 0$，通信效率最差。</li>
+</ul>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>曲线形状</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>开始时 E≈1</strong></td>
+<td>网络几乎完整，节点间通信效率最高。</td>
+</tr>
+<tr>
+<td><strong>随着 p 增加， E 下降</strong></td>
+<td>删除节点破坏路径，通信距离增大，效率降低。</td>
+</tr>
+<tr>
+<td><strong>下降越快 → 算法越好（攻击效果强）</strong></td>
+<td>说明该算法识别的节点确实关键；删这些节点网络立刻失效。</td>
+</tr>
+<tr>
+<td><strong>下降缓慢 → 算法较弱</strong></td>
+<td>说明删掉的节点不够关键，对网络结构影响小。</td>
+</tr>
+</tbody>
+</table>
+</div>
 
     </div>
 
